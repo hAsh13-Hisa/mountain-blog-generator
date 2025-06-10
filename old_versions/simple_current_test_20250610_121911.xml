@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:wp="http://wordpress.org/export/1.2/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<channel>
+    <title>現在時刻テスト投稿</title>
+    <pubDate>Tue, 10 Jun 2025 12:19:11 +0000</pubDate>
+    <wp:wxr_version>1.2</wp:wxr_version>
+    
+    <wp:author>
+        <wp:author_id>1</wp:author_id>
+        <wp:author_login><![CDATA[aime]]></wp:author_login>
+        <wp:author_email><![CDATA[aime@example.com]]></wp:author_email>
+        <wp:author_display_name><![CDATA[aime]]></wp:author_display_name>
+    </wp:author>
+    
+    <item>
+        <title>現在時刻即座公開テスト</title>
+        <pubDate>Tue, 10 Jun 2025 12:19:11 +0000</pubDate>
+        <dc:creator><![CDATA[aime]]></dc:creator>
+        <content:encoded><![CDATA[<h2>現在時刻即座公開テスト</h2><p>この記事は2025年06月10日 12時19分に作成され、即座に公開される設定です。予約投稿ではありません。</p>]]></content:encoded>
+        <wp:post_id>9999</wp:post_id>
+        <wp:post_date><![CDATA[2025-06-10 12:19:11]]></wp:post_date>
+        <wp:post_date_gmt><![CDATA[2025-06-10 12:19:11]]></wp:post_date_gmt>
+        <wp:status><![CDATA[publish]]></wp:status>
+        <wp:post_type><![CDATA[post]]></wp:post_type>
+    </item>
+</channel>
+</rss>

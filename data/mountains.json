@@ -1,0 +1,607 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2025-01-09",
+    "description": "低山旅行用の山マスターデータ",
+    "total_mountains": 20
+  },
+  "mountains": [
+    {
+      "id": "mt_takao",
+      "name": "高尾山",
+      "name_en": "Mount Takao",
+      "prefecture": "東京都",
+      "region": "関東",
+      "elevation": 599,
+      "location": {
+        "latitude": 35.6253,
+        "longitude": 139.2441,
+        "nearest_station": "高尾山口駅",
+        "access_time": "新宿から約50分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約2-3時間",
+        "distance": "約5km",
+        "elevation_gain": "約400m"
+      },
+      "features": [
+        "ケーブルカー・リフトあり",
+        "薬王院",
+        "展望台",
+        "猿園",
+        "新宿の夜景",
+        "紅葉名所"
+      ],
+      "trails": [
+        {
+          "name": "1号路",
+          "description": "舗装路で最も歩きやすい",
+          "time": "約90分"
+        },
+        {
+          "name": "6号路",
+          "description": "沢沿いの自然豊かなコース",
+          "time": "約90分"
+        }
+      ],
+      "seasons": {
+        "best": ["春", "秋"],
+        "cherry_blossom": "4月上旬-中旬",
+        "autumn_leaves": "11月中旬-12月上旬"
+      },
+      "facilities": {
+        "restrooms": true,
+        "restaurant": true,
+        "parking": true,
+        "cable_car": true,
+        "visitor_center": true
+      },
+      "nearby_attractions": [
+        "高尾山トリックアート美術館",
+        "京王高尾山温泉 極楽湯"
+      ],
+      "keywords": [
+        "初心者向け",
+        "都心から近い",
+        "ケーブルカー",
+        "薬王院",
+        "夜景",
+        "紅葉"
+      ],
+      "article_themes": [
+        "初心者向け登山ガイド",
+        "家族でハイキング",
+        "秋の紅葉狩り",
+        "新宿の夜景を見に行こう"
+      ]
+    },
+    {
+      "id": "mt_mitake",
+      "name": "御岳山",
+      "name_en": "Mount Mitake", 
+      "prefecture": "東京都",
+      "region": "関東",
+      "elevation": 929,
+      "location": {
+        "latitude": 35.7884,
+        "longitude": 139.1545,
+        "nearest_station": "御嶽駅",
+        "access_time": "新宿から約90分"
+      },
+      "difficulty": {
+        "level": "初級-中級",
+        "hiking_time": "約3-4時間",
+        "distance": "約6km",
+        "elevation_gain": "約500m"
+      },
+      "features": [
+        "武蔵御嶽神社",
+        "ケーブルカー",
+        "ロックガーデン",
+        "七代の滝",
+        "綾広の滝",
+        "天狗岩"
+      ],
+      "trails": [
+        {
+          "name": "表参道コース",
+          "description": "神社へ向かう基本コース",
+          "time": "約90分"
+        },
+        {
+          "name": "ロックガーデンコース",
+          "description": "沢と滝を楽しむコース",
+          "time": "約2時間"
+        }
+      ],
+      "seasons": {
+        "best": ["春", "夏", "秋"],
+        "cherry_blossom": "4月中旬-下旬",
+        "autumn_leaves": "10月下旬-11月中旬"
+      },
+      "facilities": {
+        "restrooms": true,
+        "restaurant": true,
+        "parking": true,
+        "cable_car": true,
+        "visitor_center": false
+      },
+      "nearby_attractions": [
+        "奥多摩湖",
+        "玉堂美術館"
+      ],
+      "keywords": [
+        "パワースポット",
+        "神社",
+        "沢歩き",
+        "滝",
+        "ケーブルカー",
+        "ロックガーデン"
+      ],
+      "article_themes": [
+        "パワースポット巡り",
+        "沢歩きと滝めぐり",
+        "武蔵御嶽神社参拝",
+        "夏の涼を求めて"
+      ]
+    },
+    {
+      "id": "mt_jinba",
+      "name": "陣馬山",
+      "name_en": "Mount Jinba",
+      "prefecture": "東京都・神奈川県",
+      "region": "関東",
+      "elevation": 855,
+      "location": {
+        "latitude": 35.6336,
+        "longitude": 139.1764,
+        "nearest_station": "高尾駅・藤野駅",
+        "access_time": "新宿から約70分"
+      },
+      "difficulty": {
+        "level": "中級",
+        "hiking_time": "約4-5時間",
+        "distance": "約8km",
+        "elevation_gain": "約600m"
+      },
+      "features": [
+        "白馬の像",
+        "360度の展望",
+        "富士山の眺望",
+        "関東平野の眺め",
+        "茶屋",
+        "桜の名所"
+      ],
+      "trails": [
+        {
+          "name": "藤野駅からのコース",
+          "description": "最短ルート",
+          "time": "約2時間"
+        },
+        {
+          "name": "高尾山縦走コース",
+          "description": "高尾山から陣馬山への縦走",
+          "time": "約4時間"
+        }
+      ],
+      "seasons": {
+        "best": ["春", "秋", "冬"],
+        "cherry_blossom": "4月上旬-中旬",
+        "autumn_leaves": "11月上旬-中旬"
+      },
+      "facilities": {
+        "restrooms": true,
+        "restaurant": true,
+        "parking": false,
+        "cable_car": false,
+        "visitor_center": false
+      },
+      "nearby_attractions": [
+        "相模湖",
+        "藤野芸術の家"
+      ],
+      "keywords": [
+        "展望",
+        "富士山",
+        "白馬の像",
+        "縦走",
+        "桜",
+        "茶屋"
+      ],
+      "article_themes": [
+        "富士山絶景ハイキング",
+        "高尾山から陣馬山縦走",
+        "春の桜ハイキング",
+        "360度パノラマビュー"
+      ]
+    },
+    {
+      "id": "mt_oyama",
+      "name": "大山",
+      "name_en": "Mount Oyama",
+      "prefecture": "神奈川県",
+      "region": "関東",
+      "elevation": 1252,
+      "location": {
+        "latitude": 35.4378,
+        "longitude": 139.2461,
+        "nearest_station": "伊勢原駅",
+        "access_time": "新宿から約90分"
+      },
+      "difficulty": {
+        "level": "中級",
+        "hiking_time": "約4-5時間",
+        "distance": "約6km",
+        "elevation_gain": "約800m"
+      },
+      "features": [
+        "大山阿夫利神社",
+        "ケーブルカー",
+        "雷ノ峰尾根",
+        "見晴台",
+        "相模湾の眺望",
+        "紅葉名所"
+      ],
+      "trails": [
+        {
+          "name": "表参道コース",
+          "description": "ケーブルカー利用の基本コース",
+          "time": "約2時間"
+        },
+        {
+          "name": "雷ノ峰尾根コース",
+          "description": "健脚向けの本格登山コース",
+          "time": "約4時間"
+        }
+      ],
+      "seasons": {
+        "best": ["春", "秋", "冬"],
+        "cherry_blossom": "4月中旬-下旬",
+        "autumn_leaves": "11月中旬-12月上旬"
+      },
+      "facilities": {
+        "restrooms": true,
+        "restaurant": true,
+        "parking": true,
+        "cable_car": true,
+        "visitor_center": true
+      },
+      "nearby_attractions": [
+        "大山豆腐料理",
+        "日向薬師"
+      ],
+      "keywords": [
+        "神社",
+        "ケーブルカー",
+        "相模湾",
+        "紅葉",
+        "豆腐料理",
+        "関東平野"
+      ],
+      "article_themes": [
+        "神奈川の名山登山",
+        "大山豆腐グルメ",
+        "秋の紅葉ハイキング",
+        "相模湾を望む絶景登山"
+      ]
+    },
+    {
+      "id": "mt_tsukuba",
+      "name": "筑波山",
+      "name_en": "Mount Tsukuba",
+      "prefecture": "茨城県", 
+      "region": "関東",
+      "elevation": 877,
+      "location": {
+        "latitude": 36.2256,
+        "longitude": 140.1061,
+        "nearest_station": "つくば駅",
+        "access_time": "秋葉原から約60分"
+      },
+      "difficulty": {
+        "level": "初級-中級",
+        "hiking_time": "約3-4時間",
+        "distance": "約6km",
+        "elevation_gain": "約600m"
+      },
+      "features": [
+        "男体山・女体山",
+        "筑波山神社",
+        "ケーブルカー・ロープウェイ",
+        "奇岩群",
+        "関東平野の眺望",
+        "百名山"
+      ],
+      "trails": [
+        {
+          "name": "御幸ヶ原コース",
+          "description": "ケーブルカー山頂駅からのコース",
+          "time": "約30分"
+        },
+        {
+          "name": "白雲橋コース",
+          "description": "つつじヶ丘から女体山への直登コース",
+          "time": "約90分"
+        }
+      ],
+      "seasons": {
+        "best": ["春", "秋", "冬"],
+        "cherry_blossom": "4月中旬-下旬",
+        "autumn_leaves": "11月上旬-中旬"
+      },
+      "facilities": {
+        "restrooms": true,
+        "restaurant": true,
+        "parking": true,
+        "cable_car": true,
+        "visitor_center": true
+      },
+      "nearby_attractions": [
+        "つくばエキスポセンター",
+        "筑波宇宙センター"
+      ],
+      "keywords": [
+        "百名山",
+        "奇岩",
+        "関東平野",
+        "神社",
+        "双耳峰",
+        "つくば"
+      ],
+      "article_themes": [
+        "日本百名山最低峰",
+        "奇岩と絶景の筑波山",
+        "つくば観光と筑波山",
+        "関東平野を一望"
+      ]
+    },
+    {
+      "id": "mt_nokogiri",
+      "name": "鋸山",
+      "name_en": "Mount Nokogiri",
+      "prefecture": "千葉県",
+      "region": "関東",
+      "elevation": 329,
+      "location": {
+        "latitude": 35.1714,
+        "longitude": 139.8206,
+        "nearest_station": "浜金谷駅",
+        "access_time": "東京から約90分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約2-3時間",
+        "distance": "約4km",
+        "elevation_gain": "約300m"
+      },
+      "features": [
+        "日本寺",
+        "大仏",
+        "地獄のぞき",
+        "石切場跡",
+        "東京湾の眺望",
+        "ロープウェイ"
+      ],
+      "trails": [
+        {
+          "name": "車力道コース",
+          "description": "浜金谷駅からの登山コース",
+          "time": "約60分"
+        },
+        {
+          "name": "関東ふれあいの道",
+          "description": "保田駅からのハイキングコース",
+          "time": "約90分"
+        }
+      ],
+      "seasons": {
+        "best": ["春", "秋", "冬"],
+        "cherry_blossom": "3月下旬-4月上旬",
+        "autumn_leaves": "11月下旬-12月上旬"
+      },
+      "facilities": {
+        "restrooms": true,
+        "restaurant": true,
+        "parking": true,
+        "cable_car": true,
+        "visitor_center": false
+      },
+      "nearby_attractions": [
+        "マザー牧場",
+        "海ほたる"
+      ],
+      "keywords": [
+        "地獄のぞき",
+        "大仏",
+        "石切場",
+        "東京湾",
+        "房総半島",
+        "ロープウェイ"
+      ],
+      "article_themes": [
+        "スリル満点！地獄のぞき",
+        "房総半島の絶景ハイキング",
+        "日本寺と大仏巡り",
+        "東京湾を望む低山歩き"
+      ]
+    },
+    {
+      "id": "mt_daibosatsu",
+      "name": "大菩薩嶺",
+      "name_en": "Mount Daibosatsu",
+      "prefecture": "山梨県",
+      "region": "関東・甲信越",
+      "elevation": 2057,
+      "location": {
+        "latitude": 35.7331,
+        "longitude": 138.9456,
+        "nearest_station": "塩山駅",
+        "access_time": "新宿から約2時間"
+      },
+      "difficulty": {
+        "level": "中級",
+        "hiking_time": "約4-5時間",
+        "distance": "約8km", 
+        "elevation_gain": "約600m"
+      },
+      "features": [
+        "大菩薩峠",
+        "富士山の絶景",
+        "南アルプスの眺望",
+        "百名山",
+        "笹原",
+        "稜線歩き"
+      ],
+      "trails": [
+        {
+          "name": "上日川峠コース",
+          "description": "最も一般的なコース",
+          "time": "約3時間"
+        },
+        {
+          "name": "裂石コース",
+          "description": "雲峰寺を経由する本格コース",
+          "time": "約5時間"
+        }
+      ],
+      "seasons": {
+        "best": ["春", "夏", "秋"],
+        "cherry_blossom": "4月下旬-5月上旬",
+        "autumn_leaves": "10月上旬-中旬"
+      },
+      "facilities": {
+        "restrooms": true,
+        "restaurant": false,
+        "parking": true,
+        "cable_car": false,
+        "visitor_center": false
+      },
+      "nearby_attractions": [
+        "勝沼ワイナリー",
+        "恵林寺"
+      ],
+      "keywords": [
+        "百名山",
+        "富士山展望",
+        "稜線歩き",
+        "大菩薩峠",
+        "南アルプス",
+        "笹原"
+      ],
+      "article_themes": [
+        "富士山絶景の百名山",
+        "稜線歩きを楽しむ",
+        "大菩薩峠の歴史",
+        "南アルプス展望ハイキング"
+      ]
+    },
+    {
+      "id": "mt_kumotori",
+      "name": "雲取山",
+      "name_en": "Mount Kumotori",
+      "prefecture": "東京都・埼玉県・山梨県",
+      "region": "関東",
+      "elevation": 2017,
+      "location": {
+        "latitude": 35.8581,
+        "longitude": 138.9267,
+        "nearest_station": "奥多摩駅",
+        "access_time": "新宿から約2時間"
+      },
+      "difficulty": {
+        "level": "上級",
+        "hiking_time": "約8-10時間",
+        "distance": "約20km",
+        "elevation_gain": "約1400m"
+      },
+      "features": [
+        "東京都最高峰",
+        "百名山",
+        "富士山の眺望",
+        "避難小屋",
+        "原生林",
+        "三県境"
+      ],
+      "trails": [
+        {
+          "name": "鴨沢コース",
+          "description": "最も一般的な日帰りコース",
+          "time": "約7時間"
+        },
+        {
+          "name": "三峰神社コース",
+          "description": "埼玉県側からのコース",
+          "time": "約6時間"
+        }
+      ],
+      "seasons": {
+        "best": ["春", "夏", "秋"],
+        "cherry_blossom": "5月上旬-中旬",
+        "autumn_leaves": "10月中旬-下旬"
+      },
+      "facilities": {
+        "restrooms": true,
+        "restaurant": false,
+        "parking": true,
+        "cable_car": false,
+        "visitor_center": false
+      },
+      "nearby_attractions": [
+        "奥多摩湖",
+        "三峰神社"
+      ],
+      "keywords": [
+        "東京都最高峰",
+        "百名山",
+        "避難小屋",
+        "原生林",
+        "三県境",
+        "健脚向け"
+      ],
+      "article_themes": [
+        "東京都最高峰に挑戦",
+        "百名山雲取山登山",
+        "避難小屋泊で楽しむ",
+        "三県境の山頂へ"
+      ]
+    }
+  ],
+  "regions": {
+    "関東": {
+      "description": "首都圏からアクセス良好な低山が豊富",
+      "mountains": ["mt_takao", "mt_mitake", "mt_jinba", "mt_oyama", "mt_tsukuba", "mt_nokogiri", "mt_kumotori"]
+    },
+    "甲信越": {
+      "description": "本格的な山歩きが楽しめる",
+      "mountains": ["mt_daibosatsu"]
+    }
+  },
+  "difficulty_levels": {
+    "初級": {
+      "description": "登山初心者・家族向け",
+      "target_time": "2-3時間",
+      "elevation_gain": "300-500m"
+    },
+    "中級": {
+      "description": "ある程度の体力が必要",
+      "target_time": "3-6時間", 
+      "elevation_gain": "500-800m"
+    },
+    "上級": {
+      "description": "健脚者向け・本格登山",
+      "target_time": "6時間以上",
+      "elevation_gain": "800m以上"
+    }
+  },
+  "search_tags": {
+    "初心者向け": ["mt_takao", "mt_nokogiri"],
+    "ケーブルカー": ["mt_takao", "mt_mitake", "mt_oyama", "mt_tsukuba", "mt_nokogiri"],
+    "富士山展望": ["mt_jinba", "mt_daibosatsu", "mt_kumotori"],
+    "百名山": ["mt_tsukuba", "mt_daibosatsu", "mt_kumotori"],
+    "神社・寺": ["mt_takao", "mt_mitake", "mt_oyama", "mt_tsukuba", "mt_nokogiri"],
+    "紅葉名所": ["mt_takao", "mt_oyama", "mt_tsukuba"],
+    "都心から近い": ["mt_takao", "mt_mitake", "mt_jinba"],
+    "家族向け": ["mt_takao", "mt_nokogiri", "mt_tsukuba"]
+  }
+}

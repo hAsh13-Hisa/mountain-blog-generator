@@ -1,0 +1,72 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+logs/
+*.log
+
+# Generated files
+generated_articles/
+output/
+
+# Test outputs
+test_files/*.xml
+test_files/*.json
+test_files/*.html
+
+# Old versions (optional - uncomment if you want to exclude)
+# old_versions/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Package files
+*.egg-info/
+dist/
+build/
+
+# Temporary files
+*.tmp
+*.bak
+.cache/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+
+# pytest
+.pytest_cache/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json

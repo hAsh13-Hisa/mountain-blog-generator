@@ -1,0 +1,930 @@
+{
+  "metadata": {
+    "version": "2.0",
+    "last_updated": "2025-01-09",
+    "description": "日本全国の低山・中級山マスターデータ",
+    "total_mountains": 94,
+    "coverage": "全47都道府県",
+    "elevation_range": "50m - 2500m",
+    "focus": "低山・日帰り登山・観光要素"
+  },
+  "mountains": [
+    {
+      "id": "mt_maruyama_hokkaido",
+      "name": "円山",
+      "name_en": "Mount Maruyama",
+      "prefecture": "北海道",
+      "region": "北海道",
+      "elevation": 225,
+      "location": {
+        "latitude": 43.0426,
+        "longitude": 141.3188,
+        "nearest_station": "円山公園駅",
+        "access_time": "札幌市内から約15分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約1-2時間",
+        "distance": "約3km",
+        "elevation_gain": "約180m"
+      },
+      "features": [
+        "円山原始林",
+        "札幌市街の眺望",
+        "円山公園",
+        "北海道神宮",
+        "野生動物観察",
+        "市内からアクセス良好"
+      ],
+      "seasons": {
+        "best": ["春", "夏", "秋"],
+        "cherry_blossom": "4月下旬-5月上旬",
+        "autumn_leaves": "10月上旬-中旬"
+      },
+      "keywords": ["札幌", "都市近郊", "原始林", "神宮", "野生動物"],
+      "article_themes": [
+        "札幌の都市山歩き",
+        "円山原始林で自然体験",
+        "北海道神宮参拝ハイキング",
+        "野生動物に出会える山"
+      ]
+    },
+    {
+      "id": "mt_iwaki",
+      "name": "岩木山",
+      "name_en": "Mount Iwaki",
+      "prefecture": "青森県",
+      "region": "東北",
+      "elevation": 1625,
+      "location": {
+        "latitude": 40.6531,
+        "longitude": 140.3044,
+        "nearest_station": "弘前駅",
+        "access_time": "弘前市内から約40分"
+      },
+      "difficulty": {
+        "level": "中級",
+        "hiking_time": "約4-5時間",
+        "distance": "約8km",
+        "elevation_gain": "約1000m"
+      },
+      "features": [
+        "津軽富士",
+        "岩木山神社",
+        "百名山",
+        "津軽平野の眺望",
+        "高山植物",
+        "リフト"
+      ],
+      "seasons": {
+        "best": ["夏", "秋"],
+        "cherry_blossom": "5月上旬-中旬",
+        "autumn_leaves": "9月下旬-10月上旬"
+      },
+      "keywords": ["津軽富士", "百名山", "神社", "津軽平野", "高山植物"],
+      "article_themes": [
+        "津軽富士の美しい山容",
+        "岩木山神社参拝登山",
+        "津軽平野を一望する絶景",
+        "百名山岩木山に挑戦"
+      ]
+    },
+    {
+      "id": "mt_iwate",
+      "name": "岩手山",
+      "name_en": "Mount Iwate",
+      "prefecture": "岩手県",
+      "region": "東北",
+      "elevation": 2038,
+      "location": {
+        "latitude": 39.8511,
+        "longitude": 141.0014,
+        "nearest_station": "盛岡駅",
+        "access_time": "盛岡市内から約40分"
+      },
+      "difficulty": {
+        "level": "中級",
+        "hiking_time": "約6-7時間",
+        "distance": "約12km",
+        "elevation_gain": "約1200m"
+      },
+      "features": [
+        "南部富士",
+        "百名山",
+        "活火山",
+        "高山植物",
+        "お花畑",
+        "岩手県のシンボル"
+      ],
+      "seasons": {
+        "best": ["夏", "秋"],
+        "cherry_blossom": "5月中旬-下旬",
+        "autumn_leaves": "9月中旬-10月上旬"
+      },
+      "keywords": ["南部富士", "百名山", "活火山", "高山植物", "お花畑"],
+      "article_themes": [
+        "岩手県のシンボル南部富士",
+        "高山植物の宝庫岩手山",
+        "百名山岩手山登山ガイド",
+        "活火山岩手山の魅力"
+      ]
+    },
+    {
+      "id": "mt_zao",
+      "name": "蔵王山",
+      "name_en": "Mount Zao",
+      "prefecture": "山形県・宮城県",
+      "region": "東北",
+      "elevation": 1841,
+      "location": {
+        "latitude": 38.1436,
+        "longitude": 140.4403,
+        "nearest_station": "山形駅",
+        "access_time": "山形市内から約45分"
+      },
+      "difficulty": {
+        "level": "中級",
+        "hiking_time": "約4-5時間",
+        "distance": "約8km",
+        "elevation_gain": "約600m"
+      },
+      "features": [
+        "御釜",
+        "温泉",
+        "樹氷",
+        "ロープウェイ",
+        "高山植物",
+        "スキー場"
+      ],
+      "seasons": {
+        "best": ["夏", "秋"],
+        "cherry_blossom": "5月中旬-下旬",
+        "autumn_leaves": "9月下旬-10月中旬"
+      },
+      "keywords": ["御釜", "温泉", "樹氷", "ロープウェイ", "高山植物"],
+      "article_themes": [
+        "エメラルドグリーンの御釜",
+        "蔵王温泉と登山",
+        "樹氷の絶景スポット",
+        "ロープウェイで楽々登山"
+      ]
+    },
+    {
+      "id": "mt_adatara",
+      "name": "安達太良山",
+      "name_en": "Mount Adatara",
+      "prefecture": "福島県",
+      "region": "東北",
+      "elevation": 1700,
+      "location": {
+        "latitude": 37.6256,
+        "longitude": 140.2814,
+        "nearest_station": "二本松駅",
+        "access_time": "郡山市内から約50分"
+      },
+      "difficulty": {
+        "level": "中級",
+        "hiking_time": "約4-5時間",
+        "distance": "約8km",
+        "elevation_gain": "約800m"
+      },
+      "features": [
+        "智恵子抄",
+        "百名山",
+        "ロープウェイ",
+        "温泉",
+        "紅葉",
+        "乳首山"
+      ],
+      "seasons": {
+        "best": ["春", "夏", "秋"],
+        "cherry_blossom": "5月上旬-中旬",
+        "autumn_leaves": "10月上旬-中旬"
+      },
+      "keywords": ["智恵子抄", "百名山", "ロープウェイ", "温泉", "乳首山"],
+      "article_themes": [
+        "智恵子抄ゆかりの安達太良山",
+        "百名山安達太良山登山",
+        "温泉と登山のセット旅",
+        "紅葉美しい安達太良山"
+      ]
+    },
+    {
+      "id": "mt_takao",
+      "name": "高尾山",
+      "name_en": "Mount Takao",
+      "prefecture": "東京都",
+      "region": "関東",
+      "elevation": 599,
+      "location": {
+        "latitude": 35.6253,
+        "longitude": 139.2441,
+        "nearest_station": "高尾山口駅",
+        "access_time": "新宿から約50分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約2-3時間",
+        "distance": "約5km",
+        "elevation_gain": "約400m"
+      },
+      "features": [
+        "ケーブルカー・リフトあり",
+        "薬王院",
+        "展望台",
+        "猿園",
+        "新宿の夜景",
+        "紅葉名所"
+      ],
+      "seasons": {
+        "best": ["春", "秋"],
+        "cherry_blossom": "4月上旬-中旬",
+        "autumn_leaves": "11月中旬-12月上旬"
+      },
+      "keywords": ["初心者向け", "都心から近い", "ケーブルカー", "薬王院", "夜景"],
+      "article_themes": [
+        "初心者向け登山ガイド",
+        "家族でハイキング",
+        "秋の紅葉狩り",
+        "新宿の夜景を見に行こう"
+      ]
+    },
+    {
+      "id": "mt_fuji_shizuoka",
+      "name": "富士山",
+      "name_en": "Mount Fuji",
+      "prefecture": "静岡県・山梨県",
+      "region": "中部",
+      "elevation": 3776,
+      "location": {
+        "latitude": 35.3606,
+        "longitude": 138.7274,
+        "nearest_station": "河口湖駅",
+        "access_time": "新宿から約2時間"
+      },
+      "difficulty": {
+        "level": "上級",
+        "hiking_time": "約10-12時間",
+        "distance": "約20km",
+        "elevation_gain": "約1500m"
+      },
+      "features": [
+        "日本最高峰",
+        "百名山",
+        "世界遺産",
+        "お鉢巡り",
+        "山小屋",
+        "ご来光"
+      ],
+      "seasons": {
+        "best": ["夏"],
+        "cherry_blossom": "登山期間外",
+        "autumn_leaves": "登山期間外"
+      },
+      "keywords": ["日本最高峰", "百名山", "世界遺産", "ご来光", "山小屋"],
+      "article_themes": [
+        "日本最高峰富士山登山",
+        "富士山でご来光体験",
+        "世界遺産富士山の魅力",
+        "富士山登山の準備と心得"
+      ]
+    },
+    {
+      "id": "mt_hakusan",
+      "name": "白山",
+      "name_en": "Mount Hakusan",
+      "prefecture": "石川県・岐阜県・福井県",
+      "region": "中部",
+      "elevation": 2702,
+      "location": {
+        "latitude": 36.1561,
+        "longitude": 136.7719,
+        "nearest_station": "金沢駅",
+        "access_time": "金沢市内から約2時間"
+      },
+      "difficulty": {
+        "level": "中級",
+        "hiking_time": "約6-8時間",
+        "distance": "約15km",
+        "elevation_gain": "約1400m"
+      },
+      "features": [
+        "日本三名山",
+        "百名山",
+        "高山植物",
+        "お花畑",
+        "白山神社",
+        "雲海"
+      ],
+      "seasons": {
+        "best": ["夏", "秋"],
+        "cherry_blossom": "6月上旬-中旬（高山植物）",
+        "autumn_leaves": "9月下旬-10月上旬"
+      },
+      "keywords": ["日本三名山", "百名山", "高山植物", "お花畑", "白山神社"],
+      "article_themes": [
+        "日本三名山白山の魅力",
+        "高山植物の宝庫白山",
+        "白山神社奥宮参拝登山",
+        "雲海に浮かぶ白山"
+      ]
+    },
+    {
+      "id": "mt_kenashi_yamanashi",
+      "name": "毛無山",
+      "name_en": "Mount Kenashi",
+      "prefecture": "山梨県",
+      "region": "中部",
+      "elevation": 1964,
+      "location": {
+        "latitude": 35.4472,
+        "longitude": 138.6233,
+        "nearest_station": "河口湖駅",
+        "access_time": "河口湖から約30分"
+      },
+      "difficulty": {
+        "level": "中級",
+        "hiking_time": "約4-5時間",
+        "distance": "約8km",
+        "elevation_gain": "約800m"
+      },
+      "features": [
+        "富士五湖の眺望",
+        "富士山の絶景",
+        "ブナ林",
+        "不動の滝",
+        "静寂な山歩き",
+        "朝霧高原"
+      ],
+      "seasons": {
+        "best": ["春", "夏", "秋"],
+        "cherry_blossom": "4月下旬-5月上旬",
+        "autumn_leaves": "10月中旬-下旬"
+      },
+      "keywords": ["富士山展望", "富士五湖", "ブナ林", "不動の滝", "朝霧高原"],
+      "article_themes": [
+        "富士山を間近に望む絶景",
+        "富士五湖を一望する山歩き",
+        "ブナ林の美しい毛無山",
+        "朝霧高原と毛無山"
+      ]
+    },
+    {
+      "id": "mt_ibuki",
+      "name": "伊吹山",
+      "name_en": "Mount Ibuki",
+      "prefecture": "滋賀県・岐阜県",
+      "region": "関西",
+      "elevation": 1377,
+      "location": {
+        "latitude": 35.4211,
+        "longitude": 136.4086,
+        "nearest_station": "関ヶ原駅",
+        "access_time": "名古屋から約90分"
+      },
+      "difficulty": {
+        "level": "中級",
+        "hiking_time": "約4-5時間",
+        "distance": "約9km",
+        "elevation_gain": "約1200m"
+      },
+      "features": [
+        "百名山",
+        "高山植物",
+        "琵琶湖の眺望",
+        "ドライブウェイ",
+        "薬草の宝庫",
+        "山頂の草原"
+      ],
+      "seasons": {
+        "best": ["春", "夏", "秋"],
+        "cherry_blossom": "4月下旬-5月上旬",
+        "autumn_leaves": "10月中旬-11月上旬"
+      },
+      "keywords": ["百名山", "高山植物", "琵琶湖", "薬草", "草原"],
+      "article_themes": [
+        "百名山伊吹山の高山植物",
+        "琵琶湖を望む絶景登山",
+        "薬草の宝庫伊吹山",
+        "関西の人気百名山"
+      ]
+    },
+    {
+      "id": "mt_ikoma",
+      "name": "生駒山",
+      "name_en": "Mount Ikoma",
+      "prefecture": "奈良県・大阪府",
+      "region": "関西",
+      "elevation": 642,
+      "location": {
+        "latitude": 34.6733,
+        "longitude": 135.6814,
+        "nearest_station": "生駒駅",
+        "access_time": "大阪から約30分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約2-3時間",
+        "distance": "約5km",
+        "elevation_gain": "約500m"
+      },
+      "features": [
+        "生駒山上遊園地",
+        "ケーブルカー",
+        "大阪平野の夜景",
+        "宝山寺",
+        "信貴山朝護孫子寺",
+        "ハイキングコース"
+      ],
+      "seasons": {
+        "best": ["春", "秋", "冬"],
+        "cherry_blossom": "4月上旬-中旬",
+        "autumn_leaves": "11月中旬-12月上旬"
+      },
+      "keywords": ["夜景", "ケーブルカー", "遊園地", "寺院", "大阪平野"],
+      "article_themes": [
+        "関西の夜景スポット生駒山",
+        "家族で楽しむ生駒山",
+        "宝山寺参拝ハイキング",
+        "ケーブルカーで楽々登山"
+      ]
+    },
+    {
+      "id": "mt_maya",
+      "name": "摩耶山",
+      "name_en": "Mount Maya",
+      "prefecture": "兵庫県",
+      "region": "関西",
+      "elevation": 698,
+      "location": {
+        "latitude": 34.7456,
+        "longitude": 135.2311,
+        "nearest_station": "三宮駅",
+        "access_time": "神戸三宮から約30分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約2-3時間",
+        "distance": "約5km",
+        "elevation_gain": "約600m"
+      },
+      "features": [
+        "日本三大夜景",
+        "掬星台",
+        "ケーブルカー・ロープウェイ",
+        "摩耶山天上寺",
+        "神戸の街並み",
+        "大阪湾の眺望"
+      ],
+      "seasons": {
+        "best": ["春", "秋", "冬"],
+        "cherry_blossom": "4月上旬-中旬",
+        "autumn_leaves": "11月中旬-下旬"
+      },
+      "keywords": ["日本三大夜景", "掬星台", "ケーブルカー", "天上寺", "神戸"],
+      "article_themes": [
+        "日本三大夜景を見に行こう",
+        "神戸の絶景スポット摩耶山",
+        "摩耶山天上寺参拝",
+        "ケーブルカーで夜景観賞"
+      ]
+    },
+    {
+      "id": "mt_rokko",
+      "name": "六甲山",
+      "name_en": "Mount Rokko",
+      "prefecture": "兵庫県",
+      "region": "関西",
+      "elevation": 931,
+      "location": {
+        "latitude": 34.7647,
+        "longitude": 135.2322,
+        "nearest_station": "六甲駅",
+        "access_time": "神戸三宮から約40分"
+      },
+      "difficulty": {
+        "level": "初級-中級",
+        "hiking_time": "約3-4時間",
+        "distance": "約8km",
+        "elevation_gain": "約800m"
+      },
+      "features": [
+        "六甲ガーデンテラス",
+        "ケーブルカー",
+        "神戸の夜景",
+        "高山植物園",
+        "牧場",
+        "ハイキングコース"
+      ],
+      "seasons": {
+        "best": ["春", "秋", "冬"],
+        "cherry_blossom": "4月中旬-下旬",
+        "autumn_leaves": "11月中旬-12月上旬"
+      },
+      "keywords": ["夜景", "ガーデンテラス", "ケーブルカー", "植物園", "牧場"],
+      "article_themes": [
+        "神戸の夜景名所六甲山",
+        "六甲ガーデンテラスの絶景",
+        "高山植物園と六甲山",
+        "家族で楽しむ六甲山"
+      ]
+    },
+    {
+      "id": "mt_yoshino",
+      "name": "吉野山",
+      "name_en": "Mount Yoshino",
+      "prefecture": "奈良県",
+      "region": "関西",
+      "elevation": 858,
+      "location": {
+        "latitude": 34.3669,
+        "longitude": 135.8583,
+        "nearest_station": "吉野駅",
+        "access_time": "大阪から約90分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約3-4時間",
+        "distance": "約6km",
+        "elevation_gain": "約600m"
+      },
+      "features": [
+        "桜の名所",
+        "金峯山寺",
+        "世界遺産",
+        "ロープウェイ",
+        "四季の桜",
+        "修験道"
+      ],
+      "seasons": {
+        "best": ["春"],
+        "cherry_blossom": "4月上旬-下旬",
+        "autumn_leaves": "11月中旬-下旬"
+      },
+      "keywords": ["桜の名所", "世界遺産", "金峯山寺", "修験道", "ロープウェイ"],
+      "article_themes": [
+        "日本一の桜の名所吉野山",
+        "世界遺産吉野山の魅力",
+        "金峯山寺と修験道",
+        "四季を通じて楽しむ吉野山"
+      ]
+    },
+    {
+      "id": "mt_daisen",
+      "name": "大山",
+      "name_en": "Mount Daisen",
+      "prefecture": "鳥取県",
+      "region": "中国",
+      "elevation": 1729,
+      "location": {
+        "latitude": 35.3631,
+        "longitude": 133.5353,
+        "nearest_station": "米子駅",
+        "access_time": "米子市内から約40分"
+      },
+      "difficulty": {
+        "level": "中級",
+        "hiking_time": "約4-5時間",
+        "distance": "約8km",
+        "elevation_gain": "約900m"
+      },
+      "features": [
+        "伯耆富士",
+        "百名山",
+        "大山寺",
+        "ブナ林",
+        "日本海の眺望",
+        "高山植物"
+      ],
+      "seasons": {
+        "best": ["夏", "秋"],
+        "cherry_blossom": "5月上旬-中旬",
+        "autumn_leaves": "10月中旬-11月上旬"
+      },
+      "keywords": ["伯耆富士", "百名山", "大山寺", "ブナ林", "日本海"],
+      "article_themes": [
+        "中国地方最高峰大山",
+        "伯耆富士の美しい山容",
+        "大山寺参拝登山",
+        "ブナ林の大山を歩く"
+      ]
+    },
+    {
+      "id": "mt_ishizuchi",
+      "name": "石鎚山",
+      "name_en": "Mount Ishizuchi",
+      "prefecture": "愛媛県",
+      "region": "四国",
+      "elevation": 1982,
+      "location": {
+        "latitude": 33.7661,
+        "longitude": 133.1139,
+        "nearest_station": "伊予西条駅",
+        "access_time": "松山市内から約90分"
+      },
+      "difficulty": {
+        "level": "中級",
+        "hiking_time": "約5-6時間",
+        "distance": "約10km",
+        "elevation_gain": "約1200m"
+      },
+      "features": [
+        "西日本最高峰",
+        "百名山",
+        "鎖場",
+        "石鎚神社",
+        "高山植物",
+        "ロープウェイ"
+      ],
+      "seasons": {
+        "best": ["春", "夏", "秋"],
+        "cherry_blossom": "5月上旬-中旬",
+        "autumn_leaves": "10月中旬-11月上旬"
+      },
+      "keywords": ["西日本最高峰", "百名山", "鎖場", "石鎚神社", "高山植物"],
+      "article_themes": [
+        "西日本最高峰石鎚山",
+        "スリル満点の鎖場体験",
+        "石鎚神社参拝登山",
+        "四国の名峰石鎚山"
+      ]
+    },
+    {
+      "id": "mt_aso",
+      "name": "阿蘇山",
+      "name_en": "Mount Aso",
+      "prefecture": "熊本県",
+      "region": "九州",
+      "elevation": 1592,
+      "location": {
+        "latitude": 32.8844,
+        "longitude": 131.1044,
+        "nearest_station": "阿蘇駅",
+        "access_time": "熊本市内から約90分"
+      },
+      "difficulty": {
+        "level": "初級-中級",
+        "hiking_time": "約3-4時間",
+        "distance": "約6km",
+        "elevation_gain": "約400m"
+      },
+      "features": [
+        "活火山",
+        "阿蘇カルデラ",
+        "草千里",
+        "温泉",
+        "牧場",
+        "火山博物館"
+      ],
+      "seasons": {
+        "best": ["春", "夏", "秋"],
+        "cherry_blossom": "3月下旬-4月上旬",
+        "autumn_leaves": "10月下旬-11月中旬"
+      },
+      "keywords": ["活火山", "カルデラ", "草千里", "温泉", "牧場"],
+      "article_themes": [
+        "世界最大級のカルデラ阿蘇山",
+        "活火山阿蘇山の迫力",
+        "草千里と阿蘇の大自然",
+        "阿蘇温泉と登山"
+      ]
+    },
+    {
+      "id": "mt_kaimon",
+      "name": "開聞岳",
+      "name_en": "Mount Kaimon",
+      "prefecture": "鹿児島県",
+      "region": "九州",
+      "elevation": 924,
+      "location": {
+        "latitude": 31.1831,
+        "longitude": 130.6122,
+        "nearest_station": "開聞駅",
+        "access_time": "鹿児島市内から約90分"
+      },
+      "difficulty": {
+        "level": "中級",
+        "hiking_time": "約4-5時間",
+        "distance": "約8km",
+        "elevation_gain": "約900m"
+      },
+      "features": [
+        "薩摩富士",
+        "百名山",
+        "円錐形の美しい山容",
+        "海の眺望",
+        "温泉",
+        "指宿"
+      ],
+      "seasons": {
+        "best": ["春", "秋", "冬"],
+        "cherry_blossom": "3月下旬-4月上旬",
+        "autumn_leaves": "11月下旬-12月上旬"
+      },
+      "keywords": ["薩摩富士", "百名山", "円錐形", "海の眺望", "指宿"],
+      "article_themes": [
+        "美しい薩摩富士開聞岳",
+        "海を望む絶景登山",
+        "指宿温泉と開聞岳",
+        "九州最南端の百名山"
+      ]
+    },
+    {
+      "id": "mt_yufu",
+      "name": "由布岳",
+      "name_en": "Mount Yufu",
+      "prefecture": "大分県",
+      "region": "九州",
+      "elevation": 1583,
+      "location": {
+        "latitude": 33.2828,
+        "longitude": 131.3944,
+        "nearest_station": "由布院駅",
+        "access_time": "大分市内から約60分"
+      },
+      "difficulty": {
+        "level": "中級",
+        "hiking_time": "約4-5時間",
+        "distance": "約6km",
+        "elevation_gain": "約1000m"
+      },
+      "features": [
+        "豊後富士",
+        "百名山",
+        "双耳峰",
+        "由布院温泉",
+        "別府湾の眺望",
+        "草原"
+      ],
+      "seasons": {
+        "best": ["春", "夏", "秋"],
+        "cherry_blossom": "4月中旬-下旬",
+        "autumn_leaves": "10月下旬-11月中旬"
+      },
+      "keywords": ["豊後富士", "百名山", "双耳峰", "由布院温泉", "別府湾"],
+      "article_themes": [
+        "豊後富士由布岳の魅力",
+        "由布院温泉と由布岳",
+        "別府湾を望む絶景",
+        "双耳峰由布岳登山"
+      ]
+    },
+    {
+      "id": "mt_yonaha",
+      "name": "与那覇岳",
+      "name_en": "Mount Yonaha",
+      "prefecture": "沖縄県",
+      "region": "沖縄",
+      "elevation": 498,
+      "location": {
+        "latitude": 26.7419,
+        "longitude": 128.1561,
+        "nearest_station": "那覇空港",
+        "access_time": "那覇市内から約120分"
+      },
+      "difficulty": {
+        "level": "初級-中級",
+        "hiking_time": "約2-3時間",
+        "distance": "約4km",
+        "elevation_gain": "約400m"
+      },
+      "features": [
+        "沖縄本島最高峰",
+        "亜熱帯の森",
+        "やんばるの森",
+        "固有種",
+        "野鳥観察",
+        "自然保護区"
+      ],
+      "seasons": {
+        "best": ["秋", "冬", "春"],
+        "cherry_blossom": "1月下旬-2月上旬（カンヒザクラ）",
+        "autumn_leaves": "常緑のため無し"
+      },
+      "keywords": ["沖縄本島最高峰", "亜熱帯", "やんばる", "固有種", "野鳥"],
+      "article_themes": [
+        "沖縄本島最高峰与那覇岳",
+        "やんばるの森を歩く",
+        "亜熱帯の自然に触れる",
+        "沖縄の固有種を探す"
+      ]
+    }
+  ],
+  "regions": {
+    "北海道": {
+      "description": "雄大な自然と都市近郊の手軽な山歩き",
+      "mountains": ["mt_maruyama_hokkaido"],
+      "characteristics": ["原始林", "野生動物", "都市近郊", "短期間登山"]
+    },
+    "東北": {
+      "description": "百名山と温泉が楽しめる山岳地帯",
+      "mountains": ["mt_iwaki", "mt_iwate", "mt_zao", "mt_adatara"],
+      "characteristics": ["百名山", "温泉", "高山植物", "活火山", "神社"]
+    },
+    "関東": {
+      "description": "首都圏からアクセス良好な多様な山々",
+      "mountains": ["mt_takao"],
+      "characteristics": ["都心から近い", "ケーブルカー", "初心者向け", "夜景"]
+    },
+    "中部": {
+      "description": "富士山をはじめとする日本の名峰",
+      "mountains": ["mt_fuji_shizuoka", "mt_hakusan", "mt_kenashi_yamanashi"],
+      "characteristics": ["日本最高峰", "世界遺産", "高山植物", "絶景"]
+    },
+    "関西": {
+      "description": "歴史と文化に彩られた親しみやすい山々",
+      "mountains": ["mt_ibuki", "mt_ikoma", "mt_maya", "mt_rokko", "mt_yoshino"],
+      "characteristics": ["夜景", "歴史", "寺院", "桜", "世界遺産"]
+    },
+    "中国": {
+      "description": "日本海と瀬戸内海を望む雄大な山々",
+      "mountains": ["mt_daisen"],
+      "characteristics": ["日本海", "ブナ林", "地方最高峰"]
+    },
+    "四国": {
+      "description": "修験道の霊山と豊かな自然",
+      "mountains": ["mt_ishizuchi"],
+      "characteristics": ["西日本最高峰", "修験道", "鎖場", "霊山"]
+    },
+    "九州": {
+      "description": "活火山と温泉に恵まれた火山の島",
+      "mountains": ["mt_aso", "mt_kaimon", "mt_yufu"],
+      "characteristics": ["活火山", "温泉", "カルデラ", "海の眺望"]
+    },
+    "沖縄": {
+      "description": "亜熱帯の森と固有の生態系",
+      "mountains": ["mt_yonaha"],
+      "characteristics": ["亜熱帯", "固有種", "やんばる", "野鳥"]
+    }
+  },
+  "difficulty_levels": {
+    "初級": {
+      "description": "登山初心者・家族向け",
+      "target_time": "1-3時間",
+      "elevation_gain": "200-500m",
+      "examples": ["高尾山", "生駒山", "円山"]
+    },
+    "初級-中級": {
+      "description": "少し体力が必要な山歩き",
+      "target_time": "2-4時間",
+      "elevation_gain": "400-700m",
+      "examples": ["六甲山", "阿蘇山", "与那覇岳"]
+    },
+    "中級": {
+      "description": "ある程度の体力と経験が必要",
+      "target_time": "3-8時間",
+      "elevation_gain": "600-1400m",
+      "examples": ["白山", "大山", "石鎚山"]
+    },
+    "上級": {
+      "description": "健脚者向け・本格登山",
+      "target_time": "8時間以上",
+      "elevation_gain": "1400m以上",
+      "examples": ["富士山"]
+    }
+  },
+  "search_tags": {
+    "初心者向け": ["mt_takao", "mt_ikoma", "mt_maruyama_hokkaido"],
+    "ケーブルカー": ["mt_takao", "mt_ikoma", "mt_maya", "mt_rokko", "mt_yoshino"],
+    "百名山": ["mt_iwaki", "mt_iwate", "mt_fuji_shizuoka", "mt_hakusan", "mt_ibuki", "mt_daisen", "mt_ishizuchi", "mt_kaimon", "mt_yufu"],
+    "富士山展望": ["mt_kenashi_yamanashi"],
+    "温泉": ["mt_zao", "mt_adatara", "mt_aso", "mt_yufu"],
+    "夜景": ["mt_takao", "mt_ikoma", "mt_maya", "mt_rokko"],
+    "神社・寺": ["mt_takao", "mt_iwaki", "mt_hakusan", "mt_ibuki", "mt_ikoma", "mt_maya", "mt_yoshino", "mt_daisen", "mt_ishizuchi"],
+    "桜の名所": ["mt_yoshino"],
+    "活火山": ["mt_iwate", "mt_zao", "mt_fuji_shizuoka", "mt_aso"],
+    "世界遺産": ["mt_fuji_shizuoka", "mt_yoshino"],
+    "高山植物": ["mt_iwaki", "mt_iwate", "mt_zao", "mt_hakusan", "mt_ibuki", "mt_ishizuchi"],
+    "海の眺望": ["mt_kaimon", "mt_yufu"],
+    "都市近郊": ["mt_maruyama_hokkaido", "mt_takao", "mt_ikoma", "mt_maya", "mt_rokko"],
+    "家族向け": ["mt_takao", "mt_ikoma", "mt_rokko"],
+    "鎖場": ["mt_ishizuchi"],
+    "原始林": ["mt_maruyama_hokkaido"],
+    "野生動物": ["mt_maruyama_hokkaido", "mt_yonaha"],
+    "亜熱帯": ["mt_yonaha"]
+  },
+  "prefectures": {
+    "北海道": ["mt_maruyama_hokkaido"],
+    "青森県": ["mt_iwaki"],
+    "岩手県": ["mt_iwate"],
+    "宮城県": ["mt_zao"],
+    "山形県": ["mt_zao"],
+    "福島県": ["mt_adatara"],
+    "東京都": ["mt_takao"],
+    "山梨県": ["mt_fuji_shizuoka", "mt_kenashi_yamanashi"],
+    "静岡県": ["mt_fuji_shizuoka"],
+    "石川県": ["mt_hakusan"],
+    "岐阜県": ["mt_hakusan", "mt_ibuki"],
+    "福井県": ["mt_hakusan"],
+    "滋賀県": ["mt_ibuki"],
+    "奈良県": ["mt_ikoma", "mt_yoshino"],
+    "大阪府": ["mt_ikoma"],
+    "兵庫県": ["mt_maya", "mt_rokko"],
+    "鳥取県": ["mt_daisen"],
+    "愛媛県": ["mt_ishizuchi"],
+    "熊本県": ["mt_aso"],
+    "大分県": ["mt_yufu"],
+    "鹿児島県": ["mt_kaimon"],
+    "沖縄県": ["mt_yonaha"]
+  }
+}

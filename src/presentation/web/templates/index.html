@@ -1,0 +1,332 @@
+{% extends "base.html" %}
+
+{% block title %}Mountain Blog Generator - 日本の低山記事自動生成{% endblock %}
+
+{% block head %}
+<style>
+    .mountain-card {
+        transition: transform 0.2s, box-shadow 0.2s;
+        cursor: pointer;
+        height: 100%;
+    }
+    .mountain-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+    .mountain-card.selected {
+        border: 2px solid #0d6efd;
+        background: #f8f9ff;
+    }
+    .difficulty-badge {
+        font-size: 0.8rem;
+    }
+    .generation-area {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 15px;
+        color: white;
+    }
+    .result-area {
+        max-height: 600px;
+        overflow-y: auto;
+    }
+    #progressContainer {
+        display: none;
+    }
+    .feature-tag {
+        font-size: 0.7rem;
+        margin: 2px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="row g-4">
+    <!-- Left Panel: Mountain Selection -->
+    <div class="col-lg-4">
+        <div class="card h-100">
+            <div class="card-header bg-success text-white">
+                <h5 class="mb-0">
+                    <i class="fas fa-mountain"></i> 山の選択
+                </h5>
+            </div>
+            <div class="card-body">
+                <!-- Filters -->
+                <div class="mb-3">
+                    <div class="row g-2">
+                        <div class="col-6">
+                            <label class="form-label small">地域</label>
+                            <select id="regionFilter" class="form-select form-select-sm" onchange="filterMountains()">
+                                <option value="">全ての地域</option>
+                                {% for region in regions.keys() %}
+                                <option value="{{ region }}">{{ region }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <label class="form-label small">難易度</label>
+                            <select id="difficultyFilter" class="form-select form-select-sm" onchange="filterMountains()">
+                                <option value="">全ての難易度</option>
+                                <option value="初級">初級</option>
+                                <option value="初級-中級">初級-中級</option>
+                                <option value="中級">中級</option>
+                                <option value="上級">上級</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Search -->
+                <div class="mb-3">
+                    <input type="text" id="mountainSearch" class="form-control form-control-sm" 
+                           placeholder="山名で検索..." oninput="filterMountains()">
+                </div>
+
+                <!-- Mountain List -->
+                <div id="mountainList" style="max-height: 500px; overflow-y: auto;">
+                    {% for mountain in mountains %}
+                    <div class="mountain-card card mb-2" 
+                         data-mountain-id="{{ mountain.id }}"
+                         data-region="{{ mountain.region }}"
+                         data-difficulty="{{ mountain.difficulty.level.value }}"
+                         data-name="{{ mountain.name }}"
+                         onclick="selectMountain(this)">
+                        <div class="card-body p-2">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div class="flex-grow-1">
+                                    <h6 class="card-title mb-1 fs-6">{{ mountain.name }}</h6>
+                                    <small class="text-muted">
+                                        <i class="fas fa-map-marker-alt"></i> {{ mountain.prefecture.split('・')[0] }}
+                                    </small>
+                                </div>
+                                <div class="text-end">
+                                    <div class="badge bg-primary">{{ mountain.elevation }}m</div>
+                                    <div class="badge difficulty-badge 
+                                        {% if mountain.difficulty.level.value == '初級' %}bg-success
+                                        {% elif mountain.difficulty.level.value == '初級-中級' %}bg-info
+                                        {% elif mountain.difficulty.level.value == '中級' %}bg-warning
+                                        {% else %}bg-danger{% endif %}">
+                                        {{ mountain.difficulty.level.value }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-1">
+                                {% for feature in mountain.features[:2] %}
+                                <span class="badge bg-light text-dark feature-tag">{{ feature }}</span>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">
+                    <span id="mountainCount">{{ mountains|length }}</span> 山が利用可能
+                </small>
+            </div>
+        </div>
+    </div>
+
+    <!-- Center Panel: Mountain Info & Generation -->
+    <div class="col-lg-4">
+        <!-- Selected Mountain Info -->
+        <div class="card mb-3">
+            <div class="card-header bg-info text-white">
+                <h6 class="mb-0">
+                    <i class="fas fa-info-circle"></i> 選択された山
+                </h6>
+            </div>
+            <div class="card-body">
+                <div id="mountainInfo" class="text-center text-muted">
+                    <i class="fas fa-mouse-pointer fa-2x mb-2"></i>
+                    <p>左側から山を選択してください</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Generation Settings -->
+        <div class="generation-area p-4">
+            <h5 class="mb-3">
+                <i class="fas fa-cog"></i> 記事生成設定
+            </h5>
+            
+            <div class="mb-3">
+                <label class="form-label">生成する記事数</label>
+                <select id="articleCount" class="form-select" onchange="updateGenerationMode()">
+                    <option value="1" selected>1記事 (選択した山)</option>
+                    <option value="3">3記事 (ランダム選択)</option>
+                    <option value="5">5記事 (ランダム選択)</option>
+                    <option value="10">10記事 (ランダム選択)</option>
+                    <option value="custom">カスタム選択</option>
+                </select>
+            </div>
+
+            <!-- カスタム記事数入力 -->
+            <div id="customCountContainer" class="mb-3" style="display: none;">
+                <label class="form-label">記事数を入力 (最大20)</label>
+                <input type="number" id="customCount" class="form-control" min="1" max="20" value="1">
+            </div>
+
+            <!-- 複数記事生成時の設定 -->
+            <div id="bulkGenerationSettings" style="display: none;">
+                <div class="mb-3">
+                    <label class="form-label">生成方法</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="generationMethod" id="randomSelection" value="random" checked>
+                        <label class="form-check-label" for="randomSelection">
+                            ランダム選択 (自動)
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="generationMethod" id="manualSelection" value="manual">
+                        <label class="form-check-label" for="manualSelection">
+                            手動選択 (左から複数選択)
+                        </label>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">地域フィルター (ランダム選択時)</label>
+                    <select id="bulkRegionFilter" class="form-select">
+                        <option value="">全ての地域</option>
+                        {% for region in regions.keys() %}
+                        <option value="{{ region }}">{{ region }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">難易度フィルター (ランダム選択時)</label>
+                    <select id="bulkDifficultyFilter" class="form-select">
+                        <option value="">全ての難易度</option>
+                        <option value="初級">初級</option>
+                        <option value="初級-中級">初級-中級</option>
+                        <option value="中級">中級</option>
+                        <option value="上級">上級</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="schedulePosting" checked>
+                        <label class="form-check-label" for="schedulePosting">
+                            予約投稿 (1時間間隔)
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">記事テーマ</label>
+                <select id="theme" class="form-select">
+                    <option value="">自動選択</option>
+                    <option value="初心者向け登山ガイド">初心者向け登山ガイド</option>
+                    <option value="家族でハイキング">家族でハイキング</option>
+                    <option value="秋の紅葉狩り">秋の紅葉狩り</option>
+                    <option value="絶景ハイキング">絶景ハイキング</option>
+                    <option value="パワースポット巡り">パワースポット巡り</option>
+                    <option value="日帰り登山プラン">日帰り登山プラン</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">目標文字数</label>
+                <select id="targetLength" class="form-select">
+                    <option value="1500">1,500文字 (短文)</option>
+                    <option value="2000" selected>2,000文字 (標準)</option>
+                    <option value="2500">2,500文字 (詳細)</option>
+                    <option value="3000">3,000文字 (長文)</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="publishToWP">
+                    <label class="form-check-label" for="publishToWP">
+                        WordPressに自動投稿
+                    </label>
+                </div>
+            </div>
+
+            <button id="generateBtn" class="btn btn-light btn-lg w-100 fw-bold" 
+                    onclick="generateArticle()" disabled>
+                <i class="fas fa-magic"></i> 記事を生成する
+            </button>
+
+            <!-- Progress -->
+            <div id="progressContainer" class="mt-3">
+                <div class="progress mb-2">
+                    <div id="progressBar" class="progress-bar progress-bar-striped progress-bar-animated" 
+                         role="progressbar" style="width: 0%"></div>
+                </div>
+                <div id="progressText" class="text-center">
+                    <small>記事を生成中... 通常20-30秒かかります</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Panel: Generation Result -->
+    <div class="col-lg-4">
+        <div class="card h-100">
+            <div class="card-header bg-warning text-dark">
+                <h5 class="mb-0">
+                    <i class="fas fa-newspaper"></i> 生成結果
+                </h5>
+            </div>
+            <div class="card-body result-area">
+                <div id="resultContent" class="text-center text-muted">
+                    <i class="fas fa-clock fa-2x mb-2"></i>
+                    <p>記事生成を開始してください</p>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div id="resultActions" class="d-grid gap-2" style="display: none !important;">
+                    <div class="btn-group">
+                        <button class="btn btn-outline-primary btn-sm" onclick="copyArticle()">
+                            <i class="fas fa-copy"></i> コピー
+                        </button>
+                        <button class="btn btn-outline-success btn-sm" onclick="downloadArticle()">
+                            <i class="fas fa-download"></i> 保存
+                        </button>
+                        <button class="btn btn-outline-info btn-sm" onclick="previewArticle()">
+                            <i class="fas fa-eye"></i> プレビュー
+                        </button>
+                    </div>
+                    <button id="publishBtn" class="btn btn-success btn-sm" onclick="publishToWordPress()" style="display: none;">
+                        <i class="fab fa-wordpress"></i> WordPressに投稿
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Preview Modal -->
+<div class="modal fade" id="previewModal" tabindex="-1">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    <i class="fas fa-eye"></i> 記事プレビュー
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div id="previewContent" style="max-height: 70vh; overflow-y: auto;"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
+                <button type="button" class="btn btn-primary" onclick="copyArticle()">
+                    <i class="fas fa-copy"></i> 記事をコピー
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/mountain-selector.js') }}"></script>
+<script src="{{ url_for('static', filename='js/article-generator.js') }}"></script>
+{% endblock %}

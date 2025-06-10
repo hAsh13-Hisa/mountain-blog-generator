@@ -1,0 +1,64 @@
+
+🎨 LOW MOUNTAIN BLOG GENERATOR - GUI LAYOUT 🎨
+═══════════════════════════════════════════════════════════════
+
+┌─────────────────────────────────────────────────────────────┐
+│                🏔️ Low Mountain Blog Generator                │
+│                                                             │
+├─────────────────┬─────────────────┬─────────────────────────┤
+│ Mountain        │ Article         │ Generation              │
+│ Selection       │ Generation      │ Result                  │
+│                 │                 │                         │
+│ Region: [All ▼] │ Selected Mount: │ 📰 Article Result       │
+│ Diff:   [All ▼] │ ┌─────────────┐ │ ┌─────────────────────┐ │
+│                 │ │🗻 Mount Takao│ │ │📌 Title: Mount      │ │
+│ ┌─────────────┐ │ │             │ │ │   Takao Perfect...  │ │
+│ │Mount    │Pre│ │ │📍 Tokyo     │ │ │                     │ │
+│ │─────────┼───│ │ │⛰️ 599m      │ │ │📊 Stats:            │ │
+│ │Takao    │Tok│ │ │🎯 Beginner  │ │ │  • Chars: 2,247     │ │
+│ │Maruyama │Hok│ │ │⏱️ 2-3 hours │ │ │  • Time: 24.5s      │ │
+│ │Fuji     │Shi│ │ │📏 ~5km      │ │ │  • Tags: 6          │ │
+│ │Zao      │Yam│ │ │             │ │ │                     │ │
+│ │Ibuki    │Shi│ │ │✨ Features:  │ │ │📋 Summary:          │ │
+│ │...      │...│ │ │  • Cable car│ │ │Mount Takao offers  │ │
+│ └─────────────┘ │ │  • Temple   │ │ │the perfect intro... │ │
+│                 │ └─────────────┘ │ │                     │ │
+│                 │                 │ │📝 Content:          │ │
+│                 │ Article Settings│ │Mount Takao stands  │ │
+│                 │ ┌─────────────┐ │ │as Tokyo's most...   │ │
+│                 │ │Theme: [Beg▼]│ │ │                     │ │
+│                 │ │Length: 2000 │ │ └─────────────────────┘ │
+│                 │ │☐ Publish WP│ │                         │
+│                 │ └─────────────┘ │ [📋Copy][💾Save][🌐WP] │
+│                 │                 │                         │
+│                 │ [🚀 Generate]   │                         │
+│                 │ [👁️ Preview]    │                         │
+│                 │ ▓▓▓▓▓░░░░ 45%  │                         │
+│                 │ Status: Ready   │                         │
+└─────────────────┴─────────────────┴─────────────────────────┘
+│ Status: Ready - Mountain data loaded: 20 mountains           │
+└─────────────────────────────────────────────────────────────┘
+
+🎯 KEY FEATURES:
+✅ 3-Column Layout for intuitive workflow
+✅ Mountain Selection with filtering (Region & Difficulty)
+✅ Real-time mountain information display
+✅ Article generation settings (Theme, Length, Auto-publish)
+✅ Live generation progress indication
+✅ Comprehensive result display with statistics
+✅ One-click operations (Copy, Save, WordPress publish)
+✅ Responsive design adapting to window size
+
+🌟 JAPANESE SUPPORT STATUS:
+✅ UTF-8 encoding properly configured
+✅ Unicode normalization (NFC) implemented
+✅ Automatic Japanese/English display switching
+✅ Text processing with charset-normalizer
+✅ Environment variables optimized for Japanese text
+
+💡 USER EXPERIENCE:
+• Select mountain → Configure settings → Generate → Review → Publish
+• 3-click article generation workflow
+• Visual feedback with progress bars and status updates
+• Professional color scheme (Blues and greens for mountain theme)
+• Clear typography and intuitive button placement

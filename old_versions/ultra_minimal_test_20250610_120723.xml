@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:wp="http://wordpress.org/export/1.2/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<channel>
+    <title>超シンプルテスト</title>
+    <pubDate>Sun, 11 May 2025 12:00:00 +0000</pubDate>
+    <wp:wxr_version>1.2</wp:wxr_version>
+    
+    <wp:author>
+        <wp:author_id>1</wp:author_id>
+        <wp:author_login><![CDATA[aime]]></wp:author_login>
+        <wp:author_email><![CDATA[aime@example.com]]></wp:author_email>
+        <wp:author_display_name><![CDATA[aime]]></wp:author_display_name>
+    </wp:author>
+    
+    <item>
+        <title>過去時刻テスト投稿</title>
+        <pubDate>Sun, 11 May 2025 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[aime]]></dc:creator>
+        <content:encoded><![CDATA[<h2>過去時刻テスト</h2><p>この記事は2025年05月11日の投稿として作成されました。予約投稿要素は一切含まれていません。</p>]]></content:encoded>
+        <wp:post_id>8000</wp:post_id>
+        <wp:post_date><![CDATA[2025-05-11 12:00:00]]></wp:post_date>
+        <wp:post_date_gmt><![CDATA[2025-05-11 12:00:00]]></wp:post_date_gmt>
+        <wp:status><![CDATA[publish]]></wp:status>
+        <wp:post_type><![CDATA[post]]></wp:post_type>
+    </item>
+</channel>
+</rss>
