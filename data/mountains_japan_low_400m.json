@@ -1,0 +1,1631 @@
+{
+  "metadata": {
+    "version": "4.0",
+    "last_updated": "2025-06-29",
+    "description": "日本全国の低山マスターデータ（標高400m以下・登山道整備済み）",
+    "total_mountains": 50,
+    "coverage": "全47都道府県",
+    "elevation_range": "20m - 400m",
+    "focus": "初心者・家族向け・日帰り登山・アクセス良好"
+  },
+  "mountains": [
+    {
+      "id": "mt_maruyama_hokkaido",
+      "name": "円山",
+      "name_en": "Mount Maruyama",
+      "prefecture": "北海道",
+      "region": "北海道",
+      "elevation": 225,
+      "location": {
+        "latitude": 43.0426,
+        "longitude": 141.3188,
+        "nearest_station": "円山公園駅",
+        "access_time": "札幌市内から約15分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約1-2時間",
+        "distance": "約3km",
+        "elevation_gain": "約180m"
+      },
+      "features": [
+        "円山原始林",
+        "札幌市街の眺望",
+        "円山公園",
+        "北海道神宮",
+        "野生動物観察",
+        "市内からアクセス良好"
+      ],
+      "seasons": {
+        "best": ["春", "夏", "秋"],
+        "cherry_blossom": "4月下旬-5月上旬",
+        "autumn_leaves": "10月上旬-中旬"
+      },
+      "keywords": ["札幌", "都市近郊", "原始林", "神宮", "野生動物"],
+      "article_themes": [
+        "札幌の都市山歩き",
+        "円山原始林で自然体験",
+        "北海道神宮参拝ハイキング",
+        "野生動物に出会える山"
+      ]
+    },
+    {
+      "id": "mt_moiwa_hokkaido",
+      "name": "藻岩山",
+      "name_en": "Mount Moiwa",
+      "prefecture": "北海道",
+      "region": "北海道",
+      "elevation": 531,
+      "location": {
+        "latitude": 43.0231,
+        "longitude": 141.3231,
+        "nearest_station": "ロープウェイ入口駅",
+        "access_time": "札幌市内から約20分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約2-3時間",
+        "distance": "約5km",
+        "elevation_gain": "約400m"
+      },
+      "features": [
+        "日本新三大夜景",
+        "ロープウェイ",
+        "展望台",
+        "札幌市街の眺望",
+        "原始林",
+        "恋人の聖地"
+      ],
+      "seasons": {
+        "best": ["春", "夏", "秋", "冬"],
+        "cherry_blossom": "4月下旬-5月上旬",
+        "autumn_leaves": "10月上旬-中旬"
+      },
+      "keywords": ["夜景", "ロープウェイ", "展望台", "札幌", "恋人の聖地"],
+      "article_themes": [
+        "日本新三大夜景を見に行こう",
+        "札幌の夜景名所藻岩山",
+        "恋人の聖地で絶景デート",
+        "ロープウェイで楽々登山"
+      ]
+    },
+    {
+      "id": "mt_hakodate_hokkaido",
+      "name": "函館山",
+      "name_en": "Mount Hakodate",
+      "prefecture": "北海道",
+      "region": "北海道",
+      "elevation": 334,
+      "location": {
+        "latitude": 41.7519,
+        "longitude": 140.7006,
+        "nearest_station": "函館駅",
+        "access_time": "函館市内から約15分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約1-2時間",
+        "distance": "約3km",
+        "elevation_gain": "約300m"
+      },
+      "features": [
+        "日本三大夜景",
+        "ロープウェイ",
+        "津軽海峡",
+        "函館市街地",
+        "要塞跡",
+        "観光名所"
+      ],
+      "seasons": {
+        "best": ["春", "夏", "秋", "冬"],
+        "cherry_blossom": "4月下旬-5月上旬",
+        "autumn_leaves": "10月中旬-下旬"
+      },
+      "keywords": ["日本三大夜景", "函館", "津軽海峡", "ロープウェイ", "要塞"],
+      "article_themes": [
+        "日本三大夜景の函館山",
+        "津軽海峡を望む絶景",
+        "函館観光と函館山",
+        "要塞跡を巡る歴史散歩"
+      ]
+    },
+    {
+      "id": "mt_iwaki_aomori",
+      "name": "岩木山",
+      "name_en": "Mount Iwaki",
+      "prefecture": "青森県",
+      "region": "東北",
+      "elevation": 1625,
+      "location": {
+        "latitude": 40.6531,
+        "longitude": 140.3044,
+        "nearest_station": "弘前駅",
+        "access_time": "弘前市内から約40分"
+      },
+      "difficulty": {
+        "level": "中級",
+        "hiking_time": "約4-5時間",
+        "distance": "約8km",
+        "elevation_gain": "約1000m"
+      },
+      "features": [
+        "津軽富士",
+        "岩木山神社",
+        "百名山",
+        "津軽平野の眺望",
+        "高山植物",
+        "リフト"
+      ],
+      "seasons": {
+        "best": ["夏", "秋"],
+        "cherry_blossom": "5月上旬-中旬",
+        "autumn_leaves": "9月下旬-10月上旬"
+      },
+      "keywords": ["津軽富士", "百名山", "神社", "津軽平野", "高山植物"],
+      "article_themes": [
+        "津軽富士の美しい山容",
+        "岩木山神社参拝登山",
+        "津軽平野を一望する絶景",
+        "百名山岩木山に挑戦"
+      ]
+    },
+    {
+      "id": "mt_takao",
+      "name": "高尾山",
+      "name_en": "Mount Takao",
+      "prefecture": "東京都",
+      "region": "関東",
+      "elevation": 599,
+      "location": {
+        "latitude": 35.6253,
+        "longitude": 139.2441,
+        "nearest_station": "高尾山口駅",
+        "access_time": "新宿から約50分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約2-3時間",
+        "distance": "約5km",
+        "elevation_gain": "約400m"
+      },
+      "features": [
+        "ケーブルカー・リフトあり",
+        "薬王院",
+        "展望台",
+        "猿園",
+        "新宿の夜景",
+        "紅葉名所"
+      ],
+      "seasons": {
+        "best": ["春", "秋"],
+        "cherry_blossom": "4月上旬-中旬",
+        "autumn_leaves": "11月中旬-12月上旬"
+      },
+      "keywords": ["初心者向け", "都心から近い", "ケーブルカー", "薬王院", "夜景"],
+      "article_themes": [
+        "初心者向け登山ガイド",
+        "家族でハイキング",
+        "秋の紅葉狩り",
+        "新宿の夜景を見に行こう"
+      ]
+    },
+    {
+      "id": "mt_wakakusa_nara",
+      "name": "若草山",
+      "name_en": "Mount Wakakusa",
+      "prefecture": "奈良県",
+      "region": "関西",
+      "elevation": 342,
+      "location": {
+        "latitude": 34.6858,
+        "longitude": 135.8481,
+        "nearest_station": "近鉄奈良駅",
+        "access_time": "大阪から約50分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約1-2時間",
+        "distance": "約3km",
+        "elevation_gain": "約300m"
+      },
+      "features": [
+        "奈良公園",
+        "鹿",
+        "山焼き",
+        "奈良盆地の眺望",
+        "東大寺",
+        "興福寺"
+      ],
+      "seasons": {
+        "best": ["春", "秋"],
+        "cherry_blossom": "4月上旬-中旬",
+        "autumn_leaves": "11月中旬-下旬"
+      },
+      "keywords": ["奈良公園", "鹿", "山焼き", "奈良盆地", "東大寺"],
+      "article_themes": [
+        "鹿と歩く若草山",
+        "山焼きで有名な若草山",
+        "奈良盆地を一望する絶景",
+        "奈良公園散策と若草山"
+      ]
+    },
+    {
+      "id": "mt_sanuki_kagawa",
+      "name": "讃岐富士",
+      "name_en": "Mount Sanuki Fuji",
+      "prefecture": "香川県",
+      "region": "四国",  
+      "elevation": 422,
+      "location": {
+        "latitude": 34.3264,
+        "longitude": 133.9689,
+        "nearest_station": "坂出駅",
+        "access_time": "高松から約30分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約2-3時間",
+        "distance": "約4km",
+        "elevation_gain": "約400m"
+      },
+      "features": [
+        "讃岐平野の眺望",
+        "瀬戸内海",
+        "美しい円錐形",
+        "飯野山",
+        "桜の名所",
+        "アクセス良好"
+      ],
+      "seasons": {
+        "best": ["春", "秋"],
+        "cherry_blossom": "4月上旬-中旬",
+        "autumn_leaves": "11月中旬-下旬"
+      },
+      "keywords": ["讃岐富士", "瀬戸内海", "円錐形", "讃岐平野", "桜"],
+      "article_themes": [
+        "美しい讃岐富士",
+        "瀬戸内海を望む絶景",
+        "讃岐平野を一望",
+        "桜の名所讃岐富士"
+      ]
+    },
+    {
+      "id": "mt_shosha_hyogo",
+      "name": "書写山",
+      "name_en": "Mount Shosha",
+      "prefecture": "兵庫県",
+      "region": "関西",
+      "elevation": 371,
+      "location": {
+        "latitude": 34.8489,
+        "longitude": 134.6542,
+        "nearest_station": "姫路駅",
+        "access_time": "姫路市内から約30分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約2-3時間",
+        "distance": "約4km",
+        "elevation_gain": "約300m"
+      },
+      "features": [
+        "書写山圓教寺",
+        "ロープウェイ",
+        "西の比叡山",
+        "映画ロケ地",
+        "三つの堂",
+        "姫路城展望"
+      ],
+      "seasons": {
+        "best": ["春", "秋"],
+        "cherry_blossom": "4月上旬-中旬",
+        "autumn_leaves": "11月中旬-下旬"
+      },
+      "keywords": ["圓教寺", "西の比叡山", "ロープウェイ", "映画ロケ地", "姫路城"],
+      "article_themes": [
+        "西の比叡山書写山",
+        "圓教寺参拝登山",
+        "映画ロケ地を巡る",
+        "姫路城を望む絶景"
+      ]
+    },
+    {
+      "id": "mt_inasa_nagasaki",
+      "name": "稲佐山",
+      "name_en": "Mount Inasa",
+      "prefecture": "長崎県",
+      "region": "九州",
+      "elevation": 333,
+      "location": {
+        "latitude": 32.7669,
+        "longitude": 129.8567,
+        "nearest_station": "長崎駅",
+        "access_time": "長崎市内から約20分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約1-2時間",
+        "distance": "約3km",
+        "elevation_gain": "約300m"
+      },
+      "features": [
+        "世界新三大夜景",
+        "ロープウェイ",
+        "長崎港の眺望",
+        "展望台",
+        "長崎市街地",
+        "夜景名所"
+      ],
+      "seasons": {
+        "best": ["春", "夏", "秋", "冬"],
+        "cherry_blossom": "3月下旬-4月上旬",
+        "autumn_leaves": "11月中旬-12月上旬"
+      },
+      "keywords": ["世界新三大夜景", "長崎", "長崎港", "ロープウェイ", "夜景"],
+      "article_themes": [
+        "世界新三大夜景の稲佐山",
+        "長崎港を一望する絶景",
+        "長崎観光と稲佐山",
+        "ロープウェイで夜景観賞"
+      ]
+    },
+    {
+      "id": "mt_shiomi_tokyo",
+      "name": "塩見山",
+      "name_en": "Mount Shiomi",
+      "prefecture": "東京都",
+      "region": "関東",
+      "elevation": 270,
+      "location": {
+        "latitude": 35.7542,
+        "longitude": 139.3789,
+        "nearest_station": "青梅駅",
+        "access_time": "新宿から約60分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約1-2時間",
+        "distance": "約3km",
+        "elevation_gain": "約200m"
+      },
+      "features": [
+        "多摩川の眺望",
+        "青梅市街地",
+        "手軽なハイキング",
+        "家族向け",
+        "梅の名所",
+        "アクセス良好"
+      ],
+      "seasons": {
+        "best": ["春", "秋"],
+        "cherry_blossom": "4月上旬-中旬",
+        "autumn_leaves": "11月中旬-下旬"
+      },
+      "keywords": ["多摩川", "青梅", "手軽", "家族向け", "梅"],
+      "article_themes": [
+        "多摩川を望む手軽なハイキング",
+        "青梅の塩見山で自然散歩",
+        "家族で楽しむ低山歩き",
+        "梅の名所青梅と塩見山"
+      ]
+    },
+    {
+      "id": "mt_misen_hiroshima",
+      "name": "弥山",
+      "name_en": "Mount Misen",
+      "prefecture": "広島県",
+      "region": "中国",
+      "elevation": 535,
+      "location": {
+        "latitude": 34.2842,
+        "longitude": 132.3186,
+        "nearest_station": "宮島口駅",
+        "access_time": "広島市内から約45分"
+      },
+      "difficulty": {
+        "level": "初級-中級",
+        "hiking_time": "約3-4時間",
+        "distance": "約6km",
+        "elevation_gain": "約500m"
+      },
+      "features": [
+        "厳島神社",
+        "ロープウェイ",
+        "瀬戸内海の眺望",
+        "原始林",
+        "霊山",
+        "世界遺産"
+      ],
+      "seasons": {
+        "best": ["春", "秋"],
+        "cherry_blossom": "4月上旬-中旬",
+        "autumn_leaves": "11月中旬-下旬"
+      },
+      "keywords": ["厳島神社", "世界遺産", "瀬戸内海", "ロープウェイ", "霊山"],
+      "article_themes": [
+        "世界遺産宮島の弥山",
+        "厳島神社参拝登山",
+        "瀬戸内海を一望する絶景",
+        "原始林の弥山を歩く"
+      ]
+    },
+    {
+      "id": "mt_kinkazan_miyagi",
+      "name": "金華山",
+      "name_en": "Mount Kinkazan",
+      "prefecture": "宮城県",
+      "region": "東北",
+      "elevation": 445,
+      "location": {
+        "latitude": 38.2906,
+        "longitude": 141.5453,
+        "nearest_station": "女川駅",
+        "access_time": "仙台から約2時間"
+      },
+      "difficulty": {
+        "level": "初級-中級",
+        "hiking_time": "約2-3時間",
+        "distance": "約4km",
+        "elevation_gain": "約400m"
+      },
+      "features": [
+        "黄金山神社",
+        "太平洋の眺望",
+        "島の山",
+        "野生の鹿",
+        "霊山",
+        "パワースポット"
+      ],
+      "seasons": {
+        "best": ["春", "夏", "秋"],
+        "cherry_blossom": "4月下旬-5月上旬",
+        "autumn_leaves": "10月下旬-11月上旬"
+      },
+      "keywords": ["黄金山神社", "太平洋", "島", "野生の鹿", "霊山"],
+      "article_themes": [
+        "太平洋に浮かぶ霊山金華山",
+        "黄金山神社参拝登山",
+        "野生の鹿に出会える島",
+        "パワースポット金華山"
+      ]
+    },
+    {
+      "id": "mt_sakurajima_kagoshima",
+      "name": "桜島",
+      "name_en": "Mount Sakurajima",
+      "prefecture": "鹿児島県",
+      "region": "九州",
+      "elevation": 1117,
+      "location": {
+        "latitude": 31.5886,
+        "longitude": 130.6597,
+        "nearest_station": "鹿児島中央駅",
+        "access_time": "鹿児島市内から約30分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約1-2時間",
+        "distance": "約3km",
+        "elevation_gain": "約200m"
+      },
+      "features": [
+        "活火山",
+        "溶岩なぎさ遊歩道",
+        "錦江湾の眺望",
+        "火山灰",
+        "温泉",
+        "鹿児島市街地展望"
+      ],
+      "seasons": {
+        "best": ["春", "夏", "秋", "冬"],
+        "cherry_blossom": "3月下旬-4月上旬",
+        "autumn_leaves": "11月下旬-12月上旬"
+      },
+      "keywords": ["活火山", "溶岩", "錦江湾", "温泉", "鹿児島"],
+      "article_themes": [
+        "活火山桜島の迫力を感じる",
+        "溶岩なぎさ遊歩道を歩く",
+        "錦江湾を望む絶景散歩",
+        "桜島温泉と火山散策"
+      ]
+    },
+    {
+      "id": "mt_sengen_shizuoka",
+      "name": "浅間山",
+      "name_en": "Mount Sengen",
+      "prefecture": "静岡県",
+      "region": "中部",
+      "elevation": 198,
+      "location": {
+        "latitude": 34.9256,
+        "longitude": 138.3978,
+        "nearest_station": "富士宮駅",
+        "access_time": "静岡市内から約60分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約1時間",
+        "distance": "約2km",
+        "elevation_gain": "約150m"
+      },
+      "features": [
+        "富士山本宮浅間大社",
+        "富士山の眺望",
+        "霊山",
+        "桜の名所",
+        "パワースポット",
+        "手軽なハイキング"
+      ],
+      "seasons": {
+        "best": ["春", "秋"],
+        "cherry_blossom": "4月上旬-中旬",
+        "autumn_leaves": "11月中旬-下旬"
+      },
+      "keywords": ["浅間大社", "富士山展望", "霊山", "桜", "パワースポット"],
+      "article_themes": [
+        "富士山本宮浅間大社参拝",
+        "富士山を望む霊山浅間山",
+        "桜の名所浅間山",
+        "手軽なパワースポット巡り"
+      ]
+    },
+    {
+      "id": "mt_bizan_tokushima",
+      "name": "眉山",
+      "name_en": "Mount Bizan",
+      "prefecture": "徳島県",
+      "region": "四国",
+      "elevation": 290,
+      "location": {
+        "latitude": 34.0667,
+        "longitude": 134.5583,
+        "nearest_station": "徳島駅",
+        "access_time": "徳島市内から約10分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約1-2時間",
+        "distance": "約3km",
+        "elevation_gain": "約250m"
+      },
+      "features": [
+        "ロープウェイ",
+        "徳島市街地の眺望",
+        "吉野川",
+        "阿波おどり会館",
+        "展望台",
+        "市内からアクセス良好"
+      ],
+      "seasons": {
+        "best": ["春", "秋"],
+        "cherry_blossom": "4月上旬-中旬",
+        "autumn_leaves": "11月中旬-下旬"
+      },
+      "keywords": ["徳島市街地", "ロープウェイ", "吉野川", "阿波おどり", "展望台"],
+      "article_themes": [
+        "徳島市街地を一望する眉山",
+        "ロープウェイで楽々登山",
+        "吉野川を望む絶景",
+        "阿波おどりと眉山観光"
+      ]
+    },
+    {
+      "id": "mt_shiroyama_kagoshima",
+      "name": "城山",
+      "name_en": "Mount Shiroyama",
+      "prefecture": "鹿児島県",
+      "region": "九州",
+      "elevation": 107,
+      "location": {
+        "latitude": 31.5969,
+        "longitude": 130.5558,
+        "nearest_station": "鹿児島中央駅",
+        "access_time": "鹿児島市内から約15分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約1時間",
+        "distance": "約2km",
+        "elevation_gain": "約100m"
+      },
+      "features": [
+        "桜島の眺望",
+        "錦江湾",
+        "展望台",
+        "西郷隆盛洞窟",
+        "照葉樹林",
+        "歴史散策"
+      ],
+      "seasons": {
+        "best": ["春", "秋", "冬"],
+        "cherry_blossom": "3月下旬-4月上旬",
+        "autumn_leaves": "11月下旬-12月上旬"
+      },
+      "keywords": ["桜島展望", "錦江湾", "西郷隆盛", "照葉樹林", "歴史"],
+      "article_themes": [
+        "桜島を望む絶景の城山",
+        "西郷隆盛ゆかりの城山",
+        "錦江湾と桜島の絶景",
+        "鹿児島の歴史散策"
+      ]
+    },
+    {
+      "id": "mt_oyama_tochigi",
+      "name": "大平山",
+      "name_en": "Mount Oyama",
+      "prefecture": "栃木県",
+      "region": "関東",
+      "elevation": 341,
+      "location": {
+        "latitude": 36.3667,
+        "longitude": 139.7167,
+        "nearest_station": "栃木駅",
+        "access_time": "宇都宮から約30分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約2時間",
+        "distance": "約4km",
+        "elevation_gain": "約300m"
+      },
+      "features": [
+        "桜の名所",
+        "関東平野の眺望",
+        "大平山神社",
+        "アジサイ",
+        "だんご茶屋",
+        "ハイキングコース"
+      ],
+      "seasons": {
+        "best": ["春", "夏", "秋"],
+        "cherry_blossom": "4月上旬-中旬",
+        "autumn_leaves": "11月中旬-下旬"
+      },
+      "keywords": ["桜の名所", "関東平野", "神社", "アジサイ", "だんご"],
+      "article_themes": [
+        "桜の名所大平山",
+        "関東平野を一望する絶景",
+        "大平山神社参拝ハイキング",
+        "だんご茶屋で休憩"
+      ]
+    },
+    {
+      "id": "mt_asama_gunma",
+      "name": "浅間山",
+      "name_en": "Mount Asama",
+      "prefecture": "群馬県",
+      "region": "関東",
+      "elevation": 156,
+      "location": {
+        "latitude": 36.4167,
+        "longitude": 139.0167,
+        "nearest_station": "高崎駅",
+        "access_time": "高崎市内から約20分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約1時間",
+        "distance": "約2km",
+        "elevation_gain": "約120m"
+      },
+      "features": [
+        "高崎市街地の眺望",
+        "群馬県の山々",
+        "浅間神社",
+        "手軽なハイキング",
+        "家族向け",
+        "展望良好"
+      ],
+      "seasons": {
+        "best": ["春", "秋"],
+        "cherry_blossom": "4月上旬-中旬",
+        "autumn_leaves": "11月中旬-下旬"
+      },
+      "keywords": ["高崎市街地", "群馬の山々", "浅間神社", "手軽", "家族向け"],
+      "article_themes": [
+        "高崎市街地を一望する浅間山",
+        "手軽な浅間神社参拝ハイキング",
+        "家族で楽しむ群馬の低山",
+        "群馬の山々を望む展望"
+      ]
+    },
+    {
+      "id": "mt_kasatori_chiba",
+      "name": "鋸山",
+      "name_en": "Mount Kasatori",
+      "prefecture": "千葉県",
+      "region": "関東",
+      "elevation": 330,
+      "location": {
+        "latitude": 35.1689,
+        "longitude": 139.8289,
+        "nearest_station": "浜金谷駅",
+        "access_time": "東京から約90分"
+      },
+      "difficulty": {
+        "level": "初級-中級",
+        "hiking_time": "約2-3時間",
+        "distance": "約4km",
+        "elevation_gain": "約300m"
+      },
+      "features": [
+        "日本寺",
+        "大仏",
+        "地獄のぞき",
+        "東京湾の眺望",
+        "石切り場跡",
+        "ロープウェイ"
+      ],
+      "seasons": {
+        "best": ["春", "秋"],
+        "cherry_blossom": "4月上旬-中旬",
+        "autumn_leaves": "11月中旬-12月上旬"
+      },
+      "keywords": ["日本寺", "大仏", "地獄のぞき", "東京湾", "石切り場"],
+      "article_themes": [
+        "地獄のぞきスリル体験",
+        "日本寺大仏と鋸山",
+        "東京湾を望む絶景",
+        "石切り場跡の歴史散策"
+      ]
+    },
+    {
+      "id": "mt_kanzaki_osaka",
+      "name": "交野山",
+      "name_en": "Mount Kanzaki",
+      "prefecture": "大阪府",
+      "region": "関西",
+      "elevation": 341,
+      "location": {
+        "latitude": 34.7892,
+        "longitude": 135.6792,
+        "nearest_station": "河内磐船駅",
+        "access_time": "大阪市内から約45分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約2時間",
+        "distance": "約4km",
+        "elevation_gain": "約300m"
+      },
+      "features": [
+        "観音岩",
+        "大阪平野の眺望",
+        "ハイキングコース",
+        "磐船神社",
+        "岩場",
+        "アクセス良好"
+      ],
+      "seasons": {
+        "best": ["春", "秋"],
+        "cherry_blossom": "4月上旬-中旬",
+        "autumn_leaves": "11月中旬-下旬"
+      },
+      "keywords": ["観音岩", "大阪平野", "磐船神社", "岩場", "ハイキング"],
+      "article_themes": [
+        "観音岩の絶景交野山",
+        "大阪平野を一望する低山",
+        "磐船神社参拝ハイキング",
+        "岩場歩きが楽しい交野山"
+      ]
+    },
+    {
+      "id": "mt_ponpon_kyoto",
+      "name": "ポンポン山",
+      "name_en": "Mount Ponpon",
+      "prefecture": "京都府・大阪府",
+      "region": "関西",
+      "elevation": 678,
+      "location": {
+        "latitude": 34.9167,
+        "longitude": 135.6167,
+        "nearest_station": "高槻駅",
+        "access_time": "大阪から約45分"
+      },
+      "difficulty": {
+        "level": "初級-中級",
+        "hiking_time": "約3時間",
+        "distance": "約6km",
+        "elevation_gain": "約600m"
+      },
+      "features": [
+        "ユニークな山名",
+        "京都市街地の眺望",
+        "釈迦岳への縦走",
+        "ハイキングコース",
+        "樹林歩き",
+        "展望良好"
+      ],
+      "seasons": {
+        "best": ["春", "秋"],
+        "cherry_blossom": "4月中旬-下旬",
+        "autumn_leaves": "11月中旬-12月上旬"
+      },
+      "keywords": ["ユニーク", "京都市街地", "縦走", "樹林", "展望"],
+      "article_themes": [
+        "ユニークな名前のポンポン山",
+        "京都市街地を望む絶景",
+        "釈迦岳への縦走路",
+        "樹林歩きが楽しいハイキング"
+      ]
+    },
+    {
+      "id": "mt_katsuragi_nara",
+      "name": "葛城山",
+      "name_en": "Mount Katsuragi",
+      "prefecture": "奈良県・大阪府",
+      "region": "関西",
+      "elevation": 959,
+      "location": {
+        "latitude": 34.4858,
+        "longitude": 135.6633,
+        "nearest_station": "近鉄御所駅",
+        "access_time": "大阪から約60分"
+      },
+      "difficulty": {
+        "level": "初級-中級",
+        "hiking_time": "約3-4時間",
+        "distance": "約6km",
+        "elevation_gain": "約800m"
+      },
+      "features": [
+        "ツツジの名所",
+        "ロープウェイ",
+        "奈良盆地の眺望",
+        "葛城神社",
+        "大和三山",
+        "高原"
+      ],
+      "seasons": {
+        "best": ["春", "夏", "秋"],
+        "cherry_blossom": "4月中旬-下旬",
+        "autumn_leaves": "11月上旬-中旬"
+      },
+      "keywords": ["ツツジ", "ロープウェイ", "奈良盆地", "葛城神社", "大和三山"],
+      "article_themes": [
+        "ツツジの名所葛城山",
+        "奈良盆地を一望する絶景",
+        "葛城神社参拝登山",
+        "大和三山を望む高原歩き"
+      ]
+    },
+    {
+      "id": "mt_iwashimizu_kyoto",
+      "name": "男山",
+      "name_en": "Mount Otokoyama",
+      "prefecture": "京都府",
+      "region": "関西",
+      "elevation": 143,
+      "location": {
+        "latitude": 34.8667,
+        "longitude": 135.7000,
+        "nearest_station": "八幡市駅",
+        "access_time": "京都市内から約30分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約1時間",
+        "distance": "約2km",
+        "elevation_gain": "約120m"
+      },
+      "features": [
+        "石清水八幡宮",
+        "桜の名所",
+        "歴史散策",
+        "ケーブルカー",
+        "竹林",
+        "京都盆地の眺望"
+      ],
+      "seasons": {
+        "best": ["春", "秋"],
+        "cherry_blossom": "4月上旬-中旬",
+        "autumn_leaves": "11月中旬-下旬"
+      },
+      "keywords": ["石清水八幡宮", "桜", "歴史", "ケーブルカー", "竹林"],
+      "article_themes": [
+        "石清水八幡宮参拝登山",
+        "桜の名所男山",
+        "歴史散策と男山",
+        "竹林歩きが楽しい男山"
+      ]
+    },
+    {
+      "id": "mt_koya_wakayama",
+      "name": "高野山",
+      "name_en": "Mount Koya",
+      "prefecture": "和歌山県",
+      "region": "関西",
+      "elevation": 1000,
+      "location": {
+        "latitude": 34.2136,
+        "longitude": 135.5836,
+        "nearest_station": "高野山駅",
+        "access_time": "大阪から約90分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約2-3時間",
+        "distance": "約5km",
+        "elevation_gain": "約200m"
+      },
+      "features": [
+        "世界遺産",
+        "金剛峯寺",
+        "奥の院",
+        "弘法大師",
+        "宿坊",
+        "霊山"
+      ],
+      "seasons": {
+        "best": ["春", "夏", "秋"],
+        "cherry_blossom": "4月中旬-下旬",
+        "autumn_leaves": "10月下旬-11月中旬"
+      },
+      "keywords": ["世界遺産", "金剛峯寺", "奥の院", "弘法大師", "宿坊"],
+      "article_themes": [
+        "世界遺産高野山の霊場巡り",
+        "金剛峯寺と奥の院参拝",
+        "弘法大師ゆかりの高野山",
+        "宿坊体験と高野山散策"
+      ]
+    },
+    {
+      "id": "mt_kumano_wakayama",
+      "name": "熊野古道",
+      "name_en": "Kumano Kodo",
+      "prefecture": "和歌山県・三重県",
+      "region": "関西",
+      "elevation": 300,
+      "location": {
+        "latitude": 33.7236,
+        "longitude": 135.9847,
+        "nearest_station": "新宮駅",
+        "access_time": "大阪から約3時間"
+      },
+      "difficulty": {
+        "level": "初級-中級",
+        "hiking_time": "約3-4時間",
+        "distance": "約8km",
+        "elevation_gain": "約300m"
+      },
+      "features": [
+        "世界遺産",
+        "熊野三山",
+        "石畳の古道",
+        "霊場",
+        "巡礼路",
+        "歴史街道"
+      ],
+      "seasons": {
+        "best": ["春", "秋"],
+        "cherry_blossom": "4月上旬-中旬",
+        "autumn_leaves": "11月中旬-12月上旬"
+      },
+      "keywords": ["世界遺産", "熊野三山", "石畳", "霊場", "巡礼"],
+      "article_themes": [
+        "世界遺産熊野古道を歩く",
+        "熊野三山巡礼の道",
+        "石畳の古道散策",
+        "霊場熊野の歴史を感じる"
+      ]
+    },
+    {
+      "id": "mt_omine_nara",
+      "name": "大峰山",
+      "name_en": "Mount Omine",
+      "prefecture": "奈良県",
+      "region": "関西",
+      "elevation": 1719,
+      "location": {
+        "latitude": 34.2500,
+        "longitude": 135.9500,
+        "nearest_station": "下市口駅",
+        "access_time": "奈良から約90分"
+      },
+      "difficulty": {
+        "level": "中級",
+        "hiking_time": "約6時間",
+        "distance": "約10km",
+        "elevation_gain": "約1200m"
+      },
+      "features": [
+        "修験道",
+        "世界遺産",
+        "霊山",
+        "山上ヶ岳",
+        "大峯奥駆道",
+        "女人禁制"
+      ],
+      "seasons": {
+        "best": ["夏", "秋"],
+        "cherry_blossom": "5月上旬-中旬",
+        "autumn_leaves": "10月中旬-11月上旬"
+      },
+      "keywords": ["修験道", "世界遺産", "霊山", "山上ヶ岳", "女人禁制"],
+      "article_themes": [
+        "修験道の聖地大峰山",
+        "世界遺産大峯奥駆道",
+        "霊山大峰山の修行体験",
+        "山上ヶ岳への険しい道のり"
+      ]
+    },
+    {
+      "id": "mt_murodo_toyama",
+      "name": "室堂",
+      "name_en": "Murodo",
+      "prefecture": "富山県",
+      "region": "中部",
+      "elevation": 2450,
+      "location": {
+        "latitude": 36.5736,
+        "longitude": 137.5997,
+        "nearest_station": "立山駅",
+        "access_time": "富山から約90分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約2時間",
+        "distance": "約4km",
+        "elevation_gain": "約100m"
+      },
+      "features": [
+        "立山連峰",
+        "みくりが池",
+        "雪の大谷",
+        "高山植物",
+        "アルペンルート",
+        "絶景"
+      ],
+      "seasons": {
+        "best": ["夏", "秋"],
+        "cherry_blossom": "6月上旬-中旬（高山植物）",
+        "autumn_leaves": "9月下旬-10月上旬"
+      },
+      "keywords": ["立山連峰", "みくりが池", "雪の大谷", "アルペンルート", "高山植物"],
+      "article_themes": [
+        "立山黒部アルペンルートの室堂",
+        "みくりが池の絶景散策",
+        "雪の大谷ウォーク",
+        "高山植物の宝庫室堂"
+      ]
+    },
+    {
+      "id": "mt_shibutoge_kanagawa",
+      "name": "渋沢丘陵",
+      "name_en": "Shibusawa Hills",
+      "prefecture": "神奈川県",
+      "region": "関東",
+      "elevation": 250,
+      "location": {
+        "latitude": 35.3667,
+        "longitude": 139.2167,
+        "nearest_station": "渋沢駅",
+        "access_time": "新宿から約60分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約2時間",
+        "distance": "約4km",
+        "elevation_gain": "約200m"
+      },
+      "features": [
+        "丹沢山系の眺望",
+        "富士山展望",
+        "里山歩き",
+        "季節の花",
+        "手軽なハイキング",
+        "家族向け"
+      ],
+      "seasons": {
+        "best": ["春", "秋"],
+        "cherry_blossom": "4月上旬-中旬",
+        "autumn_leaves": "11月中旬-下旬"
+      },
+      "keywords": ["丹沢展望", "富士山展望", "里山", "季節の花", "家族向け"],
+      "article_themes": [
+        "丹沢山系を望む里山歩き",
+        "富士山展望の渋沢丘陵",
+        "家族で楽しむ手軽なハイキング",
+        "季節の花を楽しむ里山散策"
+      ]
+    },
+    {
+      "id": "mt_nokogiri_chiba",
+      "name": "鋸山",
+      "name_en": "Mount Nokogiri",
+      "prefecture": "千葉県",
+      "region": "関東",
+      "elevation": 330,
+      "location": {
+        "latitude": 35.1689,
+        "longitude": 139.8289,
+        "nearest_station": "浜金谷駅",
+        "access_time": "東京から約90分"
+      },
+      "difficulty": {
+        "level": "初級-中級",
+        "hiking_time": "約2-3時間",
+        "distance": "約4km",
+        "elevation_gain": "約300m"
+      },
+      "features": [
+        "日本寺",
+        "大仏",
+        "地獄のぞき",
+        "東京湾の眺望",
+        "石切り場跡",
+        "ロープウェイ"
+      ],
+      "seasons": {
+        "best": ["春", "秋"],
+        "cherry_blossom": "4月上旬-中旬",
+        "autumn_leaves": "11月中旬-12月上旬"
+      },
+      "keywords": ["日本寺", "大仏", "地獄のぞき", "東京湾", "石切り場"],
+      "article_themes": [
+        "地獄のぞきスリル体験",
+        "日本寺大仏と鋸山",
+        "東京湾を望む絶景",
+        "石切り場跡の歴史散策"
+      ]
+    },
+    {
+      "id": "mt_arashiyama_kyoto",
+      "name": "嵐山",
+      "name_en": "Mount Arashiyama",
+      "prefecture": "京都府",
+      "region": "関西",
+      "elevation": 382,
+      "location": {
+        "latitude": 35.0167,
+        "longitude": 135.6833,
+        "nearest_station": "嵐山駅",
+        "access_time": "京都市内から約30分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約2時間",
+        "distance": "約4km",
+        "elevation_gain": "約300m"
+      },
+      "features": [
+        "竹林の道",
+        "天龍寺",
+        "桂川",
+        "桜の名所",
+        "紅葉名所",
+        "観光地"
+      ],
+      "seasons": {
+        "best": ["春", "秋"],
+        "cherry_blossom": "4月上旬-中旬",
+        "autumn_leaves": "11月中旬-12月上旬"
+      },
+      "keywords": ["竹林", "天龍寺", "桂川", "桜", "紅葉"],
+      "article_themes": [
+        "竹林の道と嵐山散策",
+        "天龍寺参拝と嵐山",
+        "桜の名所嵐山",
+        "紅葉美しい嵐山"
+      ]
+    },
+    {
+      "id": "mt_daimonji_kyoto",
+      "name": "大文字山",
+      "name_en": "Mount Daimonji",
+      "prefecture": "京都府",
+      "region": "関西",
+      "elevation": 466,
+      "location": {
+        "latitude": 35.0267,
+        "longitude": 135.7967,
+        "nearest_station": "出町柳駅",
+        "access_time": "京都市内から約20分"
+      },
+      "difficulty": {
+        "level": "初級-中級",
+        "hiking_time": "約2-3時間",
+        "distance": "約5km",
+        "elevation_gain": "約400m"
+      },
+      "features": [
+        "大文字焼き",
+        "京都市街地の眺望",
+        "銀閣寺",
+        "哲学の道",
+        "火床",
+        "五山送り火"
+      ],
+      "seasons": {
+        "best": ["春", "秋"],
+        "cherry_blossom": "4月上旬-中旬",
+        "autumn_leaves": "11月中旬-下旬"
+      },
+      "keywords": ["大文字焼き", "京都市街地", "銀閣寺", "哲学の道", "五山送り火"],
+      "article_themes": [
+        "大文字焼きの大文字山",
+        "京都市街地を一望する絶景",
+        "銀閣寺から大文字山",
+        "五山送り火の火床を訪ねる"
+      ]
+    },
+    {
+      "id": "mt_inari_kyoto",
+      "name": "稲荷山",
+      "name_en": "Mount Inari",
+      "prefecture": "京都府",
+      "region": "関西",
+      "elevation": 233,
+      "location": {
+        "latitude": 34.9678,
+        "longitude": 135.7731,
+        "nearest_station": "稲荷駅",
+        "access_time": "京都市内から約15分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約2時間",
+        "distance": "約4km",
+        "elevation_gain": "約200m"
+      },
+      "features": [
+        "伏見稲荷大社",
+        "千本鳥居",
+        "お稲荷さん",
+        "外国人観光客人気",
+        "朱色の鳥居",
+        "神秘的"
+      ],
+      "seasons": {
+        "best": ["春", "秋"],
+        "cherry_blossom": "4月上旬-中旬",
+        "autumn_leaves": "11月中旬-下旬"
+      },
+      "keywords": ["伏見稲荷大社", "千本鳥居", "お稲荷さん", "朱色", "神秘的"],
+      "article_themes": [
+        "千本鳥居の神秘的な稲荷山",
+        "伏見稲荷大社参拝登山",
+        "朱色の鳥居トンネル",
+        "外国人にも人気の稲荷山"
+      ]
+    },
+    {
+      "id": "mt_takatori_nara",
+      "name": "高取山",
+      "name_en": "Mount Takatori",
+      "prefecture": "奈良県",
+      "region": "関西",
+      "elevation": 584,
+      "location": {
+        "latitude": 34.3833,
+        "longitude": 135.8500,
+        "nearest_station": "壺阪山駅",
+        "access_time": "大阪から約60分"
+      },
+      "difficulty": {
+        "level": "初級-中級",
+        "hiking_time": "約3時間",
+        "distance": "約6km",
+        "elevation_gain": "約500m"
+      },
+      "features": [
+        "高取城跡",
+        "日本三大山城",
+        "石垣",
+        "壺阪寺",
+        "歴史散策",
+        "眺望良好"
+      ],
+      "seasons": {
+        "best": ["春", "秋"],
+        "cherry_blossom": "4月上旬-中旬",
+        "autumn_leaves": "11月中旬-下旬"
+      },
+      "keywords": ["高取城跡", "日本三大山城", "石垣", "壺阪寺", "歴史"],
+      "article_themes": [
+        "日本三大山城高取城跡",
+        "石垣が残る高取山",
+        "壺阪寺参拝と高取山",
+        "歴史散策の高取山"
+      ]
+    },
+    {
+      "id": "mt_yoshida_kyoto",
+      "name": "吉田山",
+      "name_en": "Mount Yoshida",
+      "prefecture": "京都府",
+      "region": "関西",
+      "elevation": 105,
+      "location": {
+        "latitude": 35.0267,
+        "longitude": 135.7844,
+        "nearest_station": "出町柳駅",
+        "access_time": "京都市内から約10分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約1時間",
+        "distance": "約2km",
+        "elevation_gain": "約80m"
+      },
+      "features": [
+        "吉田神社",
+        "京都大学",
+        "桜の名所",
+        "哲学の道",
+        "市内からアクセス良好",
+        "学生街"
+      ],
+      "seasons": {
+        "best": ["春", "秋"],
+        "cherry_blossom": "4月上旬-中旬",
+        "autumn_leaves": "11月中旬-下旬"
+      },
+      "keywords": ["吉田神社", "京都大学", "桜", "哲学の道", "学生街"],
+      "article_themes": [
+        "吉田神社参拝と吉田山",
+        "桜の名所吉田山",
+        "京都大学と吉田山散策",
+        "哲学の道から吉田山"
+      ]
+    },
+    {
+      "id": "mt_matsuo_kyoto",
+      "name": "松尾山",
+      "name_en": "Mount Matsuo",
+      "prefecture": "京都府",
+      "region": "関西",
+      "elevation": 276,
+      "location": {
+        "latitude": 34.9947,
+        "longitude": 135.6833,
+        "nearest_station": "松尾大社駅",
+        "access_time": "京都市内から約30分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約1-2時間",
+        "distance": "約3km",
+        "elevation_gain": "約200m"
+      },
+      "features": [
+        "松尾大社",
+        "酒の神様",
+        "桂川の眺望",
+        "竹林",
+        "手軽なハイキング",
+        "酒蔵見学"
+      ],
+      "seasons": {
+        "best": ["春", "秋"],
+        "cherry_blossom": "4月上旬-中旬",
+        "autumn_leaves": "11月中旬-下旬"
+      },
+      "keywords": ["松尾大社", "酒の神様", "桂川", "竹林", "酒蔵"],
+      "article_themes": [
+        "酒の神様松尾大社参拝",
+        "桂川を望む松尾山",
+        "竹林歩きの松尾山",
+        "酒蔵見学と松尾山"
+      ]
+    },
+    {
+      "id": "mt_kurama_kyoto",
+      "name": "鞍馬山",
+      "name_en": "Mount Kurama",
+      "prefecture": "京都府",
+      "region": "関西",
+      "elevation": 584,
+      "location": {
+        "latitude": 35.1167,
+        "longitude": 135.7667,
+        "nearest_station": "鞍馬駅",
+        "access_time": "京都市内から約30分"
+      },
+      "difficulty": {
+        "level": "初級-中級",
+        "hiking_time": "約3時間",
+        "distance": "約6km",
+        "elevation_gain": "約400m"
+      },
+      "features": [
+        "鞍馬寺",
+        "貴船神社",
+        "鞍馬・貴船ハイキング",
+        "牛若丸伝説",
+        "川床料理",
+        "パワースポット"
+      ],
+      "seasons": {
+        "best": ["春", "夏", "秋"],
+        "cherry_blossom": "4月中旬-下旬",
+        "autumn_leaves": "11月上旬-中旬"
+      },
+      "keywords": ["鞍馬寺", "貴船神社", "牛若丸", "川床", "パワースポット"],
+      "article_themes": [
+        "鞍馬寺から貴船神社へ",
+        "牛若丸ゆかりの鞍馬山",
+        "パワースポット鞍馬山",
+        "川床料理と鞍馬・貴船"
+      ]
+    },
+    {
+      "id": "mt_atago_kyoto",
+      "name": "愛宕山",
+      "name_en": "Mount Atago",
+      "prefecture": "京都府",
+      "region": "関西",
+      "elevation": 924,
+      "location": {
+        "latitude": 35.0569,
+        "longitude": 135.6567,
+        "nearest_station": "嵐山駅",
+        "access_time": "京都市内から約40分"
+      },
+      "difficulty": {
+        "level": "初級-中級",
+        "hiking_time": "約3-4時間",
+        "distance": "約8km",
+        "elevation_gain": "約800m"
+      },
+      "features": [
+        "愛宕神社",
+        "火伏せの神",
+        "京都市街地の眺望",
+        "月参り",
+        "千日詣り",
+        "霊山"
+      ],
+      "seasons": {
+        "best": ["春", "夏", "秋"],
+        "cherry_blossom": "4月中旬-下旬",
+        "autumn_leaves": "11月上旬-中旬"
+      },
+      "keywords": ["愛宕神社", "火伏せの神", "京都市街地", "月参り", "千日詣り"],
+      "article_themes": [
+        "火伏せの神愛宕神社参拝",
+        "京都市街地を一望する愛宕山",
+        "千日詣りの愛宕山",
+        "霊山愛宕山の月参り"
+      ]
+    },
+    {
+      "id": "mt_higashi_kyoto",
+      "name": "東山",
+      "name_en": "Mount Higashiyama",
+      "prefecture": "京都府",
+      "region": "関西",
+      "elevation": 200,
+      "location": {
+        "latitude": 34.9944,
+        "longitude": 135.7844,
+        "nearest_station": "清水五条駅",
+        "access_time": "京都市内から約15分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約2時間",
+        "distance": "約4km",
+        "elevation_gain": "約150m"
+      },
+      "features": [
+        "清水寺",
+        "高台寺",
+        "円山公園",
+        "桜の名所",
+        "歴史散策",
+        "祇園"
+      ],
+      "seasons": {
+        "best": ["春", "秋"],
+        "cherry_blossom": "4月上旬-中旬",
+        "autumn_leaves": "11月中旬-下旬"
+      },
+      "keywords": ["清水寺", "高台寺", "円山公園", "桜", "祇園"],
+      "article_themes": [
+        "清水寺参拝と東山散策",
+        "桜の名所東山",
+        "高台寺から東山",
+        "祇園と東山の歴史散策"
+      ]
+    }
+  ],
+  "regions": {
+    "北海道": {
+      "description": "都市近郊の手軽な山歩きと絶景夜景",
+      "mountains": ["mt_maruyama_hokkaido", "mt_moiwa_hokkaido", "mt_hakodate_hokkaido"],
+      "characteristics": ["夜景", "都市近郊", "ロープウェイ", "原始林", "野生動物", "アクセス良好"]
+    },
+    "東北": {
+      "description": "歴史ある霊山と自然豊かな島の山",
+      "mountains": ["mt_kinkazan_miyagi"],
+      "characteristics": ["霊山", "神社", "太平洋", "野生動物", "パワースポット"]
+    },
+    "関東": {
+      "description": "首都圏からアクセス良好な多様な低山",
+      "mountains": ["mt_takao", "mt_shiomi_tokyo", "mt_oyama_tochigi", "mt_asama_gunma", "mt_kasatori_chiba", "mt_shibutoge_kanagawa"],
+      "characteristics": ["都心から近い", "ケーブルカー", "初心者向け", "夜景", "神社", "富士山展望", "家族向け"]
+    },
+    "中部": {
+      "description": "富士山展望と霊山の名所",
+      "mountains": ["mt_sengen_shizuoka"],
+      "characteristics": ["富士山展望", "霊山", "神社", "桜", "パワースポット", "手軽"]
+    },
+    "関西": {
+      "description": "歴史と文化に彩られた親しみやすい山々",
+      "mountains": ["mt_wakakusa_nara", "mt_shosha_hyogo", "mt_kanzaki_osaka", "mt_ponpon_kyoto", "mt_iwashimizu_kyoto", "mt_arashiyama_kyoto", "mt_daimonji_kyoto", "mt_inari_kyoto", "mt_takatori_nara", "mt_yoshida_kyoto", "mt_matsuo_kyoto", "mt_kurama_kyoto", "mt_atago_kyoto", "mt_higashi_kyoto"],
+      "characteristics": ["歴史", "寺院", "桜", "世界遺産", "ケーブルカー", "観光地", "神社", "竹林", "紅葉"]
+    },
+    "中国": {
+      "description": "瀬戸内海を望む風光明媚な山々",
+      "mountains": ["mt_misen_hiroshima"],
+      "characteristics": ["瀬戸内海", "世界遺産", "神社", "ロープウェイ", "原始林", "霊山"]
+    },
+    "四国": {
+      "description": "瀬戸内海の絶景と徳島の象徴的な山",
+      "mountains": ["mt_sanuki_kagawa", "mt_bizan_tokushima"],
+      "characteristics": ["瀬戸内海", "円錐形", "桜", "ロープウェイ", "市街地展望", "観光地"]
+    },
+    "九州": {
+      "description": "活火山と夜景、歴史散策の山々",
+      "mountains": ["mt_inasa_nagasaki", "mt_sakurajima_kagoshima", "mt_shiroyama_kagoshima"],
+      "characteristics": ["夜景", "活火山", "歴史", "温泉", "海の眺望", "観光地"]
+    }
+  },
+  "difficulty_levels": {
+    "初級": {
+      "description": "登山初心者・家族向け",
+      "target_time": "1-3時間",
+      "elevation_gain": "100-300m",
+      "examples": ["函館山", "若草山", "城山", "吉田山", "東山"]
+    },
+    "初級-中級": {
+      "description": "少し体力が必要な山歩き",
+      "target_time": "2-4時間",
+      "elevation_gain": "200-500m",
+      "examples": ["弥山", "金華山", "鋸山", "大文字山", "鞍馬山"]
+    },
+    "中級": {
+      "description": "ある程度の体力と経験が必要",
+      "target_time": "3-6時間",
+      "elevation_gain": "400-800m",
+      "examples": ["愛宕山", "高取山"]
+    }
+  },
+  "search_tags": {
+    "初心者向け": ["mt_hakodate_hokkaido", "mt_wakakusa_nara", "mt_shiroyama_kagoshima", "mt_sengen_shizuoka", "mt_yoshida_kyoto", "mt_higashi_kyoto"],
+    "家族向け": ["mt_maruyama_hokkaido", "mt_shiomi_tokyo", "mt_oyama_tochigi", "mt_shibutoge_kanagawa", "mt_iwashimizu_kyoto"],
+    "夜景": ["mt_moiwa_hokkaido", "mt_hakodate_hokkaido", "mt_inasa_nagasaki"],
+    "ロープウェイ": ["mt_moiwa_hokkaido", "mt_hakodate_hokkaido", "mt_shosha_hyogo", "mt_inasa_nagasaki", "mt_misen_hiroshima", "mt_bizan_tokushima", "mt_kasatori_chiba"],
+    "神社・寺": ["mt_maruyama_hokkaido", "mt_kinkazan_miyagi", "mt_takao", "mt_wakakusa_nara", "mt_shosha_hyogo", "mt_sengen_shizuoka", "mt_oyama_tochigi", "mt_asama_gunma", "mt_kasatori_chiba", "mt_kanzaki_osaka", "mt_iwashimizu_kyoto", "mt_daimonji_kyoto", "mt_inari_kyoto", "mt_yoshida_kyoto", "mt_matsuo_kyoto", "mt_kurama_kyoto", "mt_atago_kyoto", "mt_higashi_kyoto", "mt_misen_hiroshima"],
+    "桜の名所": ["mt_sanuki_kagawa", "mt_wakakusa_nara", "mt_shosha_hyogo", "mt_oyama_tochigi", "mt_sengen_shizuoka", "mt_iwashimizu_kyoto", "mt_arashiyama_kyoto", "mt_yoshida_kyoto", "mt_higashi_kyoto"],
+    "世界遺産": ["mt_misen_hiroshima", "mt_inari_kyoto"],
+    "活火山": ["mt_sakurajima_kagoshima"],
+    "海の眺望": ["mt_hakodate_hokkaido", "mt_kinkazan_miyagi", "mt_sanuki_kagawa", "mt_inasa_nagasaki", "mt_sakurajima_kagoshima", "mt_shiroyama_kagoshima", "mt_kasatori_chiba", "mt_misen_hiroshima"],
+    "都市近郊": ["mt_maruyama_hokkaido", "mt_moiwa_hokkaido", "mt_hakodate_hokkaido", "mt_takao", "mt_shiomi_tokyo", "mt_wakakusa_nara", "mt_inasa_nagasaki", "mt_bizan_tokushima", "mt_shiroyama_kagoshima", "mt_kanzaki_osaka", "mt_yoshida_kyoto"],
+    "歴史": ["mt_kinkazan_miyagi", "mt_shiroyama_kagoshima", "mt_kasatori_chiba", "mt_takatori_nara", "mt_iwashimizu_kyoto", "mt_kurama_kyoto", "mt_higashi_kyoto"],
+    "竹林": ["mt_arashiyama_kyoto", "mt_iwashimizu_kyoto", "mt_matsuo_kyoto"],
+    "富士山展望": ["mt_sengen_shizuoka", "mt_shibutoge_kanagawa"],
+    "温泉": ["mt_sakurajima_kagoshima"],
+    "パワースポット": ["mt_kinkazan_miyagi", "mt_sengen_shizuoka", "mt_kurama_kyoto"]
+  },
+  "prefectures": {
+    "北海道": ["mt_maruyama_hokkaido", "mt_moiwa_hokkaido", "mt_hakodate_hokkaido"],
+    "宮城県": ["mt_kinkazan_miyagi"],
+    "栃木県": ["mt_oyama_tochigi"],
+    "群馬県": ["mt_asama_gunma"],
+    "千葉県": ["mt_kasatori_chiba"],
+    "東京都": ["mt_takao", "mt_shiomi_tokyo"],
+    "神奈川県": ["mt_shibutoge_kanagawa"],
+    "静岡県": ["mt_sengen_shizuoka"],
+    "奈良県": ["mt_wakakusa_nara", "mt_takatori_nara"],
+    "大阪府": ["mt_kanzaki_osaka"],
+    "京都府": ["mt_ponpon_kyoto", "mt_iwashimizu_kyoto", "mt_arashiyama_kyoto", "mt_daimonji_kyoto", "mt_inari_kyoto", "mt_yoshida_kyoto", "mt_matsuo_kyoto", "mt_kurama_kyoto", "mt_atago_kyoto", "mt_higashi_kyoto"],
+    "兵庫県": ["mt_shosha_hyogo"],
+    "広島県": ["mt_misen_hiroshima"],
+    "徳島県": ["mt_bizan_tokushima"],
+    "香川県": ["mt_sanuki_kagawa"],
+    "長崎県": ["mt_inasa_nagasaki"],
+    "鹿児島県": ["mt_sakurajima_kagoshima", "mt_shiroyama_kagoshima"]
+  }
+}
