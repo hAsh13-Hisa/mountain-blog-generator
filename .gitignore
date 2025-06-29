@@ -25,9 +25,15 @@ ENV/
 logs/
 *.log
 
-# Generated files
-generated_articles/
+# Generated files (but keep some sample files)
+generated_articles/*.json
+generated_articles/*.html
+generated_articles/*.xml
 output/
+article_*.json
+article_*_with_image.json
+preview_*.html
+wordpress_single_*.xml
 
 # Test outputs
 test_files/*.xml

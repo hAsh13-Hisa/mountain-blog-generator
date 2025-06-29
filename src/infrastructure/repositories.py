@@ -30,10 +30,13 @@ class MountainRepository(LoggerMixin):
             try:
                 mountains_file = Path(self.settings.mountains_file_path)
                 
-                # 新しい全国データファイルを優先
+                # 拡張版全国データファイルを最優先
+                expanded_file = Path(self.settings.DATA_DIR) / "mountains_japan_expanded.json"
                 japan_file = Path(self.settings.DATA_DIR) / "mountains_japan.json"
                 
-                if japan_file.exists():
+                if expanded_file.exists():
+                    data_file = expanded_file
+                elif japan_file.exists():
                     data_file = japan_file
                 elif mountains_file.exists():
                     data_file = mountains_file
