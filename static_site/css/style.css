@@ -43,14 +43,19 @@ p { font-size: 1rem; line-height: 1.7; margin-bottom: 1.2rem; }
 }
 
 /* ===== ヘッダー ===== */
-header {
+header[role="banner"] {
     background: linear-gradient(135deg, var(--primary-color), #3d6b47);
     color: white;
     padding: 1rem 0;
     box-shadow: 0 4px 20px rgba(44, 82, 52, 0.3);
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 9999;
+}
+
+/* 記事ヘッダーは低いz-index */
+.article-header {
+    z-index: 1;
 }
 
 .navbar {
@@ -576,7 +581,7 @@ footer p {
     padding: 8px;
     text-decoration: none;
     border-radius: 0 0 4px 4px;
-    z-index: 1000;
+    z-index: 10000;
     transition: top 0.3s;
 }
 
