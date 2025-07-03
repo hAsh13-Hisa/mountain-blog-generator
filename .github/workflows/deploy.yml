@@ -63,9 +63,21 @@ jobs:
     - name: Verify build output
       run: |
         echo "📁 生成されたファイルを確認中..."
-        ls -la static_site/
-        find static_site -name "*.html" | wc -l
-        echo "HTMLファイル数: $(find static_site -name "*.html" | wc -l)"
+        echo "=== static/ フォルダ (CMS用) ==="
+        ls -la static/
+        echo "=== static_site/ フォルダ (既存サイト) ==="
+        ls -la static_site/ || echo "static_site/ なし"
+        
+        # CMS管理画面を既存サイトに統合
+        if [ -d "static_site" ]; then
+          echo "🔄 CMSを既存サイトに統合中..."
+          cp -r static/admin static_site/ 2>/dev/null || echo "admin フォルダ統合済み"
+          echo "🏔️ 既存の山サイト + CMS をデプロイ (static_site/)"
+          echo "DEPLOY_DIR=static_site" >> $GITHUB_ENV
+        else
+          echo "🆕 CMSサイトをデプロイ (static/)"
+          echo "DEPLOY_DIR=static" >> $GITHUB_ENV
+        fi
     
     - name: Deploy to FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
@@ -73,7 +85,7 @@ jobs:
         server: ${{ secrets.FTP_HOST }}
         username: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: ./static_site/
+        local-dir: ./${{ env.DEPLOY_DIR }}/
         server-dir: /as_teizan/
         protocol: ftps
         port: 21

@@ -1,0 +1,147 @@
+backend:
+  name: github
+  repo: hAsh13-Hisa/mountain-blog-generator
+  branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+
+# 日本語UI
+locale: 'ja'
+
+# メディアファイルの保存先
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+
+# コンテンツコレクション
+collections:
+  # 山情報
+  - name: "mountains"
+    label: "山情報"
+    label_singular: "山"
+    description: "登山可能な低山の情報を管理"
+    folder: "content/mountains"
+    format: "json"
+    create: true
+    slug: "{{fields.id}}"
+    identifier_field: "name"
+    summary: "{{name}} ({{elevation}}m) - {{prefecture}}"
+    
+    fields:
+      - {label: "ID", name: "id", widget: "string", hint: "例: mt_maruyama_hokkaido", pattern: ['^[a-zA-Z0-9_-]+$', '英数字、アンダースコア、ハイフンのみ使用可能']}
+      - {label: "山名", name: "name", widget: "string", pattern: ['^[^<>&"]{1,100}$', '100文字以内、特殊文字（<>&"）は使用不可']}
+      - {label: "山名（英語）", name: "name_en", widget: "string", required: false, pattern: ['^[^<>&"]{0,100}$', '100文字以内、特殊文字（<>&"）は使用不可']}
+      - {label: "標高", name: "elevation", widget: "number", value_type: "int"}
+      - {label: "都道府県", name: "prefecture", widget: "string"}
+      - {label: "地域", name: "region", widget: "select", options: ["北海道", "東北", "関東", "中部", "近畿", "中国", "四国", "九州"]}
+      
+      - label: "位置情報"
+        name: "location"
+        widget: "object"
+        fields:
+          - {label: "緯度", name: "latitude", widget: "number", value_type: "float", required: false}
+          - {label: "経度", name: "longitude", widget: "number", value_type: "float", required: false}
+          - {label: "最寄り駅", name: "nearest_station", widget: "string"}
+          - {label: "アクセス時間", name: "access_time", widget: "string"}
+      
+      - label: "難易度"
+        name: "difficulty"
+        widget: "object"
+        fields:
+          - {label: "レベル", name: "level", widget: "select", options: ["初級", "中級", "上級"]}
+          - {label: "登山時間", name: "hiking_time", widget: "string"}
+          - {label: "距離", name: "distance", widget: "string"}
+          - {label: "標高差", name: "elevation_gain", widget: "string"}
+      
+      - {label: "特徴", name: "features", widget: "list", field: {label: "特徴", name: "feature", widget: "string"}}
+      
+      - label: "シーズン情報"
+        name: "seasons"
+        widget: "object"
+        fields:
+          - {label: "ベストシーズン", name: "best", widget: "list", field: {label: "月", name: "month", widget: "string"}}
+          - {label: "避けるべき時期", name: "avoid", widget: "list", field: {label: "月", name: "month", widget: "string"}}
+          - label: "季節の特徴"
+            name: "features"
+            widget: "object"
+            fields:
+              - {label: "春", name: "spring", widget: "string", required: false}
+              - {label: "夏", name: "summer", widget: "string", required: false}
+              - {label: "秋", name: "autumn", widget: "string", required: false}
+              - {label: "冬", name: "winter", widget: "string", required: false}
+      
+      - {label: "登山道", name: "trails", widget: "list", required: false}
+      
+      - label: "アクセス情報"
+        name: "access"
+        widget: "object"
+        required: false
+        fields:
+          - {label: "車", name: "car", widget: "text", required: false}
+          - {label: "公共交通機関", name: "public_transport", widget: "text", required: false}
+          - {label: "駐車場", name: "parking", widget: "string", required: false}
+      
+      - {label: "施設", name: "facilities", widget: "list", required: false}
+      - {label: "近隣の観光地", name: "nearby_attractions", widget: "list", required: false}
+      - {label: "野生動物", name: "wildlife", widget: "list", required: false}
+      - {label: "安全情報", name: "safety_info", widget: "text", required: false}
+      
+      - {label: "メイン画像", name: "main_image", widget: "image", required: false, max_file_size: 5242880, hint: "5MB以下のJPEG, PNG, WebP画像"}
+      - {label: "ギャラリー画像", name: "images", widget: "list", field: {label: "画像", name: "image", widget: "image", max_file_size: 5242880}, required: false}
+      
+  # 記事
+  - name: "articles"
+    label: "記事"
+    label_singular: "記事"
+    folder: "content/articles"
+    format: "frontmatter"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    
+    fields:
+      - {label: "タイトル", name: "title", widget: "string"}
+      - {label: "公開日", name: "date", widget: "datetime"}
+      - {label: "説明", name: "description", widget: "text"}
+      - {label: "関連する山", name: "mountain_id", widget: "relation", collection: "mountains", value_field: "id", search_fields: ["name"], display_fields: ["name"]}
+      - {label: "本文", name: "body", widget: "markdown"}
+      - {label: "アイキャッチ画像", name: "featured_image", widget: "image", required: false}
+      - {label: "カテゴリー", name: "categories", widget: "list", field: {label: "カテゴリー", name: "category", widget: "string"}}
+      - {label: "タグ", name: "tags", widget: "list", field: {label: "タグ", name: "tag", widget: "string"}}
+      
+  # サイト設定
+  - name: "settings"
+    label: "サイト設定"
+    files:
+      - label: "基本設定"
+        name: "general"
+        file: "content/settings/general.json"
+        fields:
+          - {label: "サイト名", name: "site_title", widget: "string"}
+          - {label: "サイト説明", name: "site_description", widget: "text"}
+          - {label: "キーワード", name: "keywords", widget: "string"}
+          - {label: "Google Analytics ID", name: "ga_id", widget: "string", required: false}
+          - {label: "著作権表記", name: "copyright", widget: "string"}
+          
+      - label: "アフィリエイト設定"
+        name: "affiliate"
+        file: "content/settings/affiliate.json"
+        fields:
+          - label: "Amazon"
+            name: "amazon"
+            widget: "object"
+            fields:
+              - {label: "アソシエイトID", name: "associate_id", widget: "string"}
+              - {label: "有効", name: "enabled", widget: "boolean", default: true}
+          
+          - label: "楽天"
+            name: "rakuten"
+            widget: "object"
+            fields:
+              - {label: "アフィリエイトID", name: "affiliate_id", widget: "string"}
+              - {label: "有効", name: "enabled", widget: "boolean", default: true}
+          
+          - label: "Yahoo"
+            name: "yahoo"
+            widget: "object"
+            fields:
+              - {label: "パートナーID", name: "partner_id", widget: "string"}
+              - {label: "有効", name: "enabled", widget: "boolean", default: true}
