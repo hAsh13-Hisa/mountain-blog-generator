@@ -1,0 +1,32 @@
+# Netlifyデプロイ時に無視するファイル
+requirements.txt.backup
+*.py
+*.pyc
+__pycache__/
+venv/
+.env
+.env.*
+*.log
+scripts/
+src/
+
+# デプロイに不要なファイル
+CLAUDE.md
+*.md
+!README.md
+affiliate_*.py
+bepal_*.py
+check_*.py
+create_*.py
+deploy_*.py
+enhanced_*.py
+fix_*.py
+generate_*.py
+json_*.py
+quick_*.py
+serve.py
+sync_*.py
+update_*.py
+upload_*.py
+verify_*.py
+analyze_*.py

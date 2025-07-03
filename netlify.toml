@@ -1,8 +1,17 @@
 [build]
-  # ビルドプロセスを完全に無効化（静的ファイル配信のみ）
+  # 静的ファイル配信のみ（ビルド無効化）
   command = ""
   publish = "static"
-  
+  ignore = "exit 0"
+
 [build.environment]
-  # Pythonビルドを無効化
-  NODE_ENV = "production"
+  # Python依存関係を完全無効化
+  PYTHON_VERSION = "3.8"
+  PIP_CACHE_DIR = "/tmp"
+  
+# 全てのファイルをそのまま配信
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
