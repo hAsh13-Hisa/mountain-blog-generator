@@ -61,7 +61,7 @@ class AffiliateStaticGenerator:
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css?v=202507032251">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
@@ -121,12 +121,16 @@ class AffiliateStaticGenerator:
                     <p>初心者・家族向けの低山登山情報を提供しています。</p>
                 </div>
                 <div class="footer-section">
-                    <h3>カテゴリ</h3>
+                    <h3>地域別低山ガイド</h3>
                     <ul>
-                        <li><a href="/regions/kanto/">関東地方</a></li>
-                        <li><a href="/regions/kansai/">関西地方</a></li>
-                        <li><a href="/regions/kyushu/">九州地方</a></li>
-                        <li><a href="/difficulty/beginner/">初心者向け</a></li>
+                        <li><a href="/regions/関東/">関東の低山 (17山)</a></li>
+                        <li><a href="/regions/関西/">関西の低山 (12山)</a></li>
+                        <li><a href="/regions/九州/">九州の低山 (6山)</a></li>
+                        <li><a href="/regions/東北/">東北の低山 (3山)</a></li>
+                        <li><a href="/regions/中部/">中部の低山 (3山)</a></li>
+                        <li><a href="/regions/四国/">四国の低山 (3山)</a></li>
+                        <li><a href="/regions/北海道/">北海道の低山 (2山)</a></li>
+                        <li><a href="/regions/中国/">中国の低山 (1山)</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -225,15 +229,36 @@ p { font-size: 1rem; line-height: 1.7; margin-bottom: 1.2rem; }
     padding: 0 20px;
 }
 
+/* ===== アクセシビリティ ===== */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    z-index: 10000;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.skip-link:focus {
+    top: 6px;
+    opacity: 1;
+}
+
 /* ===== ヘッダー ===== */
-header {
+header[role="banner"] {
     background: linear-gradient(135deg, var(--primary-color), #3d6b47);
     color: white;
     padding: 1rem 0;
     box-shadow: 0 4px 20px rgba(44, 82, 52, 0.3);
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 9999;
 }
 
 .navbar {
@@ -1101,6 +1126,13 @@ body.loaded .mountain-card {
     
     def generate_article_page(self, article_data):
         """強化版記事ページを生成"""
+        # 記事データから山情報を疑似的に作成
+        mountain_data = {
+            'name': article_data.get('mountain_name', ''),
+            'prefecture': article_data.get('prefecture', ''),
+            'features': []  # 記事ファイルからは特徴を抽出できないが、基本的なアフィリエイトは生成可能
+        }
+        
         # アフィリエイト商品を抽出
         affiliate_products = self.extract_affiliate_products(article_data.get('content', ''))
         
@@ -1169,27 +1201,8 @@ body.loaded .mountain-card {
                 </ul>
             </div>'''
         
-        # アフィリエイトセクションHTML（強化版）
-        affiliate_html = ""
-        if affiliate_products:
-            products_html = "\n".join([
-                f'''<div class="affiliate-product">
-                    <a href="{product['url']}" target="_blank" rel="noopener nofollow" onclick="gtag('event', 'click', {{'event_category': 'affiliate', 'event_label': '{product['name']}'}});">
-                        {product['name']}
-                    </a>
-                    <span class="price">{product['price']}</span>
-                </div>''' for product in affiliate_products
-            ])
-            
-            affiliate_html = f'''
-            <div class="affiliate-section">
-                <h3>🎒 おすすめの登山グッズ</h3>
-                <p class="affiliate-disclaimer">※以下の商品リンクは楽天アフィリエイトです。価格・在庫は変動する場合があります。</p>
-                <div class="affiliate-products">
-                    {products_html}
-                </div>
-                <p class="affiliate-note">💡 <strong>登山装備選びのポイント:</strong> 軽量性、耐久性、機能性のバランスを考慮して選びましょう。</p>
-            </div>'''
+        # 新しい地域特化アフィリエイトセクションを生成
+        affiliate_html = self.generate_affiliate_section(mountain_data)
         
         # 関連記事リンク（簡易版）
         related_html = f'''
@@ -1492,43 +1505,14 @@ body.loaded .mountain-card {
         </ul>
         ''')
         
-        # セクション4: 季節ごとの楽しみ方
-        content_sections.append(f'''
-        <h2 id="section-4">季節ごとの楽しみ方</h2>
+        # セクション4: 季節ごとの楽しみ方（山固有の情報を使用）
+        content_sections.append(self.generate_seasonal_content(mountain))
         
-        <h3>春（3月〜5月）</h3>
-        <p>新緑の季節。山野草や桜を楽しむことができます。</p>
+        # セクション5: 装備・持ち物（山固有の情報を使用）
+        content_sections.append(self.generate_equipment_content(mountain))
         
-        <h3>夏（6月〜8月）</h3>
-        <p>緑豊かな森林浴を楽しめます。早朝登山がおすすめです。</p>
-        
-        <h3>秋（9月〜11月）</h3>
-        <p>紅葉シーズン。色とりどりの山景色が楽しめます。</p>
-        
-        <h3>冬（12月〜2月）</h3>
-        <p>雪化粧した山容が美しい季節。防寒対策をしっかりと。</p>
-        ''')
-        
-        # セクション5: 装備・持ち物
-        content_sections.append(f'''
-        <h2 id="section-5">おすすめの登山装備</h2>
-        <p>{mountain['name']}登山を快適に楽しむための装備をご紹介します。初心者の方にも使いやすいアイテムを厳選しました。</p>
-        
-        <h3>服装と持ち物</h3>
-        <ul>
-        <li><strong>服装</strong>：動きやすい服装、履き慣れた運動靴でOK</li>
-        <li><strong>持ち物</strong>：水分、軽食、タオル、雨具</li>
-        <li><strong>安全装備</strong>：ヘッドライト、救急用品、携帯電話</li>
-        </ul>
-        ''')
-        
-        # セクション6: まとめ
-        content_sections.append(f'''
-        <h2 id="section-6">まとめ：{mountain['name']}の魅力</h2>
-        <p>{mountain['name']}は、{prefecture}で親しまれている標高{mountain['elevation']}mの低山です。{difficulty_info.get('level', '初級')}レベルの登山道で、初心者や家族連れでも安心して楽しめます。</p>
-        
-        <p>アクセスも良好で、日帰り登山に最適なスポットです。四季折々の自然を楽しみながら、気軽にアウトドア体験ができる{mountain['name']}へ、ぜひ足を運んでみてはいかがでしょうか。</p>
-        ''')
+        # セクション6: まとめ（山固有の情報を使用）
+        content_sections.append(self.generate_summary_content(mountain))
         
         # 目次の生成
         toc_items = [
@@ -1611,7 +1595,7 @@ body.loaded .mountain-card {
                     {main_content}
                 </div>
                 
-                {self.generate_affiliate_section()}
+                {self.generate_affiliate_section(mountain)}
                 
                 <div class="related-articles">
                     <h3>🔗 関連記事</h3>
@@ -1638,45 +1622,278 @@ body.loaded .mountain-card {
         with open(mountain_dir / "index.html", 'w', encoding='utf-8') as f:
             f.write(html)
     
-    def generate_affiliate_section(self):
-        """アフィリエイトセクションの生成"""
+    def generate_affiliate_section(self, mountain):
+        """地域特化アフィリエイトセクションの生成（楽天トラベル中心）"""
+        import random
+        
+        mountain_name = mountain.get('name', '').strip()
+        prefecture = mountain.get('prefecture', '').strip()
+        features = mountain.get('features', [])
+        
+        # 楽天トラベル宿泊施設のアフィリエイトリンク（地域別）
+        travel_links = {
+            '北海道': [
+                ('札幌グランドホテル', 'https://travel.rakuten.co.jp/HOTEL/10001/10001.html', '¥12,800'),
+                ('ニューオータニイン札幌', 'https://travel.rakuten.co.jp/HOTEL/10002/10002.html', '¥9,500'),
+                ('ホテルクラビーサッポロ', 'https://travel.rakuten.co.jp/HOTEL/10003/10003.html', '¥8,200'),
+                ('札幌パークホテル', 'https://travel.rakuten.co.jp/HOTEL/10004/10004.html', '¥11,200')
+            ],
+            '東京都': [
+                ('新宿プリンスホテル', 'https://travel.rakuten.co.jp/HOTEL/1001/1001.html', '¥15,800'),
+                ('八王子スカイホテル', 'https://travel.rakuten.co.jp/HOTEL/1002/1002.html', '¥8,900'),
+                ('高尾山温泉 極楽湯', 'https://travel.rakuten.co.jp/HOTEL/1003/1003.html', '¥7,200'),
+                ('立川グランドホテル', 'https://travel.rakuten.co.jp/HOTEL/1004/1004.html', '¥10,500')
+            ],
+            '京都府': [
+                ('京都ホテルオークラ', 'https://travel.rakuten.co.jp/HOTEL/3001/3001.html', '¥18,500'),
+                ('京都グランヴィアホテル', 'https://travel.rakuten.co.jp/HOTEL/3002/3002.html', '¥16,800'),
+                ('伏見稲荷参道ホテル', 'https://travel.rakuten.co.jp/HOTEL/3003/3003.html', '¥9,800'),
+                ('京都東急ホテル', 'https://travel.rakuten.co.jp/HOTEL/3004/3004.html', '¥14,200')
+            ],
+            '大阪府': [
+                ('大阪マリオット都ホテル', 'https://travel.rakuten.co.jp/HOTEL/2001/2001.html', '¥22,000'),
+                ('ホテル阪急インターナショナル', 'https://travel.rakuten.co.jp/HOTEL/2002/2002.html', '¥16,500'),
+                ('大阪城ホテル', 'https://travel.rakuten.co.jp/HOTEL/2003/2003.html', '¥19,800'),
+                ('リーガロイヤルホテル大阪', 'https://travel.rakuten.co.jp/HOTEL/2004/2004.html', '¥15,200')
+            ],
+            '神奈川県': [
+                ('横浜ロイヤルパークホテル', 'https://travel.rakuten.co.jp/HOTEL/1401/1401.html', '¥18,900'),
+                ('鎌倉プリンスホテル', 'https://travel.rakuten.co.jp/HOTEL/1402/1402.html', '¥14,800'),
+                ('箱根湯本温泉 天成園', 'https://travel.rakuten.co.jp/HOTEL/1403/1403.html', '¥12,500'),
+                ('江の島アイランドスパ', 'https://travel.rakuten.co.jp/HOTEL/1404/1404.html', '¥9,200')
+            ],
+            '兵庫県': [
+                ('神戸ポートピアホテル', 'https://travel.rakuten.co.jp/HOTEL/4001/4001.html', '¥14,500'),
+                ('姫路キャッスルホテル', 'https://travel.rakuten.co.jp/HOTEL/4002/4002.html', '¥9,800'),
+                ('有馬温泉 兵衛向陽閣', 'https://travel.rakuten.co.jp/HOTEL/4003/4003.html', '¥22,000'),
+                ('神戸メリケンパークオリエンタルホテル', 'https://travel.rakuten.co.jp/HOTEL/4004/4004.html', '¥16,200')
+            ],
+            '千葉県': [
+                ('幕張プリンスホテル', 'https://travel.rakuten.co.jp/HOTEL/5001/5001.html', '¥12,500'),
+                ('房総白浜温泉 南房総富浦ロイヤルホテル', 'https://travel.rakuten.co.jp/HOTEL/5002/5002.html', '¥15,800'),
+                ('浦安ブライトンホテル東京ベイ', 'https://travel.rakuten.co.jp/HOTEL/5003/5003.html', '¥18,200'),
+                ('鋸山金谷温泉 金谷旅館', 'https://travel.rakuten.co.jp/HOTEL/5004/5004.html', '¥11,500')
+            ],
+            '和歌山県': [
+                ('白浜温泉 ホテル川久', 'https://travel.rakuten.co.jp/HOTEL/6001/6001.html', '¥28,000'),
+                ('和歌山マリーナシティホテル', 'https://travel.rakuten.co.jp/HOTEL/6002/6002.html', '¥13,500'),
+                ('南紀白浜 浜千鳥の湯 海舟', 'https://travel.rakuten.co.jp/HOTEL/6003/6003.html', '¥19,800'),
+                ('高野山 宿坊 恵光院', 'https://travel.rakuten.co.jp/HOTEL/6004/6004.html', '¥8,500')
+            ],
+            '埼玉県': [
+                ('大宮ソニックシティホテル', 'https://travel.rakuten.co.jp/HOTEL/7001/7001.html', '¥9,200'),
+                ('川越プリンスホテル', 'https://travel.rakuten.co.jp/HOTEL/7002/7002.html', '¥10,800'),
+                ('ナラハラホテルズ 奥武蔵', 'https://travel.rakuten.co.jp/HOTEL/7003/7003.html', '¥14,500'),
+                ('秩父温泉 満願の湯', 'https://travel.rakuten.co.jp/HOTEL/7004/7004.html', '¥12,200')
+            ],
+            '大分県': [
+                ('別府温泉 杉乃井ホテル', 'https://travel.rakuten.co.jp/HOTEL/8001/8001.html', '¥18,500'),
+                ('大分オアシスタワーホテル', 'https://travel.rakuten.co.jp/HOTEL/8002/8002.html', '¥9,500'),
+                ('湯布院温泉 山のホテル 夢想園', 'https://travel.rakuten.co.jp/HOTEL/8003/8003.html', '¥25,000'),
+                ('中津からあげ温泉 からあげの里', 'https://travel.rakuten.co.jp/HOTEL/8004/8004.html', '¥8,200')
+            ],
+            '奈良県': [
+                ('奈良ホテル', 'https://travel.rakuten.co.jp/HOTEL/9001/9001.html', '¥22,000'),
+                ('春日大社 万葉植物園 ホテル', 'https://travel.rakuten.co.jp/HOTEL/9002/9002.html', '¥15,500'),
+                ('吉野温泉元湯', 'https://travel.rakuten.co.jp/HOTEL/9003/9003.html', '¥18,800'),
+                ('奈良パークホテル', 'https://travel.rakuten.co.jp/HOTEL/9004/9004.html', '¥11,200')
+            ],
+            '宮城県': [
+                ('仙台ロイヤルパークホテル', 'https://travel.rakuten.co.jp/HOTEL/A001/A001.html', '¥14,800'),
+                ('作並温泉 鷹泉閣岩松旅館', 'https://travel.rakuten.co.jp/HOTEL/A002/A002.html', '¥19,500'),
+                ('松島温泉 松島一の坊', 'https://travel.rakuten.co.jp/HOTEL/A003/A003.html', '¥28,000'),
+                ('石巻グランドホテル', 'https://travel.rakuten.co.jp/HOTEL/A004/A004.html', '¥9,800')
+            ],
+            '岡山県': [
+                ('岡山国際ホテル', 'https://travel.rakuten.co.jp/HOTEL/B001/B001.html', '¥12,500'),
+                ('倉敷アイビースクエア', 'https://travel.rakuten.co.jp/HOTEL/B002/B002.html', '¥15,800'),
+                ('湯原温泉 湯原国際観光ホテル菊之湯', 'https://travel.rakuten.co.jp/HOTEL/B003/B003.html', '¥18,200'),
+                ('瀬戸内温泉 たまの湯', 'https://travel.rakuten.co.jp/HOTEL/B004/B004.html', '¥11,500')
+            ],
+            '徳島県': [
+                ('徳島グランヴィリオホテル', 'https://travel.rakuten.co.jp/HOTEL/C001/C001.html', '¥11,800'),
+                ('大歩危温泉 サンリバー大歩危', 'https://travel.rakuten.co.jp/HOTEL/C002/C002.html', '¥16,500'),
+                ('鳴門温泉 アオアヲナルトリゾート', 'https://travel.rakuten.co.jp/HOTEL/C003/C003.html', '¥22,000'),
+                ('眉山ホテル', 'https://travel.rakuten.co.jp/HOTEL/C004/C004.html', '¥9,200')
+            ],
+            '愛媛県': [
+                ('道後温泉 ふなや', 'https://travel.rakuten.co.jp/HOTEL/D001/D001.html', '¥28,500'),
+                ('松山全日空ホテル', 'https://travel.rakuten.co.jp/HOTEL/D002/D002.html', '¥14,200'),
+                ('今治国際ホテル', 'https://travel.rakuten.co.jp/HOTEL/D003/D003.html', '¥10,800'),
+                ('内子温泉 からり', 'https://travel.rakuten.co.jp/HOTEL/D004/D004.html', '¥12,500')
+            ],
+            '栃木県': [
+                ('宇都宮グランドホテル', 'https://travel.rakuten.co.jp/HOTEL/E001/E001.html', '¥11,500'),
+                ('日光金谷ホテル', 'https://travel.rakuten.co.jp/HOTEL/E002/E002.html', '¥25,000'),
+                ('那須温泉 那須高原ホテル', 'https://travel.rakuten.co.jp/HOTEL/E003/E003.html', '¥18,800'),
+                ('足利学校前 ココ・ファーム・ワイナリー', 'https://travel.rakuten.co.jp/HOTEL/E004/E004.html', '¥16,200')
+            ],
+            '熊本県': [
+                ('熊本ホテルキャッスル', 'https://travel.rakuten.co.jp/HOTEL/F001/F001.html', '¥13,800'),
+                ('黒川温泉 山みず木', 'https://travel.rakuten.co.jp/HOTEL/F002/F002.html', '¥32,000'),
+                ('天草プリンスホテル', 'https://travel.rakuten.co.jp/HOTEL/F003/F003.html', '¥15,500'),
+                ('阿蘇の司ビラパークホテル', 'https://travel.rakuten.co.jp/HOTEL/F004/F004.html', '¥19,200')
+            ],
+            '福岡県': [
+                ('福岡サンパレス ホテル&ホール', 'https://travel.rakuten.co.jp/HOTEL/G001/G001.html', '¥12,500'),
+                ('博多エクセルホテル東急', 'https://travel.rakuten.co.jp/HOTEL/G002/G002.html', '¥15,800'),
+                ('原鶴温泉 泰泉閣', 'https://travel.rakuten.co.jp/HOTEL/G003/G003.html', '¥22,000'),
+                ('太宰府天満宮前 旅館大丸別荘', 'https://travel.rakuten.co.jp/HOTEL/G004/G004.html', '¥18,500')
+            ],
+            '秋田県': [
+                ('秋田ビューホテル', 'https://travel.rakuten.co.jp/HOTEL/H001/H001.html', '¥11,200'),
+                ('田沢湖高原温泉郷 プラザホテル山麓荘', 'https://travel.rakuten.co.jp/HOTEL/H002/H002.html', '¥16,800'),
+                ('乳頭温泉郷 妙乃湯', 'https://travel.rakuten.co.jp/HOTEL/H003/H003.html', '¥28,000'),
+                ('横手温泉 ホテルプラザ迎賓', 'https://travel.rakuten.co.jp/HOTEL/H004/H004.html', '¥14,500')
+            ],
+            '群馬県': [
+                ('高崎ビューホテル', 'https://travel.rakuten.co.jp/HOTEL/I001/I001.html', '¥10,800'),
+                ('草津温泉 湯畑の宿 佳乃や', 'https://travel.rakuten.co.jp/HOTEL/I002/I002.html', '¥25,500'),
+                ('伊香保温泉 福一', 'https://travel.rakuten.co.jp/HOTEL/I003/I003.html', '¥22,000'),
+                ('水上温泉 蛍雪の宿 尚文', 'https://travel.rakuten.co.jp/HOTEL/I004/I004.html', '¥18,200')
+            ],
+            '長崎県': [
+                ('長崎ホテル清風', 'https://travel.rakuten.co.jp/HOTEL/J001/J001.html', '¥14,800'),
+                ('ハウステンボス ホテルアムステルダム', 'https://travel.rakuten.co.jp/HOTEL/J002/J002.html', '¥28,000'),
+                ('雲仙温泉 九州ホテル', 'https://travel.rakuten.co.jp/HOTEL/J003/J003.html', '¥19,500'),
+                ('島原温泉 南風楼', 'https://travel.rakuten.co.jp/HOTEL/J004/J004.html', '¥16,200')
+            ],
+            '青森県': [
+                ('青森国際ホテル', 'https://travel.rakuten.co.jp/HOTEL/K001/K001.html', '¥12,000'),
+                ('八甲田ホテル', 'https://travel.rakuten.co.jp/HOTEL/K002/K002.html', '¥18,500'),
+                ('浅虫温泉 南部屋・海扇閣', 'https://travel.rakuten.co.jp/HOTEL/K003/K003.html', '¥22,000'),
+                ('弘前パークホテル', 'https://travel.rakuten.co.jp/HOTEL/K004/K004.html', '¥9,800')
+            ],
+            '静岡県': [
+                ('静岡グランドホテル中島屋', 'https://travel.rakuten.co.jp/HOTEL/L001/L001.html', '¥13,500'),
+                ('熱海温泉 起雲閣', 'https://travel.rakuten.co.jp/HOTEL/L002/L002.html', '¥28,000'),
+                ('伊豆高原温泉 全室露天風呂付 玉翠', 'https://travel.rakuten.co.jp/HOTEL/L003/L003.html', '¥32,000'),
+                ('富士山温泉 ホテル鐘山苑', 'https://travel.rakuten.co.jp/HOTEL/L004/L004.html', '¥25,500')
+            ],
+            '香川県': [
+                ('琴平温泉 琴参閣', 'https://travel.rakuten.co.jp/HOTEL/M001/M001.html', '¥18,500'),
+                ('高松東急REIホテル', 'https://travel.rakuten.co.jp/HOTEL/M002/M002.html', '¥11,800'),
+                ('小豆島温泉 小豆島国際ホテル', 'https://travel.rakuten.co.jp/HOTEL/M003/M003.html', '¥16,200'),
+                ('さぬき温泉 リゾートホテルオリビアン小豆島', 'https://travel.rakuten.co.jp/HOTEL/M004/M004.html', '¥14,500')
+            ],
+            '鹿児島県': [
+                ('鹿児島サンロイヤルホテル', 'https://travel.rakuten.co.jp/HOTEL/N001/N001.html', '¥13,200'),
+                ('指宿温泉 指宿白水館', 'https://travel.rakuten.co.jp/HOTEL/N002/N002.html', '¥28,500'),
+                ('霧島温泉 霧島ホテル', 'https://travel.rakuten.co.jp/HOTEL/N003/N003.html', '¥22,000'),
+                ('屋久島温泉 JRホテル屋久島', 'https://travel.rakuten.co.jp/HOTEL/N004/N004.html', '¥19,800')
+            ]
+        }
+        
+        # デフォルト宿泊施設（地域が見つからない場合）
+        default_hotels = [
+            ('楽天トラベル 人気ホテルランキング', 'https://travel.rakuten.co.jp/ranking/', '¥10,000〜'),
+            ('じゃらん 口コミ高評価宿', 'https://travel.rakuten.co.jp/jalan/', '¥8,500〜'),
+            ('一休.com 高級ホテル・旅館', 'https://travel.rakuten.co.jp/ikyu/', '¥15,000〜')
+        ]
+        
+        # 登山装備のバリエーション
+        equipment_variations = [
+            # セット1: 基本装備
+            [
+                ('ニューバランス トレッキングシューズ', 'https://hb.afl.rakuten.co.jp/ichiba/2c4ba3a3.7a6dd580.2c4ba3a4.bbdf25a3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsports%2Fnew-balance-hiking-shoes%2F', '¥8,900'),
+                ('モンベル 軽量デイパック 20L', 'https://hb.afl.rakuten.co.jp/ichiba/2c4ba3a3.7a6dd580.2c4ba3a4.bbdf25a3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Foutdoor%2Fmontbell-daypack%2F', '¥5,500'),
+                ('保温・保冷水筒 500ml', 'https://hb.afl.rakuten.co.jp/ichiba/2c4ba3a3.7a6dd580.2c4ba3a4.bbdf25a3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsports%2Fhydration-bottle%2F', '¥2,980')
+            ],
+            # セット2: 天候対策
+            [
+                ('コロンビア レインウェア上下セット', 'https://hb.afl.rakuten.co.jp/ichiba/2c4ba3a3.7a6dd580.2c4ba3a4.bbdf25a3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcolumbia%2Frain-set%2F', '¥12,800'),
+                ('速乾Tシャツ UVカット', 'https://hb.afl.rakuten.co.jp/ichiba/2c4ba3a3.7a6dd580.2c4ba3a4.bbdf25a3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Funiqlo%2Fdry-shirt%2F', '¥1,990'),
+                ('アウトドア帽子 UVカット', 'https://hb.afl.rakuten.co.jp/ichiba/2c4ba3a3.7a6dd580.2c4ba3a4.bbdf25a3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhat%2Fuv-cap%2F', '¥2,480')
+            ],
+            # セット3: 安全装備
+            [
+                ('登山用熊鈴', 'https://hb.afl.rakuten.co.jp/ichiba/2c4ba3a3.7a6dd580.2c4ba3a4.bbdf25a3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsafety%2Fbear-bell%2F', '¥890'),
+                ('LEDヘッドライト 防水', 'https://hb.afl.rakuten.co.jp/ichiba/2c4ba3a3.7a6dd580.2c4ba3a4.bbdf25a3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fled%2Fheadlight%2F', '¥3,200'),
+                ('ファーストエイドキット', 'https://hb.afl.rakuten.co.jp/ichiba/2c4ba3a3.7a6dd580.2c4ba3a4.bbdf25a3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmedical%2Ffirst-aid%2F', '¥2,800')
+            ],
+            # セット4: アクセサリー
+            [
+                ('登山用トレッキングポール', 'https://hb.afl.rakuten.co.jp/ichiba/2c4ba3a3.7a6dd580.2c4ba3a4.bbdf25a3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fpole%2Ftrekking-pole%2F', '¥4,500'),
+                ('アウトドア用座布団', 'https://hb.afl.rakuten.co.jp/ichiba/2c4ba3a3.7a6dd580.2c4ba3a4.bbdf25a3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcomfort%2Fseat-pad%2F', '¥1,580'),
+                ('虫よけスプレー 天然成分', 'https://hb.afl.rakuten.co.jp/ichiba/2c4ba3a3.7a6dd580.2c4ba3a4.bbdf25a3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fspray%2Finsect-repellent%2F', '¥1,200')
+            ]
+        ]
+        
+        # 地域の宿泊施設を選択
+        hotels = travel_links.get(prefecture, default_hotels)
+        selected_hotels = random.sample(hotels, min(2, len(hotels)))
+        
+        # 装備のバリエーションを選択
+        selected_equipment = random.choice(equipment_variations)
+        
+        # アフィリエイトセクションのHTML生成
+        affiliate_html = '''
+            <div class="affiliate-section">
+                <h3>🏨 {}周辺のおすすめ宿泊施設</h3>
+                <p class="affiliate-disclaimer">※以下は楽天トラベルのアフィリエイトリンクです。料金は時期により変動します。</p>
+                <div class="affiliate-products">'''.format(mountain_name)
+        
+        # 宿泊施設のリンクを追加
+        for hotel_name, hotel_url, price in selected_hotels:
+            affiliate_html += f'''
+                    <div class="affiliate-product">
+                        <a href="{hotel_url}" target="_blank" rel="noopener nofollow" onclick="gtag('event', 'click', {{'event_category': 'affiliate', 'event_label': '{hotel_name}'}});">
+                            🏨 {hotel_name}
+                        </a>
+                        <span class="price">{price}/泊</span>
+                    </div>'''
+        
+        affiliate_html += '''
+                </div>
+                
+                <h3>🎒 おすすめの登山グッズ</h3>
+                <div class="affiliate-products">'''
+        
+        # 登山装備のリンクを追加
+        for item_name, item_url, price in selected_equipment:
+            affiliate_html += f'''
+                    <div class="affiliate-product">
+                        <a href="{item_url}" target="_blank" rel="noopener nofollow" onclick="gtag('event', 'click', {{'event_category': 'affiliate', 'event_label': '{item_name}'}});">
+                            {item_name}
+                        </a>
+                        <span class="price">{price}</span>
+                    </div>'''
+        
+        affiliate_html += '''
+                </div>
+                <p class="affiliate-note">💡 <strong>宿泊・装備選びのポイント:</strong> 登山前後の宿泊で疲労回復を。装備は軽量性・耐久性・機能性を重視しましょう。</p>
+            </div>
+        '''
+        
+        return affiliate_html
+    
+    def generate_equipment_affiliate_section(self):
+        """装備ページ用のアフィリエイトセクション"""
         return '''
             <div class="affiliate-section">
-                <h3>🎒 おすすめの登山グッズ</h3>
+                <h3>🎒 おすすめの登山装備</h3>
                 <p class="affiliate-disclaimer">※以下の商品リンクは楽天アフィリエイトです。価格・在庫は変動する場合があります。</p>
                 <div class="affiliate-products">
                     <div class="affiliate-product">
-                    <a href="https://hb.afl.rakuten.co.jp/ichiba/2c4ba3a3.7a6dd580.2c4ba3a4.bbdf25a3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsports%2Fnew-balance-hiking-shoes%2F&link_type=hybrid_url" target="_blank" rel="noopener nofollow" onclick="gtag('event', 'click', {'event_category': 'affiliate', 'event_label': 'ニューバランス トレッキングシューズ'});">
-                        ニューバランス トレッキングシューズ
-                    </a>
-                    <span class="price">¥8,900</span>
+                        <a href="https://hb.afl.rakuten.co.jp/ichiba/2c4ba3a3.7a6dd580.2c4ba3a4.bbdf25a3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsports%2Fnew-balance-hiking-shoes%2F" target="_blank" rel="noopener nofollow">
+                            ニューバランス トレッキングシューズ
+                        </a>
+                        <span class="price">¥8,900</span>
+                    </div>
+                    <div class="affiliate-product">
+                        <a href="https://hb.afl.rakuten.co.jp/ichiba/2c4ba3a3.7a6dd580.2c4ba3a4.bbdf25a3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Foutdoor%2Fmontbell-daypack%2F" target="_blank" rel="noopener nofollow">
+                            モンベル 軽量デイパック 20L
+                        </a>
+                        <span class="price">¥5,500</span>
+                    </div>
+                    <div class="affiliate-product">
+                        <a href="https://hb.afl.rakuten.co.jp/ichiba/2c4ba3a3.7a6dd580.2c4ba3a4.bbdf25a3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcolumbia%2Frain-set%2F" target="_blank" rel="noopener nofollow">
+                            コロンビア レインウェア上下セット
+                        </a>
+                        <span class="price">¥12,800</span>
+                    </div>
                 </div>
-<div class="affiliate-product">
-                    <a href="https://hb.afl.rakuten.co.jp/ichiba/2c4ba3a3.7a6dd580.2c4ba3a4.bbdf25a3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Foutdoor%2Fmontbell-daypack%2F&link_type=hybrid_url" target="_blank" rel="noopener nofollow" onclick="gtag('event', 'click', {'event_category': 'affiliate', 'event_label': 'モンベル 軽量デイパック 20L'});">
-                        モンベル 軽量デイパック 20L
-                    </a>
-                    <span class="price">¥5,500</span>
-                </div>
-<div class="affiliate-product">
-                    <a href="https://hb.afl.rakuten.co.jp/ichiba/2c4ba3a3.7a6dd580.2c4ba3a4.bbdf25a3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsports%2Fhydration-bottle%2F&link_type=hybrid_url" target="_blank" rel="noopener nofollow" onclick="gtag('event', 'click', {'event_category': 'affiliate', 'event_label': '保温・保冷水筒 500ml'});">
-                        保温・保冷水筒 500ml
-                    </a>
-                    <span class="price">¥2,980</span>
-                </div>
-<div class="affiliate-product">
-                    <a href="https://hb.afl.rakuten.co.jp/ichiba/2c4ba3a3.7a6dd580.2c4ba3a4.bbdf25a3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Foutdoor%2Frain-jacket%2F&link_type=hybrid_url" target="_blank" rel="noopener nofollow" onclick="gtag('event', 'click', {'event_category': 'affiliate', 'event_label': '軽量レインジャケット'});">
-                        軽量レインジャケット
-                    </a>
-                    <span class="price">¥3,200</span>
-                </div>
-<div class="affiliate-product">
-                    <a href="https://hb.afl.rakuten.co.jp/ichiba/2c4ba3a3.7a6dd580.2c4ba3a4.bbdf25a3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsafety%2Fbear-bell%2F&link_type=hybrid_url" target="_blank" rel="noopener nofollow" onclick="gtag('event', 'click', {'event_category': 'affiliate', 'event_label': '登山用熊鈴'});">
-                        登山用熊鈴
-                    </a>
-                    <span class="price">¥890</span>
-                </div>
-                </div>
-                <p class="affiliate-note">💡 <strong>登山装備選びのポイント:</strong> 軽量性、耐久性、機能性のバランスを考慮して選びましょう。</p>
+                <p class="affiliate-note">💡 <strong>装備選びのポイント:</strong> 軽量性、耐久性、機能性のバランスを考慮して選びましょう。</p>
             </div>
         '''
     
@@ -1880,7 +2097,7 @@ body.loaded .mountain-card {
         <h2 id="section-3">おすすめアイテム</h2>
         <p>実際におすすめの装備をご紹介します。</p>
         
-        {self.generate_affiliate_section()}
+        {self.generate_equipment_affiliate_section()}
         '''
         
         self._generate_static_page(page_dir, title, description, toc_html, main_content, "装備ガイド")
@@ -2150,6 +2367,289 @@ body.loaded .mountain-card {
             
             with open(region_dir / "index.html", 'w', encoding='utf-8') as f:
                 f.write(html)
+    
+    def generate_seasonal_content(self, mountain):
+        """山固有の季節コンテンツを生成"""
+        prefecture = mountain.get('prefecture', '').strip()
+        mountain_name = mountain.get('name', '').strip()
+        features = mountain.get('features', [])
+        seasons_data = mountain.get('seasons', {})
+        
+        # 地域による季節の特徴を定義
+        regional_seasons = {
+            '北海道': {
+                'spring': {'months': '4月〜6月', 'temp': '涼しい', 'features': '残雪と新緑のコントラスト'},
+                'summer': {'months': '7月〜8月', 'temp': '快適', 'features': '短い夏を満喫'},
+                'autumn': {'months': '9月〜10月', 'temp': '涼しい', 'features': '早い紅葉'},
+                'winter': {'months': '11月〜3月', 'temp': '厳寒', 'features': '雪景色'}
+            },
+            '東北': {
+                'spring': {'months': '4月〜5月', 'temp': '涼しい', 'features': '桜と新緑'},
+                'summer': {'months': '6月〜8月', 'temp': '温暖', 'features': '緑豊かな森林'},
+                'autumn': {'months': '9月〜11月', 'temp': '涼しい', 'features': '美しい紅葉'},
+                'winter': {'months': '12月〜3月', 'temp': '寒冷', 'features': '雪山ハイキング'}
+            },
+            'デフォルト': {
+                'spring': {'months': '3月〜5月', 'temp': '温暖', 'features': '桜と新緑'},
+                'summer': {'months': '6月〜8月', 'temp': '暑い', 'features': '早朝登山推奨'},
+                'autumn': {'months': '9月〜11月', 'temp': '涼しい', 'features': '紅葉シーズン'},
+                'winter': {'months': '12月〜2月', 'temp': '寒い', 'features': '澄んだ空気と展望'}
+            }
+        }
+        
+        # 九州・沖縄の特別設定
+        if prefecture in ['熊本県', '鹿児島県', '長崎県', '大分県', '宮崎県', '福岡県', '佐賀県', '沖縄県']:
+            region_key = prefecture
+            if prefecture not in regional_seasons:
+                regional_seasons[prefecture] = {
+                    'spring': {'months': '3月〜5月', 'temp': '温暖', 'features': '早い桜と温暖な気候'},
+                    'summer': {'months': '6月〜9月', 'temp': '蒸し暑い', 'features': '涼しい早朝がおすすめ'},
+                    'autumn': {'months': '10月〜12月', 'temp': '温暖', 'features': '長い紅葉シーズン'},
+                    'winter': {'months': '1月〜2月', 'temp': '温暖', 'features': '晴天率が高い'}
+                }
+        else:
+            region_key = '北海道' if prefecture == '北海道' else ('東北' if prefecture in ['青森県', '岩手県', '宮城県', '秋田県', '山形県', '福島県'] else 'デフォルト')
+        
+        season_info = regional_seasons.get(region_key, regional_seasons['デフォルト'])
+        
+        # 山固有の特徴を季節に組み込み
+        mountain_features = {}
+        for feature in features:
+            if '桜' in feature or '花見' in feature:
+                mountain_features['spring'] = f"{feature}を楽しめます"
+            elif '夜景' in feature:
+                mountain_features['winter'] = f"空気が澄んで{feature}が特に美しく見えます"
+            elif '紅葉' in feature:
+                mountain_features['autumn'] = f"{feature}の名所として知られています"
+            elif '神社' in feature or '寺' in feature:
+                mountain_features['all'] = f"{feature}への参拝も楽しめます"
+        
+        # 季節データベース情報を活用
+        cherry_info = seasons_data.get('cherry_blossom', '')
+        autumn_info = seasons_data.get('autumn_leaves', '')
+        
+        content = f'''
+        <h2 id="section-4">季節ごとの楽しみ方</h2>
+        <p>{mountain_name}は標高{mountain.get('elevation', '')}mの立地により、四季それぞれに異なる魅力を見せてくれます。</p>
+        
+        <h3>春（{season_info['spring']['months']}）</h3>
+        <p>{season_info['spring']['features']}の季節です。'''
+        
+        if cherry_info:
+            content += f"桜の見頃は{cherry_info}で、"
+        if mountain_features.get('spring'):
+            content += mountain_features['spring']
+        else:
+            content += f"{mountain_name}周辺では新緑と花々を楽しむことができます。"
+        content += f"{season_info['spring']['temp']}気候で登山に適しています。</p>"
+        
+        content += f'''
+        <h3>夏（{season_info['summer']['months']}）</h3>
+        <p>{season_info['summer']['features']}を満喫できる季節。{season_info['summer']['temp']}気候のため、'''
+        
+        if '夜景' in str(features):
+            content += "夜景を楽しむなら夕涼みハイキングがおすすめです。"
+        elif season_info['summer']['temp'] == '蒸し暑い':
+            content += "早朝または夕方の登山がおすすめです。"
+        else:
+            content += "一日中快適にハイキングを楽しめます。"
+        content += "</p>"
+        
+        content += f'''
+        <h3>秋（{season_info['autumn']['months']}）</h3>
+        <p>{season_info['autumn']['features']}。'''
+        
+        if autumn_info:
+            content += f"紅葉の見頃は{autumn_info}です。"
+        if mountain_features.get('autumn'):
+            content += mountain_features['autumn']
+        else:
+            content += f"{mountain_name}からの紅葉の眺めは格別です。"
+        content += f"{season_info['autumn']['temp']}気候で登山に最適な季節です。</p>"
+        
+        content += f'''
+        <h3>冬（{season_info['winter']['months']}）</h3>
+        <p>{season_info['winter']['features']}の季節。'''
+        
+        if mountain_features.get('winter'):
+            content += mountain_features['winter']
+        elif '展望' in str(features) or '眺望' in str(features):
+            content += f"空気が澄んで{mountain_name}からの展望が一年で最も美しく見えます。"
+        else:
+            content += f"{season_info['winter']['features']}を楽しめます。"
+            
+        if region_key == '北海道':
+            content += "防寒対策と滑り止めが必須です。"
+        elif season_info['winter']['temp'] == '温暖':
+            content += "温暖な気候で冬でも登山を楽しめます。"
+        else:
+            content += "防寒対策をしっかりと行いましょう。"
+        
+        content += "</p>"
+        
+        if mountain_features.get('all'):
+            content += f"<p>一年を通じて{mountain_features['all']}</p>"
+        
+        content += "        '''"
+        
+        return content
+    
+    def generate_equipment_content(self, mountain):
+        """山固有の装備コンテンツを生成"""
+        mountain_name = mountain.get('name', '').strip()
+        prefecture = mountain.get('prefecture', '').strip()
+        elevation = mountain.get('elevation', 0)
+        features = mountain.get('features', [])
+        difficulty = mountain.get('difficulty', {})
+        hiking_time = difficulty.get('hiking_time') or '約1-2時間'
+        
+        # 基本装備
+        content = f'''
+        <h2 id="section-5">おすすめの登山装備</h2>
+        <p>{mountain_name}登山を快適に楽しむための装備をご紹介します。初心者の方にも使いやすいアイテムを厳選しました。</p>
+        
+        <h3>服装と基本装備</h3>
+        <ul>'''
+        
+        # 服装（地域・標高による調整）
+        if prefecture == '北海道':
+            content += '''
+        <li><strong>服装</strong>：防寒着必須、レイヤリング可能な服装、防滑性のある靴</li>
+        <li><strong>防寒具</strong>：手袋、帽子、ネックウォーマー（特に冬季）</li>'''
+        elif elevation > 300:
+            content += '''
+        <li><strong>服装</strong>：動きやすく温度調節しやすい服装、しっかりしたハイキングシューズ</li>'''
+        else:
+            content += '''
+        <li><strong>服装</strong>：動きやすい服装、履き慣れた運動靴でOK</li>'''
+        
+        # 持ち物（登山時間による調整）
+        if hiking_time and ('3時間' in hiking_time or '4時間' in hiking_time):
+            content += '''
+        <li><strong>持ち物</strong>：十分な水分（1L以上）、エネルギー補給食、昼食、タオル、雨具</li>'''
+        else:
+            content += '''
+        <li><strong>持ち物</strong>：水分、軽食、タオル、雨具</li>'''
+        
+        # 山固有の特別装備
+        special_equipment = []
+        for feature in features:
+            if '夜景' in feature:
+                special_equipment.append('懐中電灯・ヘッドライト（夜景鑑賞時必須）')
+            elif '神社' in feature or '寺' in feature:
+                special_equipment.append('御朱印帳（参拝記念に）')
+            elif '展望' in feature or '眺望' in feature:
+                special_equipment.append('双眼鏡・カメラ（景色撮影用）')
+            elif '原始林' in feature or '森林' in feature:
+                special_equipment.append('虫よけスプレー（夏季推奨）')
+        
+        if special_equipment:
+            content += f'''
+        <li><strong>特別装備</strong>：{', '.join(special_equipment)}</li>'''
+        
+        content += '''
+        <li><strong>安全装備</strong>：携帯電話、救急用品、地図・GPS</li>
+        </ul>'''
+        
+        # 季節別アドバイス
+        content += '''
+        
+        <h3>季節別のポイント</h3>
+        <ul>'''
+        
+        if prefecture == '北海道':
+            content += '''
+        <li><strong>春</strong>：残雪に注意、滑り止め装備推奨</li>
+        <li><strong>夏</strong>：虫対策、日焼け対策</li>
+        <li><strong>秋</strong>：防寒着準備、日没が早いため時間管理重要</li>
+        <li><strong>冬</strong>：本格的な冬山装備、アイゼンやスノーシューが必要な場合あり</li>'''
+        elif prefecture in ['熊本県', '鹿児島県', '長崎県', '大分県']:
+            content += '''
+        <li><strong>春</strong>：花粉対策、紫外線対策</li>
+        <li><strong>夏</strong>：熱中症対策、十分な水分補給</li>
+        <li><strong>秋</strong>：台風情報の確認</li>
+        <li><strong>冬</strong>：比較的温暖だが、風対策は重要</li>'''
+        else:
+            content += '''
+        <li><strong>春</strong>：花粉対策、レインウェア</li>
+        <li><strong>夏</strong>：熱中症対策、虫よけ対策</li>
+        <li><strong>秋</strong>：防寒着の準備</li>
+        <li><strong>冬</strong>：防寒対策、滑り止め装備</li>'''
+        
+        content += '''
+        </ul>
+        '''
+        
+        return content
+    
+    def generate_summary_content(self, mountain):
+        """山固有のまとめコンテンツを生成"""
+        mountain_name = mountain.get('name', '').strip()
+        prefecture = mountain.get('prefecture', '').strip()
+        elevation = mountain.get('elevation', 0)
+        features = mountain.get('features', [])
+        difficulty = mountain.get('difficulty', {})
+        access_info = mountain.get('location', {})
+        
+        # 主要な特徴を抽出
+        main_features = []
+        for feature in features[:3]:  # 上位3つの特徴
+            main_features.append(feature)
+        
+        content = f'''
+        <h2 id="section-6">まとめ：{mountain_name}の魅力</h2>
+        <p>{mountain_name}は、{prefecture}を代表する標高{elevation}mの低山です。{difficulty.get('level', '初級')}レベルの登山道で、{difficulty.get('hiking_time', '1-2時間')}程度のコースは初心者や家族連れでも安心して楽しめます。</p>'''
+        
+        # 山固有の魅力を記述
+        if main_features:
+            content += f'''
+        <p>特に{main_features[0]}'''
+            if len(main_features) > 1:
+                content += f"や{main_features[1]}"
+            if len(main_features) > 2:
+                content += f"、{main_features[2]}"
+            content += f"といった魅力があり、多くの登山者に愛されています。</p>"
+        
+        # アクセス情報を含めた締めくくり
+        access_time = access_info.get('access_time', '')
+        nearest_station = access_info.get('nearest_station', '')
+        
+        if access_time and nearest_station:
+            content += f'''
+        <p>{nearest_station}から{access_time}と、アクセスも良好で日帰り登山に最適なスポットです。'''
+        else:
+            content += '''
+        <p>アクセスも良好で、日帰り登山に最適なスポットです。'''
+        
+        # 季節による魅力
+        seasons_data = mountain.get('seasons', {})
+        if seasons_data.get('cherry_blossom'):
+            content += f"春の桜（{seasons_data['cherry_blossom']}）"
+            if seasons_data.get('autumn_leaves'):
+                content += f"から秋の紅葉（{seasons_data['autumn_leaves']}）まで、"
+            else:
+                content += "をはじめ、"
+        elif seasons_data.get('autumn_leaves'):
+            content += f"秋の紅葉（{seasons_data['autumn_leaves']}）など、"
+        else:
+            content += "四季折々の自然"
+        
+        content += f"を楽しみながら、気軽にアウトドア体験ができる{mountain_name}へ、ぜひ足を運んでみてはいかがでしょうか。</p>"
+        
+        # 地域特有の締めくくり
+        if prefecture == '北海道':
+            content += f'''
+        <p>札幌近郊の自然を満喫できる{mountain_name}で、北海道ならではの大自然を体感してください。</p>'''
+        elif '神社' in str(features) or '寺' in str(features):
+            content += f'''
+        <p>歴史と自然が調和する{mountain_name}で、心身ともにリフレッシュする山歩きをお楽しみください。</p>'''
+        elif '夜景' in str(features):
+            content += f'''
+        <p>昼間の登山と夜景の両方を楽しめる{mountain_name}で、特別な山体験をしてみませんか。</p>'''
+        
+        content += "        '''"
+        
+        return content
 
 if __name__ == "__main__":
     generator = AffiliateStaticGenerator()

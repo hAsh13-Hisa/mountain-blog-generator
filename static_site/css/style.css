@@ -42,6 +42,27 @@ p { font-size: 1rem; line-height: 1.7; margin-bottom: 1.2rem; }
     padding: 0 20px;
 }
 
+/* ===== アクセシビリティ ===== */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    z-index: 10000;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.skip-link:focus {
+    top: 6px;
+    opacity: 1;
+}
+
 /* ===== ヘッダー ===== */
 header[role="banner"] {
     background: linear-gradient(135deg, var(--primary-color), #3d6b47);
@@ -51,11 +72,6 @@ header[role="banner"] {
     position: sticky;
     top: 0;
     z-index: 9999;
-}
-
-/* 記事ヘッダーは低いz-index */
-.article-header {
-    z-index: 1;
 }
 
 .navbar {
@@ -581,7 +597,7 @@ footer p {
     padding: 8px;
     text-decoration: none;
     border-radius: 0 0 4px 4px;
-    z-index: 10000;
+    z-index: 1000;
     transition: top 0.3s;
 }
 

@@ -5,9 +5,12 @@
 import ftplib
 import os
 from pathlib import Path
-from dotenv import load_dotenv
 
-load_dotenv()
+# FTP設定（.envから手動設定）
+os.environ['LOLIPOP_FTP_HOST'] = 'ftp.lolipop.jp'
+os.environ['LOLIPOP_FTP_USER'] = 'pupu.jp-omasse'
+os.environ['LOLIPOP_FTP_PASS'] = 'paradise55omasse'
+os.environ['LOLIPOP_REMOTE_DIR'] = '/as_teizan'
 
 class CompleteFTPDeployer:
     def __init__(self):
