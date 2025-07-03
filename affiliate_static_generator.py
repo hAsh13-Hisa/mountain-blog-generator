@@ -1408,6 +1408,9 @@ body.loaded .mountain-card {
         # 地域別ページの生成
         self.generate_basic_region_pages(mountains)
         
+        # 8大地域別ページの生成（フッターリンク対応）
+        self.generate_major_region_pages(mountains)
+        
         # 静的ページの生成（統一デザイン）
         # self.generate_static_pages()  # このメソッドは後で定義されているためコメントアウト
         
@@ -2364,6 +2367,192 @@ body.loaded .mountain-card {
             description = f"{region}エリアの低山{len(region_mountains)}山をご紹介。初心者や家族でも楽しめる登山情報。"
             
             html = self.create_html_template(title, content, description)
+            
+            with open(region_dir / "index.html", 'w', encoding='utf-8') as f:
+                f.write(html)
+    
+    def generate_major_region_pages(self, mountains):
+        """8大地域別ページを生成（フッターリンク対応）"""
+        # 都道府県から8大地域へのマッピング
+        prefecture_to_region = {
+            # 関東 (17山)
+            '神奈川県': '関東', '栃木県': '関東', '千葉県': '関東', 
+            '群馬県': '関東', '埼玉県': '関東', '東京都': '関東',
+            '茨城県': '関東',
+            
+            # 関西 (12山)
+            '京都府': '関西', '兵庫県': '関西', '和歌山県': '関西',
+            '大阪府': '関西', '奈良県': '関西',
+            
+            # 九州 (6山)
+            '大分県': '九州', '熊本県': '九州', '福岡県': '九州',
+            '長崎県': '九州', '鹿児島県': '九州',
+            
+            # 東北 (3山)
+            '宮城県': '東北', '秋田県': '東北', '青森県': '東北',
+            
+            # 中部 (3山)
+            '静岡県': '中部',
+            
+            # 四国 (3山)  
+            '徳島県': '四国', '愛媛県': '四国', '香川県': '四国',
+            
+            # 北海道 (2山)
+            '北海道': '北海道',
+            
+            # 中国 (1山)
+            '岡山県': '中国'
+        }
+        
+        # 8大地域別にグループ化
+        major_regions = {}
+        for mountain in mountains:
+            # 都道府県情報の取得
+            prefecture = mountain.get('prefecture', '')
+            if not prefecture and '_' in mountain['id']:
+                # IDから都道府県を推測
+                id_parts = mountain['id'].split('_')
+                if len(id_parts) >= 3:
+                    pref_code = id_parts[-1]
+                    pref_map = {
+                        '秋田': '秋田県', '栃木': '栃木県', '埼玉': '埼玉県', 
+                        '千葉': '千葉県', '神奈川': '神奈川県', '静岡': '静岡県',
+                        '兵庫': '兵庫県', '愛媛': '愛媛県', '福岡': '福岡県', 
+                        '大分': '大分県'
+                    }
+                    prefecture = pref_map.get(pref_code, pref_code)
+            
+            if not prefecture:
+                continue
+                
+            # 大地域の決定
+            major_region = prefecture_to_region.get(prefecture, 'その他')
+            if major_region not in major_regions:
+                major_regions[major_region] = []
+            major_regions[major_region].append(mountain)
+        
+        # 各大地域のページを生成
+        for region, region_mountains in major_regions.items():
+            region_dir = self.output_dir / "regions" / region
+            region_dir.mkdir(exist_ok=True)
+            
+            # 都道府県別にサブグループ化
+            prefecture_groups = {}
+            for mountain in region_mountains:
+                prefecture = mountain.get('prefecture', '要確認')
+                if prefecture not in prefecture_groups:
+                    prefecture_groups[prefecture] = []
+                prefecture_groups[prefecture].append(mountain)
+            
+            # 地域説明文の生成
+            region_descriptions = {
+                '関東': 'アクセス良好で都心からの日帰り登山に最適な関東地方の低山をご紹介。初心者や家族連れでも気軽に楽しめます。',
+                '関西': '歴史と文化に富んだ関西地方の低山。古社寺や名所旧跡を巡りながらの登山が楽しめます。',
+                '九州': '温暖な気候と豊かな自然に恵まれた九州地方の低山。年間を通じて登山を楽しむことができます。',
+                '東北': '四季の変化が美しい東北地方の低山。雄大な自然と絶景を堪能できる山々です。',
+                '中部': '富士山を望める中部地方の低山。日本の象徴である富士山を背景にした登山体験が魅力です。',
+                '四国': '温暖な瀬戸内海と太平洋に囲まれた四国地方の低山。島ならではの眺望が楽しめます。',
+                '北海道': '雄大な自然と野生動物に出会える北海道の低山。本州とは異なる自然環境を体験できます。',
+                '中国': '瀬戸内海の美しい景色を一望できる中国地方の低山。穏やかな気候で登山に適しています。'
+            }
+            
+            # 都道府県別セクションHTML生成
+            prefecture_sections = ""
+            for prefecture, pref_mountains in sorted(prefecture_groups.items()):
+                mountains_list = ""
+                for mountain in sorted(pref_mountains, key=lambda x: x['elevation']):
+                    difficulty = mountain.get('difficulty', {}).get('level', '初級')
+                    features = mountain.get('features', [])[:3]
+                    feature_tags = ' '.join([f'<span class="tag">#{feature}</span>' for feature in features])
+                    
+                    mountains_list += f'''
+                    <div class="mountain-card">
+                        <h3><a href="/mountains/{mountain['id']}/">{mountain['name']} ({mountain['elevation']}m)</a></h3>
+                        <p class="mountain-location">{prefecture} | {difficulty}</p>
+                        <p class="mountain-description">{mountain['name']}は{prefecture}にある標高{mountain['elevation']}mの低山です。</p>
+                        <div class="mountain-tags">
+                            {feature_tags}
+                        </div>
+                    </div>
+                    '''
+                
+                prefecture_sections += f'''
+                <section class="prefecture-section">
+                    <h2>{prefecture} ({len(pref_mountains)}山)</h2>
+                    <div class="mountains-grid">
+                        {mountains_list}
+                    </div>
+                </section>
+                '''
+            
+            # ページコンテンツ生成
+            content = f'''
+            <div class="container">
+                <header class="region-header">
+                    <h1>{region}の低山 ({len(region_mountains)}山)</h1>
+                    <p class="region-description">{region_descriptions.get(region, f'{region}エリアの低山をご紹介します。')}</p>
+                    <div class="region-stats">
+                        <span class="stat"><strong>{len(region_mountains)}山</strong></span>
+                        <span class="stat"><strong>{len(prefecture_groups)}都道府県</strong></span>
+                        <span class="stat"><strong>標高{min(m['elevation'] for m in region_mountains)}m - {max(m['elevation'] for m in region_mountains)}m</strong></span>
+                    </div>
+                </header>
+                
+                <nav class="breadcrumb" aria-label="パンくずリスト">
+                    <ol>
+                        <li><a href="/">ホーム</a></li>
+                        <li><a href="/regions/">地域別</a></li>
+                        <li aria-current="page">{region}</li>
+                    </ol>
+                </nav>
+                
+                <div class="region-content">
+                    {prefecture_sections}
+                </div>
+                
+                <div class="related-regions">
+                    <h3>🗾 他の地域も探す</h3>
+                    <div class="region-links">
+                        <a href="/regions/関東/" class="region-link">関東の低山</a>
+                        <a href="/regions/関西/" class="region-link">関西の低山</a>
+                        <a href="/regions/九州/" class="region-link">九州の低山</a>
+                        <a href="/regions/東北/" class="region-link">東北の低山</a>
+                        <a href="/regions/中部/" class="region-link">中部の低山</a>
+                        <a href="/regions/四国/" class="region-link">四国の低山</a>
+                        <a href="/regions/北海道/" class="region-link">北海道の低山</a>
+                        <a href="/regions/中国/" class="region-link">中国の低山</a>
+                    </div>
+                </div>
+                
+                <div class="back-link">
+                    <a href="/regions/">← 地域一覧に戻る</a>
+                </div>
+            </div>
+            '''
+            
+            title = f"{region}の低山 ({len(region_mountains)}山) - 低山旅行"
+            description = f"{region}地方の低山{len(region_mountains)}山を完全ガイド。{region_descriptions.get(region, '初心者・家族向けの登山情報をお届け。')}"
+            
+            # 構造化データ
+            structured_data = f'''
+            {{
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "name": "{region}の低山",
+                "description": "{description}",
+                "url": "https://teizan.omasse.com/regions/{region}/",
+                "mainEntity": {{
+                    "@type": "ItemList",
+                    "name": "{region}の低山一覧",
+                    "numberOfItems": {len(region_mountains)},
+                    "itemListElement": [
+                        {', '.join([f'{{"@type": "ListItem", "position": {i+1}, "item": {{"@type": "Place", "name": "{m["name"]}", "alternateName": "{m["elevation"]}m"}}}}' for i, m in enumerate(region_mountains)])}
+                    ]
+                }}
+            }}
+            '''
+            
+            html = self.create_html_template(title, content, description, structured_data)
             
             with open(region_dir / "index.html", 'w', encoding='utf-8') as f:
                 f.write(html)
