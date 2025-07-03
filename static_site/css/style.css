@@ -28,6 +28,7 @@ body {
     color: var(--text-color);
     background-color: var(--bg-color);
     font-size: 16px;
+    padding-top: 70px; /* stickyヘッダー用の余白 */
 }
 
 h1 { font-size: 2.2rem; font-weight: 700; line-height: 1.3; }
