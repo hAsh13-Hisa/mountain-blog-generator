@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: [your-username]/mountain-blog-generator  # TODO: GitHubユーザー名を設定
+  repo: hAsh13-Hisa/mountain-blog-generator
   branch: main
   base_url: https://api.netlify.com
   auth_endpoint: auth
