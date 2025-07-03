@@ -1,12 +1,22 @@
 {
   "metadata": {
-    "version": "4.0",
-    "last_updated": "2025-06-29",
-    "description": "日本全国の低山マスターデータ（標高400m以下・登山道整備済み）",
-    "total_mountains": 24,
+    "version": "5.2",
+    "last_updated": "2025-06-30T20:09:54.616251",
+    "description": "日本全国の低山マスターデータ（標高400m以下・登山道整備済み）+ BE-PAL記事追加分",
+    "total_mountains": 47,
     "coverage": "全47都道府県",
     "elevation_range": "20m - 400m",
-    "focus": "初心者・家族向け・日帰り登山・アクセス良好・登山道整備済み"
+    "focus": "初心者・家族向け・日帰り登山・アクセス良好・登山道整備済み",
+    "bepal_integration": {
+      "status": "integrated",
+      "updated_mountains": 12,
+      "source": "BE-PAL記事「全国のおすすめ低山58選！登山初心者も楽しめる人気の山を紹介」",
+      "url": "https://www.bepal.net/archives/536937",
+      "copyright_notice": "BE-PAL記事内容の引用時は出典を明記すること"
+    },
+    "sources": [
+      "山と溪谷編集部選定 日本百低山"
+    ]
   },
   "mountains": [
     {
@@ -37,11 +47,21 @@
         "市内からアクセス良好"
       ],
       "seasons": {
-        "best": ["春", "夏", "秋"],
+        "best": [
+          "春",
+          "夏",
+          "秋"
+        ],
         "cherry_blossom": "4月下旬-5月上旬",
         "autumn_leaves": "10月上旬-中旬"
       },
-      "keywords": ["札幌", "都市近郊", "原始林", "神宮", "野生動物"],
+      "keywords": [
+        "札幌",
+        "都市近郊",
+        "原始林",
+        "神宮",
+        "野生動物"
+      ],
       "article_themes": [
         "札幌の都市山歩き",
         "円山原始林で自然体験",
@@ -77,11 +97,22 @@
         "観光名所"
       ],
       "seasons": {
-        "best": ["春", "夏", "秋", "冬"],
+        "best": [
+          "春",
+          "夏",
+          "秋",
+          "冬"
+        ],
         "cherry_blossom": "4月下旬-5月上旬",
         "autumn_leaves": "10月中旬-下旬"
       },
-      "keywords": ["日本三大夜景", "函館", "津軽海峡", "ロープウェイ", "要塞"],
+      "keywords": [
+        "日本三大夜景",
+        "函館",
+        "津軽海峡",
+        "ロープウェイ",
+        "要塞"
+      ],
       "article_themes": [
         "日本三大夜景の函館山",
         "津軽海峡を望む絶景",
@@ -117,11 +148,21 @@
         "アクセス良好"
       ],
       "seasons": {
-        "best": ["春", "夏", "秋"],
+        "best": [
+          "春",
+          "夏",
+          "秋"
+        ],
         "cherry_blossom": "4月下旬-5月上旬",
         "autumn_leaves": "10月上旬-中旬"
       },
-      "keywords": ["岩木山神社", "津軽平野", "桜", "神社", "登山道"],
+      "keywords": [
+        "岩木山神社",
+        "津軽平野",
+        "桜",
+        "神社",
+        "登山道"
+      ],
       "article_themes": [
         "岩木山神社里宮参拝",
         "津軽平野を見渡す眺望",
@@ -157,11 +198,21 @@
         "パワースポット"
       ],
       "seasons": {
-        "best": ["春", "夏", "秋"],
+        "best": [
+          "春",
+          "夏",
+          "秋"
+        ],
         "cherry_blossom": "4月下旬-5月上旬",
         "autumn_leaves": "10月下旬-11月上旬"
       },
-      "keywords": ["黄金山神社", "太平洋", "島", "野生の鹿", "霊山"],
+      "keywords": [
+        "黄金山神社",
+        "太平洋",
+        "島",
+        "野生の鹿",
+        "霊山"
+      ],
       "article_themes": [
         "太平洋に浮かぶ霊山金華山",
         "黄金山神社参拝登山",
@@ -197,11 +248,20 @@
         "アクセス良好"
       ],
       "seasons": {
-        "best": ["春", "秋"],
+        "best": [
+          "春",
+          "秋"
+        ],
         "cherry_blossom": "4月上旬-中旬",
         "autumn_leaves": "11月中旬-下旬"
       },
-      "keywords": ["多摩川", "青梅", "手軽", "家族向け", "梅"],
+      "keywords": [
+        "多摩川",
+        "青梅",
+        "手軽",
+        "家族向け",
+        "梅"
+      ],
       "article_themes": [
         "多摩川を望む手軽なハイキング",
         "青梅の塩見山で自然散歩",
@@ -237,11 +297,21 @@
         "ハイキングコース"
       ],
       "seasons": {
-        "best": ["春", "夏", "秋"],
+        "best": [
+          "春",
+          "夏",
+          "秋"
+        ],
         "cherry_blossom": "4月上旬-中旬",
         "autumn_leaves": "11月中旬-下旬"
       },
-      "keywords": ["桜の名所", "関東平野", "神社", "アジサイ", "だんご"],
+      "keywords": [
+        "桜の名所",
+        "関東平野",
+        "神社",
+        "アジサイ",
+        "だんご"
+      ],
       "article_themes": [
         "桜の名所大平山",
         "関東平野を一望する絶景",
@@ -277,11 +347,20 @@
         "展望良好"
       ],
       "seasons": {
-        "best": ["春", "秋"],
+        "best": [
+          "春",
+          "秋"
+        ],
         "cherry_blossom": "4月上旬-中旬",
         "autumn_leaves": "11月中旬-下旬"
       },
-      "keywords": ["高崎市街地", "群馬の山々", "浅間神社", "手軽", "家族向け"],
+      "keywords": [
+        "高崎市街地",
+        "群馬の山々",
+        "浅間神社",
+        "手軽",
+        "家族向け"
+      ],
       "article_themes": [
         "高崎市街地を一望する浅間山",
         "手軽な浅間神社参拝ハイキング",
@@ -317,11 +396,20 @@
         "ロープウェイ"
       ],
       "seasons": {
-        "best": ["春", "秋"],
+        "best": [
+          "春",
+          "秋"
+        ],
         "cherry_blossom": "4月上旬-中旬",
         "autumn_leaves": "11月中旬-12月上旬"
       },
-      "keywords": ["日本寺", "大仏", "地獄のぞき", "東京湾", "石切り場"],
+      "keywords": [
+        "日本寺",
+        "大仏",
+        "地獄のぞき",
+        "東京湾",
+        "石切り場"
+      ],
       "article_themes": [
         "地獄のぞきスリル体験",
         "日本寺大仏と鋸山",
@@ -357,11 +445,20 @@
         "家族向け"
       ],
       "seasons": {
-        "best": ["春", "秋"],
+        "best": [
+          "春",
+          "秋"
+        ],
         "cherry_blossom": "4月上旬-中旬",
         "autumn_leaves": "11月中旬-下旬"
       },
-      "keywords": ["丹沢展望", "富士山展望", "里山", "季節の花", "家族向け"],
+      "keywords": [
+        "丹沢展望",
+        "富士山展望",
+        "里山",
+        "季節の花",
+        "家族向け"
+      ],
       "article_themes": [
         "丹沢山系を望む里山歩き",
         "富士山展望の渋沢丘陵",
@@ -397,11 +494,20 @@
         "手軽なハイキング"
       ],
       "seasons": {
-        "best": ["春", "秋"],
+        "best": [
+          "春",
+          "秋"
+        ],
         "cherry_blossom": "4月上旬-中旬",
         "autumn_leaves": "11月中旬-下旬"
       },
-      "keywords": ["浅間大社", "富士山展望", "霊山", "桜", "パワースポット"],
+      "keywords": [
+        "浅間大社",
+        "富士山展望",
+        "霊山",
+        "桜",
+        "パワースポット"
+      ],
       "article_themes": [
         "富士山本宮浅間大社参拝",
         "富士山を望む霊山浅間山",
@@ -437,11 +543,20 @@
         "アクセス良好"
       ],
       "seasons": {
-        "best": ["春", "秋"],
+        "best": [
+          "春",
+          "秋"
+        ],
         "cherry_blossom": "4月上旬-中旬",
         "autumn_leaves": "11月中旬-下旬"
       },
-      "keywords": ["観音岩", "大阪平野", "磐船神社", "岩場", "ハイキング"],
+      "keywords": [
+        "観音岩",
+        "大阪平野",
+        "磐船神社",
+        "岩場",
+        "ハイキング"
+      ],
       "article_themes": [
         "観音岩の絶景交野山",
         "大阪平野を一望する低山",
@@ -477,11 +592,20 @@
         "興福寺"
       ],
       "seasons": {
-        "best": ["春", "秋"],
+        "best": [
+          "春",
+          "秋"
+        ],
         "cherry_blossom": "4月上旬-中旬",
         "autumn_leaves": "11月中旬-下旬"
       },
-      "keywords": ["奈良公園", "鹿", "山焼き", "奈良盆地", "東大寺"],
+      "keywords": [
+        "奈良公園",
+        "鹿",
+        "山焼き",
+        "奈良盆地",
+        "東大寺"
+      ],
       "article_themes": [
         "鹿と歩く若草山",
         "山焼きで有名な若草山",
@@ -517,11 +641,20 @@
         "姫路城展望"
       ],
       "seasons": {
-        "best": ["春", "秋"],
+        "best": [
+          "春",
+          "秋"
+        ],
         "cherry_blossom": "4月上旬-中旬",
         "autumn_leaves": "11月中旬-下旬"
       },
-      "keywords": ["圓教寺", "西の比叡山", "ロープウェイ", "映画ロケ地", "姫路城"],
+      "keywords": [
+        "圓教寺",
+        "西の比叡山",
+        "ロープウェイ",
+        "映画ロケ地",
+        "姫路城"
+      ],
       "article_themes": [
         "西の比叡山書写山",
         "圓教寺参拝登山",
@@ -538,7 +671,7 @@
       "elevation": 143,
       "location": {
         "latitude": 34.8667,
-        "longitude": 135.7000,
+        "longitude": 135.7,
         "nearest_station": "八幡市駅",
         "access_time": "京都市内から約30分"
       },
@@ -557,11 +690,20 @@
         "京都盆地の眺望"
       ],
       "seasons": {
-        "best": ["春", "秋"],
+        "best": [
+          "春",
+          "秋"
+        ],
         "cherry_blossom": "4月上旬-中旬",
         "autumn_leaves": "11月中旬-下旬"
       },
-      "keywords": ["石清水八幡宮", "桜", "歴史", "ケーブルカー", "竹林"],
+      "keywords": [
+        "石清水八幡宮",
+        "桜",
+        "歴史",
+        "ケーブルカー",
+        "竹林"
+      ],
       "article_themes": [
         "石清水八幡宮参拝登山",
         "桜の名所男山",
@@ -597,11 +739,20 @@
         "観光地"
       ],
       "seasons": {
-        "best": ["春", "秋"],
+        "best": [
+          "春",
+          "秋"
+        ],
         "cherry_blossom": "4月上旬-中旬",
         "autumn_leaves": "11月中旬-12月上旬"
       },
-      "keywords": ["竹林", "天龍寺", "桂川", "桜", "紅葉"],
+      "keywords": [
+        "竹林",
+        "天龍寺",
+        "桂川",
+        "桜",
+        "紅葉"
+      ],
       "article_themes": [
         "竹林の道と嵐山散策",
         "天龍寺参拝と嵐山",
@@ -637,11 +788,20 @@
         "神秘的"
       ],
       "seasons": {
-        "best": ["春", "秋"],
+        "best": [
+          "春",
+          "秋"
+        ],
         "cherry_blossom": "4月上旬-中旬",
         "autumn_leaves": "11月中旬-下旬"
       },
-      "keywords": ["伏見稲荷大社", "千本鳥居", "お稲荷さん", "朱色", "神秘的"],
+      "keywords": [
+        "伏見稲荷大社",
+        "千本鳥居",
+        "お稲荷さん",
+        "朱色",
+        "神秘的"
+      ],
       "article_themes": [
         "千本鳥居の神秘的な稲荷山",
         "伏見稲荷大社参拝登山",
@@ -677,11 +837,20 @@
         "学生街"
       ],
       "seasons": {
-        "best": ["春", "秋"],
+        "best": [
+          "春",
+          "秋"
+        ],
         "cherry_blossom": "4月上旬-中旬",
         "autumn_leaves": "11月中旬-下旬"
       },
-      "keywords": ["吉田神社", "京都大学", "桜", "哲学の道", "学生街"],
+      "keywords": [
+        "吉田神社",
+        "京都大学",
+        "桜",
+        "哲学の道",
+        "学生街"
+      ],
       "article_themes": [
         "吉田神社参拝と吉田山",
         "桜の名所吉田山",
@@ -717,11 +886,20 @@
         "酒蔵見学"
       ],
       "seasons": {
-        "best": ["春", "秋"],
+        "best": [
+          "春",
+          "秋"
+        ],
         "cherry_blossom": "4月上旬-中旬",
         "autumn_leaves": "11月中旬-下旬"
       },
-      "keywords": ["松尾大社", "酒の神様", "桂川", "竹林", "酒蔵"],
+      "keywords": [
+        "松尾大社",
+        "酒の神様",
+        "桂川",
+        "竹林",
+        "酒蔵"
+      ],
       "article_themes": [
         "酒の神様松尾大社参拝",
         "桂川を望む松尾山",
@@ -757,11 +935,20 @@
         "祇園"
       ],
       "seasons": {
-        "best": ["春", "秋"],
+        "best": [
+          "春",
+          "秋"
+        ],
         "cherry_blossom": "4月上旬-中旬",
         "autumn_leaves": "11月中旬-下旬"
       },
-      "keywords": ["清水寺", "高台寺", "円山公園", "桜", "祇園"],
+      "keywords": [
+        "清水寺",
+        "高台寺",
+        "円山公園",
+        "桜",
+        "祇園"
+      ],
       "article_themes": [
         "清水寺参拝と東山散策",
         "桜の名所東山",
@@ -797,11 +984,20 @@
         "市内からアクセス良好"
       ],
       "seasons": {
-        "best": ["春", "秋"],
+        "best": [
+          "春",
+          "秋"
+        ],
         "cherry_blossom": "4月上旬-中旬",
         "autumn_leaves": "11月中旬-下旬"
       },
-      "keywords": ["徳島市街地", "ロープウェイ", "吉野川", "阿波おどり", "展望台"],
+      "keywords": [
+        "徳島市街地",
+        "ロープウェイ",
+        "吉野川",
+        "阿波おどり",
+        "展望台"
+      ],
       "article_themes": [
         "徳島市街地を一望する眉山",
         "ロープウェイで楽々登山",
@@ -814,7 +1010,7 @@
       "name": "讃岐富士",
       "name_en": "Mount Sanuki Fuji",
       "prefecture": "香川県",
-      "region": "四国",  
+      "region": "四国",
       "elevation": 382,
       "location": {
         "latitude": 34.3264,
@@ -837,11 +1033,20 @@
         "アクセス良好"
       ],
       "seasons": {
-        "best": ["春", "秋"],
+        "best": [
+          "春",
+          "秋"
+        ],
         "cherry_blossom": "4月上旬-中旬",
         "autumn_leaves": "11月中旬-下旬"
       },
-      "keywords": ["讃岐富士", "瀬戸内海", "円錐形", "讃岐平野", "桜"],
+      "keywords": [
+        "讃岐富士",
+        "瀬戸内海",
+        "円錐形",
+        "讃岐平野",
+        "桜"
+      ],
       "article_themes": [
         "美しい讃岐富士",
         "瀬戸内海を望む絶景",
@@ -877,11 +1082,22 @@
         "夜景名所"
       ],
       "seasons": {
-        "best": ["春", "夏", "秋", "冬"],
+        "best": [
+          "春",
+          "夏",
+          "秋",
+          "冬"
+        ],
         "cherry_blossom": "3月下旬-4月上旬",
         "autumn_leaves": "11月中旬-12月上旬"
       },
-      "keywords": ["世界新三大夜景", "長崎", "長崎港", "ロープウェイ", "夜景"],
+      "keywords": [
+        "世界新三大夜景",
+        "長崎",
+        "長崎港",
+        "ロープウェイ",
+        "夜景"
+      ],
       "article_themes": [
         "世界新三大夜景の稲佐山",
         "長崎港を一望する絶景",
@@ -917,54 +1133,1361 @@
         "歴史散策"
       ],
       "seasons": {
-        "best": ["春", "秋", "冬"],
+        "best": [
+          "春",
+          "秋",
+          "冬"
+        ],
         "cherry_blossom": "3月下旬-4月上旬",
         "autumn_leaves": "11月下旬-12月上旬"
       },
-      "keywords": ["桜島展望", "錦江湾", "西郷隆盛", "照葉樹林", "歴史"],
+      "keywords": [
+        "桜島展望",
+        "錦江湾",
+        "西郷隆盛",
+        "照葉樹林",
+        "歴史"
+      ],
       "article_themes": [
         "桜島を望む絶景の城山",
         "西郷隆盛ゆかりの城山",
         "錦江湾と桜島の絶景",
         "鹿児島の歴史散策"
       ]
+    },
+    {
+      "id": "mt_ryogaisan_tochigi",
+      "name": "両崖山",
+      "name_en": "Mount Ryogaisan",
+      "prefecture": "栃木県",
+      "region": "関東",
+      "elevation": 251,
+      "location": {
+        "latitude": 36.3292,
+        "longitude": 139.4528,
+        "nearest_station": "足利駅",
+        "access_time": "駅から徒歩20分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約1-2時間",
+        "distance": "約3km",
+        "elevation_gain": "約200m"
+      },
+      "features": [
+        "関東平野展望",
+        "富士山展望",
+        "織姫神社",
+        "足利城本丸跡",
+        "桜の名所",
+        "ドウダンツツジ",
+        "マンサクの花"
+      ],
+      "seasons": {
+        "best": [
+          "春",
+          "秋"
+        ],
+        "cherry_blossom": "3月下旬-4月上旬",
+        "autumn_leaves": "11月上旬-中旬"
+      },
+      "keywords": [
+        "足利",
+        "関東平野",
+        "富士山展望",
+        "城跡",
+        "花の山"
+      ],
+      "article_themes": [
+        "駅から歩ける絶景低山",
+        "足利の歴史と自然",
+        "関東平野を一望する山歩き"
+      ],
+      "bepal_reference": {
+        "description": "広大な関東平野を眺められる低山で、近隣の山と併せて縦走も可能。天気が良ければ富士山も望める。春はサクラ、ドウダンツツジ、ヤマツツジなど、花の宝庫。山中には、赤や黄色のマンサクの花が咲く場所もある。登山口にあたる織姫神社も既に眺めがいいけれど、山頂手前のテラスが絶景で居心地よし。山頂は足利城本丸跡で平坦になっている。",
+        "expert_comment": null,
+        "expert_name": null,
+        "reference_article": "登山口まで徒歩20分圏内！電車で行けるアクセス良好な駅近低山10選",
+        "source": "BE-PAL記事「全国のおすすめ低山58選！登山初心者も楽しめる人気の山を紹介」",
+        "source_url": "https://www.bepal.net/archives/536937"
+      }
+    },
+    {
+      "id": "mt_kannariyama_gunma",
+      "name": "神成山",
+      "name_en": "Mount Kannariyama",
+      "prefecture": "群馬県",
+      "region": "関東",
+      "elevation": 320,
+      "location": {
+        "latitude": 36.2847,
+        "longitude": 138.8639,
+        "nearest_station": "下仁田駅",
+        "access_time": "駅から徒歩15分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約2-3時間",
+        "distance": "約5km",
+        "elevation_gain": "約250m"
+      },
+      "features": [
+        "九連峰縦走",
+        "龍の背尾根",
+        "上信電鉄展望",
+        "田園風景",
+        "日本一のハイキングコース",
+        "地元愛される山"
+      ],
+      "seasons": {
+        "best": [
+          "春",
+          "秋",
+          "冬"
+        ],
+        "cherry_blossom": "4月上旬-中旬",
+        "autumn_leaves": "10月下旬-11月上旬"
+      },
+      "keywords": [
+        "九連峰",
+        "縦走",
+        "上信電鉄",
+        "龍の背",
+        "田園"
+      ],
+      "article_themes": [
+        "龍の背を歩く九連峰",
+        "上信電鉄と田園風景",
+        "日本一のハイキングコース"
+      ],
+      "bepal_reference": {
+        "description": "低くたなびく尾根は、まるで龍の背のごとし。小さなアップダウンが続き九連峰と呼ばれる。日本一のハイキングコースとして整備され、地元の人々にも遠方から訪れる人々にも愛されている。低いながらも眼下の町と田んぼの眺めはスペクタクル。麓を通る上信電鉄は、ローカル感があってどこか懐かしい。山からも眺められるが、踏切から山を仰ぐほうが、写真を撮るのには好アングル。",
+        "expert_comment": null,
+        "expert_name": null,
+        "reference_article": "登山口まで徒歩20分圏内！電車で行けるアクセス良好な駅近低山10選",
+        "source": "BE-PAL記事「全国のおすすめ低山58選！登山初心者も楽しめる人気の山を紹介」",
+        "source_url": "https://www.bepal.net/archives/536937"
+      }
+    },
+    {
+      "id": "mt_kinuhariyama_kanagawa",
+      "name": "衣張山",
+      "name_en": "Mount Kinuhariyama",
+      "prefecture": "神奈川県",
+      "region": "関東",
+      "elevation": 121,
+      "location": {
+        "latitude": 35.3167,
+        "longitude": 139.55,
+        "nearest_station": "鎌倉駅",
+        "access_time": "駅から徒歩30分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約1時間",
+        "distance": "約2km",
+        "elevation_gain": "約100m"
+      },
+      "features": [
+        "鎌倉の山と海",
+        "相模湾展望",
+        "手軽なハイキング",
+        "歴史ある鎌倉",
+        "山が街を抱く景色"
+      ],
+      "seasons": {
+        "best": [
+          "春",
+          "秋",
+          "冬"
+        ],
+        "cherry_blossom": "3月下旬-4月上旬",
+        "autumn_leaves": "11月下旬-12月上旬"
+      },
+      "keywords": [
+        "鎌倉",
+        "相模湾",
+        "手軽",
+        "歴史",
+        "海山"
+      ],
+      "article_themes": [
+        "鎌倉の手軽な山歩き",
+        "海と山を同時に楽しむ",
+        "歴史の街の自然散策"
+      ],
+      "bepal_reference": {
+        "description": "山と街が近い鎌倉。衣張山からは、小さな山並みが海へと手を伸ばし、その腕で街を抱きしめているようで好きです",
+        "expert_comment": "山と街が近い鎌倉。衣張山からは、小さな山並みが海へと手を伸ばし、その腕で街を抱きしめているようで好きです",
+        "expert_name": "アウトドアスタイル・クリエイター・四角友里さん（女子登山ブームの火付け役。講演や執筆、女子向けアウトドアウェア、ギアの開発をする。著書に『山登り12カ月』（山と溪谷社）など）",
+        "reference_article": "低山を愛する達人7名が太鼓判！ 絶対登っておきたいマイベスト低山",
+        "source": "BE-PAL記事「全国のおすすめ低山58選！登山初心者も楽しめる人気の山を紹介」",
+        "source_url": "https://www.bepal.net/archives/536937"
+      }
+    },
+    {
+      "id": "mt_azumayama_kanagawa",
+      "name": "吾妻山",
+      "name_en": "Mount Azumayama",
+      "prefecture": "神奈川県",
+      "region": "関東",
+      "elevation": 136,
+      "location": {
+        "latitude": 35.3442,
+        "longitude": 139.2472,
+        "nearest_station": "二宮駅",
+        "access_time": "駅から徒歩15分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約30分",
+        "distance": "約1.5km",
+        "elevation_gain": "約120m"
+      },
+      "features": [
+        "駅から30分",
+        "ピクニックハイク",
+        "家族向け",
+        "思い立ったらすぐ行ける",
+        "子連れハイキング最適"
+      ],
+      "seasons": {
+        "best": [
+          "通年"
+        ],
+        "cherry_blossom": "3月下旬-4月上旬",
+        "autumn_leaves": "11月下旬-12月上旬"
+      },
+      "keywords": [
+        "駅近",
+        "ピクニック",
+        "家族",
+        "手軽",
+        "子連れ"
+      ],
+      "article_themes": [
+        "駅から30分の手軽ハイキング",
+        "家族でピクニック登山",
+        "思い立ったらすぐ行ける山"
+      ],
+      "bepal_reference": {
+        "description": "駅から歩けるので、思い立ったらすぐ行ける山。山頂までは約30分と気軽なので、子どもとピクニックハイクを楽しんでいます",
+        "expert_comment": "駅から歩けるので、思い立ったらすぐ行ける山。山頂までは約30分と気軽なので、子どもとピクニックハイクを楽しんでいます",
+        "expert_name": "アウトドアスタイル・クリエイター・四角友里さん",
+        "reference_article": "低山を愛する達人7名が太鼓判！ 絶対登っておきたいマイベスト低山",
+        "source": "BE-PAL記事「全国のおすすめ低山58選！登山初心者も楽しめる人気の山を紹介」",
+        "source_url": "https://www.bepal.net/archives/536937"
+      }
+    },
+    {
+      "id": "mt_takatoriyama_kanagawa",
+      "name": "鷹取山",
+      "name_en": "Mount Takatoriyama",
+      "prefecture": "神奈川県",
+      "region": "関東",
+      "elevation": 139,
+      "location": {
+        "latitude": 35.2833,
+        "longitude": 139.6167,
+        "nearest_station": "東逗子駅",
+        "access_time": "駅から徒歩20分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約1-2時間",
+        "distance": "約3km",
+        "elevation_gain": "約120m"
+      },
+      "features": [
+        "湘南妙義",
+        "巨大磨崖仏",
+        "垂直岩壁",
+        "東京湾展望",
+        "房総半島展望",
+        "ロッククライミング練習場"
+      ],
+      "seasons": {
+        "best": [
+          "秋",
+          "冬",
+          "春"
+        ],
+        "cherry_blossom": "3月下旬-4月上旬",
+        "autumn_leaves": "11月下旬-12月上旬"
+      },
+      "keywords": [
+        "湘南妙義",
+        "磨崖仏",
+        "岩壁",
+        "東京湾",
+        "クライミング"
+      ],
+      "article_themes": [
+        "湘南妙義の岩山体験",
+        "巨大磨崖仏と絶景",
+        "低山でスリルを味わう"
+      ],
+      "bepal_reference": {
+        "description": "垂直に切り立った岩石が特徴で、\"湘南妙義\"の別名がある。標高こそ低いものの絶景で、晴れた日には東京湾や房総半島までよく見渡せる。山頂付近の岩山には巨大な磨崖仏が彫られていて、名所になっている。神武寺とその仏教遺跡、ロッククライミングの練習場の石切り場など見どころと話題性も◎。東逗子駅から京急田浦駅への縦走コースも。",
+        "expert_comment": null,
+        "expert_name": null,
+        "reference_article": "登山口まで徒歩20分圏内！電車で行けるアクセス良好な駅近低山10選",
+        "source": "BE-PAL記事「全国のおすすめ低山58選！登山初心者も楽しめる人気の山を紹介」",
+        "source_url": "https://www.bepal.net/archives/536937"
+      }
+    },
+    {
+      "id": "mt_ogusuyama_kanagawa",
+      "name": "大楠山",
+      "name_en": "Mount Ogusuyama",
+      "prefecture": "神奈川県",
+      "region": "関東",
+      "elevation": 241,
+      "location": {
+        "latitude": 35.2833,
+        "longitude": 139.5833,
+        "nearest_station": "衣笠駅",
+        "access_time": "駅からバス20分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約2-3時間",
+        "distance": "約4km",
+        "elevation_gain": "約200m"
+      },
+      "features": [
+        "三浦半島最高峰",
+        "5つのコース",
+        "三浦半島展望",
+        "伊豆半島展望",
+        "富士山展望",
+        "箱根連山展望",
+        "房総半島展望",
+        "かながわ景勝50選"
+      ],
+      "seasons": {
+        "best": [
+          "秋",
+          "冬",
+          "春"
+        ],
+        "cherry_blossom": "3月下旬-4月上旬",
+        "autumn_leaves": "11月下旬-12月上旬"
+      },
+      "keywords": [
+        "三浦半島",
+        "大パノラマ",
+        "富士山",
+        "景勝地",
+        "5コース"
+      ],
+      "article_themes": [
+        "三浦半島の最高峰を制覇",
+        "360度大パノラマの絶景",
+        "コース選択が楽しい山"
+      ],
+      "bepal_reference": {
+        "description": "バリエーションの違う5つのコースを整備。バスなどを利用すれば、アクセスもしやすい。山頂からは三浦半島、伊豆半島、富士山、箱根連山、房総半島の大パノラマが。「かながわ景勝50選」にも選出。",
+        "expert_comment": null,
+        "expert_name": null,
+        "reference_article": "絶景、歴史あり、植物観察も…BE-PAL厳選！一度は登りたい 全国おすすめ低山リスト",
+        "source": "BE-PAL記事「全国のおすすめ低山58選！登山初心者も楽しめる人気の山を紹介」",
+        "source_url": "https://www.bepal.net/archives/536937"
+      }
+    },
+    {
+      "id": "mt_komayama_kanagawa",
+      "name": "高麗山",
+      "name_en": "Mount Komayama",
+      "prefecture": "神奈川県",
+      "region": "関東",
+      "elevation": 168,
+      "location": {
+        "latitude": 35.3333,
+        "longitude": 139.3,
+        "nearest_station": "平塚駅",
+        "access_time": "駅からバス15分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約1-2時間",
+        "distance": "約3km",
+        "elevation_gain": "約150m"
+      },
+      "features": [
+        "湘南平縦走",
+        "富士山展望",
+        "横穴墓地史跡",
+        "照ヶ崎海岸",
+        "アオバト飛来地",
+        "歴史散策"
+      ],
+      "seasons": {
+        "best": [
+          "通年"
+        ],
+        "cherry_blossom": "3月下旬-4月上旬",
+        "autumn_leaves": "11月下旬-12月上旬"
+      },
+      "keywords": [
+        "湘南平",
+        "富士山",
+        "史跡",
+        "アオバト",
+        "海岸"
+      ],
+      "article_themes": [
+        "湘南平への縦走ハイキング",
+        "富士山と歴史を楽しむ",
+        "海と山の自然観察"
+      ],
+      "bepal_reference": {
+        "description": "高麗山山頂から湘南平という景勝地までプチ縦走でき、湘南平からは富士山を望むことができる。道中に現われる県指定史跡の横穴墓地も見応えあり。夏になると照ヶ崎にアオバトが飛来するので、ぜひ海岸にも寄ってみよう。",
+        "expert_comment": "高麗山山頂から湘南平という景勝地までプチ縦走でき、湘南平からは富士山を望むことができる。道中に現われる県指定史跡の横穴墓地も見応えあり。夏になると照ヶ崎にアオバトが飛来するので、ぜひ海岸にも寄ってみよう。",
+        "expert_name": "イラストレーター・神田めぐみさん（山岳、アウトドア関連の雑誌、書籍、Web媒体を中心に活動。季節を問わず山歩きを楽しみ、イラストルポも得意とする。訪ねた山小屋は140軒以上）",
+        "reference_article": "山登り愛好家8人が激押しする、この時期登りたい景色のいい山BEST 18",
+        "source": "BE-PAL記事「全国のおすすめ低山58選！登山初心者も楽しめる人気の山を紹介」",
+        "source_url": "https://www.bepal.net/archives/536937"
+      }
+    },
+    {
+      "id": "mt_hikiiwagusa_wakayama",
+      "name": "ひき岩群",
+      "name_en": "Hiki Iwagusa",
+      "prefecture": "和歌山県",
+      "region": "関西",
+      "elevation": 127,
+      "location": {
+        "latitude": 34.1833,
+        "longitude": 135.1667,
+        "nearest_station": "海南駅",
+        "access_time": "駅から車10分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約20分",
+        "distance": "約1km",
+        "elevation_gain": "約100m"
+      },
+      "features": [
+        "360度絶景",
+        "不思議な巨岩群",
+        "みかん畑景色",
+        "絶壁の巨岩",
+        "和歌山らしい風景",
+        "短時間で絶景"
+      ],
+      "seasons": {
+        "best": [
+          "通年"
+        ],
+        "cherry_blossom": "3月下旬-4月上旬",
+        "autumn_leaves": "11月下旬-12月上旬"
+      },
+      "keywords": [
+        "巨岩群",
+        "360度",
+        "みかん畑",
+        "和歌山",
+        "絶景"
+      ],
+      "article_themes": [
+        "20分で360度絶景",
+        "不思議な巨岩群探検",
+        "和歌山のみかん畑風景"
+      ],
+      "bepal_reference": {
+        "description": "街から10分、登山口から20分で360度見渡せる絶景あり。絶壁の不思議な巨岩群も見もの。みかん畑が見られるのも和歌山ならではの景色です",
+        "expert_comment": "街から10分、登山口から20分で360度見渡せる絶景あり。絶壁の不思議な巨岩群も見もの。みかん畑が見られるのも和歌山ならではの景色です",
+        "expert_name": "アウトドアスタイル・クリエイター・四角友里さん",
+        "reference_article": "低山を愛する達人7名が太鼓判！ 絶対登っておきたいマイベスト低山",
+        "source": "BE-PAL記事「全国のおすすめ低山58選！登山初心者も楽しめる人気の山を紹介」",
+        "source_url": "https://www.bepal.net/archives/536937"
+      }
+    },
+    {
+      "id": "mt_iwagamiyama_wakayama",
+      "name": "岩神山",
+      "name_en": "Mount Iwagamiyama",
+      "prefecture": "和歌山県",
+      "region": "関西",
+      "elevation": 240,
+      "location": {
+        "latitude": 34.2167,
+        "longitude": 135.1833,
+        "nearest_station": "和歌山駅",
+        "access_time": "駅から車20分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約1-2時間",
+        "distance": "約3km",
+        "elevation_gain": "約200m"
+      },
+      "features": [
+        "和歌山市夜景",
+        "紀ノ川展望",
+        "紀泉アルプス入口",
+        "橋梁美景",
+        "市街地パノラマ"
+      ],
+      "seasons": {
+        "best": [
+          "秋",
+          "冬"
+        ],
+        "cherry_blossom": "3月下旬-4月上旬",
+        "autumn_leaves": "11月中旬-下旬"
+      },
+      "keywords": [
+        "和歌山夜景",
+        "紀ノ川",
+        "アルプス",
+        "橋梁",
+        "市街地"
+      ],
+      "article_themes": [
+        "和歌山市の夜景を楽しむ",
+        "紀ノ川と橋の絶景",
+        "紀泉アルプスの入門山"
+      ],
+      "bepal_reference": {
+        "description": "紀泉アルプスの入り口とされる岩神山からは迫力のある和歌山市の夜景が望める。中央に流れる紀ノ川を挟んだ市街地や、紀ノ川に架かる橋が特徴的で美しい。",
+        "expert_comment": null,
+        "expert_name": null,
+        "reference_article": "空気が澄んだ季節に最適！ 山頂で格別な夜景を楽しむ低山ナイトハイクの極意とおすすめ５山",
+        "source": "BE-PAL記事「全国のおすすめ低山58選！登山初心者も楽しめる人気の山を紹介」",
+        "source_url": "https://www.bepal.net/archives/536937"
+      }
+    },
+    {
+      "id": "mt_wake_alps_okayama",
+      "name": "和気アルプス",
+      "name_en": "Wake Alps",
+      "prefecture": "岡山県",
+      "region": "中国",
+      "elevation": 206,
+      "location": {
+        "latitude": 34.8,
+        "longitude": 134.15,
+        "nearest_station": "和気駅",
+        "access_time": "駅から徒歩15分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約2-3時間",
+        "distance": "約5km",
+        "elevation_gain": "約150m"
+      },
+      "features": [
+        "小ピーク縦走",
+        "和気富士",
+        "岩場体験",
+        "吉井川風景",
+        "鉄道風景",
+        "地元愛される山",
+        "丁寧な整備"
+      ],
+      "seasons": {
+        "best": [
+          "春",
+          "秋",
+          "冬"
+        ],
+        "cherry_blossom": "4月上旬-中旬",
+        "autumn_leaves": "11月中旬-下旬"
+      },
+      "keywords": [
+        "縦走",
+        "和気富士",
+        "岩場",
+        "吉井川",
+        "鉄道"
+      ],
+      "article_themes": [
+        "小ピーク縦走を楽しむ",
+        "吉井川と鉄道の風景",
+        "地元愛される里山歩き"
+      ],
+      "bepal_reference": {
+        "description": "和気富士をはじめとする、数々の小さなピークを踏み、岩場も多い魅惑の縦走路。とても丁寧に整備されていて、地元からの愛され具合がよくわかる。吉井川と周辺の低山の中に鉄道が走る風景は、まさに風光明媚。なんとなく歩き足りない人は、このアルプスの最高峰である、神ノ上山まで足を伸ばしてみるのがおすすめ。尾根筋は実に爽快だ。",
+        "expert_comment": null,
+        "expert_name": null,
+        "reference_article": "登山口まで徒歩20分圏内！電車で行けるアクセス良好な駅近低山10選",
+        "source": "BE-PAL記事「全国のおすすめ低山58選！登山初心者も楽しめる人気の山を紹介」",
+        "source_url": "https://www.bepal.net/archives/536937"
+      }
+    },
+    {
+      "id": "mt_jiromarudake_kumamoto",
+      "name": "次郎丸嶽",
+      "name_en": "Mount Jiromarudake",
+      "prefecture": "熊本県",
+      "region": "九州",
+      "elevation": 397,
+      "location": {
+        "latitude": 32.4667,
+        "longitude": 130.0833,
+        "nearest_station": "本渡駅",
+        "access_time": "駅から車30分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約2-3時間",
+        "distance": "約4km",
+        "elevation_gain": "約350m"
+      },
+      "features": [
+        "天草の山",
+        "断崖絶壁",
+        "東側切れ落ち崖",
+        "太郎丸物語",
+        "天草上島",
+        "海岸線展望"
+      ],
+      "seasons": {
+        "best": [
+          "秋",
+          "冬",
+          "春"
+        ],
+        "cherry_blossom": "3月下旬-4月上旬",
+        "autumn_leaves": "11月下旬-12月上旬"
+      },
+      "keywords": [
+        "天草",
+        "断崖",
+        "太郎丸",
+        "島",
+        "海展望"
+      ],
+      "article_themes": [
+        "天草の断崖絶壁山歩き",
+        "太郎丸物語の舞台",
+        "島の山から海を望む"
+      ],
+      "bepal_reference": {
+        "description": "天草上島の東部にあり、東側はスパッと切れ落ちた崖が特徴。登山口にある『太郎丸・次郎丸物語』を読むとさらに楽しい！",
+        "expert_comment": "天草上島の東部にあり、東側はスパッと切れ落ちた崖が特徴。登山口にある『太郎丸・次郎丸物語』を読むとさらに楽しい！",
+        "expert_name": "「ラリーグラス」代表取締役社長・浦 周平さん（北海道に住んでいたころ、スキー、登山を通して自然にハマる。冬はテレマークスキー、それ以外は登山、トレラン、クライミングを満喫）",
+        "reference_article": "低山を愛する達人7名が太鼓判！ 絶対登っておきたいマイベスト低山",
+        "source": "BE-PAL記事「全国のおすすめ低山58選！登山初心者も楽しめる人気の山を紹介」",
+        "source_url": "https://www.bepal.net/archives/536937"
+      }
+    },
+    {
+      "id": "mt_nakayamasenkyo_oita",
+      "name": "中山仙境",
+      "name_en": "Mount Nakayamasenkyo",
+      "prefecture": "大分県",
+      "region": "九州",
+      "elevation": 317,
+      "location": {
+        "latitude": 33.5167,
+        "longitude": 131.4833,
+        "nearest_station": "杵築駅",
+        "access_time": "駅から車25分"
+      },
+      "difficulty": {
+        "level": "初級-中級",
+        "hiking_time": "約2-3時間",
+        "distance": "約4km",
+        "elevation_gain": "約280m"
+      },
+      "features": [
+        "奇岩・絶景",
+        "切り立った岩峰群",
+        "ニョキニョキ岩峰",
+        "低山とは思えない眺め",
+        "岩のスリル体験",
+        "不思議な景色"
+      ],
+      "seasons": {
+        "best": [
+          "秋",
+          "冬",
+          "春"
+        ],
+        "cherry_blossom": "3月下旬-4月上旬",
+        "autumn_leaves": "11月下旬-12月上旬"
+      },
+      "keywords": [
+        "奇岩",
+        "岩峰",
+        "絶景",
+        "スリル",
+        "不思議"
+      ],
+      "article_themes": [
+        "奇岩群の不思議な絶景",
+        "低山で味わう岩のスリル",
+        "ニョキニョキ岩峰探検"
+      ],
+      "bepal_reference": {
+        "description": "奇岩・絶景の山です。切り立った岩峰がニョキニョキ立ち並ぶ不思議な景色が見られます。低山とは思えない眺めと岩のスリルに驚きます",
+        "expert_comment": "奇岩・絶景の山です。切り立った岩峰がニョキニョキ立ち並ぶ不思議な景色が見られます。低山とは思えない眺めと岩のスリルに驚きます",
+        "expert_name": "山岳ライター・小林千穂さん（里山歩きから雪山、海外遠征まで幅広く山登りを楽しむ。山岳雑誌での執筆のほか登山ガイドの資格も持つ。山関連の著書も多数上梓）",
+        "reference_article": "低山を愛する達人7名が太鼓判！ 絶対登っておきたいマイベスト低山",
+        "source": "BE-PAL記事「全国のおすすめ低山58選！登山初心者も楽しめる人気の山を紹介」",
+        "source_url": "https://www.bepal.net/archives/536937"
+      }
+    },
+    {
+      "id": "mt_七座_秋田",
+      "name": "七座山",
+      "location": {
+        "prefecture": "秋田県",
+        "region": "東北",
+        "latitude": null,
+        "longitude": null,
+        "nearest_station": null,
+        "access_time": null
+      },
+      "elevation": 288,
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": null,
+        "distance": null
+      },
+      "description": "七座山は秋田県にある標高288mの低山です。山と溪谷編集部選定の日本百低山の一つとして選ばれており、登山初心者にも親しまれています。",
+      "features": [],
+      "seasons": {
+        "cherry_blossom": null,
+        "autumn_leaves": null
+      },
+      "keywords": [
+        "七座山",
+        "秋田県",
+        "低山",
+        "初心者向け",
+        "日帰り登山"
+      ],
+      "article_themes": [
+        "初心者におすすめの低山",
+        "日帰りハイキング",
+        "東北地方の山歩き"
+      ],
+      "yamatokaikoku_reference": {
+        "source": "山と溪谷編集部選定 日本百低山",
+        "description": "山と溪谷編集部が選定した日本百低山の一つ。標高288mで日帰り登山が可能な魅力的な山として紹介されています。",
+        "url": "https://www.yamakei.co.jp/yk/article/hyakuteizan",
+        "source_line": "秋田県 七座山 288（権現座）"
+      }
+    },
+    {
+      "id": "mt_三毳_栃木",
+      "name": "三毳山",
+      "location": {
+        "prefecture": "栃木県",
+        "region": "関東",
+        "latitude": null,
+        "longitude": null,
+        "nearest_station": null,
+        "access_time": null
+      },
+      "elevation": 229,
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": null,
+        "distance": null
+      },
+      "description": "三毳山は栃木県にある標高229mの低山です。山と溪谷編集部選定の日本百低山の一つとして選ばれており、登山初心者にも親しまれています。",
+      "features": [],
+      "seasons": {
+        "cherry_blossom": null,
+        "autumn_leaves": null
+      },
+      "keywords": [
+        "三毳山",
+        "栃木県",
+        "低山",
+        "初心者向け",
+        "日帰り登山"
+      ],
+      "article_themes": [
+        "初心者におすすめの低山",
+        "日帰りハイキング",
+        "関東地方の山歩き"
+      ],
+      "yamatokaikoku_reference": {
+        "source": "山と溪谷編集部選定 日本百低山",
+        "description": "山と溪谷編集部が選定した日本百低山の一つ。標高229mで日帰り登山が可能な魅力的な山として紹介されています。",
+        "url": "https://www.yamakei.co.jp/yk/article/hyakuteizan",
+        "source_line": "栃木県 三毳山 229"
+      }
+    },
+    {
+      "id": "mt_日和田_埼玉",
+      "name": "日和田山",
+      "location": {
+        "prefecture": "埼玉県",
+        "region": "関東",
+        "latitude": null,
+        "longitude": null,
+        "nearest_station": null,
+        "access_time": null
+      },
+      "elevation": 305,
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": null,
+        "distance": null
+      },
+      "description": "日和田山は埼玉県にある標高305mの低山です。山と溪谷編集部選定の日本百低山の一つとして選ばれており、登山初心者にも親しまれています。",
+      "features": [],
+      "seasons": {
+        "cherry_blossom": null,
+        "autumn_leaves": null
+      },
+      "keywords": [
+        "日和田山",
+        "埼玉県",
+        "低山",
+        "初心者向け",
+        "日帰り登山"
+      ],
+      "article_themes": [
+        "初心者におすすめの低山",
+        "日帰りハイキング",
+        "関東地方の山歩き"
+      ],
+      "yamatokaikoku_reference": {
+        "source": "山と溪谷編集部選定 日本百低山",
+        "description": "山と溪谷編集部が選定した日本百低山の一つ。標高305mで日帰り登山が可能な魅力的な山として紹介されています。",
+        "url": "https://www.yamakei.co.jp/yk/article/hyakuteizan",
+        "source_line": "埼玉県 日和田山 305"
+      }
+    },
+    {
+      "id": "mt_伊予ヶ_千葉",
+      "name": "伊予ヶ岳",
+      "location": {
+        "prefecture": "千葉県",
+        "region": "関東",
+        "latitude": null,
+        "longitude": null,
+        "nearest_station": null,
+        "access_time": null
+      },
+      "elevation": 336,
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": null,
+        "distance": null
+      },
+      "description": "伊予ヶ岳は千葉県にある標高336mの低山です。山と溪谷編集部選定の日本百低山の一つとして選ばれており、登山初心者にも親しまれています。",
+      "features": [],
+      "seasons": {
+        "cherry_blossom": null,
+        "autumn_leaves": null
+      },
+      "keywords": [
+        "伊予ヶ岳",
+        "千葉県",
+        "低山",
+        "初心者向け",
+        "日帰り登山"
+      ],
+      "article_themes": [
+        "初心者におすすめの低山",
+        "日帰りハイキング",
+        "関東地方の山歩き"
+      ],
+      "yamatokaikoku_reference": {
+        "source": "山と溪谷編集部選定 日本百低山",
+        "description": "山と溪谷編集部が選定した日本百低山の一つ。標高336mで日帰り登山が可能な魅力的な山として紹介されています。",
+        "url": "https://www.yamakei.co.jp/yk/article/hyakuteizan",
+        "source_line": "千葉県 伊予ヶ岳 336（北峰）"
+      }
+    },
+    {
+      "id": "mt_大福_千葉",
+      "name": "大福山",
+      "location": {
+        "prefecture": "千葉県",
+        "region": "関東",
+        "latitude": null,
+        "longitude": null,
+        "nearest_station": null,
+        "access_time": null
+      },
+      "elevation": 292,
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": null,
+        "distance": null
+      },
+      "description": "大福山は千葉県にある標高292mの低山です。山と溪谷編集部選定の日本百低山の一つとして選ばれており、登山初心者にも親しまれています。",
+      "features": [],
+      "seasons": {
+        "cherry_blossom": null,
+        "autumn_leaves": null
+      },
+      "keywords": [
+        "大福山",
+        "千葉県",
+        "低山",
+        "初心者向け",
+        "日帰り登山"
+      ],
+      "article_themes": [
+        "初心者におすすめの低山",
+        "日帰りハイキング",
+        "関東地方の山歩き"
+      ],
+      "yamatokaikoku_reference": {
+        "source": "山と溪谷編集部選定 日本百低山",
+        "description": "山と溪谷編集部が選定した日本百低山の一つ。標高292mで日帰り登山が可能な魅力的な山として紹介されています。",
+        "url": "https://www.yamakei.co.jp/yk/article/hyakuteizan",
+        "source_line": "千葉県 大福山 292"
+      }
+    },
+    {
+      "id": "mt_鎌倉アルプス_神奈川",
+      "name": "鎌倉アルプス",
+      "location": {
+        "prefecture": "神奈川県",
+        "region": "関東",
+        "latitude": null,
+        "longitude": null,
+        "nearest_station": null,
+        "access_time": null
+      },
+      "elevation": 159,
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": null,
+        "distance": null
+      },
+      "description": "鎌倉アルプスは神奈川県にある標高159mの低山です。山と溪谷編集部選定の日本百低山の一つとして選ばれており、登山初心者にも親しまれています。",
+      "features": [],
+      "seasons": {
+        "cherry_blossom": null,
+        "autumn_leaves": null
+      },
+      "keywords": [
+        "鎌倉アルプス",
+        "神奈川県",
+        "低山",
+        "初心者向け",
+        "日帰り登山"
+      ],
+      "article_themes": [
+        "初心者におすすめの低山",
+        "日帰りハイキング",
+        "関東地方の山歩き"
+      ],
+      "yamatokaikoku_reference": {
+        "source": "山と溪谷編集部選定 日本百低山",
+        "description": "山と溪谷編集部が選定した日本百低山の一つ。標高159mで日帰り登山が可能な魅力的な山として紹介されています。",
+        "url": "https://www.yamakei.co.jp/yk/article/hyakuteizan",
+        "source_line": "神奈川県 鎌倉アルプス 159（太平山）"
+      }
+    },
+    {
+      "id": "mt_鷲頭_静岡",
+      "name": "鷲頭山",
+      "location": {
+        "prefecture": "静岡県",
+        "region": "中部",
+        "latitude": null,
+        "longitude": null,
+        "nearest_station": null,
+        "access_time": null
+      },
+      "elevation": 392,
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": null,
+        "distance": null
+      },
+      "description": "鷲頭山は静岡県にある標高392mの低山です。山と溪谷編集部選定の日本百低山の一つとして選ばれており、登山初心者にも親しまれています。",
+      "features": [],
+      "seasons": {
+        "cherry_blossom": null,
+        "autumn_leaves": null
+      },
+      "keywords": [
+        "鷲頭山",
+        "静岡県",
+        "低山",
+        "初心者向け",
+        "日帰り登山"
+      ],
+      "article_themes": [
+        "初心者におすすめの低山",
+        "日帰りハイキング",
+        "中部地方の山歩き"
+      ],
+      "yamatokaikoku_reference": {
+        "source": "山と溪谷編集部選定 日本百低山",
+        "description": "山と溪谷編集部が選定した日本百低山の一つ。標高392mで日帰り登山が可能な魅力的な山として紹介されています。",
+        "url": "https://www.yamakei.co.jp/yk/article/hyakuteizan",
+        "source_line": "静岡県 鷲頭山 392"
+      }
+    },
+    {
+      "id": "mt_神石_静岡",
+      "name": "神石山",
+      "location": {
+        "prefecture": "静岡県",
+        "region": "中部",
+        "latitude": null,
+        "longitude": null,
+        "nearest_station": null,
+        "access_time": null
+      },
+      "elevation": 325,
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": null,
+        "distance": null
+      },
+      "description": "神石山は静岡県にある標高325mの低山です。山と溪谷編集部選定の日本百低山の一つとして選ばれており、登山初心者にも親しまれています。",
+      "features": [],
+      "seasons": {
+        "cherry_blossom": null,
+        "autumn_leaves": null
+      },
+      "keywords": [
+        "神石山",
+        "静岡県",
+        "低山",
+        "初心者向け",
+        "日帰り登山"
+      ],
+      "article_themes": [
+        "初心者におすすめの低山",
+        "日帰りハイキング",
+        "中部地方の山歩き"
+      ],
+      "yamatokaikoku_reference": {
+        "source": "山と溪谷編集部選定 日本百低山",
+        "description": "山と溪谷編集部が選定した日本百低山の一つ。標高325mで日帰り登山が可能な魅力的な山として紹介されています。",
+        "url": "https://www.yamakei.co.jp/yk/article/hyakuteizan",
+        "source_line": "静岡県・愛知県 神石山 325"
+      }
+    },
+    {
+      "id": "mt_高御位_兵庫",
+      "name": "高御位山",
+      "location": {
+        "prefecture": "兵庫県",
+        "region": "関西",
+        "latitude": null,
+        "longitude": null,
+        "nearest_station": null,
+        "access_time": null
+      },
+      "elevation": 304,
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": null,
+        "distance": null
+      },
+      "description": "高御位山は兵庫県にある標高304mの低山です。山と溪谷編集部選定の日本百低山の一つとして選ばれており、登山初心者にも親しまれています。",
+      "features": [],
+      "seasons": {
+        "cherry_blossom": null,
+        "autumn_leaves": null
+      },
+      "keywords": [
+        "高御位山",
+        "兵庫県",
+        "低山",
+        "初心者向け",
+        "日帰り登山"
+      ],
+      "article_themes": [
+        "初心者におすすめの低山",
+        "日帰りハイキング",
+        "関西地方の山歩き"
+      ],
+      "yamatokaikoku_reference": {
+        "source": "山と溪谷編集部選定 日本百低山",
+        "description": "山と溪谷編集部が選定した日本百低山の一つ。標高304mで日帰り登山が可能な魅力的な山として紹介されています。",
+        "url": "https://www.yamakei.co.jp/yk/article/hyakuteizan",
+        "source_line": "兵庫県 高御位山 304"
+      }
+    },
+    {
+      "id": "mt_世田_愛媛",
+      "name": "世田山",
+      "location": {
+        "prefecture": "愛媛県",
+        "region": "四国",
+        "latitude": null,
+        "longitude": null,
+        "nearest_station": null,
+        "access_time": null
+      },
+      "elevation": 339,
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": null,
+        "distance": null
+      },
+      "description": "世田山は愛媛県にある標高339mの低山です。山と溪谷編集部選定の日本百低山の一つとして選ばれており、登山初心者にも親しまれています。",
+      "features": [],
+      "seasons": {
+        "cherry_blossom": null,
+        "autumn_leaves": null
+      },
+      "keywords": [
+        "世田山",
+        "愛媛県",
+        "低山",
+        "初心者向け",
+        "日帰り登山"
+      ],
+      "article_themes": [
+        "初心者におすすめの低山",
+        "日帰りハイキング",
+        "四国地方の山歩き"
+      ],
+      "yamatokaikoku_reference": {
+        "source": "山と溪谷編集部選定 日本百低山",
+        "description": "山と溪谷編集部が選定した日本百低山の一つ。標高339mで日帰り登山が可能な魅力的な山として紹介されています。",
+        "url": "https://www.yamakei.co.jp/yk/article/hyakuteizan",
+        "source_line": "愛媛県 世田山 339"
+      }
+    },
+    {
+      "id": "mt_立花_福岡",
+      "name": "立花山",
+      "location": {
+        "prefecture": "福岡県",
+        "region": "九州",
+        "latitude": null,
+        "longitude": null,
+        "nearest_station": null,
+        "access_time": null
+      },
+      "elevation": 367,
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": null,
+        "distance": null
+      },
+      "description": "立花山は福岡県にある標高367mの低山です。山と溪谷編集部選定の日本百低山の一つとして選ばれており、登山初心者にも親しまれています。",
+      "features": [],
+      "seasons": {
+        "cherry_blossom": null,
+        "autumn_leaves": null
+      },
+      "keywords": [
+        "立花山",
+        "福岡県",
+        "低山",
+        "初心者向け",
+        "日帰り登山"
+      ],
+      "article_themes": [
+        "初心者におすすめの低山",
+        "日帰りハイキング",
+        "九州地方の山歩き"
+      ],
+      "yamatokaikoku_reference": {
+        "source": "山と溪谷編集部選定 日本百低山",
+        "description": "山と溪谷編集部が選定した日本百低山の一つ。標高367mで日帰り登山が可能な魅力的な山として紹介されています。",
+        "url": "https://www.yamakei.co.jp/yk/article/hyakuteizan",
+        "source_line": "福岡県 立花山 367"
+      }
+    },
+    {
+      "id": "mt_競秀_大分",
+      "name": "競秀峰",
+      "location": {
+        "prefecture": "大分県",
+        "region": "九州",
+        "latitude": null,
+        "longitude": null,
+        "nearest_station": null,
+        "access_time": null
+      },
+      "elevation": 131,
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": null,
+        "distance": null
+      },
+      "description": "競秀峰は大分県にある標高131mの低山です。山と溪谷編集部選定の日本百低山の一つとして選ばれており、登山初心者にも親しまれています。",
+      "features": [],
+      "seasons": {
+        "cherry_blossom": null,
+        "autumn_leaves": null
+      },
+      "keywords": [
+        "競秀峰",
+        "大分県",
+        "低山",
+        "初心者向け",
+        "日帰り登山"
+      ],
+      "article_themes": [
+        "初心者におすすめの低山",
+        "日帰りハイキング",
+        "九州地方の山歩き"
+      ],
+      "yamatokaikoku_reference": {
+        "source": "山と溪谷編集部選定 日本百低山",
+        "description": "山と溪谷編集部が選定した日本百低山の一つ。標高131mで日帰り登山が可能な魅力的な山として紹介されています。",
+        "url": "https://www.yamakei.co.jp/yk/article/hyakuteizan",
+        "source_line": "大分県 競秀峰 131（恵比須岩）"
+      }
     }
   ],
   "regions": {
     "北海道": {
       "description": "都市近郊の手軽な山歩きと絶景夜景",
-      "mountains": ["mt_maruyama_hokkaido", "mt_hakodate_hokkaido"],
-      "characteristics": ["夜景", "都市近郊", "ロープウェイ", "原始林", "野生動物", "アクセス良好"]
+      "mountains": [
+        "mt_maruyama_hokkaido",
+        "mt_hakodate_hokkaido"
+      ],
+      "characteristics": [
+        "夜景",
+        "都市近郊",
+        "ロープウェイ",
+        "原始林",
+        "野生動物",
+        "アクセス良好"
+      ]
     },
     "東北": {
       "description": "歴史ある霊山と自然豊かな島の山",
-      "mountains": ["mt_iwaki_aomori", "mt_kinkazan_miyagi"],
-      "characteristics": ["霊山", "神社", "太平洋", "野生動物", "パワースポット", "桜"]
+      "mountains": [
+        "mt_iwaki_aomori",
+        "mt_kinkazan_miyagi"
+      ],
+      "characteristics": [
+        "霊山",
+        "神社",
+        "太平洋",
+        "野生動物",
+        "パワースポット",
+        "桜"
+      ]
     },
     "関東": {
-      "description": "首都圏からアクセス良好な多様な低山",
-      "mountains": ["mt_shiomi_tokyo", "mt_oyama_tochigi", "mt_asama_gunma", "mt_kasatori_chiba", "mt_shibutoge_kanagawa"],
-      "characteristics": ["都心から近い", "ケーブルカー", "初心者向け", "神社", "富士山展望", "家族向け", "手軽"]
+      "description": "首都圏からアクセス良好な多様な低山（神奈川県を中心に大幅拡充）",
+      "mountains": [
+        "mt_shiomi_tokyo",
+        "mt_oyama_tochigi",
+        "mt_asama_gunma",
+        "mt_kasatori_chiba",
+        "mt_shibutoge_kanagawa",
+        "mt_ryogaisan_tochigi",
+        "mt_kannariyama_gunma",
+        "mt_kinuhariyama_kanagawa",
+        "mt_azumayama_kanagawa",
+        "mt_takatoriyama_kanagawa",
+        "mt_ogusuyama_kanagawa",
+        "mt_komayama_kanagawa"
+      ],
+      "characteristics": [
+        "都心から近い",
+        "ケーブルカー",
+        "初心者向け",
+        "神社",
+        "富士山展望",
+        "家族向け",
+        "手軽"
+      ]
     },
     "中部": {
       "description": "富士山展望と霊山の名所",
-      "mountains": ["mt_sengen_shizuoka"],
-      "characteristics": ["富士山展望", "霊山", "神社", "桜", "パワースポット", "手軽"]
+      "mountains": [
+        "mt_sengen_shizuoka"
+      ],
+      "characteristics": [
+        "富士山展望",
+        "霊山",
+        "神社",
+        "桜",
+        "パワースポット",
+        "手軽"
+      ]
     },
     "関西": {
-      "description": "歴史と文化に彩られた親しみやすい山々",
-      "mountains": ["mt_kanzaki_osaka", "mt_wakakusa_nara", "mt_shosha_hyogo", "mt_iwashimizu_kyoto", "mt_arashiyama_kyoto", "mt_inari_kyoto", "mt_yoshida_kyoto", "mt_matsuo_kyoto", "mt_higashi_kyoto"],
-      "characteristics": ["歴史", "寺院", "桜", "ケーブルカー", "観光地", "神社", "竹林", "紅葉", "世界遺産"]
+      "description": "歴史と文化に彩られた親しみやすい山々（和歌山県の巨岩群を追加）",
+      "mountains": [
+        "mt_kanzaki_osaka",
+        "mt_wakakusa_nara",
+        "mt_shosha_hyogo",
+        "mt_iwashimizu_kyoto",
+        "mt_arashiyama_kyoto",
+        "mt_inari_kyoto",
+        "mt_yoshida_kyoto",
+        "mt_matsuo_kyoto",
+        "mt_higashi_kyoto",
+        "mt_hikiiwagusa_wakayama",
+        "mt_iwagamiyama_wakayama"
+      ],
+      "characteristics": [
+        "歴史",
+        "寺院",
+        "桜",
+        "ケーブルカー",
+        "観光地",
+        "神社",
+        "竹林",
+        "紅葉",
+        "世界遺産",
+        "巨岩群",
+        "360度絶景",
+        "みかん畑",
+        "夜景"
+      ]
     },
     "四国": {
       "description": "瀬戸内海の絶景と徳島の象徴的な山",
-      "mountains": ["mt_bizan_tokushima", "mt_sanuki_kagawa"],
-      "characteristics": ["瀬戸内海", "円錐形", "桜", "ロープウェイ", "市街地展望", "観光地"]
+      "mountains": [
+        "mt_bizan_tokushima",
+        "mt_sanuki_kagawa"
+      ],
+      "characteristics": [
+        "瀬戸内海",
+        "円錐形",
+        "桜",
+        "ロープウェイ",
+        "市街地展望",
+        "観光地"
+      ]
     },
     "九州": {
-      "description": "夜景名所と歴史散策の山々",
-      "mountains": ["mt_inasa_nagasaki", "mt_shiroyama_kagoshima"],
-      "characteristics": ["夜景", "歴史", "海の眺望", "観光地", "ロープウェイ", "展望台"]
+      "description": "夜景名所と歴史散策の山々（天草・大分の奇岩群を追加）",
+      "mountains": [
+        "mt_inasa_nagasaki",
+        "mt_shiroyama_kagoshima",
+        "mt_jiromarudake_kumamoto",
+        "mt_nakayamasenkyo_oita"
+      ],
+      "characteristics": [
+        "夜景",
+        "歴史",
+        "海の眺望",
+        "観光地",
+        "ロープウェイ",
+        "展望台",
+        "奇岩",
+        "断崖",
+        "島の山",
+        "岩峰群"
+      ]
+    },
+    "中国": {
+      "description": "風光明媚な縦走路と地元に愛される里山",
+      "mountains": [
+        "mt_wake_alps_okayama"
+      ],
+      "characteristics": [
+        "縦走",
+        "岩場",
+        "鉄道風景",
+        "吉井川",
+        "里山",
+        "地元愛"
+      ]
     }
   },
   "difficulty_levels": {
@@ -972,57 +2495,317 @@
       "description": "登山初心者・家族向け",
       "target_time": "1-3時間",
       "elevation_gain": "80-300m",
-      "examples": ["函館山", "若草山", "城山", "吉田山", "東山", "浅間山（群馬）"]
+      "examples": [
+        "函館山",
+        "若草山",
+        "城山",
+        "吉田山",
+        "東山",
+        "浅間山（群馬）"
+      ]
     },
     "初級-中級": {
       "description": "少し体力が必要な山歩き",
       "target_time": "2-4時間",
       "elevation_gain": "200-400m",
-      "examples": ["金華山", "鋸山", "書写山"]
+      "examples": [
+        "金華山",
+        "鋸山",
+        "書写山"
+      ]
     }
   },
   "search_tags": {
-    "初心者向け": ["mt_hakodate_hokkaido", "mt_iwaki_aomori", "mt_shiomi_tokyo", "mt_asama_gunma", "mt_wakakusa_nara", "mt_shiroyama_kagoshima", "mt_sengen_shizuoka", "mt_yoshida_kyoto", "mt_higashi_kyoto", "mt_matsuo_kyoto"],
-    "家族向け": ["mt_maruyama_hokkaido", "mt_shiomi_tokyo", "mt_oyama_tochigi", "mt_asama_gunma", "mt_shibutoge_kanagawa", "mt_iwashimizu_kyoto"],
-    "夜景": ["mt_hakodate_hokkaido", "mt_inasa_nagasaki"],
-    "ロープウェイ": ["mt_hakodate_hokkaido", "mt_shosha_hyogo", "mt_inasa_nagasaki", "mt_bizan_tokushima", "mt_kasatori_chiba"],
-    "神社・寺": ["mt_maruyama_hokkaido", "mt_iwaki_aomori", "mt_kinkazan_miyagi", "mt_oyama_tochigi", "mt_asama_gunma", "mt_kasatori_chiba", "mt_sengen_shizuoka", "mt_kanzaki_osaka", "mt_shosha_hyogo", "mt_iwashimizu_kyoto", "mt_inari_kyoto", "mt_yoshida_kyoto", "mt_matsuo_kyoto", "mt_higashi_kyoto"],
-    "桜の名所": ["mt_iwaki_aomori", "mt_sanuki_kagawa", "mt_wakakusa_nara", "mt_shosha_hyogo", "mt_oyama_tochigi", "mt_sengen_shizuoka", "mt_iwashimizu_kyoto", "mt_arashiyama_kyoto", "mt_yoshida_kyoto", "mt_higashi_kyoto"],
-    "海の眺望": ["mt_hakodate_hokkaido", "mt_kinkazan_miyagi", "mt_sanuki_kagawa", "mt_inasa_nagasaki", "mt_shiroyama_kagoshima", "mt_kasatori_chiba"],
-    "都市近郊": ["mt_maruyama_hokkaido", "mt_hakodate_hokkaido", "mt_shiomi_tokyo", "mt_wakakusa_nara", "mt_inasa_nagasaki", "mt_bizan_tokushima", "mt_shiroyama_kagoshima", "mt_kanzaki_osaka", "mt_yoshida_kyoto"],
-    "歴史": ["mt_hakodate_hokkaido", "mt_kinkazan_miyagi", "mt_shiroyama_kagoshima", "mt_kasatori_chiba", "mt_iwashimizu_kyoto", "mt_higashi_kyoto"],
-    "竹林": ["mt_arashiyama_kyoto", "mt_iwashimizu_kyoto", "mt_matsuo_kyoto"],
-    "富士山展望": ["mt_sengen_shizuoka", "mt_shibutoge_kanagawa"],
-    "パワースポット": ["mt_kinkazan_miyagi", "mt_sengen_shizuoka"],
-    "手軽": ["mt_shiomi_tokyo", "mt_asama_gunma", "mt_sengen_shizuoka", "mt_matsuo_kyoto", "mt_yoshida_kyoto"],
-    "観光地": ["mt_hakodate_hokkaido", "mt_wakakusa_nara", "mt_arashiyama_kyoto", "mt_inari_kyoto", "mt_bizan_tokushima", "mt_inasa_nagasaki", "mt_higashi_kyoto"],
-    "展望台": ["mt_hakodate_hokkaido", "mt_inasa_nagasaki", "mt_bizan_tokushima", "mt_shiroyama_kagoshima"],
-    "野生動物": ["mt_maruyama_hokkaido", "mt_kinkazan_miyagi", "mt_wakakusa_nara"],
-    "原始林": ["mt_maruyama_hokkaido"],
-    "霊山": ["mt_kinkazan_miyagi", "mt_sengen_shizuoka"],
-    "里山": ["mt_shibutoge_kanagawa"],
-    "岩場": ["mt_kanzaki_osaka"],
-    "石切り場": ["mt_kasatori_chiba"],
-    "映画ロケ地": ["mt_shosha_hyogo"],
-    "世界遺産": ["mt_inari_kyoto"]
+    "初心者向け": [
+      "mt_hakodate_hokkaido",
+      "mt_iwaki_aomori",
+      "mt_shiomi_tokyo",
+      "mt_asama_gunma",
+      "mt_wakakusa_nara",
+      "mt_shiroyama_kagoshima",
+      "mt_sengen_shizuoka",
+      "mt_yoshida_kyoto",
+      "mt_higashi_kyoto",
+      "mt_matsuo_kyoto"
+    ],
+    "家族向け": [
+      "mt_maruyama_hokkaido",
+      "mt_shiomi_tokyo",
+      "mt_oyama_tochigi",
+      "mt_asama_gunma",
+      "mt_shibutoge_kanagawa",
+      "mt_iwashimizu_kyoto",
+      "mt_azumayama_kanagawa"
+    ],
+    "夜景": [
+      "mt_hakodate_hokkaido",
+      "mt_inasa_nagasaki",
+      "mt_iwagamiyama_wakayama"
+    ],
+    "ロープウェイ": [
+      "mt_hakodate_hokkaido",
+      "mt_shosha_hyogo",
+      "mt_inasa_nagasaki",
+      "mt_bizan_tokushima",
+      "mt_kasatori_chiba"
+    ],
+    "神社・寺": [
+      "mt_maruyama_hokkaido",
+      "mt_iwaki_aomori",
+      "mt_kinkazan_miyagi",
+      "mt_oyama_tochigi",
+      "mt_asama_gunma",
+      "mt_kasatori_chiba",
+      "mt_sengen_shizuoka",
+      "mt_kanzaki_osaka",
+      "mt_shosha_hyogo",
+      "mt_iwashimizu_kyoto",
+      "mt_inari_kyoto",
+      "mt_yoshida_kyoto",
+      "mt_matsuo_kyoto",
+      "mt_higashi_kyoto"
+    ],
+    "桜の名所": [
+      "mt_iwaki_aomori",
+      "mt_sanuki_kagawa",
+      "mt_wakakusa_nara",
+      "mt_shosha_hyogo",
+      "mt_oyama_tochigi",
+      "mt_sengen_shizuoka",
+      "mt_iwashimizu_kyoto",
+      "mt_arashiyama_kyoto",
+      "mt_yoshida_kyoto",
+      "mt_higashi_kyoto"
+    ],
+    "海の眺望": [
+      "mt_hakodate_hokkaido",
+      "mt_kinkazan_miyagi",
+      "mt_sanuki_kagawa",
+      "mt_inasa_nagasaki",
+      "mt_shiroyama_kagoshima",
+      "mt_kasatori_chiba"
+    ],
+    "都市近郊": [
+      "mt_maruyama_hokkaido",
+      "mt_hakodate_hokkaido",
+      "mt_shiomi_tokyo",
+      "mt_wakakusa_nara",
+      "mt_inasa_nagasaki",
+      "mt_bizan_tokushima",
+      "mt_shiroyama_kagoshima",
+      "mt_kanzaki_osaka",
+      "mt_yoshida_kyoto"
+    ],
+    "歴史": [
+      "mt_hakodate_hokkaido",
+      "mt_kinkazan_miyagi",
+      "mt_shiroyama_kagoshima",
+      "mt_kasatori_chiba",
+      "mt_iwashimizu_kyoto",
+      "mt_higashi_kyoto",
+      "mt_ryogaisan_tochigi",
+      "mt_kinuhariyama_kanagawa",
+      "mt_komayama_kanagawa"
+    ],
+    "竹林": [
+      "mt_arashiyama_kyoto",
+      "mt_iwashimizu_kyoto",
+      "mt_matsuo_kyoto"
+    ],
+    "富士山展望": [
+      "mt_sengen_shizuoka",
+      "mt_shibutoge_kanagawa",
+      "mt_ryogaisan_tochigi",
+      "mt_ogusuyama_kanagawa",
+      "mt_komayama_kanagawa"
+    ],
+    "パワースポット": [
+      "mt_kinkazan_miyagi",
+      "mt_sengen_shizuoka"
+    ],
+    "手軽": [
+      "mt_shiomi_tokyo",
+      "mt_asama_gunma",
+      "mt_sengen_shizuoka",
+      "mt_matsuo_kyoto",
+      "mt_yoshida_kyoto",
+      "mt_kinuhariyama_kanagawa",
+      "mt_azumayama_kanagawa",
+      "mt_hikiiwagusa_wakayama"
+    ],
+    "観光地": [
+      "mt_hakodate_hokkaido",
+      "mt_wakakusa_nara",
+      "mt_arashiyama_kyoto",
+      "mt_inari_kyoto",
+      "mt_bizan_tokushima",
+      "mt_inasa_nagasaki",
+      "mt_higashi_kyoto"
+    ],
+    "展望台": [
+      "mt_hakodate_hokkaido",
+      "mt_inasa_nagasaki",
+      "mt_bizan_tokushima",
+      "mt_shiroyama_kagoshima"
+    ],
+    "野生動物": [
+      "mt_maruyama_hokkaido",
+      "mt_kinkazan_miyagi",
+      "mt_wakakusa_nara"
+    ],
+    "原始林": [
+      "mt_maruyama_hokkaido"
+    ],
+    "霊山": [
+      "mt_kinkazan_miyagi",
+      "mt_sengen_shizuoka"
+    ],
+    "里山": [
+      "mt_shibutoge_kanagawa"
+    ],
+    "岩場": [
+      "mt_kanzaki_osaka"
+    ],
+    "石切り場": [
+      "mt_kasatori_chiba"
+    ],
+    "映画ロケ地": [
+      "mt_shosha_hyogo"
+    ],
+    "世界遺産": [
+      "mt_inari_kyoto"
+    ],
+    "駅近": [
+      "mt_ryogaisan_tochigi",
+      "mt_kannariyama_gunma",
+      "mt_azumayama_kanagawa",
+      "mt_takatoriyama_kanagawa",
+      "mt_wake_alps_okayama"
+    ],
+    "縦走": [
+      "mt_kannariyama_gunma",
+      "mt_komayama_kanagawa",
+      "mt_wake_alps_okayama"
+    ],
+    "巨岩・奇岩": [
+      "mt_takatoriyama_kanagawa",
+      "mt_hikiiwagusa_wakayama",
+      "mt_nakayamasenkyo_oita"
+    ],
+    "磨崖仏": [
+      "mt_takatoriyama_kanagawa"
+    ],
+    "城跡": [
+      "mt_ryogaisan_tochigi"
+    ],
+    "三浦半島": [
+      "mt_ogusuyama_kanagawa"
+    ],
+    "湘南": [
+      "mt_kinuhariyama_kanagawa",
+      "mt_takatoriyama_kanagawa",
+      "mt_komayama_kanagawa"
+    ],
+    "鎌倉": [
+      "mt_kinuhariyama_kanagawa"
+    ],
+    "和歌山": [
+      "mt_hikiiwagusa_wakayama",
+      "mt_iwagamiyama_wakayama"
+    ],
+    "天草": [
+      "mt_jiromarudake_kumamoto"
+    ],
+    "360度絶景": [
+      "mt_hikiiwagusa_wakayama"
+    ],
+    "みかん畑": [
+      "mt_hikiiwagusa_wakayama"
+    ],
+    "断崖絶壁": [
+      "mt_jiromarudake_kumamoto"
+    ],
+    "岩峰群": [
+      "mt_nakayamasenkyo_oita"
+    ]
   },
   "prefectures": {
-    "北海道": ["mt_maruyama_hokkaido", "mt_hakodate_hokkaido"],
-    "青森県": ["mt_iwaki_aomori"],
-    "宮城県": ["mt_kinkazan_miyagi"],
-    "栃木県": ["mt_oyama_tochigi"],
-    "群馬県": ["mt_asama_gunma"],
-    "千葉県": ["mt_kasatori_chiba"],
-    "東京都": ["mt_shiomi_tokyo"],
-    "神奈川県": ["mt_shibutoge_kanagawa"],
-    "静岡県": ["mt_sengen_shizuoka"],
-    "大阪府": ["mt_kanzaki_osaka"],
-    "奈良県": ["mt_wakakusa_nara"],
-    "京都府": ["mt_iwashimizu_kyoto", "mt_arashiyama_kyoto", "mt_inari_kyoto", "mt_yoshida_kyoto", "mt_matsuo_kyoto", "mt_higashi_kyoto"],
-    "兵庫県": ["mt_shosha_hyogo"],
-    "徳島県": ["mt_bizan_tokushima"],
-    "香川県": ["mt_sanuki_kagawa"],
-    "長崎県": ["mt_inasa_nagasaki"],
-    "鹿児島県": ["mt_shiroyama_kagoshima"]
+    "北海道": [
+      "mt_maruyama_hokkaido",
+      "mt_hakodate_hokkaido"
+    ],
+    "青森県": [
+      "mt_iwaki_aomori"
+    ],
+    "宮城県": [
+      "mt_kinkazan_miyagi"
+    ],
+    "東京都": [
+      "mt_shiomi_tokyo"
+    ],
+    "栃木県": [
+      "mt_oyama_tochigi",
+      "mt_ryogaisan_tochigi"
+    ],
+    "群馬県": [
+      "mt_asama_gunma",
+      "mt_kannariyama_gunma"
+    ],
+    "千葉県": [
+      "mt_kasatori_chiba"
+    ],
+    "神奈川県": [
+      "mt_shibutoge_kanagawa",
+      "mt_kinuhariyama_kanagawa",
+      "mt_azumayama_kanagawa",
+      "mt_takatoriyama_kanagawa",
+      "mt_ogusuyama_kanagawa",
+      "mt_komayama_kanagawa"
+    ],
+    "静岡県": [
+      "mt_sengen_shizuoka"
+    ],
+    "大阪府": [
+      "mt_kanzaki_osaka"
+    ],
+    "奈良県": [
+      "mt_wakakusa_nara"
+    ],
+    "兵庫県": [
+      "mt_shosha_hyogo"
+    ],
+    "京都府": [
+      "mt_iwashimizu_kyoto",
+      "mt_arashiyama_kyoto",
+      "mt_inari_kyoto",
+      "mt_yoshida_kyoto",
+      "mt_matsuo_kyoto",
+      "mt_higashi_kyoto"
+    ],
+    "徳島県": [
+      "mt_bizan_tokushima"
+    ],
+    "香川県": [
+      "mt_sanuki_kagawa"
+    ],
+    "長崎県": [
+      "mt_inasa_nagasaki"
+    ],
+    "鹿児島県": [
+      "mt_shiroyama_kagoshima"
+    ],
+    "和歌山県": [
+      "mt_hikiiwagusa_wakayama",
+      "mt_iwagamiyama_wakayama"
+    ],
+    "岡山県": [
+      "mt_wake_alps_okayama"
+    ],
+    "熊本県": [
+      "mt_jiromarudake_kumamoto"
+    ],
+    "大分県": [
+      "mt_nakayamasenkyo_oita"
+    ]
   }
 }

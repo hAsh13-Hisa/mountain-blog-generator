@@ -505,6 +505,7 @@ class UnsplashAPIClient(LoggerMixin):
     
     def _get_sample_images(self, keyword: str) -> List[Dict[str, Any]]:
         """キーワードに応じたサンプル画像データを返す"""
+        # 豊富な山の画像リスト
         mountain_images = [
             {
                 "url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4",
@@ -529,10 +530,51 @@ class UnsplashAPIClient(LoggerMixin):
                 "photographer": "Sergey Pesterev",
                 "width": 1024,
                 "height": 576
+            },
+            {
+                "url": "https://images.unsplash.com/photo-1578662996442-48f60103fc96",
+                "photographer": "Maarten van den Heuvel",
+                "width": 1024,
+                "height": 576
+            },
+            {
+                "url": "https://images.unsplash.com/photo-1519904981063-b0cf448d479e",
+                "photographer": "Ales Krivec",
+                "width": 1024,
+                "height": 576
+            },
+            {
+                "url": "https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5",
+                "photographer": "Sebastian Boring",
+                "width": 1024,
+                "height": 576
+            },
+            {
+                "url": "https://images.unsplash.com/photo-1544558635-667480601430",
+                "photographer": "Jon Flobrant",
+                "width": 1024,
+                "height": 576
+            },
+            {
+                "url": "https://images.unsplash.com/photo-1524712245354-2c4e5e7121c0",
+                "photographer": "Kobu Agency",
+                "width": 1024,
+                "height": 576
+            },
+            {
+                "url": "https://images.unsplash.com/photo-1516655855035-d5215bcb5604",
+                "photographer": "Mark Basarab",
+                "width": 1024,
+                "height": 576
             }
         ]
         
-        return mountain_images
+        # キーワードからハッシュ値を生成して画像を選択
+        import hashlib
+        hash_value = int(hashlib.md5(keyword.encode()).hexdigest(), 16)
+        selected_image = mountain_images[hash_value % len(mountain_images)]
+        
+        return [selected_image]
 
 
 # API クライアントのファクトリークラス

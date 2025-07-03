@@ -1,0 +1,111 @@
+{
+  "source": "山と溪谷記事 - 日本百低山一覧表（山と溪谷編集部選定）",
+  "extraction_criteria": "標高400m以下の山",
+  "total_count": 12,
+  "extracted_mountains": [
+    {
+      "prefecture": "秋田県",
+      "name": "七座山",
+      "elevation": 288,
+      "source_line": "秋田県 七座山 288（権現座）"
+    },
+    {
+      "prefecture": "栃木県",
+      "name": "三毳山",
+      "elevation": 229,
+      "source_line": "栃木県 三毳山 229"
+    },
+    {
+      "prefecture": "埼玉県",
+      "name": "日和田山",
+      "elevation": 305,
+      "source_line": "埼玉県 日和田山 305"
+    },
+    {
+      "prefecture": "千葉県",
+      "name": "伊予ヶ岳",
+      "elevation": 336,
+      "source_line": "千葉県 伊予ヶ岳 336（北峰）"
+    },
+    {
+      "prefecture": "千葉県",
+      "name": "大福山",
+      "elevation": 292,
+      "source_line": "千葉県 大福山 292"
+    },
+    {
+      "prefecture": "千葉県",
+      "name": "鋸山",
+      "elevation": 329,
+      "source_line": "千葉県 鋸山 329"
+    },
+    {
+      "prefecture": "神奈川県",
+      "name": "鎌倉アルプス",
+      "elevation": 159,
+      "source_line": "神奈川県 鎌倉アルプス 159（太平山）"
+    },
+    {
+      "prefecture": "神奈川県",
+      "name": "大楠山",
+      "elevation": 241,
+      "source_line": "神奈川県 大楠山 241"
+    },
+    {
+      "prefecture": "神奈川県",
+      "name": "高麗山",
+      "elevation": 168,
+      "source_line": "神奈川県 高麗山 168"
+    },
+    {
+      "prefecture": "岐阜県",
+      "name": "金華山",
+      "elevation": 329,
+      "source_line": "岐阜県 金華山 329"
+    },
+    {
+      "prefecture": "静岡県",
+      "name": "鷲頭山",
+      "elevation": 392,
+      "source_line": "静岡県 鷲頭山 392"
+    },
+    {
+      "prefecture": "静岡県・愛知県",
+      "name": "神石山",
+      "elevation": 325,
+      "source_line": "静岡県・愛知県 神石山 325"
+    },
+    {
+      "prefecture": "兵庫県",
+      "name": "高御位山",
+      "elevation": 304,
+      "source_line": "兵庫県 高御位山 304"
+    },
+    {
+      "prefecture": "愛媛県",
+      "name": "世田山",
+      "elevation": 339,
+      "source_line": "愛媛県 世田山 339"
+    },
+    {
+      "prefecture": "福岡県",
+      "name": "立花山",
+      "elevation": 367,
+      "source_line": "福岡県 立花山 367"
+    },
+    {
+      "prefecture": "大分県",
+      "name": "競秀峰",
+      "elevation": 131,
+      "source_line": "大分県 競秀峰 131（恵比須岩）"
+    }
+  ],
+  "analysis_notes": [
+    "標高400m以下の山を16山特定しました",
+    "最も低い山：競秀峰（大分県）131m",
+    "最も高い山：鷲頭山（静岡県）392m",
+    "関東地方に比較的多く分布（8山）",
+    "低山旅行記事生成に適した魅力的な山々",
+    "都道府県名と山名、標高が明確に記載されている山のみを抽出"
+  ]
+}

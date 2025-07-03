@@ -1,0 +1,473 @@
+{
+  "new_mountains": [
+    {
+      "id": "mt_ryogaisan_tochigi",
+      "name": "両崖山",
+      "name_en": "Mount Ryogaisan",
+      "prefecture": "栃木県",
+      "region": "関東",
+      "elevation": 251,
+      "location": {
+        "latitude": 36.3292,
+        "longitude": 139.4528,
+        "nearest_station": "足利駅",
+        "access_time": "駅から徒歩20分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約1-2時間",
+        "distance": "約3km",
+        "elevation_gain": "約200m"
+      },
+      "features": [
+        "関東平野展望",
+        "富士山展望",
+        "織姫神社",
+        "足利城本丸跡",
+        "桜の名所",
+        "ドウダンツツジ",
+        "マンサクの花"
+      ],
+      "seasons": {
+        "best": ["春", "秋"],
+        "cherry_blossom": "3月下旬-4月上旬",
+        "autumn_leaves": "11月上旬-中旬"
+      },
+      "keywords": ["足利", "関東平野", "富士山展望", "城跡", "花の山"],
+      "article_themes": [
+        "駅から歩ける絶景低山",
+        "足利の歴史と自然",
+        "関東平野を一望する山歩き"
+      ]
+    },
+    {
+      "id": "mt_kannariyama_gunma",
+      "name": "神成山",
+      "name_en": "Mount Kannariyama",
+      "prefecture": "群馬県",
+      "region": "関東",
+      "elevation": 320,
+      "location": {
+        "latitude": 36.2847,
+        "longitude": 138.8639,
+        "nearest_station": "下仁田駅",
+        "access_time": "駅から徒歩15分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約2-3時間",
+        "distance": "約5km",
+        "elevation_gain": "約250m"
+      },
+      "features": [
+        "九連峰縦走",
+        "龍の背尾根",
+        "上信電鉄展望",
+        "田園風景",
+        "日本一のハイキングコース",
+        "地元愛される山"
+      ],
+      "seasons": {
+        "best": ["春", "秋", "冬"],
+        "cherry_blossom": "4月上旬-中旬",
+        "autumn_leaves": "10月下旬-11月上旬"
+      },
+      "keywords": ["九連峰", "縦走", "上信電鉄", "龍の背", "田園"],
+      "article_themes": [
+        "龍の背を歩く九連峰",
+        "上信電鉄と田園風景",
+        "日本一のハイキングコース"
+      ]
+    },
+    {
+      "id": "mt_kinuhariyama_kanagawa",
+      "name": "衣張山",
+      "name_en": "Mount Kinuhariyama",
+      "prefecture": "神奈川県",
+      "region": "関東",
+      "elevation": 121,
+      "location": {
+        "latitude": 35.3167,
+        "longitude": 139.5500,
+        "nearest_station": "鎌倉駅",
+        "access_time": "駅から徒歩30分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約1時間",
+        "distance": "約2km",
+        "elevation_gain": "約100m"
+      },
+      "features": [
+        "鎌倉の山と海",
+        "相模湾展望",
+        "手軽なハイキング",
+        "歴史ある鎌倉",
+        "山が街を抱く景色"
+      ],
+      "seasons": {
+        "best": ["春", "秋", "冬"],
+        "cherry_blossom": "3月下旬-4月上旬",
+        "autumn_leaves": "11月下旬-12月上旬"
+      },
+      "keywords": ["鎌倉", "相模湾", "手軽", "歴史", "海山"],
+      "article_themes": [
+        "鎌倉の手軽な山歩き",
+        "海と山を同時に楽しむ",
+        "歴史の街の自然散策"
+      ]
+    },
+    {
+      "id": "mt_azumayama_kanagawa",
+      "name": "吾妻山",
+      "name_en": "Mount Azumayama",
+      "prefecture": "神奈川県",
+      "region": "関東",
+      "elevation": 136,
+      "location": {
+        "latitude": 35.3442,
+        "longitude": 139.2472,
+        "nearest_station": "二宮駅",
+        "access_time": "駅から徒歩15分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約30分",
+        "distance": "約1.5km",
+        "elevation_gain": "約120m"
+      },
+      "features": [
+        "駅から30分",
+        "ピクニックハイク",
+        "家族向け",
+        "思い立ったらすぐ行ける",
+        "子連れハイキング最適"
+      ],
+      "seasons": {
+        "best": ["通年"],
+        "cherry_blossom": "3月下旬-4月上旬",
+        "autumn_leaves": "11月下旬-12月上旬"
+      },
+      "keywords": ["駅近", "ピクニック", "家族", "手軽", "子連れ"],
+      "article_themes": [
+        "駅から30分の手軽ハイキング",
+        "家族でピクニック登山",
+        "思い立ったらすぐ行ける山"
+      ]
+    },
+    {
+      "id": "mt_takatoriyama_kanagawa",
+      "name": "鷹取山",
+      "name_en": "Mount Takatoriyama",
+      "prefecture": "神奈川県",
+      "region": "関東",
+      "elevation": 139,
+      "location": {
+        "latitude": 35.2833,
+        "longitude": 139.6167,
+        "nearest_station": "東逗子駅",
+        "access_time": "駅から徒歩20分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約1-2時間",
+        "distance": "約3km",
+        "elevation_gain": "約120m"
+      },
+      "features": [
+        "湘南妙義",
+        "巨大磨崖仏",
+        "垂直岩壁",
+        "東京湾展望",
+        "房総半島展望",
+        "ロッククライミング練習場"
+      ],
+      "seasons": {
+        "best": ["秋", "冬", "春"],
+        "cherry_blossom": "3月下旬-4月上旬",
+        "autumn_leaves": "11月下旬-12月上旬"
+      },
+      "keywords": ["湘南妙義", "磨崖仏", "岩壁", "東京湾", "クライミング"],
+      "article_themes": [
+        "湘南妙義の岩山体験",
+        "巨大磨崖仏と絶景",
+        "低山でスリルを味わう"
+      ]
+    },
+    {
+      "id": "mt_ogusuyama_kanagawa",
+      "name": "大楠山",
+      "name_en": "Mount Ogusuyama",
+      "prefecture": "神奈川県",
+      "region": "関東",
+      "elevation": 241,
+      "location": {
+        "latitude": 35.2833,
+        "longitude": 139.5833,
+        "nearest_station": "衣笠駅",
+        "access_time": "駅からバス20分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約2-3時間",
+        "distance": "約4km",
+        "elevation_gain": "約200m"
+      },
+      "features": [
+        "三浦半島最高峰",
+        "5つのコース",
+        "三浦半島展望",
+        "伊豆半島展望",
+        "富士山展望",
+        "箱根連山展望",
+        "房総半島展望",
+        "かながわ景勝50選"
+      ],
+      "seasons": {
+        "best": ["秋", "冬", "春"],
+        "cherry_blossom": "3月下旬-4月上旬",
+        "autumn_leaves": "11月下旬-12月上旬"
+      },
+      "keywords": ["三浦半島", "大パノラマ", "富士山", "景勝地", "5コース"],
+      "article_themes": [
+        "三浦半島の最高峰を制覇",
+        "360度大パノラマの絶景",
+        "コース選択が楽しい山"
+      ]
+    },
+    {
+      "id": "mt_komayama_kanagawa",
+      "name": "高麗山",
+      "name_en": "Mount Komayama",
+      "prefecture": "神奈川県",
+      "region": "関東",
+      "elevation": 168,
+      "location": {
+        "latitude": 35.3333,
+        "longitude": 139.3000,
+        "nearest_station": "平塚駅",
+        "access_time": "駅からバス15分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約1-2時間",
+        "distance": "約3km",
+        "elevation_gain": "約150m"
+      },
+      "features": [
+        "湘南平縦走",
+        "富士山展望",
+        "横穴墓地史跡",
+        "照ヶ崎海岸",
+        "アオバト飛来地",
+        "歴史散策"
+      ],
+      "seasons": {
+        "best": ["通年"],
+        "cherry_blossom": "3月下旬-4月上旬",
+        "autumn_leaves": "11月下旬-12月上旬"
+      },
+      "keywords": ["湘南平", "富士山", "史跡", "アオバト", "海岸"],
+      "article_themes": [
+        "湘南平への縦走ハイキング",
+        "富士山と歴史を楽しむ",
+        "海と山の自然観察"
+      ]
+    },
+    {
+      "id": "mt_hikiiwagusa_wakayama",
+      "name": "ひき岩群",
+      "name_en": "Hiki Iwagusa",
+      "prefecture": "和歌山県",
+      "region": "関西",
+      "elevation": 127,
+      "location": {
+        "latitude": 34.1833,
+        "longitude": 135.1667,
+        "nearest_station": "海南駅",
+        "access_time": "駅から車10分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約20分",
+        "distance": "約1km",
+        "elevation_gain": "約100m"
+      },
+      "features": [
+        "360度絶景",
+        "不思議な巨岩群",
+        "みかん畑景色",
+        "絶壁の巨岩",
+        "和歌山らしい風景",
+        "短時間で絶景"
+      ],
+      "seasons": {
+        "best": ["通年"],
+        "cherry_blossom": "3月下旬-4月上旬",
+        "autumn_leaves": "11月下旬-12月上旬"
+      },
+      "keywords": ["巨岩群", "360度", "みかん畑", "和歌山", "絶景"],
+      "article_themes": [
+        "20分で360度絶景",
+        "不思議な巨岩群探検",
+        "和歌山のみかん畑風景"
+      ]
+    },
+    {
+      "id": "mt_iwagamiyama_wakayama",
+      "name": "岩神山",
+      "name_en": "Mount Iwagamiyama",
+      "prefecture": "和歌山県",
+      "region": "関西",
+      "elevation": 240,
+      "location": {
+        "latitude": 34.2167,
+        "longitude": 135.1833,
+        "nearest_station": "和歌山駅",
+        "access_time": "駅から車20分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約1-2時間",
+        "distance": "約3km",
+        "elevation_gain": "約200m"
+      },
+      "features": [
+        "和歌山市夜景",
+        "紀ノ川展望",
+        "紀泉アルプス入口",
+        "橋梁美景",
+        "市街地パノラマ"
+      ],
+      "seasons": {
+        "best": ["秋", "冬"],
+        "cherry_blossom": "3月下旬-4月上旬",
+        "autumn_leaves": "11月中旬-下旬"
+      },
+      "keywords": ["和歌山夜景", "紀ノ川", "アルプス", "橋梁", "市街地"],
+      "article_themes": [
+        "和歌山市の夜景を楽しむ",
+        "紀ノ川と橋の絶景",
+        "紀泉アルプスの入門山"
+      ]
+    },
+    {
+      "id": "mt_wake_alps_okayama",
+      "name": "和気アルプス",
+      "name_en": "Wake Alps",
+      "prefecture": "岡山県",
+      "region": "中国",
+      "elevation": 206,
+      "location": {
+        "latitude": 34.8000,
+        "longitude": 134.1500,
+        "nearest_station": "和気駅",
+        "access_time": "駅から徒歩15分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約2-3時間",
+        "distance": "約5km",
+        "elevation_gain": "約150m"
+      },
+      "features": [
+        "小ピーク縦走",
+        "和気富士",
+        "岩場体験",
+        "吉井川風景",
+        "鉄道風景",
+        "地元愛される山",
+        "丁寧な整備"
+      ],
+      "seasons": {
+        "best": ["春", "秋", "冬"],
+        "cherry_blossom": "4月上旬-中旬",
+        "autumn_leaves": "11月中旬-下旬"
+      },
+      "keywords": ["縦走", "和気富士", "岩場", "吉井川", "鉄道"],
+      "article_themes": [
+        "小ピーク縦走を楽しむ",
+        "吉井川と鉄道の風景",
+        "地元愛される里山歩き"
+      ]
+    },
+    {
+      "id": "mt_jiromarudake_kumamoto",
+      "name": "次郎丸嶽",
+      "name_en": "Mount Jiromarudake",
+      "prefecture": "熊本県",
+      "region": "九州",
+      "elevation": 397,
+      "location": {
+        "latitude": 32.4667,
+        "longitude": 130.0833,
+        "nearest_station": "本渡駅",
+        "access_time": "駅から車30分"
+      },
+      "difficulty": {
+        "level": "初級",
+        "hiking_time": "約2-3時間",
+        "distance": "約4km",
+        "elevation_gain": "約350m"
+      },
+      "features": [
+        "天草の山",
+        "断崖絶壁",
+        "東側切れ落ち崖",
+        "太郎丸物語",
+        "天草上島",
+        "海岸線展望"
+      ],
+      "seasons": {
+        "best": ["秋", "冬", "春"],
+        "cherry_blossom": "3月下旬-4月上旬",
+        "autumn_leaves": "11月下旬-12月上旬"
+      },
+      "keywords": ["天草", "断崖", "太郎丸", "島", "海展望"],
+      "article_themes": [
+        "天草の断崖絶壁山歩き",
+        "太郎丸物語の舞台",
+        "島の山から海を望む"
+      ]
+    },
+    {
+      "id": "mt_nakayamasenkyo_oita",
+      "name": "中山仙境",
+      "name_en": "Mount Nakayamasenkyo",
+      "prefecture": "大分県",
+      "region": "九州",
+      "elevation": 317,
+      "location": {
+        "latitude": 33.5167,
+        "longitude": 131.4833,
+        "nearest_station": "杵築駅",
+        "access_time": "駅から車25分"
+      },
+      "difficulty": {
+        "level": "初級-中級",
+        "hiking_time": "約2-3時間",
+        "distance": "約4km",
+        "elevation_gain": "約280m"
+      },
+      "features": [
+        "奇岩・絶景",
+        "切り立った岩峰群",
+        "ニョキニョキ岩峰",
+        "低山とは思えない眺め",
+        "岩のスリル体験",
+        "不思議な景色"
+      ],
+      "seasons": {
+        "best": ["秋", "冬", "春"],
+        "cherry_blossom": "3月下旬-4月上旬",
+        "autumn_leaves": "11月下旬-12月上旬"
+      },
+      "keywords": ["奇岩", "岩峰", "絶景", "スリル", "不思議"],
+      "article_themes": [
+        "奇岩群の不思議な絶景",
+        "低山で味わう岩のスリル",
+        "ニョキニョキ岩峰探検"
+      ]
+    }
+  ]
+}
