@@ -27,7 +27,7 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css?v=202507032201">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
@@ -87,8 +87,127 @@
                 </div>
             </div>
             
-            <div class="mountains-section">
-                <h2>山一覧</h2>
+            <!-- 新着情報・お知らせ -->
+            <section class="news-section">
+                <h2>📰 新着情報</h2>
+                <div class="news-list">
+                    <div class="news-item">
+                        <time class="news-date">2025.07.03</time>
+                        <div class="news-content">
+                            <h3><a href="/mountains/mt_takao/">高尾山記事を大幅アップデート</a></h3>
+                            <p>登山装備のアフィリエイトセクションを追加。初心者向けグッズ5選をご紹介。</p>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <time class="news-date">2025.07.03</time>
+                        <div class="news-content">
+                            <h3><a href="/regions/kansai/">関西地方ページを大幅充実</a></h3>
+                            <p>京都・奈良・大阪・兵庫・和歌山の11山を詳細解説。歴史と自然の魅力満載。</p>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <time class="news-date">2025.07.02</time>
+                        <div class="news-content">
+                            <h3>サイト品質向上完了</h3>
+                            <p>全47山のページテンプレート統一、レイアウト最適化を実施しました。</p>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <time class="news-date">2025.06.30</time>
+                        <div class="news-content">
+                            <h3>BE-PAL記事統合完了</h3>
+                            <p>BE-PAL「全国のおすすめ低山58選」から12山の詳細情報を追加統合。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- おすすめ山紹介 -->
+            <section class="featured-mountains">
+                <h2>⭐ 今月のおすすめ低山</h2>
+                <div class="featured-grid">
+                    <div class="featured-card">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4" alt="高尾山" loading="lazy">
+                        <div class="featured-content">
+                            <h3><a href="/mountains/mt_takao/">高尾山 (599m)</a></h3>
+                            <p class="featured-location">東京都 | 初級</p>
+                            <p>年間300万人が訪れる日本一人気の山。都心から1時間、ケーブルカーも完備で初心者に最適。</p>
+                            <span class="featured-tag">🔥 人気No.1</span>
+                        </div>
+                    </div>
+                    
+                    <div class="featured-card">
+                        <img src="https://images.unsplash.com/photo-1464822759844-d150ad6d0e12" alt="筑波山" loading="lazy">
+                        <div class="featured-content">
+                            <h3><a href="/mountains/mt_tsukuba_ibaraki/">筑波山 (877m)</a></h3>
+                            <p class="featured-location">茨城県 | 初級</p>
+                            <p>日本百名山の中でも標高が低く、関東平野の絶景が楽しめる美しい山。</p>
+                            <span class="featured-tag">🏔️ 日本百名山</span>
+                        </div>
+                    </div>
+                    
+                    <div class="featured-card">
+                        <img src="https://images.unsplash.com/photo-1551632811-561732d1e306" alt="稲荷山" loading="lazy">
+                        <div class="featured-content">
+                            <h3><a href="/mountains/mt_inari_kyoto/">稲荷山 (233m)</a></h3>
+                            <p class="featured-location">京都府 | 初級</p>
+                            <p>千本鳥居で有名な伏見稲荷大社の山。外国人観光客にも大人気の京都の名所。</p>
+                            <span class="featured-tag">🎌 歴史文化</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- サイト案内 -->
+            <section class="site-guide">
+                <h2>🗺️ サイトの使い方</h2>
+                <div class="guide-grid">
+                    <div class="guide-item">
+                        <div class="guide-icon">🏔️</div>
+                        <h3><a href="/mountains/">山から探す</a></h3>
+                        <p>47山すべての詳細情報を名前・標高・難易度で検索できます。</p>
+                    </div>
+                    <div class="guide-item">
+                        <div class="guide-icon">🗾</div>
+                        <h3><a href="/regions/">地域から探す</a></h3>
+                        <p>お住まいの地域や旅行先の都道府県から山を探せます。</p>
+                    </div>
+                    <div class="guide-item">
+                        <div class="guide-icon">👶</div>
+                        <h3><a href="/beginner/">初心者ガイド</a></h3>
+                        <p>登山が初めての方向けの安全な楽しみ方をご紹介します。</p>
+                    </div>
+                    <div class="guide-item">
+                        <div class="guide-icon">🎒</div>
+                        <h3><a href="/equipment/">装備について</a></h3>
+                        <p>低山登山に必要な装備や服装について詳しく解説します。</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 統計情報 -->
+            <section class="stats-section">
+                <h2>📊 データベース情報</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">47</div>
+                        <div class="stat-label">登録山数</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">25</div>
+                        <div class="stat-label">都道府県</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">20m-400m</div>
+                        <div class="stat-label">標高範囲</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">初心者対応</div>
+                    </div>
+                </div>
+                <p class="stats-description">当サイトでは初心者・家族向けに厳選した低山のみを掲載。すべて標高400m以下で登山道が整備された安全な山です。</p>
+            </section>
                 
             <section class="region-section">
                 <h2>京都府 (6山)</h2>
