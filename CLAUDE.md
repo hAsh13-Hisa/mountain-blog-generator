@@ -134,13 +134,14 @@ Skip Link:                 z-index: 10000
 ```css
 /* サイトヘッダーが固定の場合（必須） */
 body {
-    padding-top: 80px; /* ヘッダー高さ分を確保 */
+    padding-top: 70px; /* ヘッダー実測高さ分を確保 */
 }
 
 header[role="banner"] {
     position: sticky; /* または fixed */
     top: 0;
     z-index: 9999;
+    padding: 1rem 0; /* 実際のパディング例 */
 }
 ```
 
