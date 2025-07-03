@@ -1,26 +1,8 @@
-# Netlify設定ファイル
 [build]
-  publish = "dist"
-  command = "npm run build"
-
+  # ビルドプロセスを完全に無効化（静的ファイル配信のみ）
+  command = ""
+  publish = "static"
+  
 [build.environment]
-  NODE_VERSION = "18"
-
-# 自動デプロイ時に記事生成
-[[plugins]]
-  package = "@netlify/plugin-scheduled-functions"
-
-# リダイレクト設定
-[[redirects]]
-  from = "/mountains/:id"
-  to = "/posts/:id"
-  status = 301
-
-# ヘッダー設定
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
+  # Pythonビルドを無効化
+  NODE_ENV = "production"
