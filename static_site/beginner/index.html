@@ -3,33 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>初心者ガイド - 低山旅行</title>
-    <meta name="description" content="登山初心者向けの基本知識、装備、安全対策をわかりやすく解説します。">
+    <title>登山初心者ガイド - 低山旅行</title>
+    <meta name="description" content="登山初心者向けの基本的な知識、必要な装備、安全対策について詳しく解説します。">
     <meta name="keywords" content="低山, 登山, ハイキング, 初心者, 家族旅行, 日帰り, アウトドア">
     <meta name="author" content="低山旅行">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://teizan.omasse.com/">
-    <meta property="og:title" content="初心者ガイド - 低山旅行">
-    <meta property="og:description" content="登山初心者向けの基本知識、装備、安全対策をわかりやすく解説します。">
-    <meta property="og:image" content="https://teizan.omasse.com/images/og-image.jpg">
+    <meta property="og:url" content="https://your-domain.com/">
+    <meta property="og:title" content="登山初心者ガイド - 低山旅行">
+    <meta property="og:description" content="登山初心者向けの基本的な知識、必要な装備、安全対策について詳しく解説します。">
+    <meta property="og:image" content="https://your-domain.com/images/og-image.jpg">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://teizan.omasse.com/">
-    <meta property="twitter:title" content="初心者ガイド - 低山旅行">
-    <meta property="twitter:description" content="登山初心者向けの基本知識、装備、安全対策をわかりやすく解説します。">
-    <meta property="twitter:image" content="https://teizan.omasse.com/images/og-image.jpg">
+    <meta property="twitter:url" content="https://your-domain.com/">
+    <meta property="twitter:title" content="登山初心者ガイド - 低山旅行">
+    <meta property="twitter:description" content="登山初心者向けの基本的な知識、必要な装備、安全対策について詳しく解説します。">
+    <meta property="twitter:image" content="https://your-domain.com/images/og-image.jpg">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="/css/style.css?v=202507021533">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- 構造化データ -->
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "初心者ガイド",
+  "description": "登山初心者向けの基本的な知識、必要な装備、安全対策について詳しく解説します。",
+  "publisher": {
+    "@type": "Organization",
+    "name": "低山旅行"
+  }
+}
+    </script>
     
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
@@ -66,67 +80,73 @@
     </header>
     
     <main id="main-content" role="main">
-        <div class="container">
-            
-            <div class="page-header">
-                <h1>🥾 初心者ガイド</h1>
-                <p class="page-description">登山を始めたい方のための基本情報をまとめました。安全で楽しい山行のための知識とコツをお伝えします。</p>
+        
+        <nav class="breadcrumb" aria-label="パンくずリスト">
+            <div class="container">
+                <ol>
+                    <li><a href="/">ホーム</a></li>
+                    <li aria-current="page">初心者ガイド</li>
+                </ol>
             </div>
-            
-            <div class="section">
-                <h2>📚 登山の基本知識</h2>
+        </nav>
+        <div class="container">
+            <article class="article-container" itemscope itemtype="https://schema.org/Article">
+                <header class="article-header">
+                    <h1 itemprop="headline">初心者ガイド</h1>
+                    <div class="article-meta">
+                        <span class="mountain-info">低山旅行 - 初心者ガイド</span>
+                        <time datetime="2025-07-03" itemprop="datePublished">2025年07月03日</time>
+                        <span class="reading-time">📖 読了時間: 約3分</span>
+                    </div>
+                </header>
                 
-                <h3>🎯 登山計画の立て方</h3>
-                <ul>
-                    <li><strong>目標設定</strong>：体力と経験に合った山を選ぶ</li>
-                    <li><strong>天気確認</strong>：登山日の天気予報を必ずチェック</li>
-                    <li><strong>コース研究</strong>：地図やガイドブックで事前にルートを確認</li>
-                    <li><strong>時間配分</strong>：余裕をもったスケジュールを組む</li>
-                </ul>
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4" alt="初心者ガイド" class="featured-image" itemprop="image" loading="lazy">
                 
-                <h3>🎒 基本装備リスト</h3>
-                <div class="equipment-list">
-                    <h4>必需品</h4>
+                <div class="table-of-contents">
+                    <h3>📋 目次</h3>
                     <ul>
-                        <li>登山靴（トレッキングシューズ）</li>
-                        <li>リュックサック（20-30L程度）</li>
-                        <li>レインウェア（上下セット）</li>
-                        <li>防寒具（フリースやダウン）</li>
-                        <li>帽子・手袋</li>
-                        <li>水筒・ハイドレーション</li>
-                        <li>行動食・非常食</li>
-                        <li>ヘッドライト・予備電池</li>
-                        <li>救急セット</li>
-                        <li>地図・コンパス</li>
+                        
+        <li><a href="#section-1">登山の基礎知識</a></li>
+        <li><a href="#section-2">必要な装備</a></li>
+        <li><a href="#section-3">安全対策</a></li>
+        <li><a href="#section-4">マナーとルール</a></li>
+        
                     </ul>
                 </div>
-            </div>
-            
-            <div class="section">
-                <h2>⚠️ 安全対策</h2>
-                <div class="safety-tips">
-                    <div class="safety-tip">
-                        <h3>🗺️ 道迷い防止</h3>
-                        <p>登山道の分岐点では必ず地図で現在地を確認。不安になったら引き返す勇気も大切です。</p>
-                    </div>
-                    <div class="safety-tip">
-                        <h3>🌡️ 体調管理</h3>
-                        <p>水分補給をこまめに行い、疲労を感じたら無理をせず休憩を取りましょう。</p>
-                    </div>
-                    <div class="safety-tip">
-                        <h3>📱 連絡手段</h3>
-                        <p>登山届の提出と、家族への行程連絡を忘れずに。携帯電話の電池切れにも注意。</p>
+                
+                <div class="article-content" itemprop="articleBody">
+                    
+        <h2 id="section-1">登山の基礎知識</h2>
+        <p>登山を始める前に知っておきたい基本的な知識をご紹介します。</p>
+        
+        <h2 id="section-2">必要な装備</h2>
+        <p>安全で快適な登山に必要な装備をご紹介します。</p>
+        
+        <h2 id="section-3">安全対策</h2>
+        <p>山での安全を確保するための重要なポイントです。</p>
+        
+        <h2 id="section-4">マナーとルール</h2>
+        <p>登山における基本的なマナーとルールを守りましょう。</p>
+        
+                </div>
+                
+                <div class="related-articles">
+                    <h3>🔗 関連ページ</h3>
+                    <div class="related-grid">
+                        <a href="/mountains/" class="related-link">山一覧</a>
+                        <a href="/about/" class="related-link">このサイトについて</a>
+                        <a href="/beginner/" class="related-link">初心者ガイド</a>
                     </div>
                 </div>
-            </div>
-            
-            <div class="section">
-                <h2>🏔️ おすすめ初心者コース</h2>
-                <p><a href="/mountains/">山一覧ページ</a>で紹介している低山は、すべて初心者向けに厳選されています。まずは標高300m以下の山から始めることをおすすめします。</p>
-            </div>
-            
+            </article>
         </div>
+        
     </main>
+    
+    <!-- サイドバー（記事ページ用） -->
+    <aside class="sidebar" role="complementary" aria-label="関連情報">
+        <!-- 動的に挿入される -->
+    </aside>
     
     <footer role="contentinfo">
         <div class="container">

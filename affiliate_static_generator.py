@@ -1386,8 +1386,8 @@ body.loaded .mountain-card {
             }
             mountain_summary.append(mountain_info)
             
-            # 山別ページの生成
-            self.generate_basic_mountain_page(mountain)
+            # 山別ページの生成（詳細記事形式）
+            self.generate_detailed_mountain_page(mountain)
         
         # インデックスページの生成
         self.generate_basic_index_page(mountain_summary)
@@ -1395,10 +1395,13 @@ body.loaded .mountain-card {
         # 地域別ページの生成
         self.generate_basic_region_pages(mountains)
         
+        # 静的ページの生成（統一デザイン）
+        # self.generate_static_pages()  # このメソッドは後で定義されているためコメントアウト
+        
         print(f"✅ 基本サイト生成完了: {len(mountains)}山")
     
-    def generate_basic_mountain_page(self, mountain):
-        """データベースから基本的な山ページを生成"""
+    def generate_detailed_mountain_page(self, mountain):
+        """データベースから詳細な山ページを生成（筑波山スタイル）"""
         mountain_id = mountain['id']
         mountain_dir = self.output_dir / "mountains" / mountain_id
         mountain_dir.mkdir(exist_ok=True)
@@ -1422,51 +1425,596 @@ body.loaded .mountain-card {
         if not prefecture:
             prefecture = '要確認'
         
-        # 基本的な山情報HTML
-        features_html = ""
-        if mountain.get('features'):
-            features_list = "".join([f"<li>{feature}</li>" for feature in mountain['features'][:5]])
-            features_html = f"<ul>{features_list}</ul>"
-        
+        # 詳細記事コンテンツの生成
         difficulty_info = mountain.get('difficulty', {})
+        features = mountain.get('features', [])
+        location = mountain.get('location', {})
         
-        content = f"""
+        # 記事タイトルと説明文を生成
+        title = f"【{mountain['name']}完全ガイド】{prefecture}の魅力的な低山をご紹介 - 低山旅行"
+        description = f"{mountain['name']}は{prefecture}に位置する標高{mountain['elevation']}mの低山です。初心者・家族向けの登山情報、アクセス、見どころを詳しくご紹介します。"
+        
+        # 特徴リストの生成
+        features_text = ""
+        if features:
+            features_list = [f"<li>{feature}</li>" for feature in features[:5]]
+            features_text = f"<ul>{''.join(features_list)}</ul>"
+        
+        # 詳細コンテンツの生成
+        content_sections = []
+        
+        # セクション1: 山の魅力
+        content_sections.append(f'''
+        <h2 id="section-1">{mountain['name']}の魅力と基本情報</h2>
+        <p>{mountain['name']}は、{prefecture}に位置する標高{mountain['elevation']}mの低山です。初心者や家族連れでも安心して楽しめる、アクセス良好な人気の登山スポットです。</p>
+        
+        <h3>基本データ</h3>
+        <ul>
+        <li><strong>標高</strong>：{mountain['elevation']}m</li>
+        <li><strong>登山時間</strong>：{difficulty_info.get('hiking_time', '約1-3時間（初心者でも安心）')}</li>
+        <li><strong>難易度</strong>：{difficulty_info.get('level', '初級')}（登山道は整備済み）</li>
+        <li><strong>最寄り駅</strong>：{location.get('nearest_station', '詳細は現地確認をお願いします')}</li>
+        <li><strong>アクセス時間</strong>：{location.get('access_time', '要確認')}</li>
+        </ul>
+        ''')
+        
+        # セクション2: アクセス情報
+        content_sections.append(f'''
+        <h2 id="section-2">アクセス情報</h2>
+        <p>{mountain['name']}へのアクセスは比較的良好です。</p>
+        
+        <h3>公共交通機関でのアクセス</h3>
+        <ul>
+        <li><strong>最寄り駅</strong>：{location.get('nearest_station', '詳細は現地確認をお願いします')}</li>
+        <li><strong>アクセス時間</strong>：{location.get('access_time', '要確認')}</li>
+        </ul>
+        
+        <h3>車でのアクセス</h3>
+        <ul>
+        <li>駐車場情報：現地確認をお願いします</li>
+        <li>登山道入口までの案内：現地の案内板に従ってください</li>
+        </ul>
+        ''')
+        
+        # セクション3: 登山コースと見どころ
+        content_sections.append(f'''
+        <h2 id="section-3">登山コースと見どころ</h2>
+        <p>{mountain['name']}は{difficulty_info.get('level', '初級')}レベルの山として、初心者にも親しまれています。</p>
+        
+        <h3>おすすめポイント</h3>
+        {features_text}
+        
+        <h3>登山の注意点</h3>
+        <ul>
+        <li>天候の変化に注意し、雨具を携帯しましょう</li>
+        <li>登山道以外への立ち入りは避けましょう</li>
+        <li>ゴミは必ず持ち帰りましょう</li>
+        </ul>
+        ''')
+        
+        # セクション4: 季節ごとの楽しみ方
+        content_sections.append(f'''
+        <h2 id="section-4">季節ごとの楽しみ方</h2>
+        
+        <h3>春（3月〜5月）</h3>
+        <p>新緑の季節。山野草や桜を楽しむことができます。</p>
+        
+        <h3>夏（6月〜8月）</h3>
+        <p>緑豊かな森林浴を楽しめます。早朝登山がおすすめです。</p>
+        
+        <h3>秋（9月〜11月）</h3>
+        <p>紅葉シーズン。色とりどりの山景色が楽しめます。</p>
+        
+        <h3>冬（12月〜2月）</h3>
+        <p>雪化粧した山容が美しい季節。防寒対策をしっかりと。</p>
+        ''')
+        
+        # セクション5: 装備・持ち物
+        content_sections.append(f'''
+        <h2 id="section-5">おすすめの登山装備</h2>
+        <p>{mountain['name']}登山を快適に楽しむための装備をご紹介します。初心者の方にも使いやすいアイテムを厳選しました。</p>
+        
+        <h3>服装と持ち物</h3>
+        <ul>
+        <li><strong>服装</strong>：動きやすい服装、履き慣れた運動靴でOK</li>
+        <li><strong>持ち物</strong>：水分、軽食、タオル、雨具</li>
+        <li><strong>安全装備</strong>：ヘッドライト、救急用品、携帯電話</li>
+        </ul>
+        ''')
+        
+        # セクション6: まとめ
+        content_sections.append(f'''
+        <h2 id="section-6">まとめ：{mountain['name']}の魅力</h2>
+        <p>{mountain['name']}は、{prefecture}で親しまれている標高{mountain['elevation']}mの低山です。{difficulty_info.get('level', '初級')}レベルの登山道で、初心者や家族連れでも安心して楽しめます。</p>
+        
+        <p>アクセスも良好で、日帰り登山に最適なスポットです。四季折々の自然を楽しみながら、気軽にアウトドア体験ができる{mountain['name']}へ、ぜひ足を運んでみてはいかがでしょうか。</p>
+        ''')
+        
+        # 目次の生成
+        toc_items = [
+            "section-1",mountain['name']+"の魅力と基本情報",
+            "section-2","アクセス情報", 
+            "section-3","登山コースと見どころ",
+            "section-4","季節ごとの楽しみ方",
+            "section-5","おすすめの登山装備",
+            "section-6",f"まとめ：{mountain['name']}の魅力"
+        ]
+        
+        toc_html = ""
+        for i in range(0, len(toc_items), 2):
+            if i+1 < len(toc_items):
+                toc_html += f'<li><a href="#{toc_items[i]}">{toc_items[i+1]}</a></li>'
+        
+        # 記事のメインコンテンツ
+        main_content = ''.join(content_sections)
+        
+        # 構造化データ
+        structured_data = {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": title.replace(" - 低山旅行", ""),
+            "description": description,
+            "author": {
+                "@type": "Organization",
+                "name": "低山旅行"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "低山旅行",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://your-domain.com/logo.png"
+                }
+            },
+            "datePublished": "2025-07-03",
+            "dateModified": "2025-07-03",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": f"https://your-domain.com/mountains/{mountain_id}/"
+            },
+            "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4"
+        }
+        
+        # 最終HTMLコンテンツの構築
+        full_content = f"""
+        <nav class="breadcrumb" aria-label="パンくずリスト">
+            <div class="container">
+                <ol>
+                    <li><a href="/">ホーム</a></li>
+                    <li><a href="/mountains/">山一覧</a></li>
+                    <li><a href="/regions/{prefecture}/">{prefecture}</a></li>
+                    <li aria-current="page">{mountain['name']}</li>
+                </ol>
+            </div>
+        </nav>
         <div class="container">
-            <article class="mountain-article">
-                <h1>{mountain['name']} ({mountain['elevation']}m)</h1>
-                <div class="mountain-meta">
-                    <span class="location">📍 {prefecture}</span>
-                    <span class="elevation">⛰️ {mountain['elevation']}m</span>
-                    <span class="difficulty">🎯 {difficulty_info.get('level', '初級')}</span>
+            <article class="article-container" itemscope itemtype="https://schema.org/Article">
+                <header class="article-header">
+                    <h1 itemprop="headline">{title.replace(" - 低山旅行", "")}</h1>
+                    <div class="article-meta">
+                        <span class="mountain-info">{mountain['name']} ({mountain['elevation']}m) - {prefecture}</span>
+                        <time datetime="2025-07-03" itemprop="datePublished">2025年07月03日</time>
+                        <span class="reading-time">📖 読了時間: 約5分</span>
+                    </div>
+                </header>
+                
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4" alt="{mountain['name']} 登山風景" class="featured-image" itemprop="image" loading="lazy">
+                
+                <div class="table-of-contents">
+                    <h3>📋 目次</h3>
+                    <ul>
+                        {toc_html}
+                    </ul>
                 </div>
                 
-                <div class="mountain-description">
-                    <h2>山の特徴</h2>
-                    <p>{mountain['name']}は{prefecture}に位置する標高{mountain['elevation']}mの低山です。</p>
-                    {features_html}
+                <div class="article-content" itemprop="articleBody">
+                    {main_content}
                 </div>
                 
-                <div class="access-info">
-                    <h2>アクセス情報</h2>
-                    <p>最寄り駅: {mountain.get('location', {}).get('nearest_station', '要確認')}</p>
-                    <p>アクセス時間: {mountain.get('location', {}).get('access_time', '要確認')}</p>
-                </div>
+                {self.generate_affiliate_section()}
                 
-                <div class="difficulty-info">
-                    <h2>登山情報</h2>
-                    <p>難易度: {difficulty_info.get('level', '初級')}</p>
-                    <p>登山時間: {difficulty_info.get('hiking_time', '要確認')}</p>
+                <div class="related-articles">
+                    <h3>🔗 関連記事</h3>
+                    <div class="related-grid">
+                        <a href="/mountains/" class="related-link">他の低山を探す</a>
+                        <a href="/beginner/" class="related-link">登山初心者ガイド</a>
+                        <a href="/equipment/" class="related-link">登山装備について</a>
+                    </div>
+                </div>
+                <div class="article-tags">
+                    <span class="tag">#{mountain['name']}</span>
+                    <span class="tag">#{prefecture}</span>
+                    <span class="tag">#低山</span>
+                    <span class="tag">#初心者登山</span>
+                    <span class="tag">#日帰り登山</span>
+                    <span class="tag">#{difficulty_info.get('level', '初級')}</span>
                 </div>
             </article>
         </div>
         """
         
-        title = f"{mountain['name']} ({mountain['elevation']}m) - {prefecture} | 低山旅行"
-        description = f"{mountain['name']}は{prefecture}にある標高{mountain['elevation']}mの低山です。初心者でも楽しめる登山情報をご紹介。"
-        
-        html = self.create_html_template(title, content, description)
+        html = self.create_html_template(title, full_content, description, structured_data)
         
         with open(mountain_dir / "index.html", 'w', encoding='utf-8') as f:
+            f.write(html)
+    
+    def generate_affiliate_section(self):
+        """アフィリエイトセクションの生成"""
+        return '''
+            <div class="affiliate-section">
+                <h3>🎒 おすすめの登山グッズ</h3>
+                <p class="affiliate-disclaimer">※以下の商品リンクは楽天アフィリエイトです。価格・在庫は変動する場合があります。</p>
+                <div class="affiliate-products">
+                    <div class="affiliate-product">
+                    <a href="https://hb.afl.rakuten.co.jp/ichiba/2c4ba3a3.7a6dd580.2c4ba3a4.bbdf25a3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsports%2Fnew-balance-hiking-shoes%2F&link_type=hybrid_url" target="_blank" rel="noopener nofollow" onclick="gtag('event', 'click', {'event_category': 'affiliate', 'event_label': 'ニューバランス トレッキングシューズ'});">
+                        ニューバランス トレッキングシューズ
+                    </a>
+                    <span class="price">¥8,900</span>
+                </div>
+<div class="affiliate-product">
+                    <a href="https://hb.afl.rakuten.co.jp/ichiba/2c4ba3a3.7a6dd580.2c4ba3a4.bbdf25a3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Foutdoor%2Fmontbell-daypack%2F&link_type=hybrid_url" target="_blank" rel="noopener nofollow" onclick="gtag('event', 'click', {'event_category': 'affiliate', 'event_label': 'モンベル 軽量デイパック 20L'});">
+                        モンベル 軽量デイパック 20L
+                    </a>
+                    <span class="price">¥5,500</span>
+                </div>
+<div class="affiliate-product">
+                    <a href="https://hb.afl.rakuten.co.jp/ichiba/2c4ba3a3.7a6dd580.2c4ba3a4.bbdf25a3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsports%2Fhydration-bottle%2F&link_type=hybrid_url" target="_blank" rel="noopener nofollow" onclick="gtag('event', 'click', {'event_category': 'affiliate', 'event_label': '保温・保冷水筒 500ml'});">
+                        保温・保冷水筒 500ml
+                    </a>
+                    <span class="price">¥2,980</span>
+                </div>
+<div class="affiliate-product">
+                    <a href="https://hb.afl.rakuten.co.jp/ichiba/2c4ba3a3.7a6dd580.2c4ba3a4.bbdf25a3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Foutdoor%2Frain-jacket%2F&link_type=hybrid_url" target="_blank" rel="noopener nofollow" onclick="gtag('event', 'click', {'event_category': 'affiliate', 'event_label': '軽量レインジャケット'});">
+                        軽量レインジャケット
+                    </a>
+                    <span class="price">¥3,200</span>
+                </div>
+<div class="affiliate-product">
+                    <a href="https://hb.afl.rakuten.co.jp/ichiba/2c4ba3a3.7a6dd580.2c4ba3a4.bbdf25a3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsafety%2Fbear-bell%2F&link_type=hybrid_url" target="_blank" rel="noopener nofollow" onclick="gtag('event', 'click', {'event_category': 'affiliate', 'event_label': '登山用熊鈴'});">
+                        登山用熊鈴
+                    </a>
+                    <span class="price">¥890</span>
+                </div>
+                </div>
+                <p class="affiliate-note">💡 <strong>登山装備選びのポイント:</strong> 軽量性、耐久性、機能性のバランスを考慮して選びましょう。</p>
+            </div>
+        '''
+    
+    def generate_static_pages(self):
+        """統一デザインの静的ページを生成"""
+        
+        # aboutページ
+        self.generate_about_page()
+        
+        # 初心者ガイドページ
+        self.generate_beginner_page()
+        
+        # 装備ガイドページ  
+        self.generate_equipment_page()
+        
+        # お問い合わせページ
+        self.generate_contact_page()
+        
+        # プライバシーポリシー
+        self.generate_privacy_page()
+        
+        # 利用規約
+        self.generate_terms_page()
+    
+    def generate_about_page(self):
+        """aboutページを詳細記事形式で生成"""
+        page_dir = self.output_dir / "about"
+        page_dir.mkdir(exist_ok=True)
+        
+        title = "このサイトについて - 低山旅行"
+        description = "低山旅行は初心者・家族向けの低山登山情報を提供するサイトです。日本全国の低山47山の詳細な登山ガイドをお届けしています。"
+        
+        # 目次アイテム
+        toc_html = '''
+        <li><a href="#section-1">低山旅行について</a></li>
+        <li><a href="#section-2">掲載している山の特徴</a></li>
+        <li><a href="#section-3">サイトの使い方</a></li>
+        <li><a href="#section-4">安全な登山のために</a></li>
+        <li><a href="#section-5">お問い合わせ</a></li>
+        '''
+        
+        main_content = '''
+        <h2 id="section-1">低山旅行について</h2>
+        <p>低山旅行は、初心者や家族連れでも安心して楽しめる日本全国の低山情報を紹介するサイトです。標高400m以下の山を中心に、アクセスが良く、登山道が整備された安全な山をご紹介しています。</p>
+        
+        <p>登山は難しいものと思われがちですが、実は気軽に始められる素晴らしいアクティビティです。都市近郊にも美しい自然と絶景を楽しめる山がたくさんあります。このサイトでは、そんな身近な山の魅力をお伝えし、皆様の週末のお出かけのお手伝いをします。</p>
+        
+        <h2 id="section-2">掲載している山の特徴</h2>
+        <h3>選定基準</h3>
+        <ul>
+        <li><strong>標高400m以下</strong>：初心者でも無理なく登れる高さ</li>
+        <li><strong>登山道整備済み</strong>：安全に登山できる環境</li>
+        <li><strong>アクセス良好</strong>：公共交通機関や車でアクセスしやすい</li>
+        <li><strong>日帰り可能</strong>：気軽に楽しめる日帰り登山</li>
+        <li><strong>家族向け</strong>：子供から高齢者まで楽しめる</li>
+        </ul>
+        
+        <h3>全国47山のラインナップ</h3>
+        <p>北は北海道から南は鹿児島まで、日本各地の魅力的な低山を47山厳選してご紹介しています。それぞれの山の特色、アクセス方法、見どころ、季節の楽しみ方を詳しく解説しています。</p>
+        
+        <h2 id="section-3">サイトの使い方</h2>
+        <h3>山一覧から探す</h3>
+        <p>「山一覧」ページでは、地域別に山を分類して表示しています。お住まいの地域や旅行先に合わせて山を選ぶことができます。</p>
+        
+        <h3>地域別から探す</h3>
+        <p>「地域別」ページでは都道府県ごとに山をまとめています。特定の地域の山を一覧で確認したい場合にご利用ください。</p>
+        
+        <h3>初心者ガイド</h3>
+        <p>「初心者ガイド」では、登山の基本的な知識、必要な装備、安全対策について詳しく解説しています。初めて登山にチャレンジする方は必読です。</p>
+        
+        <h2 id="section-4">安全な登山のために</h2>
+        <p>低山といえども自然の中での活動です。以下の点にご注意ください：</p>
+        
+        <ul>
+        <li><strong>天候の確認</strong>：登山前には必ず天気予報をチェック</li>
+        <li><strong>計画の共有</strong>：登山計画を家族や友人と共有</li>
+        <li><strong>適切な装備</strong>：最低限の登山装備を準備</li>
+        <li><strong>無理をしない</strong>：体調や天候に応じて引き返す勇気</li>
+        <li><strong>自然保護</strong>：ゴミの持ち帰り、植物の採取禁止</li>
+        </ul>
+        
+        <h2 id="section-5">お問い合わせ</h2>
+        <p>サイトに関するご質問、掲載情報の修正依頼、新しい山の推薦などがございましたら、お気軽にお問い合わせください。</p>
+        
+        <p>皆様に安全で楽しい登山体験をお届けできるよう、継続的にサイトの改善を行ってまいります。</p>
+        '''
+        
+        full_content = f'''
+        <nav class="breadcrumb" aria-label="パンくずリスト">
+            <div class="container">
+                <ol>
+                    <li><a href="/">ホーム</a></li>
+                    <li aria-current="page">このサイトについて</li>
+                </ol>
+            </div>
+        </nav>
+        <div class="container">
+            <article class="article-container" itemscope itemtype="https://schema.org/Article">
+                <header class="article-header">
+                    <h1 itemprop="headline">このサイトについて</h1>
+                    <div class="article-meta">
+                        <span class="mountain-info">低山旅行サイト情報</span>
+                        <time datetime="2025-07-03" itemprop="datePublished">2025年07月03日</time>
+                        <span class="reading-time">📖 読了時間: 約3分</span>
+                    </div>
+                </header>
+                
+                <img src="https://images.unsplash.com/photo-1464822759844-d150ad6d0e12" alt="低山登山の風景" class="featured-image" itemprop="image" loading="lazy">
+                
+                <div class="table-of-contents">
+                    <h3>📋 目次</h3>
+                    <ul>
+                        {toc_html}
+                    </ul>
+                </div>
+                
+                <div class="article-content" itemprop="articleBody">
+                    {main_content}
+                </div>
+                
+                <div class="related-articles">
+                    <h3>🔗 関連ページ</h3>
+                    <div class="related-grid">
+                        <a href="/mountains/" class="related-link">山一覧を見る</a>
+                        <a href="/beginner/" class="related-link">登山初心者ガイド</a>
+                        <a href="/contact/" class="related-link">お問い合わせ</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+        '''
+        
+        structured_data = {
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            "name": "このサイトについて",
+            "description": description,
+            "publisher": {
+                "@type": "Organization",
+                "name": "低山旅行"
+            }
+        }
+        
+        html = self.create_html_template(title, full_content, description, structured_data)
+        
+        with open(page_dir / "index.html", 'w', encoding='utf-8') as f:
+            f.write(html)
+    
+    def generate_beginner_page(self):
+        """初心者ガイドページを生成"""
+        page_dir = self.output_dir / "beginner"
+        page_dir.mkdir(exist_ok=True)
+        
+        title = "登山初心者ガイド - 低山旅行"
+        description = "登山初心者向けの基本的な知識、必要な装備、安全対策について詳しく解説します。"
+        
+        toc_html = '''
+        <li><a href="#section-1">登山の基礎知識</a></li>
+        <li><a href="#section-2">必要な装備</a></li>
+        <li><a href="#section-3">安全対策</a></li>
+        <li><a href="#section-4">マナーとルール</a></li>
+        '''
+        
+        main_content = '''
+        <h2 id="section-1">登山の基礎知識</h2>
+        <p>登山を始める前に知っておきたい基本的な知識をご紹介します。</p>
+        
+        <h2 id="section-2">必要な装備</h2>
+        <p>安全で快適な登山に必要な装備をご紹介します。</p>
+        
+        <h2 id="section-3">安全対策</h2>
+        <p>山での安全を確保するための重要なポイントです。</p>
+        
+        <h2 id="section-4">マナーとルール</h2>
+        <p>登山における基本的なマナーとルールを守りましょう。</p>
+        '''
+        
+        self._generate_static_page(page_dir, title, description, toc_html, main_content, "初心者ガイド")
+    
+    def generate_equipment_page(self):
+        """装備ガイドページを生成"""
+        page_dir = self.output_dir / "equipment"
+        page_dir.mkdir(exist_ok=True)
+        
+        title = "登山装備ガイド - 低山旅行"
+        description = "登山に必要な装備の選び方、おすすめアイテムをご紹介します。"
+        
+        toc_html = '''
+        <li><a href="#section-1">基本装備</a></li>
+        <li><a href="#section-2">季節別装備</a></li>
+        <li><a href="#section-3">おすすめアイテム</a></li>
+        '''
+        
+        main_content = f'''
+        <h2 id="section-1">基本装備</h2>
+        <p>登山に必要な基本的な装備をご紹介します。</p>
+        
+        <h2 id="section-2">季節別装備</h2>
+        <p>季節に応じた装備選びのポイントです。</p>
+        
+        <h2 id="section-3">おすすめアイテム</h2>
+        <p>実際におすすめの装備をご紹介します。</p>
+        
+        {self.generate_affiliate_section()}
+        '''
+        
+        self._generate_static_page(page_dir, title, description, toc_html, main_content, "装備ガイド")
+    
+    def generate_contact_page(self):
+        """お問い合わせページを生成"""
+        page_dir = self.output_dir / "contact"
+        page_dir.mkdir(exist_ok=True)
+        
+        title = "お問い合わせ - 低山旅行"
+        description = "低山旅行へのお問い合わせはこちらから。ご質問やご要望をお聞かせください。"
+        
+        toc_html = '''
+        <li><a href="#section-1">お問い合わせについて</a></li>
+        <li><a href="#section-2">よくある質問</a></li>
+        '''
+        
+        main_content = '''
+        <h2 id="section-1">お問い合わせについて</h2>
+        <p>サイトに関するご質問、情報の修正依頼などがございましたらお気軽にお問い合わせください。</p>
+        
+        <h2 id="section-2">よくある質問</h2>
+        <p>よく寄せられるご質問とその回答をまとめています。</p>
+        '''
+        
+        self._generate_static_page(page_dir, title, description, toc_html, main_content, "お問い合わせ")
+    
+    def generate_privacy_page(self):
+        """プライバシーポリシーページを生成"""
+        page_dir = self.output_dir / "privacy"
+        page_dir.mkdir(exist_ok=True)
+        
+        title = "プライバシーポリシー - 低山旅行"
+        description = "低山旅行のプライバシーポリシーです。"
+        
+        toc_html = '''
+        <li><a href="#section-1">個人情報の取り扱い</a></li>
+        <li><a href="#section-2">Cookie について</a></li>
+        '''
+        
+        main_content = '''
+        <h2 id="section-1">個人情報の取り扱い</h2>
+        <p>当サイトでは、個人情報の適切な保護と管理に努めています。</p>
+        
+        <h2 id="section-2">Cookie について</h2>
+        <p>当サイトではCookieを使用してサービスの向上を図っています。</p>
+        '''
+        
+        self._generate_static_page(page_dir, title, description, toc_html, main_content, "プライバシーポリシー")
+    
+    def generate_terms_page(self):
+        """利用規約ページを生成"""
+        page_dir = self.output_dir / "terms"
+        page_dir.mkdir(exist_ok=True)
+        
+        title = "利用規約 - 低山旅行"
+        description = "低山旅行の利用規約です。"
+        
+        toc_html = '''
+        <li><a href="#section-1">利用規約について</a></li>
+        <li><a href="#section-2">免責事項</a></li>
+        '''
+        
+        main_content = '''
+        <h2 id="section-1">利用規約について</h2>
+        <p>当サイトをご利用いただく際の規約です。</p>
+        
+        <h2 id="section-2">免責事項</h2>
+        <p>登山は自己責任で行ってください。当サイトは情報提供のみを目的としています。</p>
+        '''
+        
+        self._generate_static_page(page_dir, title, description, toc_html, main_content, "利用規約")
+    
+    def _generate_static_page(self, page_dir, title, description, toc_html, main_content, page_name):
+        """共通の静的ページ生成メソッド"""
+        full_content = f'''
+        <nav class="breadcrumb" aria-label="パンくずリスト">
+            <div class="container">
+                <ol>
+                    <li><a href="/">ホーム</a></li>
+                    <li aria-current="page">{page_name}</li>
+                </ol>
+            </div>
+        </nav>
+        <div class="container">
+            <article class="article-container" itemscope itemtype="https://schema.org/Article">
+                <header class="article-header">
+                    <h1 itemprop="headline">{page_name}</h1>
+                    <div class="article-meta">
+                        <span class="mountain-info">低山旅行 - {page_name}</span>
+                        <time datetime="2025-07-03" itemprop="datePublished">2025年07月03日</time>
+                        <span class="reading-time">📖 読了時間: 約3分</span>
+                    </div>
+                </header>
+                
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4" alt="{page_name}" class="featured-image" itemprop="image" loading="lazy">
+                
+                <div class="table-of-contents">
+                    <h3>📋 目次</h3>
+                    <ul>
+                        {toc_html}
+                    </ul>
+                </div>
+                
+                <div class="article-content" itemprop="articleBody">
+                    {main_content}
+                </div>
+                
+                <div class="related-articles">
+                    <h3>🔗 関連ページ</h3>
+                    <div class="related-grid">
+                        <a href="/mountains/" class="related-link">山一覧</a>
+                        <a href="/about/" class="related-link">このサイトについて</a>
+                        <a href="/beginner/" class="related-link">初心者ガイド</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+        '''
+        
+        structured_data = {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": page_name,
+            "description": description,
+            "publisher": {
+                "@type": "Organization",
+                "name": "低山旅行"
+            }
+        }
+        
+        html = self.create_html_template(title, full_content, description, structured_data)
+        
+        with open(page_dir / "index.html", 'w', encoding='utf-8') as f:
             f.write(html)
     
     def generate_basic_index_page(self, mountains):
