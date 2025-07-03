@@ -104,6 +104,31 @@ python deploy_all_pages.py
 3. 静的サイトジェネレーターでサイト構築
 4. FTPデプロイで公開
 
+## 🎨 HTML/CSSテンプレート生成ルール（2025-07-03追加）
+
+### ⚠️ 重要：z-index階層管理
+**異なるヘッダー要素の競合を防ぐため、以下の階層を厳守する**
+
+```css
+/* z-index階層定義（絶対遵守） */
+Skip Link:                 z-index: 10000
+サイトヘッダー（ナビ）:      z-index: 9999   ← header[role="banner"]
+モーダル・ドロップダウン:    z-index: 1000-8999
+記事ヘッダー:              z-index: 1       ← .article-header  
+通常コンテンツ:            z-index: auto (0)
+背景装飾:                  z-index: -1
+```
+
+### 📋 HTMLテンプレート命名ルール
+- **サイトヘッダー**: `<header role="banner">` （ナビゲーション用）
+- **記事ヘッダー**: `<header class="article-header">` （記事タイトル用）
+- **セクションヘッダー**: `<div class="section-header">` （その他用）
+
+### 🚫 禁止事項
+- 同じ`header`タグに複数の高いz-indexを設定しない
+- `header`要素は用途を明確に区別する
+- z-index値の重複や近似値は避ける
+
 ## 🔄 再開時の最初のコマンド
 ```bash
 cd /home/qthisa/abg_teizan/mountain_blog_generator
