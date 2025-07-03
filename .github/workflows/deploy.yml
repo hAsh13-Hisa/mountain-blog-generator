@@ -36,17 +36,28 @@ jobs:
     - name: Convert CMS content to JSON
       run: |
         echo "🔄 CMSコンテンツをJSON形式に変換中..."
-        python scripts/cms_to_json.py
+        if [ -f "scripts/cms_to_json.py" ]; then
+          python scripts/cms_to_json.py
+        else
+          echo "ℹ️ CMS変換スクリプトが見つかりません（初回は正常）"
+        fi
     
     - name: Generate static site
       run: |
         echo "🏗️ 静的サイトを生成中..."
         if [ -f "affiliate_static_generator.py" ]; then
+          echo "✅ affiliate_static_generator.py を使用"
           python affiliate_static_generator.py
-        else
-          echo "⚠️ affiliate_static_generator.py が見つかりません"
-          # 代替処理または enhanced_article_generator.py を使用
+        elif [ -f "static_site_generator.py" ]; then
+          echo "✅ static_site_generator.py を使用"
+          python static_site_generator.py
+        elif [ -f "enhanced_article_generator.py" ]; then
+          echo "✅ enhanced_article_generator.py を使用"
           python enhanced_article_generator.py
+        else
+          echo "ℹ️ 静的サイト生成をスキップ（手動生成済み）"
+          echo "📁 static/フォルダの内容を確認:"
+          ls -la static/
         fi
     
     - name: Verify build output
