@@ -91,6 +91,19 @@ python deploy_all_pages.py
 - アフィリエイトセクション欠落
 - HTMLテンプレート崩れ
 
+## 📝 記事生成ルール（2025-07-03更新）
+
+### ⚠️ 重要：外部API使用禁止
+- **Claude Code**による記事生成のみ使用
+- Anthropic API、WordPress API等の外部API呼び出しは禁止
+- APIエラー回避・安定性確保のため
+
+### 🎯 記事生成フロー
+1. **Claude Code**で記事内容を直接生成
+2. 生成した記事をHTMLファイルとして保存
+3. 静的サイトジェネレーターでサイト構築
+4. FTPデプロイで公開
+
 ## 🔄 再開時の最初のコマンド
 ```bash
 cd /home/qthisa/abg_teizan/mountain_blog_generator
