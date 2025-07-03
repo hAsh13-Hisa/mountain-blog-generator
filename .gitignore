@@ -76,3 +76,43 @@ coverage.xml
 .mypy_cache/
 .dmypy.json
 dmypy.json
+
+# Netlify
+.netlify/
+
+# Local server logs
+server.log
+static_site/server.log
+
+# FTP credentials (IMPORTANT: Never commit these!)
+ftp_config.json
+.ftp_config
+ftp_credentials.txt
+
+# Generated static site (optional - comment out if you want to track)
+# static_site/
+
+# Temporary files from scripts
+*.pyc
+temp_*
+tmp_*
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+.directory
+
+# Editor backup files
+*.bak
+*.swp
+*.swo
+*~

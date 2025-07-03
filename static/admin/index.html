@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>低山旅行CMS管理画面</title>
+  <link href="https://unpkg.com/decap-cms@^3.1.2/dist/decap-cms.css" rel="stylesheet" />
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+  <!-- CMS本体 -->
+  <script src="https://unpkg.com/decap-cms@^3.1.2/dist/decap-cms.js"></script>
+  
+  <!-- カスタマイズ -->
+  <script>
+    // 日本語化
+    CMS.registerLocale('ja', {
+      auth: {
+        login: 'ログイン',
+        loggingIn: 'ログイン中...',
+        loginWithGitHub: 'GitHubでログイン',
+        errors: {
+          email: '有効なメールアドレスを入力してください',
+          password: 'パスワードを入力してください',
+          authTitle: '認証エラー',
+          authBody: 'ログインに失敗しました。',
+        },
+      },
+      app: {
+        header: {
+          content: 'コンテンツ',
+          media: 'メディア',
+          quickAdd: 'クイック追加',
+        },
+        app: {
+          loading: '読み込み中...',
+          errorHeader: 'CMSの設定読み込みエラー',
+          configErrors: '設定エラー',
+          checkConfigYml: 'config.ymlファイルを確認してください。',
+          loadingConfig: '設定を読み込み中...',
+          waitingBackend: 'バックエンドの応答を待っています...',
+        },
+        notFoundPage: {
+          header: 'ページが見つかりません',
+        },
+      },
+      collection: {
+        sidebar: {
+          collections: 'コレクション',
+          allCollections: 'すべてのコレクション',
+          searchAll: 'すべて検索',
+          searchIn: '検索',
+        },
+        collectionTop: {
+          sortBy: '並び替え',
+          viewAs: '表示形式',
+          newButton: '新規 %{collectionLabel}',
+          ascending: '昇順',
+          descending: '降順',
+          searchResults: '"%{searchTerm}" の検索結果',
+          searchResultsInCollection: '%{collection} での "%{searchTerm}" の検索結果',
+          filterBy: 'フィルター',
+          groupBy: 'グループ化',
+        },
+        entries: {
+          loadingEntries: 'エントリーを読み込み中...',
+          cachingEntries: 'エントリーをキャッシュ中...',
+          longerLoading: '数分かかる場合があります',
+          noEntries: 'エントリーがありません',
+        },
+        groups: {
+          other: 'その他',
+          negateLabel: '%{label} 以外',
+        },
+      },
+      editor: {
+        editorControl: {
+          field: {
+            optional: '任意',
+          },
+        },
+        editorControlPane: {
+          widget: {
+            required: '%{fieldLabel} は必須です。',
+            regexPattern: '%{fieldLabel} は %{pattern} パターンに一致する必要があります。',
+            processing: '%{fieldLabel} を処理中...',
+            range: '%{fieldLabel} は %{minValue} から %{maxValue} の間である必要があります。',
+            min: '%{fieldLabel} は %{minValue} 以上である必要があります。',
+            max: '%{fieldLabel} は %{maxValue} 以下である必要があります。',
+          },
+        },
+        editor: {
+          onLeavePage: '本当にこのページを離れますか？',
+          onUpdatingWithUnsavedChanges: '保存されていない変更があります。ステータスを更新する前に保存してください。',
+          onPublishingNotReady: '公開する前にステータスを「準備完了」に更新してください。',
+          onPublishingWithUnsavedChanges: '保存されていない変更があります。公開する前に保存してください。',
+          onPublishing: '本当にこのエントリーを公開しますか？',
+          onDeleteWithUnsavedChanges: '本当にこの公開済みエントリーと、現在のセッションの保存されていない変更を削除しますか？',
+          onDeletePublishedEntry: '本当にこの公開済みエントリーを削除しますか？',
+          onDeleteUnpublishedChangesWithUnsavedChanges: '未公開の変更がすべて削除され、現在のセッションの保存されていない変更も削除されます。本当に削除しますか？',
+          onDeleteUnpublishedChanges: 'このエントリーの未公開の変更がすべて削除されます。本当に削除しますか？',
+          loadingEntry: 'エントリーを読み込み中...',
+        },
+        editorToolbar: {
+          publishing: '公開中...',
+          publish: '公開',
+          published: '公開済み',
+          publishNow: '今すぐ公開',
+          publishAndCreateNew: '公開して新規作成',
+          publishAndDuplicate: '公開して複製',
+          unpublish: '非公開',
+          duplicate: '複製',
+          unpublishing: '非公開にしています...',
+          publishAndNew: '公開して新規作成',
+          publishAndDuplicate: '公開して複製',
+          deleteUnpublishedChanges: '未公開の変更を削除',
+          deleteUnpublishedEntry: '未公開エントリーを削除',
+          deletePublishedEntry: '公開済みエントリーを削除',
+          deleteEntry: 'エントリーを削除',
+          saving: '保存中...',
+          save: '保存',
+          statusInfoTooltipDraft: 'エントリーは下書きステータスです。最終確認して公開してください',
+          statusInfoTooltipInReview: 'エントリーはレビュー中です。これ以上のアクションは必要ありません',
+          deleting: '削除中...',
+          updating: '更新中...',
+          status: 'ステータス: %{status}',
+          backCollection: '%{collectionLabel} に戻る',
+          unsavedChanges: '未保存の変更',
+          changesSaved: '変更を保存しました',
+          draft: '下書き',
+          inReview: 'レビュー中',
+          ready: '準備完了',
+          publishNow: '今すぐ公開',
+          deployPreviewPendingButtonLabel: 'プレビューを確認',
+          deployPreviewButtonLabel: 'プレビューを表示',
+          deployButtonLabel: 'ライブ表示',
+        },
+        editorWidgets: {
+          markdown: {
+            bold: '太字',
+            italic: '斜体',
+            code: 'コード',
+            link: 'リンク',
+            linkPrompt: 'リンクのURLを入力してください',
+            headings: '見出し',
+            quote: '引用',
+            bulletedList: '箇条書き',
+            numberedList: '番号付きリスト',
+            addComponent: 'コンポーネントを追加',
+            richText: 'リッチテキスト',
+            markdown: 'Markdown',
+          },
+          image: {
+            choose: '画像を選択',
+            chooseMultiple: '画像を選択',
+            remove: '削除',
+            removeAll: 'すべて削除',
+          },
+          file: {
+            choose: 'ファイルを選択',
+            chooseMultiple: 'ファイルを選択',
+            remove: '削除',
+            removeAll: 'すべて削除',
+          },
+        },
+      },
+      mediaLibrary: {
+        mediaLibraryCard: {
+          draft: '下書き',
+        },
+        mediaLibrary: {
+          onDelete: '選択したメディアを本当に削除しますか？',
+          fileTooLarge: 'ファイルが大きすぎます。\n設定では %{size} kB以下のファイルが許可されています。',
+        },
+        mediaLibraryModal: {
+          loading: '読み込み中...',
+          noResults: '結果がありません。',
+          noAssetsFound: 'アセットが見つかりません。',
+          noImagesFound: '画像が見つかりません。',
+          private: 'プライベート',
+          images: '画像',
+          mediaAssets: 'メディアアセット',
+          search: '検索...',
+          uploading: 'アップロード中...',
+          upload: 'アップロード',
+          download: 'ダウンロード',
+          deleting: '削除中...',
+          deleteSelected: '選択を削除',
+          chooseSelected: '選択を使用',
+        },
+      },
+      ui: {
+        default: {
+          goBackToSite: 'サイトに戻る',
+        },
+        errorBoundary: {
+          title: 'エラー',
+          details: 'エラーが発生しました。',
+          reportIt: 'GitHubでイシューを作成してください。',
+          detailsHeading: '詳細',
+          privacyWarning: 'イシューを開くと、エラーメッセージとデバッグデータが事前に入力されます。\n情報が正しいことを確認し、機密データが存在する場合は削除してください。',
+          recoveredEntry: {
+            heading: 'ドキュメントを復元しました',
+            warning: 'どこかにコピーして保存してからページを離れてください。',
+            copyButtonLabel: 'クリップボードにコピー',
+          },
+        },
+        settingsDropdown: {
+          logOut: 'ログアウト',
+        },
+        toast: {
+          onFailToLoadEntries: 'エントリーの読み込みに失敗しました: %{details}',
+          onFailToLoadDeployPreview: 'プレビューの読み込みに失敗しました: %{details}',
+          onFailToPersist: '保存に失敗しました: %{details}',
+          onFailToDelete: '削除に失敗しました: %{details}',
+          onFailToUpdateStatus: 'ステータスの更新に失敗しました: %{details}',
+          missingRequiredField: '必須フィールドが入力されていません。保存する前にすべて入力してください。',
+          entrySaved: '保存しました',
+          entryPublished: '公開しました',
+          entryUnpublished: '非公開にしました',
+          onFailToPublishEntry: '公開に失敗しました: %{details}',
+          onFailToUnpublishEntry: '非公開に失敗しました: %{details}',
+          entryUpdated: 'エントリーのステータスを更新しました',
+          onDeleteUnpublishedChanges: '未公開の変更を削除しました',
+          onFailToAuth: '%{details}',
+          onLoggedOut: 'ログアウトしました。データをバックアップしてから再度ログインしてください',
+          onBackendDown: 'バックエンドサービスが停止しています。詳細は %{details} を参照してください',
+        },
+      },
+      workflow: {
+        workflow: {
+          loading: 'ワークフローのエントリーを読み込み中',
+          workflowHeading: 'ワークフロー',
+          newPost: '新規投稿',
+          description: 'エントリー数: %{smart_count}',
+          dateFormat: 'MMMM D',
+        },
+        workflowCard: {
+          lastChange: '%{date} by %{author}',
+          lastChangeNoAuthor: '%{date}',
+          deleteChanges: '変更を削除',
+          deleteNewEntry: '新規エントリーを削除',
+          publishChanges: '変更を公開',
+          publishNewEntry: '新規エントリーを公開',
+        },
+        workflowList: {
+          onDeleteEntry: 'このエントリーを本当に削除しますか？',
+          onPublishingNotReadyEntry: 'ステータスが「準備完了」のアイテムのみ公開できます。「準備完了」列にカードをドラッグしてください。',
+          onPublishEntry: 'このエントリーを本当に公開しますか？',
+          draftHeader: '下書き',
+          inReviewHeader: 'レビュー中',
+          readyHeader: '準備完了',
+          currentEntries: '現在のエントリー',
+        },
+      },
+    });
+
+    // デフォルトロケールを日本語に設定
+    CMS.registerLocale('ja', ja);
+    CMS.init({ locale: 'ja' });
+
+    // カスタムプレビューテンプレート
+    CMS.registerPreviewStyle('/css/style.css');
+  </script>
+</body>
+</html>

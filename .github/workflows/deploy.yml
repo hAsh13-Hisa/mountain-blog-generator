@@ -1,0 +1,93 @@
+name: Build and Deploy to Lolipop
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+  
+# 同時実行を防ぐ
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    
+    - name: Setup Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.9'
+        cache: 'pip'
+    
+    - name: Install dependencies
+      run: |
+        pip install --upgrade pip
+        pip install -r requirements.txt || echo "No requirements.txt found"
+        # 必要なパッケージを直接インストール
+        pip install requests beautifulsoup4 python-frontmatter
+    
+    - name: Convert CMS content to JSON
+      run: |
+        echo "🔄 CMSコンテンツをJSON形式に変換中..."
+        python scripts/cms_to_json.py
+    
+    - name: Generate static site
+      run: |
+        echo "🏗️ 静的サイトを生成中..."
+        if [ -f "affiliate_static_generator.py" ]; then
+          python affiliate_static_generator.py
+        else
+          echo "⚠️ affiliate_static_generator.py が見つかりません"
+          # 代替処理または enhanced_article_generator.py を使用
+          python enhanced_article_generator.py
+        fi
+    
+    - name: Verify build output
+      run: |
+        echo "📁 生成されたファイルを確認中..."
+        ls -la static_site/
+        find static_site -name "*.html" | wc -l
+        echo "HTMLファイル数: $(find static_site -name "*.html" | wc -l)"
+    
+    - name: Deploy to FTP
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ${{ secrets.FTP_HOST }}
+        username: ${{ secrets.FTP_USER }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: ./static_site/
+        server-dir: /as_teizan/
+        protocol: ftps
+        port: 21
+        timeout: 120000
+        dangerous-clean-slate: false
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          **/.netlify/**
+          **/server.log
+    
+    - name: Post-deployment verification
+      run: |
+        echo "✅ デプロイ完了！"
+        echo "🌐 サイトURL: https://teizan.omasse.com/"
+        echo "📅 デプロイ日時: $(date +'%Y-%m-%d %H:%M:%S')"
+    
+    # エラー時の詳細ログ出力
+    - name: Upload error logs on failure
+      if: failure()
+      uses: actions/upload-artifact@v4
+      with:
+        name: error-logs
+        path: |
+          logs/
+          *.log
+        retention-days: 7
