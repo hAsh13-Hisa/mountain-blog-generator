@@ -27,7 +27,7 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="/css/style.css?v=202507040515">
+    <link rel="stylesheet" href="/css/style.css?v=202507041106">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
@@ -66,11 +66,22 @@
     
     <main id="main-content" role="main">
         <div class="container">
-            <div class="hero-section">
+            <div class="hero-section regions-hero">
                 <h1>🗾 地域別山一覧</h1>
                 <p class="hero-description">日本全国の低山を都道府県別にご紹介</p>
                 <div class="stats">
                     <span>25都道府県</span> | <span>47山</span> | <span>アクセス良好</span>
+                </div>
+                <div class="region-search">
+                    <h3>地域で検索</h3>
+                    <div class="region-filters">
+                        <button class="region-filter active" data-region="all">全地域</button>
+                        <button class="region-filter" data-region="kanto">関東</button>
+                        <button class="region-filter" data-region="kansai">関西</button>
+                        <button class="region-filter" data-region="kyushu">九州</button>
+                        <button class="region-filter" data-region="tohoku">東北</button>
+                        <button class="region-filter" data-region="hokkaido">北海道</button>
+                    </div>
                 </div>
             </div>
             

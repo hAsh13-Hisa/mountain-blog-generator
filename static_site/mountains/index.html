@@ -27,7 +27,7 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="/css/style.css?v=202507040515">
+    <link rel="stylesheet" href="/css/style.css?v=202507041106">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
@@ -66,11 +66,20 @@
     
     <main id="main-content" role="main">
         <div class="container">
-            <div class="hero-section">
+            <div class="hero-section mountains-hero">
                 <h1>🏔️ 山一覧</h1>
                 <p class="hero-description">全47山の低山データベース</p>
                 <div class="stats">
                     <span>標高20m〜400m</span> | <span>初心者・家族向け</span> | <span>登山道整備済み</span>
+                </div>
+                <div class="filter-section">
+                    <h3>標高別フィルター</h3>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">全て</button>
+                        <button class="filter-btn" data-filter="100-200">標高100-200m</button>
+                        <button class="filter-btn" data-filter="200-300">標高200-300m</button>
+                        <button class="filter-btn" data-filter="300-400">標高300-400m</button>
+                    </div>
                 </div>
             </div>
             
