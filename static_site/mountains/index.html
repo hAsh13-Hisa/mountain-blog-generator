@@ -68,24 +68,37 @@
         <div class="container">
             <div class="hero-section mountains-hero">
                 <h1>🏔️ 山一覧</h1>
-                <p class="hero-description">全47山の低山データベース</p>
+                <p class="hero-description">初心者・家族向けの低山全47山を標高順に一覧表示</p>
                 <div class="stats">
-                    <span>標高20m〜400m</span> | <span>初心者・家族向け</span> | <span>登山道整備済み</span>
+                    <span>標高20m〜400m</span> | <span>全47山</span> | <span>25都道府県</span>
                 </div>
-                <div class="filter-section">
-                    <h3>標高別フィルター</h3>
-                    <div class="filter-buttons">
-                        <button class="filter-btn active" data-filter="all">全て</button>
-                        <button class="filter-btn" data-filter="100-200">標高100-200m</button>
-                        <button class="filter-btn" data-filter="200-300">標高200-300m</button>
-                        <button class="filter-btn" data-filter="300-400">標高300-400m</button>
+                <div class="search-section">
+                    <h3>🔍 山を探す</h3>
+                    <div class="search-controls">
+                        <input type="text" id="mountain-search" placeholder="山名、都道府県、タグで検索...">
+                        <div class="filter-buttons">
+                            <button class="filter-btn active" data-filter="all">全て</button>
+                            <button class="filter-btn" data-filter="100-200">100-200m</button>
+                            <button class="filter-btn" data-filter="200-300">200-300m</button>
+                            <button class="filter-btn" data-filter="300-400">300-400m</button>
+                        </div>
                     </div>
                 </div>
             </div>
             
             <div class="mountains-section">
-                <h2>標高順山一覧</h2>
-                <div class="mountains-grid">
+                <div class="results-header">
+                    <h2>🌲 全山一覧（標高順）</h2>
+                    <div class="sort-controls">
+                        <label for="sort-select">並び順:</label>
+                        <select id="sort-select">
+                            <option value="elevation">標高順</option>
+                            <option value="name">山名順</option>
+                            <option value="prefecture">都道府県順</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mountains-grid" id="mountains-list">
 
                 <div class="mountain-card">
                     <h3><a href="/mountains/mt_yoshida_kyoto/">吉田山 (105m)</a></h3>
@@ -125,7 +138,7 @@
 
                 <div class="mountain-card">
                     <h3><a href="/mountains/mt_競秀_大分/">競秀峰 (131m)</a></h3>
-                    <p class="mountain-location">都道府県なし | 初級</p>
+                    <p class="mountain-location">静岡県 | 初級</p>
                     <p class="mountain-description">競秀峰は都道府県なしにある標高131mの低山です。</p>
                     <div class="mountain-tags">
                         
@@ -170,7 +183,7 @@
 
                 <div class="mountain-card">
                     <h3><a href="/mountains/mt_鎌倉アルプス_神奈川/">鎌倉アルプス (159m)</a></h3>
-                    <p class="mountain-location">都道府県なし | 初級</p>
+                    <p class="mountain-location">静岡県 | 初級</p>
                     <p class="mountain-description">鎌倉アルプスは都道府県なしにある標高159mの低山です。</p>
                     <div class="mountain-tags">
                         
@@ -224,7 +237,7 @@
 
                 <div class="mountain-card">
                     <h3><a href="/mountains/mt_三毳_栃木/">三毳山 (229m)</a></h3>
-                    <p class="mountain-location">都道府県なし | 初級</p>
+                    <p class="mountain-location">静岡県 | 初級</p>
                     <p class="mountain-description">三毳山は都道府県なしにある標高229mの低山です。</p>
                     <div class="mountain-tags">
                         
@@ -296,7 +309,7 @@
 
                 <div class="mountain-card">
                     <h3><a href="/mountains/mt_七座_秋田/">七座山 (288m)</a></h3>
-                    <p class="mountain-location">都道府県なし | 初級</p>
+                    <p class="mountain-location">静岡県 | 初級</p>
                     <p class="mountain-description">七座山は都道府県なしにある標高288mの低山です。</p>
                     <div class="mountain-tags">
                         
@@ -314,7 +327,7 @@
 
                 <div class="mountain-card">
                     <h3><a href="/mountains/mt_大福_千葉/">大福山 (292m)</a></h3>
-                    <p class="mountain-location">都道府県なし | 初級</p>
+                    <p class="mountain-location">静岡県 | 初級</p>
                     <p class="mountain-description">大福山は都道府県なしにある標高292mの低山です。</p>
                     <div class="mountain-tags">
                         
@@ -323,7 +336,7 @@
 
                 <div class="mountain-card">
                     <h3><a href="/mountains/mt_高御位_兵庫/">高御位山 (304m)</a></h3>
-                    <p class="mountain-location">都道府県なし | 初級</p>
+                    <p class="mountain-location">静岡県 | 初級</p>
                     <p class="mountain-description">高御位山は都道府県なしにある標高304mの低山です。</p>
                     <div class="mountain-tags">
                         
@@ -332,7 +345,7 @@
 
                 <div class="mountain-card">
                     <h3><a href="/mountains/mt_日和田_埼玉/">日和田山 (305m)</a></h3>
-                    <p class="mountain-location">都道府県なし | 初級</p>
+                    <p class="mountain-location">静岡県 | 初級</p>
                     <p class="mountain-description">日和田山は都道府県なしにある標高305mの低山です。</p>
                     <div class="mountain-tags">
                         
@@ -359,7 +372,7 @@
 
                 <div class="mountain-card">
                     <h3><a href="/mountains/mt_神石_静岡/">神石山 (325m)</a></h3>
-                    <p class="mountain-location">都道府県なし | 初級</p>
+                    <p class="mountain-location">静岡県 | 初級</p>
                     <p class="mountain-description">神石山は都道府県なしにある標高325mの低山です。</p>
                     <div class="mountain-tags">
                         
@@ -395,7 +408,7 @@
 
                 <div class="mountain-card">
                     <h3><a href="/mountains/mt_伊予ヶ_千葉/">伊予ヶ岳 (336m)</a></h3>
-                    <p class="mountain-location">都道府県なし | 初級</p>
+                    <p class="mountain-location">静岡県 | 初級</p>
                     <p class="mountain-description">伊予ヶ岳は都道府県なしにある標高336mの低山です。</p>
                     <div class="mountain-tags">
                         
@@ -404,7 +417,7 @@
 
                 <div class="mountain-card">
                     <h3><a href="/mountains/mt_世田_愛媛/">世田山 (339m)</a></h3>
-                    <p class="mountain-location">都道府県なし | 初級</p>
+                    <p class="mountain-location">静岡県 | 初級</p>
                     <p class="mountain-description">世田山は都道府県なしにある標高339mの低山です。</p>
                     <div class="mountain-tags">
                         
@@ -440,7 +453,7 @@
 
                 <div class="mountain-card">
                     <h3><a href="/mountains/mt_立花_福岡/">立花山 (367m)</a></h3>
-                    <p class="mountain-location">都道府県なし | 初級</p>
+                    <p class="mountain-location">静岡県 | 初級</p>
                     <p class="mountain-description">立花山は都道府県なしにある標高367mの低山です。</p>
                     <div class="mountain-tags">
                         
@@ -485,7 +498,7 @@
 
                 <div class="mountain-card">
                     <h3><a href="/mountains/mt_鷲頭_静岡/">鷲頭山 (392m)</a></h3>
-                    <p class="mountain-location">都道府県なし | 初級</p>
+                    <p class="mountain-location">静岡県 | 初級</p>
                     <p class="mountain-description">鷲頭山は都道府県なしにある標高392mの低山です。</p>
                     <div class="mountain-tags">
                         
@@ -524,12 +537,16 @@
                     <p>初心者・家族向けの低山登山情報を提供しています。</p>
                 </div>
                 <div class="footer-section">
-                    <h3>カテゴリ</h3>
+                    <h3>地域別低山ガイド</h3>
                     <ul>
-                        <li><a href="/regions/kanto/">関東地方</a></li>
-                        <li><a href="/regions/kansai/">関西地方</a></li>
-                        <li><a href="/regions/kyushu/">九州地方</a></li>
-                        <li><a href="/difficulty/beginner/">初心者向け</a></li>
+                        <li><a href="/regions/関東/">関東の低山 (17山)</a></li>
+                        <li><a href="/regions/関西/">関西の低山 (12山)</a></li>
+                        <li><a href="/regions/九州/">九州の低山 (6山)</a></li>
+                        <li><a href="/regions/東北/">東北の低山 (3山)</a></li>
+                        <li><a href="/regions/中部/">中部の低山 (3山)</a></li>
+                        <li><a href="/regions/四国/">四国の低山 (3山)</a></li>
+                        <li><a href="/regions/北海道/">北海道の低山 (2山)</a></li>
+                        <li><a href="/regions/中国/">中国の低山 (1山)</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
