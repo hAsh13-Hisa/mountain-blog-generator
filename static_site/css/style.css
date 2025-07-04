@@ -39,6 +39,16 @@ header[role="banner"] {
     --success-color: #388E3C;    /* 成功色 */
     --warning-color: #F57C00;    /* 警告色 */
     --info-color: #1976D2;       /* 情報色 */
+    
+    /* グラデーション変数（重要：白文字表示問題解決） */
+    --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-2: linear-gradient(135deg, #2E7D32 0%, #4CAF50 100%);
+    --gradient-3: linear-gradient(135deg, #FF7043 0%, #FF9800 100%);
+    
+    /* 追加カラー変数 */
+    --sub-color: #E8F5E8;        /* サブカラー */
+    --affiliate-bg: #FFF8E1;     /* アフィリエイト背景 */
+    --cta-color: #D84315;        /* CTAボタン色 */
 }
 
 /* タイポグラフィ（山ガール風改善） */
@@ -906,7 +916,7 @@ footer::after {
 
 .region-card a {
     text-decoration: none;
-    color: white;
+    color: var(--text-color);
     display: block;
     height: 100%;
 }
@@ -917,27 +927,27 @@ footer::after {
 }
 
 .region-card h3 {
-    color: white;
+    color: var(--text-color);
     font-size: 1.4rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-shadow: none;
 }
 
 .region-card .region-description {
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--text-sub);
     font-size: 0.95rem;
     line-height: 1.6;
     margin-bottom: 1.5rem;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    text-shadow: none;
 }
 
 .region-card .region-mountains {
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--primary-color);
     font-size: 0.85rem;
     font-weight: 600;
     padding: 0.5rem 1rem;
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--surface-color);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     display: inline-block;
@@ -1008,18 +1018,19 @@ footer::after {
 
 /* 山一覧ページ特別機能 */
 .mountains-hero {
-    background: var(--gradient-2);
-    color: white;
+    background: var(--surface-color);
+    color: var(--text-color);
     padding: 3rem 2rem;
     border-radius: 25px;
     margin-bottom: 3rem;
+    border: 2px solid var(--border-color);
 }
 
 .mountains-hero h1,
 .mountains-hero p,
 .mountains-hero .stats {
-    color: white;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: var(--text-color);
+    text-shadow: none;
 }
 
 .filter-section {
@@ -1028,7 +1039,7 @@ footer::after {
 }
 
 .filter-section h3 {
-    color: white;
+    color: var(--text-color);
     margin-bottom: 1rem;
     font-size: 1.2rem;
 }
@@ -1042,36 +1053,37 @@ footer::after {
 
 .filter-btn {
     padding: 0.8rem 1.5rem;
-    background: rgba(255, 255, 255, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: white;
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
     border-radius: 25px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
 }
 
 .filter-btn:hover,
 .filter-btn.active {
-    background: rgba(255, 255, 255, 0.3);
+    background: var(--primary-color);
+    color: white;
     transform: scale(1.05);
 }
 
 /* 地域別ページ特別機能 */
 .regions-hero {
-    background: var(--gradient-3);
-    color: white;
+    background: var(--surface-color);
+    color: var(--text-color);
     padding: 3rem 2rem;
     border-radius: 25px;
     margin-bottom: 3rem;
+    border: 2px solid var(--border-color);
 }
 
 .regions-hero h1,
 .regions-hero p,
 .regions-hero .stats {
-    color: white;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: var(--text-color);
+    text-shadow: none;
 }
 
 .region-search {
@@ -1080,7 +1092,7 @@ footer::after {
 }
 
 .region-search h3 {
-    color: white;
+    color: var(--text-color);
     margin-bottom: 1rem;
     font-size: 1.2rem;
 }
@@ -1094,36 +1106,37 @@ footer::after {
 
 .region-filter {
     padding: 0.8rem 1.5rem;
-    background: rgba(255, 255, 255, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: white;
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
     border-radius: 25px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
 }
 
 .region-filter:hover,
 .region-filter.active {
-    background: rgba(255, 255, 255, 0.3);
+    background: var(--primary-color);
+    color: white;
     transform: scale(1.05);
 }
 
 /* ===== サイトマップページスタイル ===== */
 .sitemap-hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+    background: var(--surface-color);
+    color: var(--text-color);
     padding: 3rem 2rem;
     border-radius: 25px;
     margin-bottom: 3rem;
+    border: 2px solid var(--border-color);
 }
 
 .sitemap-hero h1,
 .sitemap-hero p,
 .sitemap-hero .stats {
-    color: white;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: var(--text-color);
+    text-shadow: none;
 }
 
 .sitemap-content {
