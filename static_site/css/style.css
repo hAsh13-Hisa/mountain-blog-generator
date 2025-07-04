@@ -8,6 +8,22 @@
     box-sizing: border-box;
 }
 
+/* 根本的な余白問題の解決 */
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header[role="banner"] {
+    margin: 0;
+    padding: 1.2rem 0;
+}
+
 :root {
     /* 明るい山ガール風カラーパレット（アウトドアファッション準拠） */
     --primary-color: #4A90E2;    /* ブライトブルー */
