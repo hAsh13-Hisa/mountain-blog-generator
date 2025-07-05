@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}} - 低山旅行</title>
+    <meta name="description" content="{{description}}">
+    
+    <link rel="stylesheet" href="{{css_path}}css/minimal_design.css">
+    
+    <!-- 構造化データ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "{{page_type}}",
+        "name": "{{title}}",
+        "description": "{{description}}",
+        "url": "https://teizan.omasse.com{{current_path}}"
+    }
+    </script>
+</head>
+<body><!-- Skip Link -->
+    <a href="#main-content" class="sr-only">メインコンテンツへスキップ</a>
+
+    <!-- ヘッダー -->
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="{{root_path}}" aria-label="低山旅行 ホーム">
+                        <span class="logo-icon">🏔️</span>
+                        <span class="logo-text">低山旅行</span>
+                    </a>
+                </div>
+                
+                <nav class="main-nav" aria-label="メインナビゲーション">
+                    <ul class="nav-menu">
+                        <li><a href="{{root_path}}mountains/">山を探す</a></li>
+                        <li><a href="{{root_path}}equipment/">装備ガイド</a></li>
+                        <li><a href="{{root_path}}beginner/">初心者向け</a></li>
+                        <li><a href="{{root_path}}regions/">地域別</a></li>
+                    </ul>
+                </nav>
+                
+                <button class="mobile-menu-toggle" aria-label="メニューを開く">
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
+                </button>
+            </div>
+        </div>
+        
+        <nav class="mobile-nav" aria-label="モバイルナビゲーション">
+            <ul class="mobile-menu">
+                <li><a href="{{root_path}}mountains/">山を探す</a></li>
+                <li><a href="{{root_path}}equipment/">装備ガイド</a></li>
+                <li><a href="{{root_path}}beginner/">初心者向け</a></li>
+                <li><a href="{{root_path}}regions/">地域別</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main id="main-content">
+        {{content}}
+    </main>
+
+    <!-- フッター -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>低山旅行</h3>
+                    <p>安全で楽しい低山ハイキングを応援する専門サイト。初心者からファミリーまで、誰でも気軽に山歩きを楽しめる情報をお届けします。</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>人気コンテンツ</h3>
+                    <ul class="footer-links">
+                        <li><a href="{{root_path}}mountains/">山を探す</a></li>
+                        <li><a href="{{root_path}}equipment/">装備ガイド</a></li>
+                        <li><a href="{{root_path}}beginner/">初心者向け</a></li>
+                        <li><a href="{{root_path}}regions/">地域別ガイド</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>サイト情報</h3>
+                    <ul class="footer-links">
+                        <li><a href="{{root_path}}about/">このサイトについて</a></li>
+                        <li><a href="{{root_path}}contact/">お問い合わせ</a></li>
+                        <li><a href="{{root_path}}privacy/">プライバシーポリシー</a></li>
+                        <li><a href="{{root_path}}terms/">利用規約</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 低山旅行. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="{{js_path}}js/minimal.js"></script>
+</body>
+</html>

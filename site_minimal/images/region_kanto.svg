@@ -1,0 +1,24 @@
+
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="regionBg_region_kanto" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#e8f5e8;stop-opacity:0.3" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="400" height="300" fill="url(#regionBg_region_kanto)"/>
+  
+  <!-- 地域の山々（シルエット） -->
+  <polygon points="0,200 80,150 160,180 240,140 320,170 400,160 400,300 0,300" 
+           fill="#4a7c59" opacity="0.3"/>
+  
+  <!-- ランドマークアイコン -->
+  <circle cx="200" cy="120" r="45" fill="white" opacity="0.8"/>
+  <text x="200" y="135" text-anchor="middle" font-size="36" fill="#2d5016">🗼</text>
+  
+  <!-- 地域名 -->
+  <text x="200" y="250" text-anchor="middle" fill="#2c3e50" font-family="Arial, sans-serif" 
+        font-size="18" font-weight="bold">関東地方</text>
+</svg>

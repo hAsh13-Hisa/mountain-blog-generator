@@ -1,0 +1,23 @@
+
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="supportBg_support_family" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#e8f5e8;stop-opacity:0.1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="400" height="300" fill="url(#supportBg_support_family)"/>
+  
+  <!-- メインアイコン -->
+  <circle cx="200" cy="120" r="50" fill="#3498db" opacity="0.1"/>
+  <text x="200" y="140" text-anchor="middle" font-size="40" fill="#3498db">👨‍👩‍👧‍👦</text>
+  
+  <!-- サポートタイプ -->
+  <text x="200" y="220" text-anchor="middle" fill="#2c3e50" font-family="Arial, sans-serif" 
+        font-size="16" font-weight="bold">ファミリー向け</text>
+  
+  <!-- 装飾線 -->
+  <line x1="100" y1="250" x2="300" y2="250" stroke="#3498db" stroke-width="2" opacity="0.3"/>
+</svg>

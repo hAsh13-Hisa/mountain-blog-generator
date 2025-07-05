@@ -1,0 +1,33 @@
+
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="skyGrad_mountain_takao" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E0F6FF;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="mountGrad_mountain_takao" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d5016;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4a7c59;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 空 -->
+  <rect width="400" height="300" fill="url(#skyGrad_mountain_takao)"/>
+  
+  <!-- 山の形状（山によって変える） -->
+  <polygon points="0,250 80,120 160,140 240,100 320,130 400,110 400,300 0,300" 
+           fill="url(#mountGrad_mountain_takao)"/>
+  
+  <!-- 緑の装飾 -->
+  <circle cx="60" cy="220" r="15" fill="#2d5016"/>
+  <circle cx="300" cy="200" r="18" fill="#2d5016"/>
+  <circle cx="350" cy="190" r="12" fill="#2d5016"/>
+  
+  <!-- 雲 -->
+  <ellipse cx="100" cy="60" rx="25" ry="15" fill="white" opacity="0.7"/>
+  <ellipse cx="300" cy="50" rx="30" ry="18" fill="white" opacity="0.7"/>
+  
+  <!-- 山名テキスト -->
+  <text x="200" y="280" text-anchor="middle" fill="#2c3e50" font-family="Arial, sans-serif" 
+        font-size="16" font-weight="bold">高尾山</text>
+</svg>

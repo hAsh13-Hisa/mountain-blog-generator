@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>低山旅行 - 安全で楽しい低山ハイキング</title>
+    <meta name="description" content="初心者・ファミリー向けの低山ハイキング情報。全国47都道府県の安全な低山と必要装備を専門家が解説します。">
+    
+    <link rel="stylesheet" href="css/minimal_design.css">
+    
+    <!-- 構造化データ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "低山旅行",
+        "description": "初心者・ファミリー向けの低山ハイキング情報サイト",
+        "url": "https://teizan.omasse.com/"
+    }
+    </script>
+</head>
+<body>
+    <!-- Skip Link -->
+    <a href="#main-content" class="sr-only">メインコンテンツへスキップ</a>
+
+    <!-- ヘッダー -->
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="/" aria-label="低山旅行 ホーム">
+                        <span class="logo-icon">🏔️</span>
+                        <span class="logo-text">低山旅行</span>
+                    </a>
+                </div>
+                
+                <nav class="main-nav" aria-label="メインナビゲーション">
+                    <ul class="nav-menu">
+                        <li><a href="/mountains/">山を探す</a></li>
+                        <li><a href="/equipment/">装備ガイド</a></li>
+                        <li><a href="/beginner/">初心者向け</a></li>
+                        <li><a href="/regions/">地域別</a></li>
+                    </ul>
+                </nav>
+                
+                <button class="mobile-menu-toggle" aria-label="メニューを開く">
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
+                </button>
+            </div>
+        </div>
+        
+        <nav class="mobile-nav" aria-label="モバイルナビゲーション">
+            <ul class="mobile-menu">
+                <li><a href="/mountains/">山を探す</a></li>
+                <li><a href="/equipment/">装備ガイド</a></li>
+                <li><a href="/beginner/">初心者向け</a></li>
+                <li><a href="/regions/">地域別</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main id="main-content">
+        <!-- ヒーロー -->
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-title">
+                    安全で楽しい低山ハイキング
+                </h1>
+                <p class="hero-subtitle">
+                    初心者・ファミリー向けの低山情報と装備選びを専門家がサポート。
+                    全国47都道府県の厳選低山で、自然との出会いを始めましょう。
+                </p>
+                <div class="hero-cta">
+                    <a href="/mountains/" class="btn btn-primary btn-large">
+                        <span>🗾</span>
+                        山を探す
+                    </a>
+                    <a href="/beginner/" class="btn btn-secondary btn-large">
+                        <span>📚</span>
+                        初心者ガイド
+                    </a>
+                </div>
+                
+                <!-- ヒーロー画像 -->
+                <div class="hero-image">
+                    <img src="images/hero_mountain_hiking.svg" 
+                         alt="美しい低山でハイキングを楽しむ人のイラスト。緑豊かな山々と青い空、ハイキング道が描かれている。" 
+                         class="hero-img" onerror="this.src='images/hero_mountain_hiking.svg'">
+                </div>
+            </div>
+        </section>
+
+        <!-- 人気の山 -->
+        <section class="section">
+            <div class="container">
+                <header class="section-header">
+                    <h2 class="section-title">人気の低山</h2>
+                    <p class="section-subtitle">
+                        初心者におすすめの安全で楽しい低山をご紹介します
+                    </p>
+                </header>
+                
+                <div class="card-grid">
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="images/mountain_takao.svg" 
+                                 alt="高尾山の美しいイラスト。緑豊かな山容と青い空が描かれている。" 
+                                 class="card-img" onerror="this.src='images/hero_mountain_hiking.svg'">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">高尾山</h3>
+                            <div class="card-meta">
+                                <span>📍 東京都</span>
+                                <span>📏 標高599m</span>
+                                <span>👨‍👩‍👧‍👦 ファミリー向け</span>
+                            </div>
+                            <p class="card-description">
+                                都心からのアクセス抜群。ケーブルカーもあり、初心者や子供連れでも安心して登れる低山の代表格です。
+                            </p>
+                            <a href="/mountains/takao/" class="btn btn-secondary btn-small">
+                                詳細を見る
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="images/mountain_tsukuba.svg" 
+                                 alt="筑波山の美しいイラスト。双耳峰の特徴的な山容が描かれている。" 
+                                 class="card-img" onerror="this.src='images/hero_mountain_hiking.svg'">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">筑波山</h3>
+                            <div class="card-meta">
+                                <span>📍 茨城県</span>
+                                <span>📏 標高877m</span>
+                                <span>⛰️ 中級者向け</span>
+                            </div>
+                            <p class="card-description">
+                                関東平野の名峰。男体山・女体山の双耳峰で、変化に富んだコースが楽しめます。
+                            </p>
+                            <a href="/mountains/tsukuba/" class="btn btn-secondary btn-small">
+                                詳細を見る
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="images/mountain_sanuki.svg" 
+                                 alt="讃岐富士の美しいイラスト。円錐形の山容と瀬戸内海の風景が描かれている。" 
+                                 class="card-img" onerror="this.src='images/hero_mountain_hiking.svg'">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">讃岐富士</h3>
+                            <div class="card-meta">
+                                <span>📍 香川県</span>
+                                <span>📏 標高422m</span>
+                                <span>🌊 絶景</span>
+                            </div>
+                            <p class="card-description">
+                                美しい円錐形の山容と瀬戸内海を一望できる絶景が魅力。四国の低山を代表する人気の山です。
+                            </p>
+                            <a href="/mountains/sanuki/" class="btn btn-secondary btn-small">
+                                詳細を見る
+                            </a>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="text-center">
+                    <a href="/mountains/" class="btn btn-primary">
+                        <span>⛰️</span>
+                        すべての山を見る
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 装備ガイド -->
+        <section class="section">
+            <div class="container">
+                <header class="section-header">
+                    <h2 class="section-title">装備選びガイド</h2>
+                    <p class="section-subtitle">
+                        安全で快適な低山ハイキングのための装備選びをサポートします
+                    </p>
+                </header>
+                
+                <div class="card-grid">
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="images/equipment_backpack.svg" 
+                                 alt="ハイキング用ザックのイラスト。登山に必要な装備を表している。" 
+                                 class="card-img">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">ザック選び</h3>
+                            <p class="card-description">
+                                日帰り低山ハイキングに最適なザックの選び方と、おすすめモデルをご紹介します。
+                            </p>
+                            <div class="price-info">
+                                <span class="price-current">¥8,000</span>
+                                <span class="price-original">¥12,000</span>
+                                <span class="price-discount">33%OFF</span>
+                            </div>
+                            <ul class="feature-list">
+                                <li>軽量で疲れにくい</li>
+                                <li>防水性能あり</li>
+                                <li>初心者向け</li>
+                            </ul>
+                            <a href="/equipment/backpack/" class="btn btn-primary btn-small">
+                                詳細を見る
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="images/equipment_shoes.svg" 
+                                 alt="登山靴のイラスト。低山ハイキングに適したトレッキングシューズを表している。" 
+                                 class="card-img">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">登山靴選び</h3>
+                            <p class="card-description">
+                                低山に適した登山靴の選び方と、足への負担を軽減するポイントを解説します。
+                            </p>
+                            <div class="price-info">
+                                <span class="price-current">¥12,800</span>
+                                <span class="price-discount">セール中</span>
+                            </div>
+                            <ul class="feature-list">
+                                <li>グリップ力抜群</li>
+                                <li>防水仕様</li>
+                                <li>疲れにくい設計</li>
+                            </ul>
+                            <a href="/equipment/shoes/" class="btn btn-primary btn-small">
+                                詳細を見る
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="images/equipment_rain.svg" 
+                                 alt="レインウェアのイラスト。ハイキング時の雨対策に必要な装備を表している。" 
+                                 class="card-img">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">レインウェア</h3>
+                            <p class="card-description">
+                                突然の雨や風から身を守る必需品。軽量でコンパクトに収納できるモデルを厳選。
+                            </p>
+                            <div class="price-info">
+                                <span class="price-current">¥6,480</span>
+                                <span class="price-discount">限定価格</span>
+                            </div>
+                            <ul class="feature-list">
+                                <li>完全防水</li>
+                                <li>軽量250g</li>
+                                <li>コンパクト収納</li>
+                            </ul>
+                            <a href="/equipment/rain/" class="btn btn-primary btn-small">
+                                詳細を見る
+                            </a>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="text-center">
+                    <a href="/equipment/" class="btn btn-primary">
+                        <span>🛍️</span>
+                        装備ガイド一覧
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 初心者向け情報 -->
+        <section class="section">
+            <div class="container">
+                <header class="section-header">
+                    <h2 class="section-title">初心者向けサポート</h2>
+                    <p class="section-subtitle">
+                        低山ハイキングを始める方に向けた基礎知識と安全な楽しみ方
+                    </p>
+                </header>
+                
+                <div class="card-grid">
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="images/support_guide.svg" 
+                                 alt="ハイキングガイドブックのイラスト。初心者向けの基礎知識を表している。" 
+                                 class="card-img">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">基礎知識</h3>
+                            <p class="card-description">
+                                低山ハイキングの基本的な知識と準備について分かりやすく解説します。
+                            </p>
+                            <a href="/beginner/basics/" class="btn btn-secondary btn-small">
+                                詳細を見る
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="images/support_safety.svg" 
+                                 alt="安全対策のイラスト。ハイキング時の安全管理を表している。" 
+                                 class="card-img">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">安全対策</h3>
+                            <p class="card-description">
+                                事故を防ぐための基本的な安全対策と、緊急時の対処方法をご紹介。
+                            </p>
+                            <a href="/beginner/safety/" class="btn btn-secondary btn-small">
+                                詳細を見る
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="images/support_family.svg" 
+                                 alt="ファミリーハイキングのイラスト。家族で楽しむハイキングを表している。" 
+                                 class="card-img">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">ファミリー向け</h3>
+                            <p class="card-description">
+                                子供と一緒に楽しむ低山ハイキングのコツと注意点をお伝えします。
+                            </p>
+                            <a href="/beginner/family/" class="btn btn-secondary btn-small">
+                                詳細を見る
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>低山旅行</h3>
+                    <p>安全で楽しい低山ハイキングを応援する専門サイト。初心者からファミリーまで、誰でも気軽に山歩きを楽しめる情報をお届けします。</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>人気コンテンツ</h3>
+                    <ul class="footer-links">
+                        <li><a href="/mountains/">山を探す</a></li>
+                        <li><a href="/equipment/">装備ガイド</a></li>
+                        <li><a href="/beginner/">初心者向け</a></li>
+                        <li><a href="/regions/">地域別ガイド</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>サイト情報</h3>
+                    <ul class="footer-links">
+                        <li><a href="/about/">このサイトについて</a></li>
+                        <li><a href="/contact/">お問い合わせ</a></li>
+                        <li><a href="/privacy/">プライバシーポリシー</a></li>
+                        <li><a href="/terms/">利用規約</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 低山旅行. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // モバイルメニュー制御
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileToggle = document.querySelector('.mobile-menu-toggle');
+            const mobileNav = document.querySelector('.mobile-nav');
+            
+            if (mobileToggle && mobileNav) {
+                mobileToggle.addEventListener('click', function() {
+                    mobileNav.classList.toggle('active');
+                    this.classList.toggle('active');
+                    
+                    // アクセシビリティ
+                    const expanded = this.getAttribute('aria-expanded') === 'true';
+                    this.setAttribute('aria-expanded', !expanded);
+                });
+            }
+            
+            // スムーススクロール
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad_equipment_backpack" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8f5e8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f4f9f4;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="centerGlow_equipment_backpack" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#e8f5e8;stop-opacity:0.2" />
+    </radialGradient>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="400" height="300" fill="url(#bgGrad_equipment_backpack)"/>
+  <circle cx="200" cy="150" r="120" fill="url(#centerGlow_equipment_backpack)"/>
+  
+  <!-- アイコンエリア -->
+  <circle cx="200" cy="150" r="60" fill="#4a7c59" opacity="0.1"/>
+  <text x="200" y="170" text-anchor="middle" font-size="48" fill="#2d5016">🎒</text>
+  
+  <!-- 装飾的な要素 -->
+  <circle cx="80" cy="80" r="3" fill="#4a7c59" opacity="0.5"/>
+  <circle cx="320" cy="70" r="4" fill="#4a7c59" opacity="0.5"/>
+  <circle cx="350" cy="220" r="3" fill="#4a7c59" opacity="0.5"/>
+  <circle cx="50" cy="250" r="2" fill="#4a7c59" opacity="0.5"/>
+  
+  <!-- 装備名 -->
+  <text x="200" y="250" text-anchor="middle" fill="#2d5016" font-family="Arial, sans-serif" 
+        font-size="18" font-weight="bold">ザック選び</text>
+</svg>
