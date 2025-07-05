@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}{{ mountain.name }}（{{ mountain.prefecture }}）- 登山ガイド | 低山マスター{% endblock %}
+
+{% block description %}{{ mountain.name }}の登山ガイド。標高{{ mountain.elevation }}m、{{ mountain.prefecture }}の低山。初心者向けコース情報と必要装備を詳しく解説。{% endblock %}
+
+{% block content %}
+<article class="mountain-article">
+    <header class="article-header">
+        <div class="container">
+            <h1>{{ mountain.name }}</h1>
+            <div class="mountain-meta">
+                <span>📍 {{ mountain.prefecture }}</span>
+                <span>⛰️ 標高{{ mountain.elevation }}m</span>
+                <span>👨‍👩‍👧‍👦 初心者・ファミリー向け</span>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section class="mountain-info">
+            <h2>山の概要</h2>
+            <p>{{ mountain.description or '' }}</p>
+        </section>
+        
+        <section class="recommended-equipment">
+            <h2>🎒 推奨装備</h2>
+            <div class="equipment-grid">
+                {% for product in recommended_products %}
+                <div class="equipment-item">
+                    <h4>{{ product.name }}</h4>
+                    <p>{{ product.description }}</p>
+                    <div class="price">¥{{ product.price | format_price }}</div>
+                    <a href="{{ product.affiliate_url }}" class="cta-button primary" target="_blank" rel="nofollow">詳細を見る</a>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+        
+        <section class="affiliate-notice">
+            <p><small>※当ページではアフィリエイト広告を利用しています</small></p>
+        </section>
+    </div>
+</article>
+{% endblock %}

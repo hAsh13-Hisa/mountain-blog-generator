@@ -1,0 +1,117 @@
+<!-- アフィリエイト商品ボックス - 再利用可能コンポーネント -->
+<article class="product-box {{ box_class }}" data-product-id="{{ product.id }}">
+    {% if badge %}
+    <div class="product-badge {{ badge.type }}">{{ badge.text }}</div>
+    {% endif %}
+    
+    <!-- 商品画像 -->
+    <div class="product-image">
+        {% if product.image %}
+        <img src="{{ product.image }}" alt="{{ product.name }}" loading="lazy">
+        {% else %}
+        <div class="product-image-placeholder">
+            <span class="placeholder-icon">{{ product.icon | default('📦') }}</span>
+        </div>
+        {% endif %}
+        
+        {% if product.discount %}
+        <div class="discount-overlay">{{ product.discount }}%OFF</div>
+        {% endif %}
+    </div>
+    
+    <!-- 商品情報 -->
+    <div class="product-content">
+        <h3 class="product-name">{{ product.name }}</h3>
+        
+        {% if product.subtitle %}
+        <p class="product-subtitle">{{ product.subtitle }}</p>
+        {% endif %}
+        
+        <p class="product-description">{{ product.description }}</p>
+        
+        <!-- 評価 -->
+        {% if product.rating %}
+        <div class="product-rating">
+            <span class="rating-stars">
+                {% for i in range(5) %}
+                    {% if i < product.rating %}★{% else %}☆{% endif %}
+                {% endfor %}
+            </span>
+            <span class="rating-text">({{ product.review_count | default(0) }}件のレビュー)</span>
+        </div>
+        {% endif %}
+        
+        <!-- 価格表示 -->
+        <div class="product-price">
+            {% if product.original_price and product.original_price > product.price %}
+            <span class="price-original">¥{{ "{:,}".format(product.original_price) }}</span>
+            {% endif %}
+            <span class="price-current">¥{{ "{:,}".format(product.price) }}</span>
+            {% if product.discount %}
+            <span class="price-discount">{{ product.discount }}%OFF</span>
+            {% endif %}
+        </div>
+        
+        <!-- 特徴リスト -->
+        {% if product.features %}
+        <ul class="product-features">
+            {% for feature in product.features %}
+            <li>✅ {{ feature }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        
+        <!-- 在庫・緊急性表示 -->
+        {% if product.stock_status %}
+        <div class="stock-info {{ product.stock_status.type }}">
+            {{ product.stock_status.message }}
+        </div>
+        {% endif %}
+        
+        <!-- CTAボタン -->
+        <div class="product-cta">
+            {% if product.affiliate_url %}
+            <a href="{{ product.affiliate_url }}" 
+               class="cta-button primary product-cta-button"
+               target="_blank" 
+               rel="nofollow noopener"
+               data-affiliate-id="{{ product.affiliate_id }}"
+               data-product-name="{{ product.name }}"
+               onclick="AffiliateTracker.trackClick('{{ product.affiliate_id }}', '{{ product.name }}', {{ product.price }})">
+                {{ cta_text | default('詳細・購入はこちら') }}
+            </a>
+            {% endif %}
+            
+            {% if product.compare_url %}
+            <a href="{{ product.compare_url }}" class="cta-button secondary">
+                価格比較を見る
+            </a>
+            {% endif %}
+        </div>
+        
+        <!-- アフィリエイト表記 -->
+        <div class="affiliate-notice">
+            <small>※アフィリエイト広告を利用しています</small>
+        </div>
+    </div>
+</article>
+
+<!-- 商品ボックス追跡用スクリプト -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // 商品ボックスの表示追跡
+    const productBox = document.querySelector('[data-product-id="{{ product.id }}"]');
+    if (productBox && typeof AffiliateTracker !== 'undefined') {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    AffiliateTracker.trackProductView('{{ product.id }}', '{{ product.name }}');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        observer.observe(productBox);
+    }
+});
+</script>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}低山マスター - 初心者向け低山ハイキング完全ガイド{% endblock %}</title>
+    <meta name="description" content="{% block description %}47都道府県の低山を完全網羅。初心者・ファミリー向けの安全な低山ハイキング情報と必要装備を専門家が解説。{% endblock %}">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/static_fresh/css/mountain_fresh.css">
+    <link rel="stylesheet" href="/static_fresh/css/affiliate_components.css">
+    {% block extra_css %}{% endblock %}
+    
+    <!-- アフィリエイト表記 -->
+    <meta name="affiliate-disclosure" content="このサイトではアフィリエイト広告を利用しています">
+    
+    <!-- 構造化データ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "低山マスター",
+        "description": "初心者向け低山ハイキング完全ガイド",
+        "url": "https://teizan.omasse.com/"
+    }
+    </script>
+    
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
+
+    <!-- サイトヘッダー（アフィリエイト最適化） -->
+    <header role="banner" class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <!-- ロゴ -->
+                <div class="logo">
+                    <a href="/" aria-label="低山マスター ホーム">
+                        <span class="logo-icon">🏔️</span>
+                        <span class="logo-text">低山マスター</span>
+                    </a>
+                </div>
+                
+                <!-- メインナビゲーション -->
+                <nav class="main-nav" aria-label="メインナビゲーション">
+                    <ul class="nav-menu">
+                        <li><a href="/">ホーム</a></li>
+                        <li><a href="/mountains/">山一覧</a></li>
+                        <li><a href="/equipment/" class="nav-cta">装備ガイド</a></li>
+                        <li><a href="/ranking/" class="nav-cta">ランキング</a></li>
+                        <li><a href="/beginner/">初心者向け</a></li>
+                        <li><a href="/regions/">地域別</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- ヘッダーCTA -->
+                <div class="header-actions">
+                    <a href="/equipment/essential/" class="cta-button small">
+                        <span class="cta-icon">🎒</span>
+                        必需品チェック
+                    </a>
+                </div>
+                
+                <!-- モバイルメニューボタン -->
+                <button class="mobile-menu-toggle" aria-label="メニューを開く" aria-expanded="false">
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- モバイルメニュー -->
+        <nav class="mobile-nav" aria-label="モバイルナビゲーション">
+            <ul class="mobile-menu">
+                <li><a href="/">🏠 ホーム</a></li>
+                <li><a href="/mountains/">⛰️ 山一覧</a></li>
+                <li><a href="/equipment/">🎒 装備ガイド</a></li>
+                <li><a href="/ranking/">🏆 ランキング</a></li>
+                <li><a href="/beginner/">👨‍👩‍👧‍👦 初心者向け</a></li>
+                <li><a href="/regions/">🗾 地域別</a></li>
+                <li class="mobile-cta">
+                    <a href="/equipment/essential/" class="cta-button">必需品チェック</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main id="main-content" class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- サイドバー（記事ページのみ） -->
+    {% block sidebar %}{% endblock %}
+
+    <!-- フッター -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- 運営情報 -->
+                <div class="footer-section">
+                    <h3 class="footer-title">
+                        <span class="footer-icon">🏔️</span>
+                        低山マスター
+                    </h3>
+                    <p class="footer-description">
+                        安全で楽しい低山ハイキングを応援する専門サイト。
+                        初心者からファミリーまで、誰でも気軽に山歩きを楽しめる情報をお届けします。
+                    </p>
+                    <div class="footer-affiliate-notice">
+                        <p><small>※当サイトではアフィリエイト広告を利用しています</small></p>
+                    </div>
+                </div>
+                
+                <!-- 人気コンテンツ -->
+                <div class="footer-section">
+                    <h3 class="footer-title">人気コンテンツ</h3>
+                    <ul class="footer-links">
+                        <li><a href="/equipment/beginner/">初心者向け装備選び</a></li>
+                        <li><a href="/ranking/mountains/">人気の山ランキング</a></li>
+                        <li><a href="/beginner/safety/">安全ガイド</a></li>
+                        <li><a href="/equipment/seasonal/">季節別装備</a></li>
+                        <li><a href="/equipment/budget/">予算別装備</a></li>
+                    </ul>
+                </div>
+                
+                <!-- 地域別ガイド -->
+                <div class="footer-section">
+                    <h3 class="footer-title">地域別ガイド</h3>
+                    <ul class="footer-links">
+                        <li><a href="/regions/kanto/">関東地方の低山</a></li>
+                        <li><a href="/regions/kansai/">関西地方の低山</a></li>
+                        <li><a href="/regions/kyushu/">九州地方の低山</a></li>
+                        <li><a href="/regions/tohoku/">東北地方の低山</a></li>
+                        <li><a href="/regions/">全地域を見る</a></li>
+                    </ul>
+                </div>
+                
+                <!-- サイト情報 -->
+                <div class="footer-section">
+                    <h3 class="footer-title">サイト情報</h3>
+                    <ul class="footer-links">
+                        <li><a href="/about/">このサイトについて</a></li>
+                        <li><a href="/contact/">お問い合わせ</a></li>
+                        <li><a href="/privacy/">プライバシーポリシー</a></li>
+                        <li><a href="/terms/">利用規約</a></li>
+                        <li><a href="/sitemap/">サイトマップ</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- フッター下部 -->
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2025 低山マスター. All rights reserved.</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="/privacy/">プライバシーポリシー</a>
+                    <a href="/terms/">利用規約</a>
+                    <a href="/affiliate-disclosure/">アフィリエイト表記</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/static_fresh/js/fresh_site.js"></script>
+    <script src="/static_fresh/js/affiliate_tracking.js"></script>
+    {% block extra_js %}{% endblock %}
+    
+    <!-- アフィリエイト追跡（ページ読み込み時） -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof AffiliateTracker !== 'undefined') {
+                AffiliateTracker.trackPageView();
+            }
+        });
+    </script>
+</body>
+</html>

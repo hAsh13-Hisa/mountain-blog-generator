@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}登山装備ガイド - 初心者向け装備選び | 低山マスター{% endblock %}
+
+{% block content %}
+<div class="container">
+    <header class="page-header">
+        <h1>🎒 登山装備ガイド</h1>
+        <p>初心者向け装備選びから上級者向けギアまで、専門家が厳選した装備をご紹介</p>
+    </header>
+    
+    <section class="featured-equipment">
+        <h2>おすすめ装備</h2>
+        <div class="equipment-grid">
+            {% for product in products %}
+            <article class="equipment-card">
+                <div class="card-image">
+                    <div class="image-placeholder">
+                        <span class="placeholder-icon">{{ product.icon }}</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3>{{ product.name }}</h3>
+                    <p>{{ product.description }}</p>
+                    <div class="price-display">
+                        <span class="price-current">¥{{ product.price | format_price }}</span>
+                        {% if product.original_price %}
+                        <span class="price-original">¥{{ product.original_price | format_price }}</span>
+                        {% endif %}
+                    </div>
+                    <a href="{{ product.affiliate_url }}" class="cta-button primary" target="_blank" rel="nofollow">
+                        詳細・購入はこちら
+                    </a>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </section>
+    
+    <section class="affiliate-notice">
+        <p><small>※当ページではアフィリエイト広告を利用しています</small></p>
+    </section>
+</div>
+{% endblock %}

@@ -1,0 +1,535 @@
+{% extends "base.html" %}
+
+{% block title %}低山マスター - 初心者向け低山ハイキング完全ガイド{% endblock %}
+
+{% block description %}47都道府県の低山を完全網羅。初心者・ファミリー向けの安全な低山ハイキング情報と必要装備を専門家が解説。アフィリエイト収益最大化に特化したサイト。{% endblock %}
+
+{% block content %}
+
+<!-- ヒーローエリア -->
+<section class="hero">
+    <div class="hero-background">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-main">安全で楽しい</span>
+                        <span class="title-highlight">低山ハイキング</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        初心者・ファミリー向け <strong>47都道府県の厳選低山</strong> + 
+                        <span class="highlight-text">必要装備を完全ガイド</span>
+                    </p>
+                    
+                    <!-- ヒーローCTA -->
+                    <div class="hero-cta">
+                        <a href="/equipment/beginner/" class="cta-button primary large pulse-cta">
+                            <span class="cta-icon">🎒</span>
+                            初心者向け装備ガイド
+                        </a>
+                        <a href="/mountains/ranking/" class="cta-button secondary large">
+                            <span class="cta-icon">🏆</span>
+                            人気の山ランキング
+                        </a>
+                    </div>
+                    
+                    <!-- ヒーロー特徴 -->
+                    <div class="hero-features">
+                        <div class="feature-item float-animation">
+                            <span class="feature-icon">🗾</span>
+                            <span class="feature-text">47都道府県対応</span>
+                        </div>
+                        <div class="feature-item float-animation" style="animation-delay: 0.5s;">
+                            <span class="feature-icon">👨‍👩‍👧‍👦</span>
+                            <span class="feature-text">ファミリー向け</span>
+                        </div>
+                        <div class="feature-item float-animation" style="animation-delay: 1s;">
+                            <span class="feature-icon">🎒</span>
+                            <span class="feature-text">装備完全ガイド</span>
+                        </div>
+                        <div class="feature-item float-animation" style="animation-delay: 1.5s;">
+                            <span class="feature-icon">💰</span>
+                            <span class="feature-text">コスパ重視</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- ヒーロー画像プレースホルダー -->
+                <div class="hero-visual">
+                    <div class="hero-image-placeholder">
+                        <span class="placeholder-icon">🏔️</span>
+                        <p>美しい低山の風景</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 今月のおすすめ装備（アフィリエイト重点） -->
+<section class="featured-equipment">
+    <div class="container">
+        <header class="section-header">
+            <h2 class="section-title">
+                <span class="section-icon">🎒</span>
+                今月のおすすめ装備
+                <span class="urgency-indicator">限定価格</span>
+            </h2>
+            <p class="section-subtitle">
+                <strong>専門家が厳選</strong>した初心者向け登山装備・<span class="highlight-text">最大30%OFF</span>
+            </p>
+        </header>
+        
+        <div class="equipment-grid">
+            <!-- 装備カード1: ザック -->
+            <article class="equipment-card featured">
+                <div class="card-badge popular">人気No.1</div>
+                <div class="card-image">
+                    <div class="image-placeholder">
+                        <span class="placeholder-icon">🎒</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">初心者向けザック 30L</h3>
+                    <p class="card-description">
+                        日帰りハイキングに最適なサイズ。軽量で背負いやすく、
+                        初心者でも疲れにくい設計。<strong>Amazon's Choice</strong>商品。
+                    </p>
+                    
+                    <!-- 評価 -->
+                    <div class="rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-text">(1,234件のレビュー)</span>
+                    </div>
+                    
+                    <!-- 価格表示 -->
+                    <div class="price-display">
+                        <span class="price-current">¥8,980</span>
+                        <span class="price-original">¥12,800</span>
+                        <span class="price-discount">30%OFF</span>
+                    </div>
+                    
+                    <!-- 特徴リスト -->
+                    <ul class="feature-list">
+                        <li>✅ 軽量750g</li>
+                        <li>✅ レインカバー付き</li>
+                        <li>✅ 初心者向け</li>
+                    </ul>
+                    
+                    <!-- CTA -->
+                    <a href="/equipment/backpack-beginner/" class="cta-button primary" data-affiliate="bp001">
+                        詳細・購入はこちら
+                    </a>
+                </div>
+            </article>
+            
+            <!-- 装備カード2: 登山靴 -->
+            <article class="equipment-card">
+                <div class="card-badge recommended">おすすめ</div>
+                <div class="card-image">
+                    <div class="image-placeholder">
+                        <span class="placeholder-icon">👟</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">トレッキングシューズ</h3>
+                    <p class="card-description">
+                        低山に最適なミドルカット。グリップ力抜群で
+                        <strong>安全性と歩きやすさ</strong>を両立。
+                    </p>
+                    
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-text">(892件のレビュー)</span>
+                    </div>
+                    
+                    <div class="price-display">
+                        <span class="price-current">¥12,800</span>
+                        <span class="stock-warning">残り僅か</span>
+                    </div>
+                    
+                    <ul class="feature-list">
+                        <li>✅ 防水仕様</li>
+                        <li>✅ グリップ力抜群</li>
+                        <li>✅ 疲れにくい</li>
+                    </ul>
+                    
+                    <a href="/equipment/shoes-beginner/" class="cta-button primary" data-affiliate="sh001">
+                        詳細・購入はこちら
+                    </a>
+                </div>
+            </article>
+            
+            <!-- 装備カード3: レインウェア -->
+            <article class="equipment-card">
+                <div class="card-badge essential">必需品</div>
+                <div class="card-image">
+                    <div class="image-placeholder">
+                        <span class="placeholder-icon">🧥</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">レインジャケット</h3>
+                    <p class="card-description">
+                        突然の雨や風から身を守る<strong>必需品</strong>。
+                        軽量でコンパクトに収納可能。
+                    </p>
+                    
+                    <div class="rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-text">(567件のレビュー)</span>
+                    </div>
+                    
+                    <div class="price-display">
+                        <span class="price-current">¥6,480</span>
+                        <span class="price-discount">セール中</span>
+                    </div>
+                    
+                    <ul class="feature-list">
+                        <li>✅ 完全防水</li>
+                        <li>✅ 軽量250g</li>
+                        <li>✅ コンパクト</li>
+                    </ul>
+                    
+                    <a href="/equipment/rain-jacket/" class="cta-button primary" data-affiliate="rj001">
+                        詳細・購入はこちら
+                    </a>
+                </div>
+            </article>
+        </div>
+        
+        <!-- セクションCTA -->
+        <div class="section-cta">
+            <a href="/equipment/" class="cta-button secondary large">
+                <span class="cta-icon">🛍️</span>
+                すべての装備を見る
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- 山別おすすめ装備セット -->
+<section class="mountain-with-gear">
+    <div class="container">
+        <header class="section-header">
+            <h2 class="section-title">
+                <span class="section-icon">⛰️</span>
+                山別おすすめ装備セット
+            </h2>
+            <p class="section-subtitle">
+                山の特徴に合わせた<strong>最適な装備セット</strong>をご提案
+            </p>
+        </header>
+        
+        <div class="mountain-gear-grid">
+            <!-- 高尾山セット -->
+            <article class="mountain-gear-card">
+                <div class="mountain-info">
+                    <div class="mountain-image">
+                        <div class="image-placeholder">
+                            <span class="placeholder-icon">🗻</span>
+                        </div>
+                        <div class="mountain-badge">初心者向け</div>
+                    </div>
+                    <div class="mountain-details">
+                        <h3 class="mountain-name">高尾山（東京都）</h3>
+                        <div class="mountain-meta">
+                            <span class="meta-item">📍 標高599m</span>
+                            <span class="meta-item">👨‍👩‍👧‍👦 ファミリー向け</span>
+                            <span class="meta-item">🚡 ケーブルカーあり</span>
+                        </div>
+                        <p class="mountain-description">
+                            都心からアクセス抜群。<strong>初心者やファミリー</strong>に最適な
+                            低山の代表格。四季を通じて楽しめます。
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="gear-recommendation">
+                    <h4 class="gear-title">
+                        <span class="gear-icon">🎒</span>
+                        推奨装備セット
+                    </h4>
+                    <ul class="gear-list">
+                        <li>軽量ザック (15-20L)</li>
+                        <li>スニーカー or 軽登山靴</li>
+                        <li>レインウェア</li>
+                        <li>水筒・行動食</li>
+                    </ul>
+                    <div class="gear-price-display">
+                        <span class="set-price">セット価格: ¥18,800</span>
+                        <span class="individual-price">個別購入: ¥24,200</span>
+                        <span class="save-amount">¥5,400お得</span>
+                    </div>
+                    <a href="/mountains/takao/equipment/" class="cta-button primary" data-mountain="takao">
+                        装備セットを見る
+                    </a>
+                </div>
+            </article>
+            
+            <!-- 筑波山セット -->
+            <article class="mountain-gear-card">
+                <div class="mountain-info">
+                    <div class="mountain-image">
+                        <div class="image-placeholder">
+                            <span class="placeholder-icon">🏔️</span>
+                        </div>
+                        <div class="mountain-badge">中級者向け</div>
+                    </div>
+                    <div class="mountain-details">
+                        <h3 class="mountain-name">筑波山（茨城県）</h3>
+                        <div class="mountain-meta">
+                            <span class="meta-item">📍 標高877m</span>
+                            <span class="meta-item">⛰️ 中級者向け</span>
+                            <span class="meta-item">🚡 ロープウェイあり</span>
+                        </div>
+                        <p class="mountain-description">
+                            関東平野の名峰。<strong>男体山・女体山</strong>の双耳峰で
+                            変化に富んだコースが楽しめます。
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="gear-recommendation">
+                    <h4 class="gear-title">
+                        <span class="gear-icon">🎒</span>
+                        推奨装備セット
+                    </h4>
+                    <ul class="gear-list">
+                        <li>本格ザック (25-30L)</li>
+                        <li>トレッキングシューズ</li>
+                        <li>レインウェア上下</li>
+                        <li>防寒着・手袋</li>
+                    </ul>
+                    <div class="gear-price-display">
+                        <span class="set-price">セット価格: ¥32,800</span>
+                        <span class="individual-price">個別購入: ¥42,100</span>
+                        <span class="save-amount">¥9,300お得</span>
+                    </div>
+                    <a href="/mountains/tsukuba/equipment/" class="cta-button primary" data-mountain="tsukuba">
+                        装備セットを見る
+                    </a>
+                </div>
+            </article>
+            
+            <!-- 讃岐富士セット -->
+            <article class="mountain-gear-card">
+                <div class="mountain-info">
+                    <div class="mountain-image">
+                        <div class="image-placeholder">
+                            <span class="placeholder-icon">🌸</span>
+                        </div>
+                        <div class="mountain-badge">景色抜群</div>
+                    </div>
+                    <div class="mountain-details">
+                        <h3 class="mountain-name">讃岐富士（香川県）</h3>
+                        <div class="mountain-meta">
+                            <span class="meta-item">📍 標高422m</span>
+                            <span class="meta-item">👨‍👩‍👧‍👦 初心者向け</span>
+                            <span class="meta-item">🌊 瀬戸内海絶景</span>
+                        </div>
+                        <p class="mountain-description">
+                            美しい円錐形の山容。<strong>瀬戸内海を一望</strong>できる
+                            絶景スポットとして人気。
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="gear-recommendation">
+                    <h4 class="gear-title">
+                        <span class="gear-icon">🎒</span>
+                        推奨装備セット
+                    </h4>
+                    <ul class="gear-list">
+                        <li>軽量ザック (20L)</li>
+                        <li>ミドルカット登山靴</li>
+                        <li>レインウェア</li>
+                        <li>日除け帽子・サングラス</li>
+                    </ul>
+                    <div class="gear-price-display">
+                        <span class="set-price">セット価格: ¥24,800</span>
+                        <span class="individual-price">個別購入: ¥31,200</span>
+                        <span class="save-amount">¥6,400お得</span>
+                    </div>
+                    <a href="/mountains/sanuki/equipment/" class="cta-button primary" data-mountain="sanuki">
+                        装備セットを見る
+                    </a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- 地域別ガイド -->
+<section class="regional-guide">
+    <div class="container">
+        <header class="section-header">
+            <h2 class="section-title">
+                <span class="section-icon">🗾</span>
+                地域別低山ガイド
+            </h2>
+            <p class="section-subtitle">
+                お住まいの地域から<strong>アクセス良好な低山</strong>を見つけよう
+            </p>
+        </header>
+        
+        <div class="region-grid">
+            <article class="region-card">
+                <div class="region-image">
+                    <div class="image-placeholder">
+                        <span class="placeholder-icon">🗼</span>
+                    </div>
+                </div>
+                <div class="region-content">
+                    <h3 class="region-name">関東地方</h3>
+                    <p class="region-description">
+                        都心からアクセス良好な<strong>12座の低山</strong>をご紹介。
+                        電車で行ける山が中心です。
+                    </p>
+                    <div class="region-stats">
+                        <span class="stat-item">🚊 電車アクセス良好</span>
+                        <span class="stat-item">⛰️ 12座の低山</span>
+                    </div>
+                    <a href="/regions/kanto/" class="cta-button secondary">
+                        関東の山を見る
+                    </a>
+                </div>
+            </article>
+            
+            <article class="region-card">
+                <div class="region-image">
+                    <div class="image-placeholder">
+                        <span class="placeholder-icon">🏯</span>
+                    </div>
+                </div>
+                <div class="region-content">
+                    <h3 class="region-name">関西地方</h3>
+                    <p class="region-description">
+                        歴史と自然が融合した<strong>8座の名峰</strong>。
+                        京都・奈良の古都の山々。
+                    </p>
+                    <div class="region-stats">
+                        <span class="stat-item">🏛️ 歴史ある山</span>
+                        <span class="stat-item">⛰️ 8座の名峰</span>
+                    </div>
+                    <a href="/regions/kansai/" class="cta-button secondary">
+                        関西の山を見る
+                    </a>
+                </div>
+            </article>
+            
+            <article class="region-card">
+                <div class="region-image">
+                    <div class="image-placeholder">
+                        <span class="placeholder-icon">♨️</span>
+                    </div>
+                </div>
+                <div class="region-content">
+                    <h3 class="region-name">九州地方</h3>
+                    <p class="region-description">
+                        温泉とセットで楽しめる<strong>6座の低山</strong>。
+                        登山後の温泉が最高です。
+                    </p>
+                    <div class="region-stats">
+                        <span class="stat-item">♨️ 温泉セット</span>
+                        <span class="stat-item">⛰️ 6座の低山</span>
+                    </div>
+                    <a href="/regions/kyushu/" class="cta-button secondary">
+                        九州の山を見る
+                    </a>
+                </div>
+            </article>
+        </div>
+        
+        <div class="section-cta">
+            <a href="/regions/" class="cta-button large">
+                <span class="cta-icon">🗾</span>
+                全地域を見る
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- 初心者向けガイド -->
+<section class="beginner-guide">
+    <div class="container">
+        <div class="guide-content">
+            <div class="guide-text">
+                <h2 class="guide-title">
+                    <span class="guide-icon">🔰</span>
+                    初めての低山ハイキング
+                </h2>
+                <p class="guide-description">
+                    登山が初めての方でも<strong>安心して楽しめる</strong>よう、
+                    基本的な装備選びから安全な歩き方まで、専門家が詳しく解説します。
+                </p>
+                
+                <ul class="guide-points">
+                    <li class="guide-point">
+                        <span class="point-icon">✅</span>
+                        <div class="point-content">
+                            <strong>装備選びの基本</strong>
+                            <p>予算別・レベル別のおすすめ装備を詳しく解説</p>
+                        </div>
+                    </li>
+                    <li class="guide-point">
+                        <span class="point-icon">✅</span>
+                        <div class="point-content">
+                            <strong>安全な登山計画</strong>
+                            <p>ルート選択と時間配分、天気の読み方</p>
+                        </div>
+                    </li>
+                    <li class="guide-point">
+                        <span class="point-icon">✅</span>
+                        <div class="point-content">
+                            <strong>緊急時の対処法</strong>
+                            <p>もしもの時の準備と対応方法</p>
+                        </div>
+                    </li>
+                    <li class="guide-point">
+                        <span class="point-icon">✅</span>
+                        <div class="point-content">
+                            <strong>コスパ重視の装備選び</strong>
+                            <p>高品質×低価格の装備を厳選紹介</p>
+                        </div>
+                    </li>
+                </ul>
+                
+                <div class="guide-cta">
+                    <a href="/beginner/" class="cta-button primary large">
+                        <span class="cta-icon">📚</span>
+                        初心者ガイドを読む
+                    </a>
+                    <a href="/equipment/budget/" class="cta-button secondary">
+                        予算別装備を見る
+                    </a>
+                </div>
+            </div>
+            
+            <div class="guide-visual">
+                <div class="guide-image-placeholder">
+                    <span class="placeholder-icon">🥾</span>
+                    <p>初心者向けハイキングガイド</p>
+                </div>
+                
+                <!-- 統計表示 -->
+                <div class="guide-stats">
+                    <div class="stat-box">
+                        <span class="stat-number">47</span>
+                        <span class="stat-label">都道府県の低山</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">1,000+</span>
+                        <span class="stat-label">装備レビュー</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">98%</span>
+                        <span class="stat-label">満足度</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}人気の山ランキング | 低山マスター{% endblock %}
+
+{% block content %}
+<div class="container">
+    <header class="page-header">
+        <h1>🏆 人気の山ランキング</h1>
+        <p>初心者に人気の低山ランキング。アクセス・難易度・景色を総合評価</p>
+    </header>
+    
+    <section class="mountain-ranking">
+        <div class="ranking-list">
+            {% for mountain in mountains %}
+            <article class="ranking-item">
+                <div class="rank-number">{{ loop.index }}</div>
+                <div class="mountain-info">
+                    <h3>{{ mountain.name }}（{{ mountain.prefecture }}）</h3>
+                    <p>標高{{ mountain.elevation }}m</p>
+                    <div class="mountain-features">
+                        <span class="feature">初心者向け</span>
+                        <span class="feature">ファミリー向け</span>
+                    </div>
+                </div>
+                <div class="mountain-action">
+                    <a href="/mountains/{{ mountain.name }}/" class="cta-button secondary">詳細を見る</a>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </section>
+</div>
+{% endblock %}
