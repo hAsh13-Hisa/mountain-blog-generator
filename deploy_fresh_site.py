@@ -117,6 +117,18 @@ class FreshSiteFTPDeployer:
             return False
         
         try:
+            # リモートディレクトリに移動
+            self.ftp.cwd(self.remote_dir)
+            
+            # 重要：メインのindex.htmlを直接上書き
+            main_index = self.local_dir / 'index.html'
+            if main_index.exists():
+                if self.upload_file(main_index, 'index.html'):
+                    print("🎯 メインページ (index.html) を上書きしました")
+                else:
+                    print("❌ メインページの上書きに失敗")
+                    return False
+            
             uploaded_count, failed_count = self.upload_directory(self.local_dir)
             
             print(f"\n📊 デプロイ結果:")

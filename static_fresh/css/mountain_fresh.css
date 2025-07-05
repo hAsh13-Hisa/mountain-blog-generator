@@ -76,7 +76,8 @@ body {
     line-height: 1.6;
     color: var(--text-primary);
     background-color: var(--white);
-    padding-top: var(--header-height); /* ヘッダー分のスペース確保 */
+    padding-top: 0; /* 上部空白を完全除去 */
+    margin: 0;
 }
 
 /* === コンテナ === */
