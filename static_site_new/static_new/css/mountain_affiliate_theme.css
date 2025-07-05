@@ -1,0 +1,782 @@
+/* ==========================================================================
+   Mountain Affiliate Theme CSS
+   アフィリエイト収益最大化を目的とした低山ハイキングサイト専用CSS
+   ========================================================================== */
+
+/* CSS変数定義 */
+:root {
+  /* 自然・山をイメージした基本色 */
+  --primary-green: #2c5234;
+  --secondary-green: #e8f5e8;
+  --accent-orange: #f0a500;
+  
+  /* テキスト・基本色 */
+  --text-dark: #333333;
+  --text-light: #666666;
+  --background: #fafafa;
+  --border: #e0e0e0;
+  
+  /* アフィリエイト専用色 */
+  --affiliate-bg: #fff3e0;
+  --price-red: #e53935;
+  --cta-orange: #d84315;
+  --sale-yellow: #ffd54f;
+  
+  /* z-index階層定義（絶対遵守） */
+  --z-skip-link: 10000;
+  --z-site-header: 9999;
+  --z-modal: 1000;
+  --z-article-header: 1;
+  --z-content: auto;
+  --z-background: -1;
+  
+  /* レスポンシブブレイクポイント */
+  --bp-mobile: 768px;
+  --bp-tablet: 1024px;
+  --bp-desktop: 1025px;
+  
+  /* 共通サイズ */
+  --header-height: 70px;
+  --container-max-width: 1200px;
+  --border-radius: 8px;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================================================
+   リセット・基本設定
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans JP', sans-serif;
+  line-height: 1.7;
+  color: var(--text-dark);
+  background-color: var(--background);
+  margin: 0;
+  padding: 0;
+  padding-top: var(--header-height); /* sticky/fixedヘッダー対応 */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--primary-green);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent-orange);
+}
+
+/* ==========================================================================
+   Skip Link
+   ========================================================================== */
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--text-dark);
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  z-index: var(--z-skip-link);
+  border-radius: 4px;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* ==========================================================================
+   サイトヘッダー
+   ========================================================================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  background: white;
+  border-bottom: 1px solid var(--border);
+  z-index: var(--z-site-header);
+  box-shadow: var(--shadow);
+}
+
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  min-height: var(--header-height);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-green);
+}
+
+.logo-icon {
+  margin-right: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.logo-text {
+  color: var(--primary-green);
+}
+
+.main-nav .nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+}
+
+.main-nav .nav-menu a {
+  color: var(--text-dark);
+  font-weight: 500;
+  padding: 0.5rem 0;
+  transition: color 0.2s ease;
+}
+
+.main-nav .nav-menu a:hover,
+.main-nav .nav-menu a.cta-nav {
+  color: var(--accent-orange);
+}
+
+.header-cta {
+  display: flex;
+  align-items: center;
+}
+
+/* モバイルメニュー */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.mobile-menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: var(--text-dark);
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+/* ==========================================================================
+   CTAボタン
+   ========================================================================== */
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.cta-button.primary {
+  background: linear-gradient(135deg, var(--accent-orange), var(--cta-orange));
+  color: white;
+  box-shadow: 0 4px 15px rgba(240, 165, 0, 0.3);
+}
+
+.cta-button.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(240, 165, 0, 0.4);
+  color: white;
+}
+
+.cta-button.secondary {
+  background: white;
+  color: var(--primary-green);
+  border: 2px solid var(--primary-green);
+}
+
+.cta-button.secondary:hover {
+  background: var(--primary-green);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.cta-button.small {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+}
+
+.cta-button.large {
+  padding: 16px 32px;
+  font-size: 1.1rem;
+}
+
+/* ==========================================================================
+   ヒーローエリア
+   ========================================================================== */
+
+.hero {
+  position: relative;
+  padding: 4rem 0;
+  background: linear-gradient(135deg, var(--secondary-green), #f0f8ff);
+  overflow: hidden;
+}
+
+.hero-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('/static_new/images/hero-pattern.svg') repeat;
+  opacity: 0.1;
+  z-index: var(--z-background);
+}
+
+.hero-content {
+  text-align: center;
+  position: relative;
+  z-index: var(--z-content);
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--primary-green);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.hero-features {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.feature-icon {
+  font-size: 1.5rem;
+}
+
+/* ==========================================================================
+   セクション共通
+   ========================================================================== */
+
+section {
+  padding: 4rem 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--primary-green);
+  text-align: center;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.section-icon {
+  font-size: 2rem;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--text-light);
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-cta {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+/* ==========================================================================
+   装備セクション
+   ========================================================================== */
+
+.featured-equipment {
+  background: white;
+}
+
+.equipment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.equipment-card {
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.equipment-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--accent-orange);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-content h3 {
+  font-size: 1.3rem;
+  color: var(--primary-green);
+  margin-bottom: 0.5rem;
+}
+
+.card-description {
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.card-price {
+  margin-bottom: 1rem;
+}
+
+.price-current {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--price-red);
+}
+
+.price-original {
+  font-size: 1rem;
+  color: var(--text-light);
+  text-decoration: line-through;
+  margin-left: 0.5rem;
+}
+
+/* ==========================================================================
+   山×装備セクション
+   ========================================================================== */
+
+.mountain-with-gear {
+  background: var(--secondary-green);
+}
+
+.mountain-gear-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.mountain-gear-card {
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.mountain-info {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.mountain-info img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+}
+
+.mountain-details h3 {
+  color: var(--primary-green);
+  margin-bottom: 0.5rem;
+}
+
+.mountain-stats {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.mountain-description {
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+.gear-recommendation {
+  padding: 1.5rem;
+  background: var(--affiliate-bg);
+}
+
+.gear-recommendation h4 {
+  color: var(--primary-green);
+  margin-bottom: 1rem;
+}
+
+.gear-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.gear-list li {
+  padding: 0.3rem 0;
+  color: var(--text-dark);
+}
+
+.gear-list li::before {
+  content: '🎒';
+  margin-right: 0.5rem;
+}
+
+.gear-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--price-red);
+  margin-bottom: 1rem;
+}
+
+/* ==========================================================================
+   地域別ガイド
+   ========================================================================== */
+
+.regional-guide {
+  background: white;
+}
+
+.region-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.region-card {
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.region-card:hover {
+  transform: translateY(-5px);
+}
+
+.region-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.region-card h3 {
+  color: var(--primary-green);
+  padding: 1rem 1rem 0.5rem;
+  margin: 0;
+}
+
+.region-card p {
+  color: var(--text-light);
+  padding: 0 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.region-card .cta-button {
+  margin-bottom: 1.5rem;
+}
+
+/* ==========================================================================
+   初心者ガイド
+   ========================================================================== */
+
+.beginner-guide {
+  background: var(--affiliate-bg);
+}
+
+.guide-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.guide-text h2 {
+  font-size: 2.2rem;
+  color: var(--primary-green);
+  margin-bottom: 1rem;
+}
+
+.guide-text p {
+  color: var(--text-dark);
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.guide-points {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.guide-points li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+.point-icon {
+  color: var(--primary-green);
+  font-size: 1.2rem;
+  margin-top: 0.1rem;
+}
+
+.guide-image img {
+  width: 100%;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+/* ==========================================================================
+   フッター
+   ========================================================================== */
+
+.site-footer {
+  background: var(--primary-green);
+  color: white;
+  padding: 3rem 0 1rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section ul a {
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.2s ease;
+}
+
+.footer-section ul a:hover {
+  color: white;
+}
+
+.footer-affiliate-notice {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ==========================================================================
+   レスポンシブ対応
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  :root {
+    --header-height: 60px;
+  }
+  
+  body {
+    padding-top: var(--header-height);
+  }
+  
+  .main-nav {
+    display: none;
+  }
+  
+  .mobile-menu-toggle {
+    display: flex;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero-features {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .equipment-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .mountain-gear-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .mountain-gear-card .mountain-info {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .mountain-info img {
+    width: 100%;
+    height: 200px;
+  }
+  
+  .guide-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .container {
+    padding: 0 15px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .equipment-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .mountain-gear-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   ユーティリティクラス
+   ========================================================================== */
+
+.text-center {
+  text-align: center;
+}
+
+.text-green {
+  color: var(--primary-green);
+}
+
+.text-orange {
+  color: var(--accent-orange);
+}
+
+.bg-green {
+  background-color: var(--secondary-green);
+}
+
+.bg-affiliate {
+  background-color: var(--affiliate-bg);
+}
+
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 2rem; }
+.mb-3 { margin-bottom: 3rem; }
+
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.mt-3 { margin-top: 3rem; }

@@ -1,0 +1,156 @@
+<!-- 装備セット紹介コンポーネント -->
+<div class="equipment-set" data-set-id="{{ set.id }}" data-mountain="{{ set.mountain_id }}">
+    <div class="set-header">
+        <h3 class="set-title">
+            <span class="set-icon">🎒</span>
+            {{ set.title }}
+        </h3>
+        {% if set.difficulty %}
+        <div class="set-difficulty difficulty-{{ set.difficulty }}">
+            {{ set.difficulty_text }}
+        </div>
+        {% endif %}
+    </div>
+    
+    <div class="set-description">
+        <p>{{ set.description }}</p>
+        
+        {% if set.season %}
+        <div class="set-season">
+            <span class="season-icon">📅</span>
+            <span>推奨シーズン: {{ set.season }}</span>
+        </div>
+        {% endif %}
+        
+        {% if set.target_user %}
+        <div class="set-target">
+            <span class="target-icon">👥</span>
+            <span>対象: {{ set.target_user }}</span>
+        </div>
+        {% endif %}
+    </div>
+    
+    <div class="equipment-list">
+        {% for category in set.categories %}
+        <div class="equipment-category">
+            <h4 class="category-title">
+                <span class="category-icon">{{ category.icon }}</span>
+                {{ category.name }}
+            </h4>
+            
+            <div class="category-items">
+                {% for item in category.items %}
+                <div class="equipment-item">
+                    <div class="item-info">
+                        <div class="item-image">
+                            {% if item.image %}
+                            <img src="{{ item.image }}" alt="{{ item.name }}" loading="lazy">
+                            {% else %}
+                            <div class="item-placeholder">{{ item.icon or "📦" }}</div>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="item-details">
+                            <h5 class="item-name">{{ item.name }}</h5>
+                            {% if item.brand %}
+                            <p class="item-brand">{{ item.brand }}</p>
+                            {% endif %}
+                            <p class="item-description">{{ item.description }}</p>
+                            
+                            {% if item.features %}
+                            <div class="item-features">
+                                {% for feature in item.features %}
+                                <span class="feature-badge">{{ feature }}</span>
+                                {% endfor %}
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    
+                    <div class="item-pricing">
+                        {% if item.sale_price %}
+                        <div class="price-current">¥{{ item.sale_price | format_price }}</div>
+                        <div class="price-original">¥{{ item.price | format_price }}</div>
+                        <div class="discount-badge">{{ item.discount_percent }}%OFF</div>
+                        {% else %}
+                        <div class="price-current">¥{{ item.price | format_price }}</div>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="item-actions">
+                        <a href="{{ item.affiliate_url }}" 
+                           class="cta-button primary small affiliate-link"
+                           data-event="click"
+                           data-product="{{ item.id }}"
+                           data-set="{{ set.id }}"
+                           target="_blank"
+                           rel="nofollow noopener">
+                            詳細を見る
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    
+    <div class="set-summary">
+        <div class="set-pricing">
+            <div class="total-price">
+                <span class="price-label">セット合計価格</span>
+                {% if set.sale_total %}
+                <div class="total-current">¥{{ set.sale_total | format_price }}</div>
+                <div class="total-original">¥{{ set.total_price | format_price }}</div>
+                <div class="total-savings">¥{{ (set.total_price - set.sale_total) | format_price }} お得！</div>
+                {% else %}
+                <div class="total-current">¥{{ set.total_price | format_price }}</div>
+                {% endif %}
+            </div>
+        </div>
+        
+        <div class="set-actions">
+            <a href="{{ set.bundle_url or '#' }}" 
+               class="cta-button primary large affiliate-link"
+               data-event="click"
+               data-set="{{ set.id }}"
+               data-type="bundle"
+               target="_blank"
+               rel="nofollow noopener">
+                <span class="cta-icon">🛒</span>
+                セットでまとめて購入
+            </a>
+            
+            {% if set.alternative_url %}
+            <a href="{{ set.alternative_url }}" class="cta-button secondary">他の選択肢を見る</a>
+            {% endif %}
+        </div>
+        
+        {% if set.expert_comment %}
+        <div class="expert-comment">
+            <div class="comment-header">
+                <span class="expert-icon">👨‍🏫</span>
+                <span class="expert-title">専門家からのコメント</span>
+            </div>
+            <p class="comment-text">{{ set.expert_comment }}</p>
+        </div>
+        {% endif %}
+    </div>
+    
+    {% if set.related_mountains %}
+    <div class="related-mountains">
+        <h4>このセットがおすすめの山</h4>
+        <div class="mountain-tags">
+            {% for mountain in set.related_mountains %}
+            <a href="/mountains/{{ mountain.slug }}/" class="mountain-tag">
+                {{ mountain.name }} ({{ mountain.prefecture }})
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+    
+    <div class="affiliate-disclosure">
+        <small>※この装備セットにはアフィリエイト広告が含まれています</small>
+    </div>
+</div>

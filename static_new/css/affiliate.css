@@ -1,0 +1,638 @@
+/* ==========================================================================
+   Affiliate Components CSS
+   アフィリエイト要素専用スタイル
+   ========================================================================== */
+
+/* ==========================================================================
+   商品紹介ボックス
+   ========================================================================== */
+
+.affiliate-product-box {
+  background: var(--affiliate-bg);
+  border: 2px solid var(--border);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  margin: 2rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.affiliate-product-box::before {
+  content: 'PR';
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--accent-orange);
+  color: white;
+  padding: 0.2rem 0.8rem;
+  font-size: 0.7rem;
+  font-weight: bold;
+  border-bottom-left-radius: var(--border-radius);
+}
+
+.product-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.product-badge {
+  background: var(--cta-orange);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stars {
+  color: var(--sale-yellow);
+  font-size: 1.2rem;
+}
+
+.star.filled {
+  color: var(--sale-yellow);
+}
+
+.star {
+  color: var(--border);
+}
+
+.rating-text {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.product-content {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.product-image {
+  position: relative;
+}
+
+.product-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+}
+
+.product-image-placeholder {
+  width: 100%;
+  height: 200px;
+  background: var(--secondary-green);
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholder-icon {
+  font-size: 3rem;
+  color: var(--text-light);
+}
+
+.sale-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--price-red);
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.product-name {
+  font-size: 1.4rem;
+  color: var(--primary-green);
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.product-brand {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.product-description {
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.product-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature-tag {
+  background: white;
+  color: var(--primary-green);
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  border: 1px solid var(--primary-green);
+}
+
+.product-pricing {
+  margin-bottom: 1.5rem;
+}
+
+.price-current {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--price-red);
+  margin-bottom: 0.3rem;
+}
+
+.price-original {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  text-decoration: line-through;
+  margin-bottom: 0.3rem;
+}
+
+.shipping-info {
+  color: var(--primary-green);
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.product-actions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.product-review {
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+}
+
+.pros, .cons {
+  margin-bottom: 1rem;
+}
+
+.pros h4, .cons h4 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-green);
+}
+
+.pros ul, .cons ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.pros li, .cons li {
+  margin-bottom: 0.3rem;
+  color: var(--text-dark);
+  line-height: 1.5;
+}
+
+.product-specs {
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+.product-specs h4 {
+  color: var(--primary-green);
+  margin-bottom: 0.8rem;
+}
+
+.specs-list {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 0.5rem 1rem;
+}
+
+.specs-list dt {
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.specs-list dd {
+  color: var(--text-light);
+  margin: 0;
+}
+
+.affiliate-disclosure {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.affiliate-disclosure small {
+  color: var(--text-light);
+  font-size: 0.8rem;
+}
+
+/* ==========================================================================
+   装備セット
+   ========================================================================== */
+
+.equipment-set {
+  background: white;
+  border: 2px solid var(--primary-green);
+  border-radius: var(--border-radius);
+  margin: 2rem 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.equipment-set::before {
+  content: '装備セット';
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--primary-green);
+  color: white;
+  padding: 0.3rem 1rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-bottom-left-radius: var(--border-radius);
+}
+
+.set-header {
+  background: var(--secondary-green);
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.set-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary-green);
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.set-icon {
+  font-size: 1.8rem;
+}
+
+.set-difficulty {
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: white;
+}
+
+.difficulty-beginner {
+  background: var(--primary-green);
+}
+
+.difficulty-intermediate {
+  background: var(--accent-orange);
+}
+
+.difficulty-advanced {
+  background: var(--price-red);
+}
+
+.set-description {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.set-description p {
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.set-season, .set-target {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+.equipment-category {
+  border-bottom: 1px solid var(--border);
+}
+
+.category-title {
+  background: var(--affiliate-bg);
+  padding: 1rem 1.5rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary-green);
+  font-size: 1.2rem;
+}
+
+.category-icon {
+  font-size: 1.3rem;
+}
+
+.category-items {
+  padding: 1rem 1.5rem;
+}
+
+.equipment-item {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.equipment-item:last-child {
+  border-bottom: none;
+}
+
+.item-info {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.item-image {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item-placeholder {
+  width: 100%;
+  height: 100%;
+  background: var(--secondary-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.item-name {
+  color: var(--primary-green);
+  margin-bottom: 0.3rem;
+  font-size: 1.1rem;
+}
+
+.item-brand {
+  color: var(--text-light);
+  font-size: 0.8rem;
+  margin-bottom: 0.3rem;
+}
+
+.item-description {
+  color: var(--text-dark);
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+}
+
+.item-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.feature-badge {
+  background: var(--secondary-green);
+  color: var(--primary-green);
+  padding: 0.1rem 0.4rem;
+  border-radius: 8px;
+  font-size: 0.7rem;
+}
+
+.item-pricing {
+  text-align: right;
+}
+
+.discount-badge {
+  background: var(--price-red);
+  color: white;
+  padding: 0.2rem 0.4rem;
+  border-radius: 8px;
+  font-size: 0.7rem;
+  margin-top: 0.3rem;
+}
+
+.set-summary {
+  background: var(--affiliate-bg);
+  padding: 2rem 1.5rem;
+}
+
+.set-pricing {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.price-label {
+  display: block;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.total-current {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: var(--price-red);
+  margin-bottom: 0.3rem;
+}
+
+.total-original {
+  font-size: 1.4rem;
+  color: var(--text-light);
+  text-decoration: line-through;
+  margin-bottom: 0.5rem;
+}
+
+.total-savings {
+  color: var(--primary-green);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.set-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-icon {
+  margin-right: 0.5rem;
+}
+
+.expert-comment {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.comment-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-green);
+  font-weight: bold;
+}
+
+.expert-icon {
+  font-size: 1.2rem;
+}
+
+.comment-text {
+  color: var(--text-dark);
+  line-height: 1.6;
+  margin: 0;
+  font-style: italic;
+}
+
+.related-mountains h4 {
+  color: var(--primary-green);
+  margin-bottom: 0.8rem;
+}
+
+.mountain-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.mountain-tag {
+  background: white;
+  color: var(--primary-green);
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  border: 1px solid var(--primary-green);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.mountain-tag:hover {
+  background: var(--primary-green);
+  color: white;
+}
+
+/* ==========================================================================
+   アフィリエイトリンク共通
+   ========================================================================== */
+
+.affiliate-link {
+  position: relative;
+}
+
+.affiliate-link::after {
+  content: '🔗';
+  font-size: 0.8rem;
+  margin-left: 0.3rem;
+  opacity: 0.7;
+}
+
+.affiliate-link:hover::after {
+  opacity: 1;
+}
+
+/* トラッキング用の非表示要素 */
+.affiliate-tracking {
+  display: none;
+}
+
+/* ==========================================================================
+   レスポンシブ対応
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .affiliate-product-box {
+    padding: 1rem;
+  }
+  
+  .product-content {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .product-image img,
+  .product-image-placeholder {
+    height: 150px;
+  }
+  
+  .product-actions {
+    flex-direction: column;
+  }
+  
+  .specs-list {
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+  }
+  
+  .equipment-item {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    text-align: center;
+  }
+  
+  .item-info {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .set-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .mountain-tags {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .product-content {
+    grid-template-columns: 150px 1fr;
+  }
+  
+  .equipment-item {
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+  }
+  
+  .item-actions {
+    grid-column: 1 / -1;
+    justify-self: center;
+    margin-top: 0.5rem;
+  }
+}

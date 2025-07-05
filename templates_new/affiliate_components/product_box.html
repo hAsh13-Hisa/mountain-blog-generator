@@ -1,0 +1,125 @@
+<!-- アフィリエイト商品紹介ボックス -->
+<div class="affiliate-product-box" data-product-id="{{ product.id }}" data-category="{{ product.category }}">
+    <div class="product-header">
+        {% if product.badge %}
+        <div class="product-badge">{{ product.badge }}</div>
+        {% endif %}
+        
+        {% if product.rating %}
+        <div class="product-rating">
+            <div class="stars">
+                {% for i in range(1, 6) %}
+                    {% if i <= product.rating %}
+                        <span class="star filled">★</span>
+                    {% else %}
+                        <span class="star">☆</span>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <span class="rating-text">({{ product.rating }}/5)</span>
+        </div>
+        {% endif %}
+    </div>
+    
+    <div class="product-content">
+        <div class="product-image">
+            {% if product.image %}
+            <img src="{{ product.image }}" alt="{{ product.name }}" loading="lazy">
+            {% else %}
+            <div class="product-image-placeholder">
+                <span class="placeholder-icon">📦</span>
+            </div>
+            {% endif %}
+            
+            {% if product.sale_price %}
+            <div class="sale-badge">{{ product.discount_percent }}%OFF</div>
+            {% endif %}
+        </div>
+        
+        <div class="product-info">
+            <h3 class="product-name">{{ product.name }}</h3>
+            
+            {% if product.brand %}
+            <p class="product-brand">{{ product.brand }}</p>
+            {% endif %}
+            
+            <p class="product-description">{{ product.description }}</p>
+            
+            <div class="product-features">
+                {% for feature in product.features %}
+                <span class="feature-tag">{{ feature }}</span>
+                {% endfor %}
+            </div>
+            
+            <div class="product-pricing">
+                {% if product.sale_price %}
+                <div class="price-current">¥{{ product.sale_price | format_price }}</div>
+                <div class="price-original">¥{{ product.price | format_price }}</div>
+                {% else %}
+                <div class="price-current">¥{{ product.price | format_price }}</div>
+                {% endif %}
+                
+                {% if product.shipping_free %}
+                <div class="shipping-info">送料無料</div>
+                {% endif %}
+            </div>
+            
+            <div class="product-actions">
+                <a href="{{ product.affiliate_url }}" 
+                   class="cta-button primary affiliate-link"
+                   data-event="click"
+                   data-product="{{ product.id }}"
+                   target="_blank"
+                   rel="nofollow noopener">
+                    {{ product.cta_text or "詳細を見る" }}
+                </a>
+                
+                {% if product.compare_url %}
+                <a href="{{ product.compare_url }}" class="cta-button secondary">比較する</a>
+                {% endif %}
+            </div>
+            
+            {% if product.pros or product.cons %}
+            <div class="product-review">
+                {% if product.pros %}
+                <div class="pros">
+                    <h4>👍 おすすめポイント</h4>
+                    <ul>
+                        {% for pro in product.pros %}
+                        <li>{{ pro }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+                
+                {% if product.cons %}
+                <div class="cons">
+                    <h4>👎 注意点</h4>
+                    <ul>
+                        {% for con in product.cons %}
+                        <li>{{ con }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    
+    {% if product.specifications %}
+    <div class="product-specs">
+        <h4>仕様</h4>
+        <dl class="specs-list">
+            {% for spec in product.specifications %}
+            <dt>{{ spec.name }}</dt>
+            <dd>{{ spec.value }}</dd>
+            {% endfor %}
+        </dl>
+    </div>
+    {% endif %}
+    
+    <div class="affiliate-disclosure">
+        <small>※この商品リンクはアフィリエイト広告を利用しています</small>
+    </div>
+</div>
